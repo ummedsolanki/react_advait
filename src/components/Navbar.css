@@ -1,0 +1,69 @@
+/* Navbar Container */
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 3.125rem;
+  background-color: #e6f9e6;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+/* Logo Image */
+/* .navbar-logo img {
+  height: 2.5rem;
+  width: auto;
+} */
+
+/* Navigation Links Container */
+/* .navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.875rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Individual Link */
+/* .navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 1.25rem;
+  transition: background-color 0.3s;
+} */
+
+/* Active Link */
+/* .navbar-links a.active {
+  background-color: white;
+} */
+
+/* Get in Touch Button */
+/* .get-in-touch-button {
+  background-color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+} */
+
+/* Arrow Icon Inside the Button */
+/* .get-in-touch-button .arrow {
+  background-color: #dcffcc;
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+} */
