@@ -2,7 +2,6 @@ import './styles/main.css';
 import 'typeface-open-sans';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
 import Blogs from './components/Blogs';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -15,7 +14,6 @@ function App() {
       <Services />
       <Cards />
       {/* <Component /> */}
-      <WhyChooseUs />
       <Blogs />
       {/* <Footer /> */}
     </div>
