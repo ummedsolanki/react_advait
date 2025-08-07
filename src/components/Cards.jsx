@@ -61,6 +61,7 @@ export default function ServiceSlider() {
           <Swiper
             spaceBetween={30}
             slidesPerView={3}
+            speed={1200}
             loop={true}
             autoplay={{
               delay: 2500,

@@ -20,7 +20,7 @@
 .frame-1000002174 {
   width: 1377px;
   /* height: 468px; */
-  /* position: absolute; */
+  /* position: absolute; */  
   left: 0px;
   top: 0px;
   overflow-x: auto;
@@ -92,8 +92,8 @@
 .make-real-time-data-driven-decisions-with-powerful-dashboards-and-predictive-analytics {
   color: rgba(0, 0, 0, 0.6);
   text-align: left;
-  font-family: "OpenSans-Regular", sans-serif;
-  font-size: 18px;
+  font-family: "Open Sans";
+  font-size: 1rem;
   font-weight: 400;
   position: absolute;
   right: 5%;
@@ -119,7 +119,7 @@
   color: #000000;
   text-align: left;
   font-family: "OpenSans-SemiBold", sans-serif;
-  font-size: 25px;
+  font-size: 1.6rem;
   font-weight: 600;
   position: absolute;
   right: 0%;

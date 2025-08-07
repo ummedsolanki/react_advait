@@ -22,7 +22,6 @@ html {
 body {
   /* font-family: 'Open Sans, sans-serif'; */
   color: var(--text-color);
-  line-height: 1.6;
 }
 *, *::before, *::after {
   box-sizing: border-box;
