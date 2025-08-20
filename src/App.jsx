@@ -27,7 +27,7 @@ import Workedwithd from "./page/Workedwithd";
 function App() {
   return (
     <>
-    <Footer/>
+    {/* <Footer/> */}
 {/* CONTACT-US */}
 
       {/* <ContactUs /> */}
@@ -71,7 +71,7 @@ function App() {
       {/* <MissionSection/> */}
       {/* <TimelineSlider/> */}
       {/* <Team/> */}
-      
+      {/* <Footer/> */}
 
 {/* HOME */}
 
