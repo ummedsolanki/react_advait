@@ -32,7 +32,6 @@ export default function MissionSection() {
             <div className='mission-title'>Our Mission</div>
             <div className="mission-header">
               <h3>{mission.title}</h3>
-              <div className="arrow-box"></div>
             </div>
             <p>{mission.description}</p>
             <div className="mission-src">
