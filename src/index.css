@@ -15,7 +15,9 @@
   --typo-fontsize: 3.75rem;
   --m-typo-fontsize: 3rem;
   --cardtitle-fontsize: 1.6rem;
-  --m-cardtitle-fontsize: 1.1rem;
+  --l-cardtitle-fontsize: 2rem;
+  --m-cardtitle-fontsize: 1.2rem;
+
   --normal-fontsize: 1.125rem;
   --m-normal-fontsize: 1rem;
   --l-normal-fontsize: 1.5rem;
@@ -800,6 +802,10 @@ body {
   align-items: start;
 }
 
+.about-margin {
+  margin: 0 2.5rem;
+}
+
 .about-left h2 {
   font-size: var(--header-fontsize);
   font-weight: 400;
@@ -833,6 +839,7 @@ body {
 
 .mission-title {
   color: var(--green-text);
+  font-size: var(--normal-fontsize);
   /* margin: 1.25rem 0 0 1.25rem; */
 }
 
@@ -1022,7 +1029,7 @@ body {
 }
 
 .team-section {
-  margin: 2.5rem;
+  margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--header-fontsize);
@@ -2266,7 +2273,9 @@ textarea {
 
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .about-section {
+
+  /*-------------------------------------About Us------------------------------------*/
+  .about-margin {
     margin: 0 3rem;
   }
 
@@ -2284,10 +2293,31 @@ textarea {
     font-size: var(--l-normal-fontsize);
     font-weight: 500;
   }
+
+  .mission-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+
+  .mission-title {
+    font-size: var(--l-normal-fontsize);
+  }
+
+  .mission-header h3 {
+    font-size: var(--l-cardtitle-fontsize);
+    font-weight: 400;
+  }
+
+  .mission-card p {
+    font-size: var(--l-normal-fontsize);
+  }
+
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1367px) {
-  .about-section {
+
+  /*-------------------------------------About Us------------------------------------*/
+  .about-margin {
     margin: 0 2.5rem;
   }
 
@@ -2305,6 +2335,19 @@ textarea {
     font-size: var(--l-normal-fontsize);
     font-weight: 500;
   }
+
+  .mission-title {
+    font-size: var(--l-normal-fontsize);
+  }
+
+  .mission-header h3 {
+    font-size: var(--cardtitle-fontsize);
+    font-weight: 400;
+  }
+
+  .mission-card p {
+    font-size: var(--l-normal-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1281px) {}
@@ -2313,7 +2356,9 @@ textarea {
 @media only screen and (max-width: 1280px) and (min-width: 1153px) {}
 
 @media only screen and (max-width: 1152px) and (min-width: 1041px) {
-  .about-section {
+
+  /*-------------------------------------About Us------------------------------------*/
+  .about-margin {
     margin: 0 2rem;
   }
 
@@ -2324,18 +2369,38 @@ textarea {
 
   .about-left h2 {
     font-size: var(--m-header-fontsize);
-    font-weight: 500;
   }
 
   .about-right p {
     font-size: var(--normal-fontsize);
-    font-weight: 500;
   }
+
+
+  .mission-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .mission-title {
+    font-size: var(--m-normal-fontsize);
+  }
+
+  .mission-header h3 {
+    font-size: var(--cardtitle-fontsize);
+    font-weight: 400;
+  }
+
+  .mission-card p {
+    font-size: var(--normal-fontsize);
+  }
+
 }
 
-/* @media only screen and (max-width: 1040px) and (min-width: 992px) { */
-@media only screen and (max-width: 1040px) and (min-width: 779px) {
-  .about-section {
+@media only screen and (max-width: 1040px) and (min-width: 992px) {
+  /* @media only screen and (max-width: 1040px) and (min-width: 779px) { */
+
+  /*-------------------------------------About Us------------------------------------*/
+  .about-margin {
     margin: 0 2rem;
   }
 
@@ -2353,13 +2418,51 @@ textarea {
     font-size: var(--normal-fontsize);
     font-weight: 500;
   }
+
+  .mission-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 /* Tablets: 991px and below */
-@media only screen and (max-width: 991px) and (min-width: 768px) {}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .about-margin {
+    margin: 0 2rem;
+  }
+
+  .about-content {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .mobile-br {
+    display: none;
+  }
+
+  .about-left h2 {
+    font-size: var(--s-header-fontsize);
+    font-weight: 500;
+  }
+
+  .about-right p {
+    font-size: var(--normal-fontsize);
+    font-weight: 500;
+  }
+
+  .mission-cards {
+    gap: 1.6rem;
+    grid-template-columns: 1fr;
+  }
+}
 
 @media only screen and (max-width: 768px) {
-  .about-section {
+
+  /*-------------------------------------About Us------------------------------------*/
+  .about-margin {
     margin: 0 1.125rem;
   }
 
@@ -2385,5 +2488,22 @@ textarea {
     font-weight: 500;
     /* text-align: justify;
     text-justify: inter-word; */
+  }
+
+  .mission-cards {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .mission-title {
+    font-size: var(--p-normal-fontsize);
+  }
+
+  .mission-header h3 {
+    font-size: var(--m-cardtitle-fontsize);
+  }
+
+  .mission-card p {
+    font-size: var(--p-normal-fontsize);
   }
 }

@@ -41,16 +41,16 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="team-section">
+    <section className="team-section about-margin ">
       <div className="team-header">
         <p className="team-subtitle">Our Team</p>
         <h2>
           <strong>
-          A team of{" "}
-           experts
+            A team of{" "}
+            experts
             <br />
-         {" "}
-          dedicated </strong> to your success.
+            {" "}
+            dedicated </strong> to your success.
         </h2>
       </div>
 

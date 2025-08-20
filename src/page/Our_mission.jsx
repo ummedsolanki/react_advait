@@ -25,7 +25,7 @@ const missions = [
 
 export default function MissionSection() {
   return (
-    <section className="mission-section">
+    <section className="mission-section about-margin">
       <div className="mission-cards">
         {missions.map((mission, index) => (
           <div className="mission-card" key={index}>
