@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import AboutUs from "./page/About_us_emp";
 import BlogSection from "./page/Blogs";
 import Team from "./page/blur";
@@ -26,6 +27,7 @@ import Workedwithd from "./page/Workedwithd";
 function App() {
   return (
     <>
+    <Footer/>
 {/* CONTACT-US */}
 
       {/* <ContactUs /> */}
@@ -64,11 +66,12 @@ function App() {
       <TestimonialSlider /> */}
 
 {/* ABOUT */}
-
-      {/* <AboutUs/>
-      <MissionSection/>
-      <TimelineSlider/>
-      <Team/> */}
+      {/* <Header /> */}
+      {/* <AboutUs/> */}
+      {/* <MissionSection/> */}
+      {/* <TimelineSlider/> */}
+      {/* <Team/> */}
+      
 
 {/* HOME */}
 

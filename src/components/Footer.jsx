@@ -1,56 +1,33 @@
+import LinkedInIcon from "../assets/linkedin.svg";
+import TwitterIcon from "../assets/twitter.svg";
+import InstagramIcon from "../assets/instagram.svg";
+import AdvaitLogo from "../assets/Advait-Logo.svg";
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="company-info">
-            <h3>ADVAIT</h3>
-            <p>-qi-sq2200-22200</p>
-            <p>sales@abastbearbeas.com</p>
-            <address>
-              Head Office ~<br />
-              Poe # ID: Superline Industrial Hub ~ 1 New Zodex Lifenservice,<br />
-              Hotel Infanoma plenary, Samsung Hospice Co. Changsafe,<br />
-              Ahmedabad 382233 Gujarat, India
-            </address>
-          </div>
-          
-          <div className="footer-links">
-            <div className="links-column">
-              <h4>Company</h4>
-              <ul>
-                <li>About</li>
-                <li>Solutions</li>
-                <li>Services</li>
-                <li>Cost Studies</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-            
-            <div className="links-column">
-              <h4>Socials</h4>
-              <ul>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-              </ul>
-            </div>
-            
-            <div className="links-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Insurance</li>
-                <li>Israel</li>
-                <li>Plaza Nordic</li>
-                <li>Send Message</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>Microsoft Gold Partner</p>
-          <p>© 2023 ADVAIT. All rights reserved. Privacy Policy</p>
-        </div>
+      {/* Left */}
+      <div className="footer-left">
+        <p>© 2025 ADVAIT. All rights reserved.</p>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+
+      {/* Center */}
+      <div className="footer-center">
+        <img src={AdvaitLogo} alt="Advait Logo" className="footer-logo" />
+      </div>
+
+      {/* Right */}
+      <div className="footer-right">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src={LinkedInIcon} alt="LinkedIn" className="social-icon" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src={TwitterIcon} alt="Twitter" className="social-icon" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src={InstagramIcon} alt="Instagram" className="social-icon" />
+        </a>
       </div>
     </footer>
   );
