@@ -4,6 +4,7 @@ import img2 from "../assets/team2.jpg";
 import img2Hover from "../assets/team1.jpg";
 import img3 from "../assets/team3.jpg";
 import img3Hover from "../assets/team1.jpg";
+import linkedinIcon from "../assets/linkedin.svg";
 
 const teamMembers = [
   {
@@ -14,6 +15,7 @@ const teamMembers = [
     image: img1,
     hoverImage: img1Hover,
     linkedin: "#",
+    linkedinIcon: linkedinIcon,
   },
   {
     name: "Olivya Brook",
@@ -23,6 +25,7 @@ const teamMembers = [
     image: img2,
     hoverImage: img2Hover,
     linkedin: "#",
+    linkedinIcon: linkedinIcon,
   },
   {
     name: "Emma Johnson",
@@ -32,6 +35,7 @@ const teamMembers = [
     image: img3,
     hoverImage: img3Hover,
     linkedin: "#",
+    linkedinIcon: linkedinIcon,
   },
 ];
 
@@ -68,7 +72,7 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="linkedin-icon"
                 >
-                  <img src="/linkedin.svg" alt="LinkedIn" />
+                  <img src={member.linkedinIcon} alt="LinkedIn" />
                 </a>
               </div>
             </div>
