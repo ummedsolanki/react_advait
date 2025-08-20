@@ -13,7 +13,7 @@ export default function AboutUs() {
       <div className="about-content">
         <div className="about-left">
           <h2>
-            Empowering <span>Your Digital Journey</span> with Clarity and
+           <strong>Empowering Your Digital<br/> Journey </strong>with Clarity and<br/>
             Confidence
           </h2>
         </div>
