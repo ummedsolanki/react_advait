@@ -161,7 +161,7 @@ body {
   right: 50px;
   width: 48px;
   height: 48px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   box-shadow: 0 0 0 6px white;
   z-index: 1;
@@ -272,7 +272,7 @@ body {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 0 0 0 6px white;
@@ -628,7 +628,7 @@ body {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
   /* box-shadow: 0 0 0 6px white; */
@@ -1281,7 +1281,7 @@ body {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 0 0 0 6px white;
@@ -1424,7 +1424,7 @@ body {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 0 0 0 6px white;
@@ -1566,7 +1566,7 @@ body {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 0 0 0 6px white;
