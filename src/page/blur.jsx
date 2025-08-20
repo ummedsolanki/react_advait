@@ -45,12 +45,12 @@ export default function Team() {
       <div className="team-header">
         <p className="team-subtitle">Our Team</p>
         <h2>
-          A team of{" "}
           <strong>
-            experts
+          A team of{" "}
+           experts
             <br />
-          </strong>{" "}
-          dedicated to your success.
+         {" "}
+          dedicated </strong> to your success.
         </h2>
       </div>
 
