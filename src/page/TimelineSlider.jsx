@@ -2,6 +2,14 @@ import Slider from "react-slick";
 
 const timelineData = [
   {
+    year: "2012",
+    text: "The Begining ADVAIT journey began in 2012"
+  },
+  {
+    year: "2013",
+    text: "Partnered with Accenture India The first partnership happened with and we were responsible for delivering part of the large projects undertaken."
+  },
+  {
     year: "2014 - 2015",
     text: "Revenue Grew by 160% & Team Grew by 25% since inception and there was a considerable amount of revenue growth & team during 2014-2015."
   },
@@ -12,6 +20,10 @@ const timelineData = [
   {
     year: "2017",
     text: "Attained CMMi Level 3 certification for non-SAP practices, Recognition by DIPP for an upcoming startup from the government."
+  },
+  {
+    year: "2018",
+    text: "Team Grew Team Grew by 15% and Revenues by 30%. Performed Upgrades, Migrations and implementations on SAP."
   }
 ];
 

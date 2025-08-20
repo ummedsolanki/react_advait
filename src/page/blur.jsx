@@ -41,7 +41,7 @@ export default function Team() {
       <div className="team-header">
         <p className="team-subtitle">Our Team</p>
         <h2>
-          A team of <strong>experts</strong> dedicated to your success.
+          A team of <strong>experts<br/></strong> dedicated to your success.
         </h2>
       </div>
 
