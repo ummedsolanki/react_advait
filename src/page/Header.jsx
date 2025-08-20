@@ -13,13 +13,13 @@ export default function Header() {
 
         {/* Navigation Links */}
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Industries</a>
-          <a href="#">Services</a>
-          <a href="#">Careers</a>
-          <a href="#">Insights</a>
-          <button className="contact-btn">Contact Us →</button>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/industries">Industries</a>
+          <a href="/services">Services</a>
+          <a href="/careers">Careers</a>
+          <a href="/insights">Insights</a>
+          <a href="/contact">Contact Us</a>
         </nav>
 
         {/* Hamburger Menu */}

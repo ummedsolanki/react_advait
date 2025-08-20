@@ -9,7 +9,7 @@ import Header from "./page/Header";
 import Hero from "./page/Hero";
 import HeroBanner from "./page/HeroBanner";
 import Industries from "./page/Industries-Focused";
-import Insights from "./page/iNSIGHTS.JSX";
+import Insights from "./page/Insights";
 import Modernization from "./page/Modernization";
 import MissionSection from "./page/Our_mission";
 import JobRoles from "./page/Roles";
@@ -24,69 +24,80 @@ import Workedwitha from "./page/Workedwitha";
 import Workedwithb from "./page/Workedwithb";
 import Workedwithc from "./page/Workedwithc";
 import Workedwithd from "./page/Workedwithd";
-function App() {
+import WorldMap from "./page/WorldMap";
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
+
+function Layout() {
   return (
     <>
-    {/* <Footer/> */}
-{/* CONTACT-US */}
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
 
-      {/* <ContactUs /> */}
-
-{/* JOIN-US */}
-
-      {/* <JoinUs /> */}
-
-{/* INSIGHTS */}
-
-      {/* <Insights/> */}
-
-{/* MODERNIZATIONS */}
-
-      {/* <Modernization/> */}
-
-{/* CONSULTING */}
-
-      {/* <Consulting/> */}
-      
-{/*CLOUD SOLUTIONS*/}
-
-      {/* <CloudSolutions/> */}
-
-{/* SERVICES/BUSINESS SOLUTION */}
-
-      {/* <WeProvide /> */}
-
-{/* INDUSTRIES  */}
-
-      {/* <Industries />
-      <Workedwitha />
-      <Workedwithb />
-      <Workedwithc />
-      <Workedwithd />
-      <TestimonialSlider /> */}
-
-{/* ABOUT */}
-      {/* <Header /> */}
-      {/* <AboutUs/> */}
-      {/* <MissionSection/> */}
-      {/* <TimelineSlider/> */}
-      {/* <Team/> */}
-      {/* <Footer/> */}
-
-{/* HOME */}
-
-      {/* <Header />
-      <Hero/>
-      <Why/>
+function Home() {
+  return (
+    <>
+      <Hero />
+      <Why />
       <ServiceSection />
       <HeroBanner />
       <BlogSection />
-      <RtlSwiper /> */}
-
-{/* common */}
-
-      {/* <JobRoles/> */}
+      <RtlSwiper />
     </>
+  );
+}
+function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route
+          path="/about"
+          element={
+            <>
+              <AboutUs />
+              <MissionSection />
+              <TimelineSlider />
+              <Team />
+            </>
+          }
+        />
+        <Route
+          path="/industries"
+          element={
+            <>
+              <Industries />
+              <Workedwitha />
+              <Workedwithb />
+              <Workedwithc />
+              <Workedwithd />
+              <TestimonialSlider />
+            </>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <>
+              <WeProvide />
+              <ServiceSection />
+            </>
+          }
+        />
+        <Route path="/cloud-solutions" element={<CloudSolutions />} />
+        <Route path="/consulting" element={<Consulting />} />
+        <Route path="/modernization" element={<Modernization />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/careers" element={<JoinUs />} />
+        <Route path="/roles" element={<JobRoles />} />
+        <Route path="/map" element={<WorldMap />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 }
 
