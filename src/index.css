@@ -2305,10 +2305,30 @@ textarea {
 
   .mission-header h3 {
     font-size: var(--l-cardtitle-fontsize);
-    font-weight: 400;
   }
 
   .mission-card p {
+    font-size: var(--l-normal-fontsize);
+  }
+
+  .team-section {
+    margin-bottom: 3rem;
+  }
+
+  .team-subtitle {
+    font-size: var(--l-cardtitle-fontsize);
+  }
+
+  .team-header h2 {
+    font-size: var(--l-header-fontsize);
+  }
+
+  .team-grid {
+    gap: 1.6rem;
+  }
+
+  .role,
+  .desc {
     font-size: var(--l-normal-fontsize);
   }
 
@@ -2348,6 +2368,25 @@ textarea {
   .mission-card p {
     font-size: var(--l-normal-fontsize);
   }
+
+  .team-section {
+    margin-bottom: 3rem;
+  }
+
+  .team-subtitle {
+    font-size: var(--cardtitle-fontsize);
+  }
+
+  .team-header h2 {
+    font-size: var(--header-fontsize);
+    font-weight: 400;
+  }
+
+  .role,
+  .desc {
+    font-size: var(--normal-fontsize);
+  }
+
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1281px) {}
@@ -2394,6 +2433,15 @@ textarea {
     font-size: var(--normal-fontsize);
   }
 
+  .team-header h2 {
+    font-size: var(--m-header-fontsize);
+    font-weight: 400;
+  }
+
+  .role,
+  .desc {
+    font-size: var(--normal-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
