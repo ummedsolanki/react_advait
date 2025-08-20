@@ -1,4 +1,4 @@
-import aboutImage from "../assets/About-us.jpg"; 
+import aboutImage from "../assets/About-us.jpg";
 
 export default function AboutUs() {
   return (
@@ -13,8 +13,8 @@ export default function AboutUs() {
       <div className="about-content">
         <div className="about-left">
           <h2>
-           <strong>Empowering Your Digital<br/> Journey </strong>with Clarity and<br/>
-            Confidence
+            <strong>Empowering Your Digital <span className="mobile-br"><br /> </span>Journey
+            </strong> with Clarity and <span className="mobile-br"><br /></span>Confidence
           </h2>
         </div>
 
