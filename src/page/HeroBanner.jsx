@@ -1,6 +1,6 @@
 
 import bannerImage from "../assets/card1.jpg"; 
-import logo from "../assets/advaitlogo.svg"; 
+import logo from "../assets/Advait-Logo.svg"; 
 
 const HeroBanner = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/advaitlogo.svg";
+import logo from "../assets/Advait-Logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import logo from "../images/advaitlogo.svg";
+import logo from "../images/Advait-Logo.svg";
 
 const Navbar = () => {
   const styles = {
