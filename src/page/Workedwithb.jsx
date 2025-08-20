@@ -29,11 +29,8 @@ export default function WorkedWithSection() {
       <div className="workedwith-header">
         <p className="tag">Worked With</p>
         <h2>
-          <strong>Our Trusted Partners</strong> Around the Globe
+          <strong>Automotive</strong>
         </h2>
-        <a className="view-all" href="#">
-          View all partners <span className="arrow">↗</span>
-        </a>
       </div>
 
       <div className="workedwith-cards">
