@@ -2,6 +2,7 @@
   --primary: #00b074;
   --text-dark: #111;
   --text-light: #555;
+  --green-text: #078672;
   --bg-card: #fff;
   --bg-color: #F4F6F4;
   --radius: 1.25rem;
@@ -823,7 +824,7 @@ body {
 }
 
 .mission-title {
-  color: #078672;
+  color: var(--green-text);
   /* margin: 1.25rem 0 0 1.25rem; */
 }
 
@@ -1012,29 +1013,40 @@ body {
 }
 
 .team-section {
-  padding: 40px;
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-fontsize);
 }
 
 .team-header {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.team-header h2 {
+  font-size: var(--header-fontsize);
+  font-weight: 400;
 }
 
 .team-subtitle {
-  color: #009688;
+  font-size: var(--cardtitle-fontsize);
   font-weight: 600;
+  color: var(--green-text);
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .team-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 400px;
+  height: 28rem;
   cursor: pointer;
 }
 
@@ -1063,35 +1075,54 @@ body {
 
 .card-back {
   background: #eaffea;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   transform: scale(1.05);
   opacity: 0;
+  position: relative;
+}
+
+.card-back h3 {
+  font-size: var(--cardtitle-fontsize);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.role {
+  font-size: var(--normal-fontsize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.desc {
+  font-size: var(--normal-fontsize);
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 1.25rem;
 }
 
 .team-card:hover .card-front {
-  /* animation: pixelate 0.6s steps(10) forwards; */
   opacity: 0;
 }
 
 .team-card:hover .card-back {
   opacity: 1;
-  /* transform: scale(1); */
 }
 
-.role {
-  font-size: 14px;
-  color: #555;
-}
-
-.desc {
-  font-size: 13px;
-  margin-top: 10px;
+.linkedin-icon {
+  position: absolute;
+  bottom: 40px;
+  left: 55px;
+  transform: translateX(-50%);
 }
 
 .linkedin-icon img {
-  width: 20px;
-  margin-top: 15px;
+  width: 30px;
 }
 
 
@@ -1809,6 +1840,55 @@ body {
 .gallery-item.mediums {
   grid-column: span 4;
   grid-row: span 2;
+}
+
+/* ...................................FOOTER................................................. */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #333;
+}
+
+.footer-left a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
 }
 
 /* Responsive */
