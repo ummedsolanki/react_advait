@@ -29,6 +29,7 @@ export default function MissionSection() {
       <div className="mission-cards">
         {missions.map((mission, index) => (
           <div className="mission-card" key={index}>
+            <div className='mission-title'>Our Mission</div>
             <div className="mission-header">
               <h3>{mission.title}</h3>
               <div className="arrow-box"></div>
