@@ -10,13 +10,13 @@ const missions = [
     src: card1,
   },
   {
-    title: 'SAP Business Solution',
+    title: 'Delivering Scalable, Tailored Solutions',
     description:
       'From ERP implementation to custom application development, we provide end-to-end services that drive operational efficiency, adaptability, and measurable outcomes.',
     src: card2,
   },
   {
-    title: 'SAP BASIS & Security',
+    title: 'Committing to Customer Success and Innovation',
     description:
       'Our customer-centric approach and strong technical expertise allow us to build long-term partnerships and deliver consistent business value across industries.',
     src: card3,
