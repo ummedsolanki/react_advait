@@ -757,6 +757,7 @@ body {
 
 .about-section {
   margin: 0 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .about-image-wrapper {
@@ -767,9 +768,9 @@ body {
 
 .about-image {
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
   display: block;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 
 .about-overlay {
@@ -778,11 +779,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.3rem;
+  /* font-size: 3.75rem; */
   font-weight: bold;
   text-align: center;
 }
 
+.about-overlay h1 {
+  font-size: 3.75rem;
+}
 
 .about-content {
   margin: 2.5rem 0;
@@ -946,8 +950,9 @@ body {
 }
 
 .timeline-slider {
+  margin: 2.5rem;
   background-color: #00897b;
-  padding: 60px 40px;
+  padding: 60px 0px;
   color: white;
   position: relative;
   border-radius: 20px;
