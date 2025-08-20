@@ -10,16 +10,16 @@ const teamMembers = [
     name: "James Carter",
     role: "Senior Dev",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     image: img1,
     hoverImage: img1Hover,
     linkedin: "#",
   },
   {
-    name: "Sarah Williams",
+    name: "Olivya Brook",
     role: "UI/UX Designer",
     description:
-      "Designing experiences that are intuitive, efficient, and delightful. Passionate about turning ideas into reality.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     image: img2,
     hoverImage: img2Hover,
     linkedin: "#",
@@ -28,7 +28,7 @@ const teamMembers = [
     name: "Emma Johnson",
     role: "Marketing Head",
     description:
-      "Leading marketing strategies that create brand impact and growth.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     image: img3,
     hoverImage: img3Hover,
     linkedin: "#",
@@ -41,7 +41,12 @@ export default function Team() {
       <div className="team-header">
         <p className="team-subtitle">Our Team</p>
         <h2>
-          A team of <strong>experts<br/></strong> dedicated to your success.
+          A team of{" "}
+          <strong>
+            experts
+            <br />
+          </strong>{" "}
+          dedicated to your success.
         </h2>
       </div>
 
