@@ -3,28 +3,28 @@ import Slider from "react-slick";
 const timelineData = [
   {
     year: "2012",
-    text: "The Begining ADVAIT journey began in 2012"
+    text: "The Begining ADVAIT journey began in 2012",
   },
   {
     year: "2013",
-    text: "Partnered with Accenture India The first partnership happened with and we were responsible for delivering part of the large projects undertaken."
+    text: "Partnered with Accenture India The first partnership happened with and we were responsible for delivering part of the large projects undertaken.",
   },
   {
     year: "2014 - 2015",
-    text: "Revenue Grew by 160% & Team Grew by 25% since inception and there was a considerable amount of revenue growth & team during 2014-2015."
+    text: "Revenue Grew by 160% & Team Grew by 25% since inception and there was a considerable amount of revenue growth & team during 2014-2015.",
   },
   {
     year: "2016",
-    text: "Delivery Centre Setup in Ahmedabad, Gujarat. India Inaugurated a new office in Ahmedabad for setting up a delivery center for Gujarat."
+    text: "Delivery Centre Setup in Ahmedabad, Gujarat. India Inaugurated a new office in Ahmedabad for setting up a delivery center for Gujarat.",
   },
   {
     year: "2017",
-    text: "Attained CMMi Level 3 certification for non-SAP practices, Recognition by DIPP for an upcoming startup from the government."
+    text: "Attained CMMi Level 3 certification for non-SAP practices, Recognition by DIPP for an upcoming startup from the government.",
   },
   {
     year: "2018",
-    text: "Team Grew Team Grew by 15% and Revenues by 30%. Performed Upgrades, Migrations and implementations on SAP."
-  }
+    text: "Team Grew Team Grew by 15% and Revenues by 30%. Performed Upgrades, Migrations and implementations on SAP.",
+  },
 ];
 
 export default function TimelineSlider() {
@@ -32,14 +32,16 @@ export default function TimelineSlider() {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 7000,
+    speed: 10000, // duration of one full slide movement
+    autoplaySpeed: 0,
     slidesToShow: 2,
     slidesToScroll: 1,
     draggable: false,
-    swipe: false, 
-    touchMove: false, 
+    swipe: false,
+    touchMove: false,
     arrows: false,
-    pauseOnHover: false
+    pauseOnHover: false,
+     cssEase: "linear" 
   };
 
   return (
