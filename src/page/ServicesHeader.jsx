@@ -100,6 +100,35 @@ export default function WeProvide() {
         </div>
       </div>
 
+      <div className="industries-content">
+        <div className="industries-heading">
+          <h2>
+            <strong>
+              Innovative IT Solutions
+              <span className="mobile-br">
+                <br />
+              </span>{" "}
+              Tailored
+            </strong>{" "}
+            to Your Business
+            <span className="mobile-br">
+              <br />{" "}
+            </span>{" "}
+            Needs.
+          </h2>
+        </div>
+        <div className="industries-text">
+          <p>
+            Our SAP Managed Services ensure the seamless operation, maintenance,
+            and optimization of your SAP landscape. From system monitoring and
+            performance tuning to user support and patch management, we provide
+            end-to-end support tailored to your business needs. With proactive
+            management and 24/7 support, we help you reduce downtime, lower IT
+            costs, and enhance system performance.
+          </p>
+        </div>
+      </div>
+
       <div className="section-header">
         <p className="tag">WE PROVIDE</p>
         <h2>
