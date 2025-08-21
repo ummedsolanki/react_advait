@@ -24,6 +24,7 @@ import Workedwitha from "./page/Workedwitha";
 import Workedwithb from "./page/Workedwithb";
 import Workedwithc from "./page/Workedwithc";
 import Workedwithd from "./page/Workedwithd";
+import WorkedWithSection from "./page/Workedwithe";
 import WorldMap from "./page/WorldMap";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 
@@ -74,6 +75,7 @@ function App() {
               <Workedwithb />
               <Workedwithc />
               <Workedwithd />
+              <WorkedWithSection />
               <TestimonialSlider />
             </>
           }
