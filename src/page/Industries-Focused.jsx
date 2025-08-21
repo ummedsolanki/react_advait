@@ -20,8 +20,8 @@ export default function Industries() {
       <div className="industries-content">
         <div className="industries-heading">
           <h2>
-            <strong>Industry-Focused</strong> Solutions.
-            Tailored for <br /><strong>Your Success.</strong>
+            <strong>Industry-Focused</strong> <span className="mobile-br"><br /> </span> Solutions.
+            Tailored for <span className="mobile-br"><br /> </span><strong>Your Success.</strong>
           </h2>
         </div>
         <div className="industries-text">
