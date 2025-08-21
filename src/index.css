@@ -100,6 +100,7 @@ body {
   cursor: pointer;
 }
 
+/*--------------------------------------------------Services-Section----------------------------------------------------*/
 
 .blog-section {
   padding: 2rem;
@@ -108,19 +109,22 @@ body {
 }
 
 .section-header {
-  max-width: 800px;
+  /* max-width: 800px; */
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .section-header .tag {
-  color: var(--primary);
+  font-size: var(--cardtitle-fontsize);
+  color: var(--green-text);
   font-weight: 600;
 }
 
 .section-header h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
+  font-size: var(--header-fontsize);
+  font-weight: 400;
 }
+
 
 .view-all {
   display: inline-flex;
@@ -148,7 +152,7 @@ body {
 .blog-card {
   background: white;
   border-radius: 16px;
-  padding: 16px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -172,6 +176,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+}
+
+.blog-header h3 {
+  font-size: var(--cardtitle-fontsize);
+  font-weight: 600;
 }
 
 .arrow-box {
@@ -195,8 +205,7 @@ body {
 }
 
 .blog-card p {
-  padding: 0 1.5rem;
-  font-size: 0.9rem;
+  font-size: var(--normal-fontsize);
   color: var(--text-light);
   margin-bottom: 1rem;
 }
@@ -205,8 +214,7 @@ body {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-radius: var(--radius);
 }
 
 
@@ -218,6 +226,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* 
 .section-header {
   max-width: 800px;
   margin-bottom: 2rem;
@@ -231,7 +240,7 @@ body {
 .section-header h2 {
   font-size: 2rem;
   margin: 0.5rem 0;
-}
+} */
 
 .view-all {
   display: inline-flex;
@@ -739,7 +748,7 @@ body {
 
 .workedwith-card p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--green-text);
   margin-bottom: 1.25rem;
 }
 
@@ -847,7 +856,7 @@ body {
   margin: 0 2.5rem;
 }
 
-.section-header {
+/* .section-header {
   max-width: 800px;
   margin-bottom: 2rem;
 }
@@ -860,7 +869,7 @@ body {
 .section-header h2 {
   font-size: 2rem;
   margin: 0.5rem 0;
-}
+} */
 
 .view-all {
   display: inline-flex;
@@ -2397,6 +2406,37 @@ textarea {
   .success h2 {
     font-size: var(--l-header-fontsize);
   }
+
+  /*--------------------------------------------------Services-Section----------------------------------------------------*/
+  .blog-section {
+    padding: 3rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .section-header .tag {
+    font-size: var(--l-cardtitle-fontsize);
+  }
+
+  .section-header h2 {
+    font-size: var(--l-header-fontsize);
+  }
+
+  .blog-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+
+  .blog-header h3 {
+    font-size: var(--l-cardtitle-fontsize);
+  }
+
+  .blog-card p {
+    font-size: var(--l-normal-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1367px) {
@@ -2580,6 +2620,37 @@ textarea {
   .success h2 {
     font-size: var(--m-header-fontsize);
   }
+
+  /*--------------------------------------------------Services-Section----------------------------------------------------*/
+  .blog-section {
+    padding: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .section-header .tag {
+    font-size: var(--cardtitle-fontsize);
+  }
+
+  .section-header h2 {
+    font-size: var(--m-header-fontsize);
+  }
+
+  .blog-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .blog-header h3 {
+    font-size: var(--cardtitle-fontsize);
+  }
+
+  .blog-card p {
+    font-size: var(--normal-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
@@ -2665,6 +2736,30 @@ textarea {
   .success h2 {
     font-size: var(--s-header-fontsize);
   }
+
+  /*--------------------------------------------------Services-Section----------------------------------------------------*/
+
+  .section-header .tag {
+    font-size: var(--m-cardtitle-fontsize);
+  }
+
+  .section-header h2 {
+    font-size: var(--s-header-fontsize);
+  }
+
+  .blog-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .blog-header h3 {
+    font-size: var(--m-cardtitle-fontsize);
+  }
+
+  .blog-card p {
+    font-size: var(--normal-fontsize);
+  }
+
 }
 
 /* Tablets: 991px and below */
@@ -2676,7 +2771,7 @@ textarea {
   .about-content {
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
     align-items: start;
   }
@@ -2697,7 +2792,7 @@ textarea {
 
   .mission-cards {
     gap: 1.6rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .team-header h2 {
@@ -2716,7 +2811,7 @@ textarea {
 
   .team-grid {
     gap: 1.6rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .team-card {
@@ -2727,7 +2822,7 @@ textarea {
   .industries-content {
     margin: 2rem 0;
     gap: 1rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .industries-heading h2 {
@@ -2747,7 +2842,7 @@ textarea {
   }
 
   .workedwith-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin: 1.6rem 0;
   }
 
@@ -2758,6 +2853,17 @@ textarea {
   .success h2 {
     font-size: var(--s-header-fontsize);
   }
+
+  /*--------------------------------------------------Services-Section----------------------------------------------------*/
+
+  .section-header h2 {
+    font-size: var(--s-header-fontsize);
+  }
+
+  .blog-cards {
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2765,6 +2871,10 @@ textarea {
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
     margin: 0 1.125rem;
+  }
+
+  .about-overlay h1 {
+    font-size: var(--p-header-fontsize);
   }
 
   .about-content {
@@ -2896,5 +3006,36 @@ textarea {
 
   .success h2 {
     font-size: var(--p-header-fontsize);
+  }
+
+  /*-----------------------------------------------Services-Section----------------------------------------------------*/
+  .blog-section {
+    padding: 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .section-header .tag {
+    font-size: var(--p-cardtitle-fontsize);
+  }
+
+  .section-header h2 {
+    font-size: var(--p-header-fontsize);
+  }
+
+  .blog-cards {
+    gap: 1.6rem;
+    grid-template-columns: 1fr;
+  }
+
+  .blog-header h3 {
+    font-size: var(--p-cardtitle-fontsize);
+  }
+
+  .blog-card p {
+    font-size: var(--p-normal-fontsize);
   }
 }
