@@ -32,7 +32,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#e6f9e6',
+    backgroundColor: 'white',
     padding: '10px 20px',
     height: '100%',
     maxWidth: '100%',
