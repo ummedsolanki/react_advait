@@ -25,9 +25,9 @@ const workedWitha = [
 
 export default function WorkedWithSection() {
   return (
-    <section className="workedwith-section">
+    <section className="workedwith-section about-margin">
       <div className="workedwith-header">
-        <p className="tag">Worked With</p>
+        <p className="tag">WORKED WITH</p>
         <h2>
           <strong>Utility /Power Generation</strong>
         </h2>
