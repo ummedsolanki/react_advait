@@ -7,6 +7,7 @@
   --bg-color: #F4F6F4;
   --radius: 1.25rem;
   --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --i-header-fontsize: 3.75rem;
   --header-fontsize: 2.5rem;
   --l-header-fontsize: 2.8rem;
   --m-header-fontsize: 2rem;
@@ -462,18 +463,6 @@ body {
   transform: rotateY(180deg);
 }
 
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .section-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .blog-card p {
-    font-size: 0.85rem;
-  }
-}
-
 .banner-container {
   display: flex;
   justify-content: space-between;
@@ -693,18 +682,17 @@ body {
   border-bottom-right-radius: var(--radius);
 }
 
-
+/* -------------------------------------------------------------------industries--------------------------------------------------------------- */
 .industries-section {
-  font-family: Arial, sans-serif;
   padding: 40px 0;
 }
 
 .video-banner {
   position: relative;
   width: 100%;
-  height: 350px;
+  /* height: 350px; */
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
 .video-bg {
@@ -723,7 +711,7 @@ body {
 
 .industries-title {
   color: white;
-  font-size: 2.5rem;
+  font-size: var(--i-header-fontsize);
   font-weight: bold;
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.3);
@@ -734,18 +722,17 @@ body {
 .industries-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 20px;
+  margin-top: 2.5rem;
+  gap: var(--gap);
 }
 
 .industries-heading {
   flex: 1;
-  min-width: 250px;
 }
 
 .industries-heading h2 {
-  font-size: 1.8rem;
-  line-height: 1.4;
+  font-size: var(--header-fontsize);
+  font-weight: 400;
 }
 
 .industries-text {
@@ -785,13 +772,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  /* font-size: 3.75rem; */
   font-weight: bold;
   text-align: center;
 }
 
 .about-overlay h1 {
-  font-size: 3.75rem;
+  font-size: var(--i-header-fontsize);
 }
 
 .about-content {
@@ -1142,7 +1128,7 @@ body {
   width: 30px;
 }
 
-
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
 .cloud-solutions-text {
   flex: 2;
   min-width: 300px;
@@ -1765,6 +1751,17 @@ body {
 
 .item8 {
   grid-column: span 6;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-card p {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 1024px) {
