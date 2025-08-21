@@ -7,14 +7,19 @@
   --bg-color: #F4F6F4;
   --radius: 1.25rem;
   --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  --card-text: #00000099;
+
   --i-header-fontsize: 3.75rem;
   --header-fontsize: 2.5rem;
   --l-header-fontsize: 2.8rem;
   --m-header-fontsize: 2rem;
   --p-header-fontsize: 1.5rem;
   --s-header-fontsize: 1.8rem;
+
   --typo-fontsize: 3.75rem;
   --m-typo-fontsize: 3rem;
+
   --cardtitle-fontsize: 1.6rem;
   --l-cardtitle-fontsize: 2rem;
   --m-cardtitle-fontsize: 1.4rem;
@@ -697,7 +702,7 @@ body {
 
 .workedwith-card p {
   font-size: var(--normal-fontsize);
-  color: var(--green-text);
+  color: var(--card-text);
   margin-bottom: 1.25rem;
 }
 
@@ -860,7 +865,7 @@ body {
 .mission-card p {
   font-size: var(--normal-fontsize);
   font-weight: 400;
-  color: #00000099;
+  color: var(--card-text);
 }
 
 /* Dip shape */
@@ -1331,13 +1336,6 @@ body {
   border-radius: 8px;
 }
 
-.consulting-section {
-  font-family: Arial, sans-serif;
-  padding: 40px 0;
-}
-
-
-
 .Consulting-header {
   display: flex;
   justify-content: space-between;
@@ -1427,13 +1425,6 @@ body {
   font-size: 2rem;
   margin: 0.5rem 0;
 }
-
-.Consulting-section {
-  padding: 2rem;
-  background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
-}
-
 
 /*  */
 

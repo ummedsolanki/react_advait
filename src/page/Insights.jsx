@@ -42,7 +42,7 @@ export default function Insights() {
           </div>
         </div>
       </section>
-      <section className="Consulting-section">
+      <section className="Consulting-section about-margin">
         <div className="section-header">
           <p className="tag">INSIGHTS</p>
           <h2>
@@ -50,22 +50,22 @@ export default function Insights() {
           </h2>
         </div>
 
-        <div className="Consulting-cards">
+        <div className="workedwith-cards">
           {Consultings.map((Consulting, index) => (
-            <div className="Consulting-card" key={index}>
-              <div className="Consulting-header">
+            <div className="workedwith-card" key={index}>
+              <div className="workedwith-card-header">
                 <h3>{Consulting.title}</h3>
                 <div className="arrow-box"></div>
               </div>
               <p>{Consulting.description}</p>
-              <div className="Consulting-src">
+              <div className="workedwith-src">
                 <img src={Consulting.src} alt={Consulting.title} />
               </div>
             </div>
           ))}
         </div>
       </section>
-      <section className="Consulting-section">
+      <section className="Consulting-section about-margin">
         <div className="section-header">
           <p className="tag">WORKS</p>
           <h2>
@@ -73,15 +73,15 @@ export default function Insights() {
           </h2>
         </div>
 
-        <div className="Consulting-cards">
+        <div className="workedwith-cards">
           {Consultings.map((Consulting, index) => (
-            <div className="Consulting-card" key={index}>
-              <div className="Consulting-header">
+            <div className="workedwith-card" key={index}>
+              <div className="workedwith-card-header">
                 <h3>{Consulting.title}</h3>
                 <div className="arrow-box"></div>
               </div>
               <p>{Consulting.description}</p>
-              <div className="Consulting-src">
+              <div className="workedwith-src">
                 <img src={Consulting.src} alt={Consulting.title} />
               </div>
             </div>
