@@ -69,55 +69,55 @@ export default function TestimonialSlider() {
 
   return (
     <>
-    <div className="success">Success Stories</div>
-    <div style={{ margin: "auto", width: "100%" }}>
-      <Slider {...settings}>
-        {data.map((item, i) => (
-          <div key={i} style={{ padding: "15px" }}>
-            <div 
-              style={{
-                // background: "#e6ffe6",
-                borderRadius: "12px",
-                padding: "16px",
-                textAlign: "left",
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-              }}
-            >
+      <div className="success"><h2>Success Stories</h2></div>
+      <div style={{ margin: "auto", width: "100%" }}>
+        <Slider {...settings}>
+          {data.map((item, i) => (
+            <div key={i} style={{ padding: "15px" }}>
               <div
                 style={{
+                  // background: "#e6ffe6",
+                  borderRadius: "12px",
+                  padding: "16px",
+                  textAlign: "left",
+                  height: "100%",
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "250px",
-                  overflow: "hidden",
+                  flexDirection: "column",
+                  gap: "8px",
                 }}
               >
-                <img
-                  src={item.img}
-                  alt={item.name}
+                <div
                   style={{
-                    width: "250px",
-                    height: "100%",
-                    objectFit: "cover", 
-                    borderRadius: "12px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "250px",
+                    overflow: "hidden",
                   }}
-                />
-              </div>
+                >
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    style={{
+                      width: "250px",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                    }}
+                  />
+                </div>
 
-              <p style={{ fontSize: "14px", marginBottom: "8px" }}>
-                {item.text}
-              </p>
-              <p style={{ fontWeight: "bold", margin: 0 }}>{item.name}</p>
-              <p style={{ fontSize: "12px", margin: 0, color: "#555" }}>
-                {item.position}
-              </p>
+                <p style={{ fontSize: "14px", marginBottom: "8px" }}>
+                  {item.text}
+                </p>
+                <p style={{ fontWeight: "bold", margin: 0 }}>{item.name}</p>
+                <p style={{ fontSize: "12px", margin: 0, color: "#555" }}>
+                  {item.position}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div></>
+          ))}
+        </Slider>
+      </div></>
   );
 }

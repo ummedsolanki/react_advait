@@ -752,6 +752,15 @@ body {
   border-radius: var(--radius);
 }
 
+.success {
+  margin: 0 2.5rem;
+}
+
+.success h2 {
+  font-size: var(--header-fontsize);
+  font-weight: 600;
+}
+
 /*----------------------------------------------------------------About Us------------------------------------------------------------------*/
 
 .about-section {
@@ -2385,6 +2394,14 @@ textarea {
   .workedwith-card p {
     font-size: var(--l-normal-fontsize);
   }
+
+  .success {
+    margin: 0 3rem;
+  }
+
+  .success h2 {
+    font-size: var(--l-header-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1367px) {
@@ -2561,6 +2578,13 @@ textarea {
     margin: 1.6rem 0;
   }
 
+  .success {
+    margin: 0 2rem;
+  }
+
+  .success h2 {
+    font-size: var(--m-header-fontsize);
+  }
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
@@ -2637,6 +2661,14 @@ textarea {
   .workedwith-cards {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin: 1.6rem 0;
+  }
+
+  .success {
+    margin: 0 2rem;
+  }
+
+  .success h2 {
+    font-size: var(--s-header-fontsize);
   }
 }
 
@@ -2722,6 +2754,14 @@ textarea {
   .workedwith-cards {
     grid-template-columns: 1fr;
     margin: 1.6rem 0;
+  }
+
+  .success {
+    margin: 0 2rem;
+  }
+
+  .success h2 {
+    font-size: var(--s-header-fontsize);
   }
 }
 
@@ -2853,5 +2893,13 @@ textarea {
 
   .workedwith-card p {
     font-size: var(--p-normal-fontsize);
+  }
+
+  .success {
+    margin: 0 1rem;
+  }
+
+  .success h2 {
+    font-size: var(--p-header-fontsize);
   }
 }
