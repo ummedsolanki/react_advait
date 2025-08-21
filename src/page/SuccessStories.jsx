@@ -72,46 +72,62 @@ export default function TestimonialSlider() {
       <Slider {...settings}>
         {data.map((item, i) => (
           <div key={i} style={{ padding: "15px" }}>
-            <div 
+            <div
               style={{
-                // background: "#e6ffe6",
                 borderRadius: "12px",
-                padding: "16px",
-                textAlign: "left",
-                height: "100%",
+                background: "#f8f9fa", // soft gray background
+                boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                gap: "8px",
+                height: "100%",
               }}
             >
+              {/* Image */}
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "250px",
+                  width: "100%",
+                  height: "240px",
                   overflow: "hidden",
+                  borderRadius: "12px 12px 0 0",
                 }}
               >
                 <img
                   src={item.img}
                   alt={item.name}
                   style={{
-                    width: "250px",
+                    width: "100%",
                     height: "100%",
-                    objectFit: "cover", 
-                    borderRadius: "12px",
+                    objectFit: "cover",
                   }}
                 />
               </div>
 
-              <p style={{ fontSize: "14px", marginBottom: "8px" }}>
-                {item.text}
-              </p>
-              <p style={{ fontWeight: "bold", margin: 0 }}>{item.name}</p>
-              <p style={{ fontSize: "12px", margin: 0, color: "#555" }}>
-                {item.position}
-              </p>
+              {/* Text + Details */}
+              <div style={{ padding: "16px", textAlign: "left" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    margin: "0 0 12px 0",
+                    lineHeight: "1.6",
+                    color: "#333",
+                  }}
+                >
+                  {item.text}
+                </p>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    margin: "0 0 4px 0",
+                    color: "#111",
+                  }}
+                >
+                  {item.name}
+                </p>
+                <p style={{ fontSize: "13px", margin: 0, color: "#555" }}>
+                  {item.position}
+                </p>
+              </div>
             </div>
           </div>
         ))}
