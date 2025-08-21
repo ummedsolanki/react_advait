@@ -27,7 +27,7 @@ const Consultings = [
 export default function Insights() {
   return (
     <>
-      <section className="insights-section">
+      <section className="industries-section about-margin">
         <div className="video-banner">
           <video
             className="video-bg"
@@ -38,7 +38,7 @@ export default function Insights() {
             playsInline
           />
           <div className="video-overlay">
-            <h1 className="insights-title">CLOUD SOLUTIONS</h1>
+            <h1 className="industries-title">CLOUD SOLUTIONS</h1>
           </div>
         </div>
       </section>

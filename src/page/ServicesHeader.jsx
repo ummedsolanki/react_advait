@@ -100,7 +100,7 @@ export default function WeProvide() {
         </div>
       </div>
 
-      <div className="industries-content">
+      <div className="industries-content service-content">
         <div className="industries-heading">
           <h2>
             <strong>

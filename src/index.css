@@ -2576,8 +2576,7 @@ textarea {
   /*-----------------------------------------------Industries-section------------------------------------------------------*/
   .industries-content {
     margin: 2.5rem 0;
-    /* gap: 2rem;
-  grid-template-columns: 36% 61%; */
+    grid-template-columns: 36% 61%;
   }
 
   .industries-heading h2 {
@@ -2600,7 +2599,12 @@ textarea {
 @media only screen and (max-width: 1366px) and (min-width: 1281px) {}
 
 /* 1280px screens */
-@media only screen and (max-width: 1280px) and (min-width: 1153px) {}
+@media only screen and (max-width: 1280px) and (min-width: 1153px) {
+  .service-content {
+    display: grid;
+    grid-template-columns: 40% 56%;
+  }
+}
 
 @media only screen and (max-width: 1152px) and (min-width: 1041px) {
 
@@ -2807,6 +2811,12 @@ textarea {
   }
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
+
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 40% 56%;
+  }
 
   .section-header .tag {
     font-size: var(--m-cardtitle-fontsize);
