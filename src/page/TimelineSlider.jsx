@@ -41,11 +41,11 @@ export default function TimelineSlider() {
     touchMove: false,
     arrows: false,
     pauseOnHover: false,
-     cssEase: "linear" 
+    cssEase: "linear"
   };
 
   return (
-    <div className="timeline-slider">
+    <div className="timeline-slider about-margin">
       <div className="timeline-line"></div>
       <Slider {...settings}>
         {timelineData.map((item, index) => (
