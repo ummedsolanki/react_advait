@@ -136,15 +136,15 @@ export default function WeProvide() {
         </h2>
       </div>
 
-      <div className="blog-cards">
+      <div className="workedwith-cards">
         {provide.map((service, index) => (
-          <div className="blog-card" key={index}>
-            <div className="blog-header">
+          <div className="workedwith-card" key={index}>
+            <div className="workedwith-card-header">
               <h3>{service.title}</h3>
               <div className="arrow-box"></div>
             </div>
             <p>{service.description}</p>
-            <div className="blog-src">
+            <div className="workedwith-src">
               <img src={service.src} alt={service.title} />
             </div>
           </div>
