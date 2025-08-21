@@ -134,20 +134,20 @@ const services1 = [
   },
 ];
 
-export default function BlogSection() {
+export default function SolutionsSection() {
   return (
     <section className="service-section">
       <div style={styles.sectionHeader}>
         <div>
-        <p style={styles.tag}>Our Blogs</p>
+        <p style={styles.tag}>Our Solutions</p>
         <h2 style={styles.title}>
-          Your source for <strong>smart,</strong>
-          <br/><strong>simple IT insights.</strong> 
+          <strong>Tailored Solutions</strong> to Grow 
+           <br /> & Expand Your Business
         </h2>
         </div>
         <div>
         <a style={styles.viewAll} href="#">
-          <span>View all Blogs</span>
+          <span>View all solutions</span>
           <div style={styles.arrowBox}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

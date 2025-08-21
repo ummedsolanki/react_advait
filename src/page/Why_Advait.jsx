@@ -1,17 +1,63 @@
 import team from "../assets/card3.jpg";
 import printer from "../assets/i1.png";
+
+const cardData = [
+  {
+    title: "Innovative Solution",
+    desc: "We deliver cutting-edge IT solutions tailored to your business needs.",
+    img: printer,
+  },
+  {
+    title: "Cost-efficiency",
+    desc: "We help reduce costs while improving overall efficiency.",
+    img: printer,
+  },
+  {
+    title: "Industry Expertise",
+    desc: "Benefit from our deep understanding of diverse industry sectors.",
+    img: printer,
+  },
+  {
+    title: "Scalability",
+    desc: "Our services grow with your business, ensuring long-term value.",
+    img: printer,
+  },
+];
+
+// Card Component
+function FeatureCard({ img, title, desc }) {
+  return (
+    <div className="sec5_1">
+      <div className="sec5_image">
+        <img src={img} alt={title} />
+      </div>
+      <div>
+        <div className="sec5_text">
+          <p>{title}</p>
+        </div>
+        <div className="sec5_text_p">
+        <p>{desc}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Why() {
   return (
     <>
+      {/* Header Section */}
       <section>
         <div
           className="banner-container"
           style={{
             height: "50px",
             background: "white",
-            clipPath: "polygon(0px 0px, 50% 0px, 75% 360%, 100% 100%, 0% 100%)",
+            clipPath:
+              "polygon(0px 0px, 50% 0px, 75% 360%, 100% 100%, 0% 100%)",
             paddingTop: "10px",
             overflow: "hidden",
+            top: "-30px",
           }}
         >
           <div className="banner-left">
@@ -23,67 +69,25 @@ export default function Why() {
           </div>
         </div>
       </section>
+
+      {/* Feature Section */}
       <section className="section5">
         <div className="section5_left">
           <div className="sec5_cards">
             <div className="section5_grid">
-              <div className="sec5_1">
-                <div className="sec5_image">
-                  <img src={printer} alt="Innovative Solution" />
-                </div>
-                <div className="sec5_text">
-                  <h4>Innovative Solution</h4>
-                  <p>
-                    We deliver cutting-edge IT solutions tailored to your
-                    business <br />
-                    needs.
-                  </p>
-                </div>
-              </div>
-
-              <div className="sec5_1">
-                <div className="sec5_image">
-                  <img src={printer} alt="Cost-efficiency" />
-                </div>
-                <div className="sec5_text">
-                  <h4>Cost-efficiency</h4>
-                  <p>
-                    We help reduce costs while improving overall
-                    <br /> efficiency.
-                  </p>
-                </div>
-              </div>
-
-              <div className="sec5_1">
-                <div className="sec5_image">
-                  <img src={printer} alt="Industry Expertise" />
-                </div>
-                <div className="sec5_text">
-                  <h4>Industry Expertise</h4>
-                  <p>
-                    Benefit from our deep understanding of diverse industry{" "}
-                    <br />
-                    sectors.
-                  </p>
-                </div>
-              </div>
-
-              <div className="sec5_1">
-                <div className="sec5_image">
-                  <img src={printer} alt="Scalability" />
-                </div>
-                <div className="sec5_text">
-                  <h4>Scalability</h4>
-                  <p>
-                    Our services grow with your business, ensuring long-term{" "}
-                    <br />
-                    value.
-                  </p>
-                </div>
-              </div>
+              {cardData.map((card, index) => (
+                <FeatureCard
+                  key={index}
+                  img={card.img}
+                  title={card.title}
+                  desc={card.desc}
+                />
+              ))}
             </div>
           </div>
         </div>
+
+        {/* Right Side Image */}
         <div className="section5_right">
           <div>
             <img src={team} alt="Line6" />

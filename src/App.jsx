@@ -26,7 +26,10 @@ import Workedwithc from "./page/Workedwithc";
 import Workedwithd from "./page/Workedwithd";
 import WorkedWithSection from "./page/Workedwithe";
 import WorldMap from "./page/WorldMap";
+import CompanyExp from "./components/company_exp";
+import SolutionsSection from "./page/Solutions";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
+import FooterDetails from "./components/FooterDetails";
 
 function Layout() {
   return (
@@ -43,10 +46,13 @@ function Home() {
     <>
       <Hero />
       <Why />
+      <CompanyExp />
+      <SolutionsSection />
       <ServiceSection />
       <HeroBanner />
       <BlogSection />
       <RtlSwiper />
+      <FooterDetails />
     </>
   );
 }
