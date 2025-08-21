@@ -68,6 +68,8 @@ export default function TestimonialSlider() {
   ];
 
   return (
+    <>
+    <div className="success">Success Stories</div>
     <div style={{ margin: "auto", width: "100%" }}>
       <Slider {...settings}>
         {data.map((item, i) => (
@@ -116,6 +118,6 @@ export default function TestimonialSlider() {
           </div>
         ))}
       </Slider>
-    </div>
+    </div></>
   );
 }
