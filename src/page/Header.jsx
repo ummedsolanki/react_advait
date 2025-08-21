@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import logo from "../assets/advaitlogo.svg";
-import styles from "./Navbar.css.jsx"; // Make sure this exports a JS object
+import styles from "./Header.css.jsx"; // Make sure this exports a JS object
 
 const NavItem = ({ title, children, isOpen, onToggle }) => {
   const navItemRef = useRef(null);
@@ -85,7 +85,7 @@ const Header = () => {
       { title: "Education", link: "/industries/education" },
       { title: "Retail", link: "/industries/retail" },
     ],
-    services: [
+    services: [ 
       { title: "Services", link: "/services" },
       { title: "Cloud Solution", link: "/services/cloud-solution" },
       {
@@ -99,7 +99,9 @@ const Header = () => {
   };
 
   return (
-    <nav style={styles.navbar}>
+    <div style={styles.navbarContainer}>
+      <div className="fixed-nav">
+        <nav style={styles.navbar}>
       <div>
         <img
           src={logo}
@@ -165,10 +167,12 @@ const Header = () => {
       </ul>
       <div>
         <a href="#" style={styles.getInTouch}>
-          Get in Touch <span style={styles.arrow}>{"→"}</span>
+          Contact Us <span style={styles.arrow}>{"→"}</span>
         </a>
       </div>
     </nav>
+    </div>
+    </div>
   );
 };
 
