@@ -165,7 +165,6 @@ body {
   height: 48px;
   background: #f4f6f4;
   border-radius: 50%;
-  box-shadow: 0 0 0 6px white;
   z-index: 1;
 }
 
@@ -277,7 +276,6 @@ body {
   background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 0 0 6px white;
 }
 
 .service-header {
@@ -1286,7 +1284,6 @@ body {
   background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 0 0 6px white;
 }
 
 .Consulting-cards {
@@ -1429,7 +1426,6 @@ body {
   background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 0 0 6px white;
 }
 
 .modernization-cards {
@@ -1571,7 +1567,6 @@ body {
   background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 0 0 6px white;
 }
 
 .insights-cards {
