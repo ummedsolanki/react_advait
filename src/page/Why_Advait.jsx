@@ -7,8 +7,11 @@ export default function Why() {
         <div
           className="banner-container"
           style={{
-            background: "#d8c8c8",
+            height: "50px",
+            background: "white",
             clipPath: "polygon(0px 0px, 50% 0px, 75% 360%, 100% 100%, 0% 100%)",
+            paddingTop: "10px",
+            overflow: "hidden",
           }}
         >
           <div className="banner-left">

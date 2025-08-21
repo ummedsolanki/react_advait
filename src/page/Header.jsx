@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import logo from "../assets/advaitlogo.svg";
+import logo from "../assets/Advait-Logo.svg";
 import styles from "./Header.css.jsx"; // Make sure this exports a JS object
 
 const NavItem = ({ title, children, isOpen, onToggle }) => {

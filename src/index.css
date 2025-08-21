@@ -373,23 +373,21 @@ body {
   height: auto;
   z-index: 1;
   opacity: 0.9;
-
 }
 
 .section5 {
   display: flex;
   width: 100%;
-  /* margin-top: 1rem; */
+  margin-top: -100px;
   gap: 1rem;
 }
-
 
 .section5_left {
   display: flex;
   flex-direction: column;
   flex: 0 0 50%;
   gap: 2rem;
-  /* margin: 4rem 0; */
+  margin-left: 10px;
 }
 
 */ .section5_left p {
@@ -465,32 +463,36 @@ body {
 
 .banner-container {
   display: flex;
+  height: 1px;
   justify-content: space-between;
   align-items: flex-start;
-  background: white;
-  border-radius: 15px 15px 0 0;
-  padding: 20px 30px;
   position: relative;
+  padding: 70px 0 80px;
   overflow: hidden;
+  background: #f8f9fa;
+  margin-top: -60px;
+  z-index: 1;
 }
 
 .banner-container::before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
-  width: 60%;
   height: 100%;
-  background: url('your-background.jpg') no-repeat center/cover;
-  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: #fff;
+  border-bottom-right-radius: 60% 20%;
+  border-bottom-left-radius: 60% 20%;
+  z-index: -1;
   z-index: 0;
 }
 
 .banner-left {
   position: relative;
   z-index: 1;
+  margin-left: 10px;
 }
-
 .banner-subtitle {
   color: #00796B;
   font-size: 16px;
