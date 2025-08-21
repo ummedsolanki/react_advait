@@ -1036,7 +1036,135 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  .timeline-slider {
+    padding: 40px 15px;
+  }
 
+  .timeline-line {
+    top: auto;
+    bottom: 218px;   
+    height: 2px;
+  }
+
+  .timeline-slide {
+    padding-top: 10px;
+  }
+
+  .timeline-year {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .timeline-dot {
+    top: 35px;   /* adjust dot position */
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-card {
+    max-width: 90%;  
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline-card p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 660px) {
+    .timeline-line {
+    top: auto;
+    bottom: 218px;   
+    height: 2px;
+  }
+}
+@media (max-width: 580px) {
+    .timeline-line {
+    top: auto;
+    bottom: 239px;   
+    height: 2px;
+  }
+}
+@media (max-width: 494px) {
+    .timeline-line {
+    top: auto;
+    bottom: 260px;   
+    height: 2px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 478px) {
+  .timeline-line {
+    top: auto;
+    bottom: 281px;   
+    height: 2px;
+  }
+}
+@media (max-width: 430px) {
+  .timeline-line {
+    top: auto;
+    bottom: 302px;   
+    height: 2px;
+  }
+}
+@media (max-width: 412px) {
+  .timeline-line {
+    top: auto;
+    bottom: 323px;   
+    height: 2px;
+  }
+}
+@media (max-width: 376px) {
+  .timeline-line {
+    top: auto;
+    bottom: 345px;   
+    height: 2px;
+  }
+}
+@media (max-width: 352px) {
+  .timeline-line {
+    top: auto;
+    bottom: 365px;   
+    height: 2px;
+  }
+}
+@media (max-width: 342px) {
+  .timeline-line {
+    top: auto;
+    bottom: 386px;   
+    height: 2px;
+  }
+}
+@media (max-width: 326px) {
+  .timeline-line {
+    top: auto;
+    bottom: 428px;   
+    height: 2px;
+  }
+}
+@media (max-width: 316px) {
+  .timeline-line {
+    top: auto;
+    bottom: 449px;   
+    height: 2px;
+  }
+}
+@media (max-width: 296px) {
+  .timeline-line {
+    top: auto;
+    bottom: 471px;   
+    height: 2px;
+  }
+}
+@media (max-width: 285px) {
+  .timeline-line {
+    top: auto;
+    bottom: 492px;   
+    height: 2px;
+  }
+}
 .team-section {
   margin-bottom: 2.5rem;
   display: flex;
