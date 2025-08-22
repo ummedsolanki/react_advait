@@ -105,6 +105,105 @@ body {
   cursor: pointer;
 }
 
+/*-------------------------------------------------------Job Section----------------------------------------------------*/
+.job-section {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.job-card {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Job text */
+.job-label {
+  color: #008060;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.job-position {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.job-info {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.apply-btn {
+  display: flex;
+  align-items: center;
+  background-color: #008060;
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left text part */
+.apply-btn .btn-text {
+  color: white;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Right arrow part */
+.apply-btn .btn-icon {
+  background: white;
+  color: #008060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover */
+.apply-btn:hover {
+  background-color: white;
+  border: 2px solid #008060;
+}
+
+.apply-btn:hover .btn-text {
+  color: #008060;
+}
+
+.apply-btn:hover .btn-icon {
+  background: #008060;
+  color: white;
+  transform: translateX(3px);
+}
+
+/*  */
+.culture-section {
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+.culture-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #106a4e;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 /*--------------------------------------------------Services-Section----------------------------------------------------*/
 
 .blog-section {
@@ -600,11 +699,11 @@ body {
   transition: transform 0.3s ease, content 0.3s ease;
 }
 
-.arrow-box:hover {
+/* .arrow-box:hover {
   background: #d9ffe5;
-  /* light green background */
-  border-color: transparent;
-}
+  light green background
+border-color: transparent;
+}*/
 
 .arrow-box:hover::before {
   content: "↗";
@@ -713,6 +812,11 @@ body {
 
 .workedwith-card:hover::before {
   box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4);
+}
+
+.workedwith-card:hover .arrow-box {
+  transform: rotate(-45deg);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Dip shape */
@@ -1760,104 +1864,6 @@ body {
 .insights-section {
   padding: 2rem;
   background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.job-section {
-  margin: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.job-card {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Job text */
-.job-label {
-  color: #008060;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
-.job-position {
-  font-size: 1.5rem;
-  margin: 5px 0;
-}
-
-.job-info {
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* Button */
-.apply-btn {
-  display: flex;
-  align-items: center;
-  background-color: #008060;
-  border: none;
-  border-radius: 999px;
-  padding: 0;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Left text part */
-.apply-btn .btn-text {
-  color: white;
-  padding: 10px 18px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-/* Right arrow part */
-.apply-btn .btn-icon {
-  background: white;
-  color: #008060;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hover */
-.apply-btn:hover {
-  background-color: white;
-  border: 2px solid #008060;
-}
-
-.apply-btn:hover .btn-text {
-  color: #008060;
-}
-
-.apply-btn:hover .btn-icon {
-  background: #008060;
-  color: white;
-  transform: translateX(3px);
-}
-
-/*  */
-.culture-section {
-  padding: 40px 20px;
-  background: #fafafa;
-}
-
-.culture-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  color: #106a4e;
   font-family: 'Segoe UI', sans-serif;
 }
 

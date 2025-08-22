@@ -6,6 +6,7 @@ import img5 from "../assets/ind5.jpg";
 import img6 from "../assets/ind6.jpg";
 import img7 from "../assets/ind7.jpg";
 import img8 from "../assets/ind4.jpg";
+import aboutImage from "../assets/About-us.jpg";
 
 const JoinUs = () => {
   const images = [
@@ -38,7 +39,20 @@ const JoinUs = () => {
 
   return (
     <>
-      <div className="job-section">
+      <section className="about-section about-margin">
+        <div className="about-image-wrapper">
+          <img src={aboutImage} alt="About Us" className="about-image" />
+          <div className="about-overlay">
+            <h1>JOIN US</h1>
+          </div>
+        </div>
+      </section>
+      <div className="section-header about-margin">
+        <h2>
+          Our Open Roles
+        </h2>
+      </div>
+      <div className="job-section about-margin">
         {roles.map((role, index) => (
           <div key={index} className="job-card">
             <div>
@@ -55,8 +69,8 @@ const JoinUs = () => {
           </div>
         ))}
       </div>
-      <h2 className="culture-title">Culture highlights</h2>
-      <div className="gallery-container">
+      <h2 className="culture-title about-margin">Culture highlights</h2>
+      <div className="gallery-container about-margin">
         {images.map((img, i) => (
           <div key={i} className={`gallery-item ${img.id}`}>
             <img src={img.src} alt={`gallery-${i}`} />
