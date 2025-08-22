@@ -304,6 +304,106 @@ body {
   color: white;
 }
 
+/* */
+.contactus-apply-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: var(--green-text);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+}
+
+/* White wipe (hover in) */
+.contactus-apply-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 30px;
+  /* hidden by default */
+  background: #fff;
+  transition: width 0.45s ease;
+  z-index: 0;
+}
+
+/* Green wipe (hover out) */
+.contactus-apply-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* grows from right */
+  height: 100%;
+  width: 0;
+  /* hidden by default */
+  background: var(--green-text);
+  transition: width 0.45s ease;
+  z-index: 1;
+  /* above white but below text */
+}
+
+/* Hover in: show white wipe */
+.contactus-apply-btn:hover::after {
+  width: 100%;
+}
+
+/* Hover out: show green wipe */
+.contactus-apply-btn:not(:hover)::before {
+  width: 100%;
+}
+
+/* Keep text & icon above wipes */
+.contactus-btn-text,
+.contactus-job-box {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.contactus-btn-text {
+  padding-left: 20px;
+}
+
+/* On hover, text/icon turn green */
+.contactus-apply-btn:hover .contactus-btn-text {
+  color: var(--green-text);
+}
+
+/* Icon circle */
+.contactus-job-box {
+  border-radius: 50%;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--green-text);
+  border: 1px solid currentColor;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 5px 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.contactus-job-box::before {
+  font-size: 16px;
+}
+
+.contactus-apply-btn:hover .contactus-job-box {
+  transform: rotate(-45deg);
+  background: var(--green-text);
+  color: white;
+}
+
 /*---pop up ---*/
 /* Overlay */
 .popup-overlay {

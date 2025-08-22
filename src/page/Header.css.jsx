@@ -132,8 +132,8 @@ const styles = {
     borderRadius: "20px",
   },
   activeLink: {
-    backgroundColor: "#008060", 
-    color: "white",             
+    backgroundColor: "#008060",
+    color: "white",
     fontWeight: "600",
   },
   modal: {
@@ -169,6 +169,56 @@ const styles = {
     '& $modalTitle': {
       color: "#008060",
       fontWeight: "500"
+    }
+  },
+  applyBtn: {
+    position: "relative",
+    overflow: "hidden",
+    border: "none",
+    background: "var(--green-text)",
+    color: "#fff",
+    fontSize: "1rem",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "10px",
+    borderRadius: "30px",
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      height: "100%",
+      width: 0,
+      borderRadius: "30px",
+      background: "#fff",
+      transition: "width 0.45s ease",
+      zIndex: 0,
+    },
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      right: 0,
+      height: "100%",
+      width: 0,
+      background: "var(--green-text)",
+      transition: "width 0.45s ease",
+      zIndex: 1,
+    },
+    "&:hover::after": {
+      width: "100%",
+    },
+    "&:not(:hover)::before": {
+      width: "100%",
+    },
+    "& .btn-text, & .job-box": {
+      position: "relative",
+      zIndex: 2,
+      transition: "color 0.3s ease",
+    },
+    "& .btn-text": {
+      paddingLeft: "20px",
     }
   }
 };
