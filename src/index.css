@@ -106,14 +106,16 @@ body {
 }
 
 /*-------------------------------------------------------Job Section----------------------------------------------------*/
-.job-section {
+.job-header {
+  color: var(--green-text);
+  font-weight: 600 !important;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
 }
 
 .job-card {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
+  border-top: 1px solid #00000099;
+  padding: 2.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,22 +123,27 @@ body {
 
 /* Job text */
 .job-label {
-  color: #008060;
-  font-size: 0.9rem;
-  font-weight: bold;
+  color: var(--green-text);
+  font-size: var(--normal-fontsize);
+  /* font-weight: bold; */
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 0.625rem;
 }
 
 .job-position {
-  font-size: 1.5rem;
-  margin: 5px 0;
+  font-size: var(--cardtitle-fontsize);
+  margin: 1.25rem 0;
 }
 
 .job-info {
-  color: #666;
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #00000099;
+  font-size: var(--normal-fontsize);
+  margin-bottom: 1.25rem;
 }
+
 
 /* Button */
 .apply-btn {
@@ -154,8 +161,8 @@ body {
 /* Left text part */
 .apply-btn .btn-text {
   color: white;
-  padding: 10px 18px;
-  font-size: 0.95rem;
+  padding: 1.25rem;
+  font-size: var(--normal-fontsize);
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -197,11 +204,10 @@ body {
 }
 
 .culture-title {
-  font-size: 2rem;
+  font-size: var(--header-fontsize);
   font-weight: 600;
   margin-bottom: 30px;
-  color: #106a4e;
-  font-family: 'Segoe UI', sans-serif;
+  color: var(--green-text);
 }
 
 /*--------------------------------------------------Services-Section----------------------------------------------------*/
@@ -271,22 +277,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* 
-.section-header {
-  max-width: 800px;
-  margin-bottom: 2rem;
-}
-
-.section-header .tag {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.section-header h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
-} */
-
 .view-all {
   display: inline-flex;
   align-items: center;
@@ -343,7 +333,6 @@ body {
   background: white;
   border: 2px solid #000;
   border-radius: 50%;
-  padding: 0.25rem 0.45rem;
   font-size: 0.85rem;
 }
 
@@ -705,12 +694,6 @@ body {
 border-color: transparent;
 }*/
 
-.arrow-box:hover::before {
-  content: "↗";
-  /* change to diagonal arrow */
-  transform: rotate(0deg);
-  /* keep upright */
-}
 
 /* -------------------------------------------------------------------industries-section--------------------------------------------------------------- */
 
@@ -965,21 +948,6 @@ border-color: transparent;
   margin: 0 2.5rem;
 }
 
-/* .section-header {
-  max-width: 800px;
-  margin-bottom: 2rem;
-}
-
-.section-header .tag {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.section-header h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
-} */
-
 .view-all {
   display: inline-flex;
   align-items: center;
@@ -1069,7 +1037,6 @@ border-color: transparent;
 .arrow-box {
   border: 2px solid #000;
   border-radius: 50%;
-  padding: 0.25rem 0.45rem;
   font-size: 0.85rem;
 }
 
@@ -2570,6 +2537,24 @@ textarea {
     font-size: var(--l-header-fontsize);
   }
 
+  /*------------------------------------job-section------------------------------------*/
+
+  .job-label {
+    font-size: var(--l-normal-fontsize);
+  }
+
+  .job-position {
+    font-size: var(--l-cardtitle-fontsize);
+  }
+
+  .job-info {
+    font-size: var(--l-normal-fontsize);
+  }
+
+  .culture-title {
+    font-size: var(--l-header-fontsize);
+  }
+
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1367px) {
@@ -3146,6 +3131,46 @@ textarea {
 
   .section-header h2 {
     font-size: var(--p-header-fontsize);
+  }
+
+  /*-----------------------------------------------Job Section----------------------------------------------------*/
+  .job-header {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .job-card {
+    padding: 1rem 0;
+  }
+
+  .job-label {
+    font-size: var(--p-normal-fontsize);
+  }
+
+  .job-position {
+    font-size: var(--p-cardtitle-fontsize);
+  }
+
+  .job-info {
+    font-size: var(--p-normal-fontsize);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .for-phone {
+    display: none;
+  }
+
+  .apply-btn {
+    align-items: start;
+  }
+
+  .apply-btn .btn-text {
+    font-size: 14px;
+    padding: 0.5rem;
   }
 
 }

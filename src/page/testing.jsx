@@ -47,8 +47,8 @@ const JoinUs = () => {
           </div>
         </div>
       </section>
-      <div className="section-header about-margin">
-        <h2>
+      <div className="section-header about-margin job-section">
+        <h2 className="job-header">
           Our Open Roles
         </h2>
       </div>
@@ -59,8 +59,11 @@ const JoinUs = () => {
               <p className="job-label">OPEN ROLE</p>
               <h3 className="job-position">{role.title}</h3>
               <p className="job-info">
-                {role.type} • {role.location}
+                <span>{role.type}</span>
+                <span className="for-phone">•</span>
+                <span>{role.location}</span>
               </p>
+
             </div>
             <button className="apply-btn">
               <span className="btn-text">Submit Application</span>
