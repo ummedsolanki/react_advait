@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" style={{marginTop: "20px"}}>
       {/* 🔁 Background Video */}
       <video
         ref={videoRef}

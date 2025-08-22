@@ -33,8 +33,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'white',
-    padding: '10px 20px',
-    height: '100%',
+    padding: '5px 20px',
+    height: '80px',
     maxWidth: '100%',
     margin: '0 auto',
     '@media (min-width: 768px)': {
@@ -76,7 +76,7 @@ const styles = {
     display: 'block',
     transition: 'all 0.3s ease',
     textAlign: 'center',
-    fontSize: '14px',
+    fontSize: '18px',
     '@media (min-width: 768px)': {
       padding: '10px 15px',
       fontSize: '16px',
@@ -96,6 +96,10 @@ const styles = {
     fontSize: "16px",
     fontWeight: "500",
     color: "#333",
+    transition: "all 0.2s ease-in-out",
+    'div:hover > &': {
+      color: "#008060"
+    }
   },
   modalDescription: {
     fontSize: "14px",
@@ -103,7 +107,7 @@ const styles = {
   },
   getInTouch: {
     backgroundColor: "white",
-    border: "none",
+    border: "1px solid #008060",
     padding: "10px 20px",
     borderRadius: "30px",
     cursor: "pointer",
@@ -128,15 +132,17 @@ const styles = {
     borderRadius: "20px",
   },
   activeLink: {
-    backgroundColor: "#008060", // ✅ green background like video
-    color: "white",             // ✅ white text when active
+    backgroundColor: "#008060", 
+    color: "white",             
     fontWeight: "600",
   },
   modal: {
     position: "absolute",
-    top: "calc(100% + 8px)", // ✅ little gap below nav item (same as video)
+    top: "calc(100% + 8px)",
     left: "0",
-    width: "250px",
+    minWidth: "250px",
+    width: "auto",
+    maxWidth: "350px",
     backgroundColor: "white",
     borderRadius: "12px",
     boxShadow: "0 8px 20px rgba(0, 0, 0, 0.15)",
@@ -146,13 +152,24 @@ const styles = {
     flexDirection: "column",
   },
   modalItem: {
-    padding: "12px 15px",
-    transition: "background 0.2s ease",
+    padding: "12px 24px",
+    transition: "all 0.2s ease-in-out",
     cursor: "pointer",
     textDecoration: "none",
+    whiteSpace: "nowrap",
+    overflow: "visible",
+    textOverflow: "clip",
+    color: "#333",
+    '&:hover': {
+      backgroundColor: "#e6f7ed",
+    }
   },
   modalItemHover: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#e6f7ed",
+    '& $modalTitle': {
+      color: "#008060",
+      fontWeight: "500"
+    }
   }
 };
 
