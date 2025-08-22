@@ -32,7 +32,10 @@ export const modalContent = {
 };
 
 //Why.jsx (Why Card Data)
-import printer from "../assets/i1.png";
+import why1 from "../assets/Innovation.svg";
+import why2 from "../assets/Industries.svg";
+import why3 from "../assets/Scalability.svg";
+import why4 from "../assets/Cost.svg";
 export const whyText = {
   whyAdvait: "Why Advait",
   whyAdvaitSub: "Make the Smartest Move",
@@ -43,22 +46,22 @@ export const whyCardData = [
   {
     title: "Innovative Solution",
     desc: "We deliver cutting-edge IT solutions tailored to your business needs.",
-    img: printer,
+    img: why1,
   },
   {
     title: "Cost-efficiency",
     desc: "We help reduce costs while improving overall efficiency.",
-    img: printer,
+    img: why2,
   },
   {
     title: "Industry Expertise",
     desc: "Benefit from our deep understanding of diverse industry sectors.",
-    img: printer,
+    img: why3,
   },
   {
     title: "Scalability",
     desc: "Our services grow with your business, ensuring long-term value.",
-    img: printer,
+    img: why4,
   },
 ];
 
@@ -244,9 +247,8 @@ export const footerDetails = {
   Email: "advait@advaitit.com",
 };
 
-
-//Footer 
+//Footer
 export const footerData = {
-    footerText: "© 2025 ADVAIT BUSINESS SOLUTION. All rights reserved.",
-    privacyPolicy: "Privacy Policy",
-}
+  footerText: "© 2025 ADVAIT BUSINESS SOLUTION. All rights reserved.",
+  privacyPolicy: "Privacy Policy",
+};

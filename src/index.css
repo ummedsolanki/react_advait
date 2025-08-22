@@ -529,9 +529,6 @@ body {
   transform-style: preserve-3d;
 }
 
-.sec5_image:hover img {
-  transform: rotateY(180deg);
-}
 
 .sec5_text {
   font-family: "open sans-semibold", Helvetica;
