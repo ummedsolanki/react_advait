@@ -1,19 +1,26 @@
+import { useState } from "react";
 import team from "../assets/card2.jpg";
 import { whyCardData, whyText } from "../data/staticData";
 
 // Card Component
-function FeatureCard({ img, title, desc }) {
+
+function FeatureCard({ img, hoverImg, title, desc }) {
+  const [hovered, setHovered] = useState(false);
   return (
-    <div className="sec5_1">
+    <div
+      className="sec5_1"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <div className="sec5_image">
-        <img src={img} alt={title} />
+        <img src={hovered ? hoverImg : img} alt={title} />
       </div>
       <div>
         <div className="sec5_text">
           <p>{title}</p>
         </div>
         <div className="sec5_text_p">
-        <p>{desc}</p>
+          <p>{desc}</p>
         </div>
       </div>
     </div>
@@ -30,8 +37,7 @@ export default function Why() {
           style={{
             height: "50px",
             background: "white",
-            clipPath:
-              "polygon(0px 0px, 50% 0px, 75% 360%, 100% 100%, 0% 100%)",
+            clipPath: "polygon(0px 0px, 50% 0px, 75% 360%, 100% 100%, 0% 100%)",
             paddingTop: "10px",
             overflow: "hidden",
             top: "-30px",
@@ -58,6 +64,8 @@ export default function Why() {
                   img={card.img}
                   title={card.title}
                   desc={card.desc}
+                  imgComponent={card.img}
+                  hoverImg={card.hoverImg}
                 />
               ))}
             </div>

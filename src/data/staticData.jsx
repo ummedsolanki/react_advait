@@ -5,7 +5,7 @@ export const headerData = {
   industries: "Industries",
   services: "Services",
   contact: "Contact",
-  careers: "Careers",
+  careers: "Join Us",
   insights: "Insights",
   contactUs: "Contact Us",
 };
@@ -19,7 +19,6 @@ export const modalContent = {
     { title: "Retail", link: "/industries/retail" },
   ],
   services: [
-    { title: "Services", link: "/services" },
     { title: "Cloud Solution", link: "/services/cloud-solution" },
     {
       title: "Consulting & Engineering Services",
@@ -36,6 +35,11 @@ import why1 from "../assets/Innovation.svg";
 import why2 from "../assets/Industries.svg";
 import why3 from "../assets/Scalability.svg";
 import why4 from "../assets/Cost.svg";
+
+import InnovationBlack from "../assets/Innovationblack.svg";
+import IndustriesBlack from "../assets/Industriesblack.svg";
+import ScalabilityBlack from "../assets/Scalabilityblack.svg";
+import CostBlack from "../assets/Costblack.svg";
 export const whyText = {
   whyAdvait: "Why Advait",
   whyAdvaitSub: "Make the Smartest Move",
@@ -47,21 +51,25 @@ export const whyCardData = [
     title: "Innovative Solution",
     desc: "We deliver cutting-edge IT solutions tailored to your business needs.",
     img: why1,
+    hoverImg: InnovationBlack,
   },
   {
     title: "Industry Expertise",
     desc: "Benefit from our deep understanding of diverse industry sectors.",
     img: why2,
+    hoverImg: IndustriesBlack,
   },
   {
     title: "Scalability",
     desc: "Our services grow with your business, ensuring long-term value.",
     img: why3,
+    hoverImg: ScalabilityBlack,
   },
   {
     title: "Cost Efficiency",
     desc: "We help reduce operational costs while improving overall efficiency.",
     img: why4,
+    hoverImg: CostBlack,
   },
 ];
 
@@ -79,9 +87,6 @@ import service2 from "../assets/card6.jpg";
 import service3 from "../assets/card3.jpg";
 import service4 from "../assets/card4.jpg";
 import service5 from "../assets/card5.jpg";
-
-
-
 
 export const solutionsText = {
   solutionsTitle: "Our Solution",
@@ -236,14 +241,14 @@ export const ClientImages = [
 //Footer Details
 export const footerDetails = {
   IndiaHeadOffice: "India Head Office",
-  Address:"Advait House Plot 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences,Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad  382213. Gujarat. India",
+  Address:
+    "Advait House Plot 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences,Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad  382213. Gujarat. India",
   Phone: "+91-92270-22260",
   Email: "sales@advaitbusiness.com",
 };
 
-
-//Footer 
+//Footer
 export const footerData = {
-    footerText: "© 2025 ADVAIT BUSINESS SOLUTION pvt ltd. All rights reserved.",
-    privacyPolicy: "Privacy Policy",
-}
+  footerText: "© 2025 ADVAIT BUSINESS SOLUTION pvt ltd. All rights reserved.",
+  privacyPolicy: "Privacy Policy",
+};
