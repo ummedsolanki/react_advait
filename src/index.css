@@ -2152,9 +2152,10 @@ body {
 
 
 /* contact */
+/* contact */
 .contact-us-section {
   font-family: Arial, sans-serif;
-  padding: 40px 0;
+  /* padding: 40px 0; */
 }
 
 .contact-us-title {
@@ -2177,6 +2178,7 @@ body {
 .contact-us-heading {
   flex: 1;
   min-width: 250px;
+  margin-left: 20px;
 }
 
 .contact-us-heading h2 {

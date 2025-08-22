@@ -137,18 +137,18 @@ const Header = () => {
           ))}
         </NavItem>
         <li>
-          <a href="#" style={styles.link}>
+          <a href="/careers" style={styles.link}>
             {headerData.careers}
           </a>
         </li>
         <li>
-          <a href="#" style={styles.link}>
+          <a href="/insights" style={styles.link}>
             {headerData.insights}
           </a>
         </li>
       </ul>
       <div>
-        <a href="#" style={styles.getInTouch}>
+        <a href="/contact" style={styles.getInTouch}>
           {headerData.contactUs} <span style={styles.arrow}>{"→"}</span>
         </a>
       </div>
