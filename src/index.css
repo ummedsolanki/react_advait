@@ -609,15 +609,22 @@ body {
 
 }
 
+.sec5_1:hover .sec5_image {
+  background-color: white;
+}
+
 .sec5_image {
   perspective: 800px;
   display: inline-block;
   margin-left: 15px;
+  background-color: var(--green-text);
+  border-radius: 50%;
 }
 
 .sec5_image img {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
 }
