@@ -1,28 +1,5 @@
 import team from "../assets/card3.jpg";
-import printer from "../assets/i1.png";
-
-const cardData = [
-  {
-    title: "Innovative Solution",
-    desc: "We deliver cutting-edge IT solutions tailored to your business needs.",
-    img: printer,
-  },
-  {
-    title: "Cost-efficiency",
-    desc: "We help reduce costs while improving overall efficiency.",
-    img: printer,
-  },
-  {
-    title: "Industry Expertise",
-    desc: "Benefit from our deep understanding of diverse industry sectors.",
-    img: printer,
-  },
-  {
-    title: "Scalability",
-    desc: "Our services grow with your business, ensuring long-term value.",
-    img: printer,
-  },
-];
+import { whyCardData, whyText } from "../data/staticData";
 
 // Card Component
 function FeatureCard({ img, title, desc }) {
@@ -61,10 +38,10 @@ export default function Why() {
           }}
         >
           <div className="banner-left">
-            <p className="banner-subtitle">Why Advait</p>
+            <p className="banner-subtitle">{whyText.whyAdvait}</p>
             <h1 className="banner-title">
-              Make the Smartest Move <br />
-              <span className="banner-title-thin">for Your Future Goal!</span>
+              {whyText.whyAdvaitSub} <br />
+              <span className="banner-title-thin">{whyText.whyAdvaitSub2}</span>
             </h1>
           </div>
         </div>
@@ -75,7 +52,7 @@ export default function Why() {
         <div className="section5_left">
           <div className="sec5_cards">
             <div className="section5_grid">
-              {cardData.map((card, index) => (
+              {whyCardData.map((card, index) => (
                 <FeatureCard
                   key={index}
                   img={card.img}

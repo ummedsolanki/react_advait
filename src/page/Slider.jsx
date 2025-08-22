@@ -1,13 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../assets/i1.png";
-import img2 from "../assets/i2.png";
-import img3 from "../assets/i3.svg";
-import img4 from "../assets/i4.png";
-import img5 from "../assets/i5.png";
-import img6 from "../assets/gold.svg";
-import img7 from "../assets/i7.png";
+import { ClientImages } from "../data/staticData";
 
 export default function RtlSlider() {
   const settings = {
@@ -29,26 +23,23 @@ export default function RtlSlider() {
     ],
   };
 
-  const images = [img1, img2, img3, img4, img5, img6, img7];
-
   return (
-    <div style={{ margin: "auto", width: "100%" }}>
+    <div style={{width: "100%", backgroundColor: "#fff", height: "100px" }}>
       <Slider {...settings}>
-        {images.map((src, i) => (
+        {ClientImages.map((src, i) => (
           <div
             key={i}
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              padding: "15px",
             }}
           >
             <img
               src={src}
               alt={`Slide ${i + 1}`}
               style={{
-                height: "120px",
+                height: "100px",
                 width: "auto",
                 objectFit: "contain",
               }}

@@ -1,5 +1,6 @@
 import bannerImage from "../assets/card1.jpg";
 import logo from "../assets/Advait-Logo.svg";
+import { heroText } from "../data/staticData";
 
 const styles = {
   heroContainer: {
@@ -94,12 +95,12 @@ const HeroBanner = () => {
       <div style={styles.overlay}></div>
       <div style={styles.heroContent}>
         <h1 style={styles.mainHeading}>
-          <span style={styles.headingEm}>Take Your Business</span>
-          <span style={styles.headingEm}>To Next Level</span>
+          <span style={styles.headingEm}>{heroText.heroTitle}</span>
+          <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
         </h1>
-        <p style={styles.subHeading}>Start Your Journey With Us Today</p>
+        <p style={styles.subHeading}>{heroText.heroSubTitle2}</p>
         <button style={styles.contactButton}>
-          Contact Us
+          {heroText.contactUs}
           <svg 
             style={styles.buttonIcon}
             xmlns="http://www.w3.org/2000/svg" 

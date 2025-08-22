@@ -1,6 +1,4 @@
-import service1 from "../assets/card1.jpg";
-import service2 from "../assets/card2.jpg";
-import service3 from "../assets/card3.jpg";
+import { solutionsData, solutionsText } from "../data/staticData";
 
 const styles = {
   section: {
@@ -8,12 +6,12 @@ const styles = {
     padding: "40px 20px",
   },
   sectionHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    margin: '40px 0',
-    flexWrap: 'wrap',
-    gap: '20px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    margin: "40px 0",
+    flexWrap: "wrap",
+    gap: "20px",
   },
   tag: {
     color: "#078672",
@@ -98,99 +96,49 @@ const styles = {
   },
 };
 
-const services = [
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service2,
-  },
-  {
-    title: "SAP S/4HANA",
-    description:
-      "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
-    src: service3,
-  },
-];
-
-const services1 = [
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service2,
-  },
-];
-
 export default function SolutionsSection() {
   return (
     <section className="service-section">
       <div style={styles.sectionHeader}>
         <div>
-        <p style={styles.tag}>Our Solutions</p>
-        <h2 style={styles.title}>
-          <strong>Tailored Solutions</strong> to Grow 
-           <br /> & Expand Your Business
-        </h2>
+          <p style={styles.tag}>{solutionsText.solutionsTitle}</p>
+          <h2 style={styles.title}>
+            <strong>{solutionsText.solutionsSubTitle}</strong> {solutionsText.solutionsSubTitle2}
+            <br /> {solutionsText.solutionsSubTitle3}
+          </h2>
         </div>
         <div>
-        <a style={styles.viewAll} href="#">
-          <span>View all solutions</span>
-          <div style={styles.arrowBox}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="16"
-              viewBox="0 0 32 16"
-              fill="none"
-              style={styles.arrowSvg}
-            >
-              <path
-                d="M1.00024 7C0.447959 7 0.000244141 7.44772 0.000244141 8C0.000244141 8.55228 0.447959 9 1.00024 9V8V7ZM31.7074 8.70711C32.0979 8.31658 32.0979 7.68342 31.7074 7.29289L25.3434 0.928932C24.9529 0.538408 24.3197 0.538408 23.9292 0.928932C23.5387 1.31946 23.5387 1.95262 23.9292 2.34315L29.586 8L23.9292 13.6569C23.5387 14.0474 23.5387 14.6805 23.9292 15.0711C24.3197 15.4616 24.9529 15.4616 25.3434 15.0711L31.7074 8.70711ZM1.00024 8V9L31.0002 9V8V7L1.00024 7V8Z"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </a>
+          <a style={styles.viewAll} href="#">
+            <span>{solutionsText.solutionsViewAll}</span>
+            <div style={styles.arrowBox}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="16"
+                viewBox="0 0 32 16"
+                fill="none"
+                style={styles.arrowSvg}
+              >
+                <path
+                  d="M1.00024 7C0.447959 7 0.000244141 7.44772 0.000244141 8C0.000244141 8.55228 0.447959 9 1.00024 9V8V7ZM31.7074 8.70711C32.0979 8.31658 32.0979 7.68342 31.7074 7.29289L25.3434 0.928932C24.9529 0.538408 24.3197 0.538408 23.9292 0.928932C23.5387 1.31946 23.5387 1.95262 23.9292 2.34315L29.586 8L23.9292 13.6569C23.5387 14.0474 23.5387 14.6805 23.9292 15.0711C24.3197 15.4616 24.9529 15.4616 25.3434 15.0711L31.7074 8.70711ZM1.00024 8V9L31.0002 9V8V7L1.00024 7V8Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div className="service-cards">
-        {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-header">
-              <h3>{service.title}</h3>
+      <div className="workedwith-cards">
+        {solutionsData.map((item, index) => (
+          <div className="workedwith-card" key={index}>
+            <div className="workedwith-card-header">
+              <h3>{item.title}</h3>
               <div className="arrow-box"></div>
             </div>
-            <p>{service.description}</p>
-            <div className="service-src">
-              <img src={service.src} alt={service.title} />
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="service-cards" style={{marginTop: "40px"}}>
-        {services1.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-header">
-              <h3>{service.title}</h3>
-              <div className="arrow-box"></div>
-            </div>
-            <p>{service.description}</p>
-            <div className="service-src">
-              <img src={service.src} alt={service.title} />
+            <p>{item.description}</p>
+            <div className="workedwith-src">
+              <img src={item.src} alt={item.title} />
             </div>
           </div>
         ))}

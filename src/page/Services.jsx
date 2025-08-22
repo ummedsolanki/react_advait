@@ -1,6 +1,7 @@
 import service1 from "../assets/card1.jpg";
 import service2 from "../assets/card2.jpg";
 import service3 from "../assets/card3.jpg";
+import { servicesData, servicesText } from "../data/staticData";
 
 const styles = {
   section: {
@@ -98,56 +99,20 @@ const styles = {
   },
 };
 
-const services = [
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service2,
-  },
-  {
-    title: "SAP S/4HANA",
-    description:
-      "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
-    src: service3,
-  },
-];
-
-const services1 = [
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service2,
-  },
-];
-
 export default function ServiceSection() {
   return (
     <section className="service-section">
       <div style={styles.sectionHeader}>
         <div>
-        <p style={styles.tag}>Our Services</p>
+        <p style={styles.tag}>{servicesText.servicesTitle}</p>
         <h2 style={styles.title}>
-          <strong>Tailored Services</strong> to Grow 
-           <br /> & Expand Your Business
+          <strong>{servicesText.servicesSubTitle}</strong> {servicesText.servicesSubTitle2}
+           <br /> {servicesText.servicesSubTitle3}
         </h2>
         </div>
         <div>
         {/* <a style={styles.viewAll} href="#">
-          <span>View all services</span>
+          <span>View all servicesData</span>
           <div style={styles.arrowBox}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -167,30 +132,16 @@ export default function ServiceSection() {
         </div>
       </div>
 
-      <div className="service-cards">
-        {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-header">
-              <h3>{service.title}</h3>
+      <div className="workedwith-cards">
+        {servicesData.map((item, index) => (
+          <div className="workedwith-card" key={index}>
+            <div className="workedwith-card-header">
+              <h3>{item.title}</h3>
               <div className="arrow-box"></div>
             </div>
-            <p>{service.description}</p>
-            <div className="service-src">
-              <img src={service.src} alt={service.title} />
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="service-cards" style={{marginTop: "40px"}}>
-        {services1.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-header">
-              <h3>{service.title}</h3>
-              <div className="arrow-box"></div>
-            </div>
-            <p>{service.description}</p>
-            <div className="service-src">
-              <img src={service.src} alt={service.title} />
+            <p>{item.description}</p>
+            <div className="workedwith-src">
+              <img src={item.src} alt={item.title} />
             </div>
           </div>
         ))}

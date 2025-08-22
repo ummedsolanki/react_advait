@@ -1,78 +1,79 @@
-import React from 'react';
+import React from "react";
+import { footerDetails } from "../data/staticData";
 
 const FooterDetails = () => {
   const footerStyle = {
-    width: '100%',
-    height: '250px',
+    width: "100%",
+    height: "250px",
     flexShrink: 0,
-    borderRadius: '20px 20px 0 0',
-    background: '#078672',
-    position: 'relative',
-    overflow: 'hidden',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0 5%',
-    boxSizing: 'border-box',
-    marginTop: '20px',
+    borderRadius: "20px 20px 0 0",
+    background: "#078672",
+    position: "relative",
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0 5%",
+    boxSizing: "border-box",
+    marginTop: "70px",
   };
 
   const contentWrapper = {
-    display: 'flex',
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    position: 'relative',
+    display: "flex",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    position: "relative",
   };
 
   const svgContainer = {
-    position: 'absolute',
-    left: '50%',
-    transform: 'translateX(-50%)',
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-50%)",
   };
 
   const svgStyle = {
-    width: '209px',
-    height: '178px',
+    width: "209px",
+    height: "178px",
     flexShrink: 0,
-    fill: 'rgba(255, 255, 255, 0.10)',
-    backdropFilter: 'blur(3px)',
+    fill: "rgba(255, 255, 255, 0.10)",
+    backdropFilter: "blur(3px)",
   };
 
   const contactSection = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    maxWidth: '300px',
-    color: '#FFF',
-    textAlign: 'left',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    maxWidth: "300px",
+    color: "#FFF",
+    textAlign: "left",
     zIndex: 2,
   };
 
   const headingStyle = {
-    fontFamily: 'Open Sans',
-    fontSize: '25px',
+    fontFamily: "Open Sans",
+    fontSize: "25px",
     fontWeight: 600,
-    margin: '0 0 10px 0',
+    margin: "0 0 10px 0",
   };
 
   const addressStyle = {
-    fontFamily: 'Open Sans',
-    fontSize: '16px',
+    fontFamily: "Open Sans",
+    fontSize: "16px",
     fontWeight: 400,
-    lineHeight: '24px',
-    margin: '0 0 10px 0',
-    whiteSpace: 'pre-line',
+    lineHeight: "24px",
+    margin: "0 0 10px 0",
+    whiteSpace: "pre-line",
   };
 
   const contactRow = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    fontFamily: 'Open Sans',
-    fontSize: '16px',
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    fontFamily: "Open Sans",
+    fontSize: "16px",
     fontWeight: 600,
-    lineHeight: '24px',
+    lineHeight: "24px",
   };
 
   return (
@@ -108,12 +109,8 @@ const FooterDetails = () => {
 
         {/* Contact Section */}
         <div style={contactSection}>
-          <h3 style={headingStyle}>India Head Office</h3>
-          <p style={addressStyle}>
-            Plot # 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences,
-            Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad
-            382213. Gujarat. India
-          </p>
+          <h3 style={headingStyle}>{footerDetails.IndiaHeadOffice}</h3>
+          <p style={addressStyle}>{footerDetails.Address}</p>
 
           {/* Phone */}
           <div style={contactRow}>
@@ -133,7 +130,7 @@ const FooterDetails = () => {
                 stroke="white"
               />
             </svg>
-            +91-92270-22260
+            {footerDetails.Phone}
           </div>
 
           {/* Email */}
@@ -150,7 +147,7 @@ const FooterDetails = () => {
                 fill="white"
               />
             </svg>
-            sales@advaitbusiness.com
+            {footerDetails.Email}
           </div>
         </div>
       </div>

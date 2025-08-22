@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import logo from "../assets/Advait-Logo.svg";
-import styles from "./Header.css.jsx"; // Make sure this exports a JS object
+import styles from "./Header.css.jsx"; 
+import { modalContent, headerData } from "../data/staticData";
 
 const NavItem = ({ title, children, isOpen, onToggle }) => {
   const navItemRef = useRef(null);
@@ -78,25 +79,6 @@ const NavItem = ({ title, children, isOpen, onToggle }) => {
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const modalContent = {
-    industries: [
-      { title: "Healthcare", link: "/industries/healthcare" },
-      { title: "Finance", link: "/industries/finance" },
-      { title: "Education", link: "/industries/education" },
-      { title: "Retail", link: "/industries/retail" },
-    ],
-    services: [ 
-      { title: "Services", link: "/services" },
-      { title: "Cloud Solution", link: "/services/cloud-solution" },
-      {
-        title: "Consulting & Engineering Services",
-        link: "/services/consulting",
-      },
-      { title: "Modernization", link: "/services/modernization" },
-      { title: "Solutions", link: "/services/solutions" },
-      { title: "Infra", link: "/services/infra" },
-    ],
-  };
 
   return (
     <div style={styles.navbarContainer}>
@@ -114,12 +96,12 @@ const Header = () => {
       <ul style={styles.links}>
         <li>
           <a href="/" style={{ ...styles.link, ...styles.activeLink }}>
-            Home
+            {headerData.home}
           </a>
         </li>
         <li>
           <a href="/about" style={styles.link}>
-            About
+            {headerData.about}
           </a>
         </li>
         <NavItem
@@ -127,7 +109,7 @@ const Header = () => {
           isOpen={openDropdown === "industries"}
           onToggle={(isOpen) => setOpenDropdown(isOpen ? "industries" : null)}
         >
-          {modalContent.industries.map((item, index) => (
+          {modalContent?.industries.map((item, index) => (
             <a
               key={index}
               href={item.link}
@@ -143,7 +125,7 @@ const Header = () => {
           isOpen={openDropdown === "services"}
           onToggle={(isOpen) => setOpenDropdown(isOpen ? "services" : null)}
         >
-          {modalContent.services.map((item, index) => (
+          {modalContent?.services.map((item, index) => (
             <a
               key={index}
               href={item.link}
@@ -156,18 +138,18 @@ const Header = () => {
         </NavItem>
         <li>
           <a href="#" style={styles.link}>
-            Careers
+            {headerData.careers}
           </a>
         </li>
         <li>
           <a href="#" style={styles.link}>
-            Insights
+            {headerData.insights}
           </a>
         </li>
       </ul>
       <div>
         <a href="#" style={styles.getInTouch}>
-          Contact Us <span style={styles.arrow}>{"→"}</span>
+          {headerData.contactUs} <span style={styles.arrow}>{"→"}</span>
         </a>
       </div>
     </nav>
