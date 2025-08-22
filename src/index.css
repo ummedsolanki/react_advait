@@ -10,7 +10,7 @@
 
   --card-text: #00000099;
 
-  --i-header-fontsize: 3.75rem;
+  --i-header-fontsize: 3rem;
   --header-fontsize: 2.5rem;
   --l-header-fontsize: 2.8rem;
   --m-header-fontsize: 2rem;
@@ -345,9 +345,9 @@ body {
 
 .section5_right {
   width: 550px;
-height: 560px;
-flex-shrink: 0;
-aspect-ratio: 101/97;
+  height: 560px;
+  flex-shrink: 0;
+  aspect-ratio: 101/97;
 }
 
 .section5_right img {
@@ -391,8 +391,10 @@ aspect-ratio: 101/97;
   align-items: center;
   transition: all 0.4s ease-in-out;
   border: 0.5px solid transparent;
-  position: relative; /* Add this */
-  overflow: hidden; /* Add this to contain the glow */
+  position: relative;
+  /* Add this */
+  overflow: hidden;
+  /* Add this to contain the glow */
 }
 
 .sec5_1::before {
@@ -403,7 +405,8 @@ aspect-ratio: 101/97;
   right: 0;
   bottom: 0;
   border-radius: 20px;
-  padding: 0.5px; /* Match the border width */
+  padding: 0.5px;
+  /* Match the border width */
   background: linear-gradient(45deg, #46F27A, #46F27A);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -417,7 +420,7 @@ aspect-ratio: 101/97;
 
 .sec5_1:hover::before {
   opacity: 1;
-  box-shadow: 
+  box-shadow:
     inset 0 0 15px #46F27A,
     inset 0 0 30px #46F27A,
     inset 0 0 45px #46F27A;
@@ -494,6 +497,7 @@ aspect-ratio: 101/97;
   z-index: 1;
   margin-left: 20px;
 }
+
 .banner-subtitle {
   color: #00796B;
   font-size: 16px;
@@ -636,10 +640,11 @@ aspect-ratio: 101/97;
 .industries-title {
   color: white;
   font-size: var(--i-header-fontsize);
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 600;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 12px 24px;
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* padding: 12px 24px; */
   border-radius: 8px;
 }
 
@@ -922,10 +927,12 @@ aspect-ratio: 101/97;
   box-shadow: 0 0 0 6px #f4f6f4;
   z-index: 1;
 }
+
 .mission-card:hover {
   box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4),
     0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .mission-card:hover::before {
   box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4);
 }
@@ -2822,6 +2829,10 @@ textarea {
     margin: 2rem 0;
     gap: 2rem;
     grid-template-columns: 36% 61%;
+  }
+
+  .industries-title {
+    font-size: var(--header-fontsize);
   }
 
   .industries-heading h2 {
