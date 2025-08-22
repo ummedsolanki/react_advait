@@ -1,6 +1,7 @@
 import industryVideo from "../assets/industry.mp4";
 import Modernization1 from "../assets/card1.jpg";
 import Modernization2 from "../assets/card2.jpg";
+import ServiceCard from "../components/ServiceCard";
 
 const Modernizations = [
   {
@@ -20,7 +21,7 @@ const Modernizations = [
 export default function Modernization() {
   return (
     <>
-      <section className="modernization-section">
+      <section className="industries-section about-margin">
         <div className="video-banner">
           <video
             className="video-bg"
@@ -31,19 +32,18 @@ export default function Modernization() {
             playsInline
           />
           <div className="video-overlay">
-            <h1 className="modernization-title">SOLUTIONS</h1>
+            <h1 className="industries-title">MODERNIZATION</h1>
           </div>
         </div>
 
-        <div className="modernization-content">
-          <div className="modernization-heading">
+        <div className="industries-content service-content">
+          <div className="industries-heading">
             <h2>
-              <strong>Innovative IT Solutions</strong> Tailored
-              <br />
-              to Your Business Needs.
+              <strong>Innovative IT Solutions</strong>
+              <span className="mobile-br"><br /> </span>   Tailored           to Your Business Needs.
             </h2>
           </div>
-          <div className="modernization-text">
+          <div className="industries-text">
             <p>
               Our SAP Managed Services ensure the seamless operation,
               maintenance, and optimization of your SAP landscape. From system
@@ -56,29 +56,8 @@ export default function Modernization() {
           </div>
         </div>
       </section>
-      <section className="modernization-section">
-        <div className="section-header">
-          <p className="tag">WE PROVIDE</p>
-          <h2>
-            <strong> Modernizations</strong>
-          </h2>
-        </div>
 
-        <div className="modernization-cards">
-          {Modernizations.map((Modernization, index) => (
-            <div className="modernization-card" key={index}>
-              <div className="modernization-header">
-                <h3>{Modernization.title}</h3>
-                <div className="arrow-box"></div>
-              </div>
-              <p>{Modernization.description}</p>
-              <div className="modernization-src">
-                <img src={Modernization.src} alt={Modernization.title} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServiceCard sectionTitle="Modernization" sectionTag="WE PROVIDE" data={Modernizations} />
     </>
   );
 }

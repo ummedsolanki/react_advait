@@ -2884,6 +2884,10 @@ textarea {
     margin: 0 2rem;
   }
 
+  .industries-title {
+    font-size: var(--header-fontsize);
+  }
+
   .about-content {
     margin: 2rem 0;
     display: grid;

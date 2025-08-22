@@ -76,29 +76,7 @@ export default function Consulting() {
           </div>
         </div>
       </section>
-      {/* <section className="Consulting-section">
-      <div className="section-header">
-        <p className="tag">Our Consultings</p>
-        <h2>
-          <strong>Tailored Consultings</strong> to Grow & Expand Your Business
-        </h2>
-      </div>
 
-      <div className="Consulting-cards">
-        {Consultings.map((Consulting, index) => (
-          <div className="Consulting-card" key={index}>
-            <div className="Consulting-header">
-              <h3>{Consulting.title}</h3>
-              <div className="arrow-box"></div>
-            </div>
-            <p>{Consulting.description}</p>
-            <div className="Consulting-src">
-              <img src={Consulting.src} alt={Consulting.title} />
-            </div>
-          </div>
-        ))}
-      </div>
-    </section> */}
       <ServiceCard sectionTitle="Tailored Consultings" sectionTag="Our Consultings" data={Consultings} />
     </>
   );
