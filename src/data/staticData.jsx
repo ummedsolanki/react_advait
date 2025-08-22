@@ -49,18 +49,18 @@ export const whyCardData = [
     img: why1,
   },
   {
-    title: "Cost-efficiency",
-    desc: "We help reduce costs while improving overall efficiency.",
-    img: why2,
-  },
-  {
     title: "Industry Expertise",
     desc: "Benefit from our deep understanding of diverse industry sectors.",
-    img: why3,
+    img: why2,
   },
   {
     title: "Scalability",
     desc: "Our services grow with your business, ensuring long-term value.",
+    img: why3,
+  },
+  {
+    title: "Cost Efficiency",
+    desc: "We help reduce operational costs while improving overall efficiency.",
     img: why4,
   },
 ];
@@ -75,15 +75,20 @@ export const companyExpData = [
 
 //Solutions Data
 import service1 from "../assets/card1.jpg";
-import service2 from "../assets/card2.jpg";
+import service2 from "../assets/card6.jpg";
 import service3 from "../assets/card3.jpg";
+import service4 from "../assets/card4.jpg";
+import service5 from "../assets/card5.jpg";
+
+
+
 
 export const solutionsText = {
-  solutionsTitle: "Our Solutions",
-  solutionsSubTitle: "Tailored Solutions",
+  solutionsTitle: "Our Solution",
+  solutionsSubTitle: "Tailored Solution",
   solutionsSubTitle2: "to Grow",
   solutionsSubTitle3: "& Expand Your Business",
-  solutionsViewAll: "View all solutions",
+  solutionsViewAll: "View all solution",
 };
 
 export const solutionsData = [
@@ -97,32 +102,34 @@ export const solutionsData = [
     title: "SAP Fiori & UX",
     description:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
+    src: service3,
+  },
+  {
+    title: "Rise with SAP Private cloud",
+    description:
+      "Private cloud is a suite of intelligent ERP software that includes digital process to enhance efficiency, predictive and simulation",
     src: service2,
   },
   {
     title: "SAP S/4HANA",
     description:
       "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
-    src: service3,
+    src: service4,
   },
   {
-    title: "SAP Analytics Cloud",
+    title: "SAP Development",
     description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service2,
+      "Leverage cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+    src: service5,
   },
 ];
 
 //Services Data
-import service12 from "../assets/card1.jpg";
-import service22 from "../assets/card2.jpg";
-import service32 from "../assets/card3.jpg";
+import service12 from "../assets/card_service_1.jpg";
+import service22 from "../assets/card_service_2.jpg";
+import service32 from "../assets/card_service_3.jpg";
+import service42 from "../assets/card_service_4.jpg";
+import service52 from "../assets/card_service_5.jpg";
 
 export const servicesText = {
   servicesTitle: "Our Services",
@@ -134,34 +141,34 @@ export const servicesText = {
 
 export const servicesData = [
   {
-    title: "SAP Analytics Cloud",
+    title: "Implementation & Rollouts Analytics Cloud",
     description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
+      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service12,
   },
   {
-    title: "SAP Fiori & UX",
+    title: "SAP Upgrades & Migrations",
     description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
+      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service22,
   },
   {
-    title: "SAP S/4HANA",
+    title: "Managed Services & Support",
     description:
-      "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
+      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service32,
   },
   {
-    title: "SAP Analytics Cloud",
+    title: "Staff Augmentation",
     description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: service12,
+      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+    src: service42,
   },
   {
-    title: "SAP Fiori & UX",
+    title: "Training & Management",
     description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: service22,
+      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+    src: service52,
   },
 ];
 
@@ -174,9 +181,9 @@ export const heroText = {
 };
 
 //Blog Data
-import blog1 from "../assets/card1.jpg";
-import blog2 from "../assets/card2.jpg";
-import blog3 from "../assets/card3.jpg";
+import blog1 from "../assets/blog_1.jpg";
+import blog2 from "../assets/blog_2.jpg";
+import blog3 from "../assets/blog_3.jpg";
 
 export const blogText = {
   blogTitle: "Our Blogs",
@@ -188,34 +195,22 @@ export const blogText = {
 
 export const blogData = [
   {
-    title: "SAP Analytics Cloud",
+    title: "Digital Transformation",
     description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
+      "In today's fast-paced digital landscape, organizations are under increasing pressure to innovate, and stay competitive.",
     src: blog1,
   },
   {
-    title: "SAP Fiori & UX",
+    title: "SAP Business Solution",
     description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
+      "In a world where digital transformation is not just an option but a necessity businesses are turning to agile.",
     src: blog2,
   },
   {
-    title: "SAP S/4HANA",
+    title: "Chemical Industry",
     description:
-      "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
+      "The chemical industry stands at a critical juncture navigating increasing regulatory pressures, and growing calls for sustainability.",
     src: blog3,
-  },
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: blog1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: blog2,
   },
 ];
 
@@ -241,14 +236,14 @@ export const ClientImages = [
 //Footer Details
 export const footerDetails = {
   IndiaHeadOffice: "India Head Office",
-  Address:
-    "Plot # 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
+  Address:"Advait House Plot 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences,Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad  382213. Gujarat. India",
   Phone: "+91-92270-22260",
-  Email: "advait@advaitit.com",
+  Email: "sales@advaitbusiness.com",
 };
 
-//Footer
+
+//Footer 
 export const footerData = {
-  footerText: "© 2025 ADVAIT BUSINESS SOLUTION. All rights reserved.",
-  privacyPolicy: "Privacy Policy",
-};
+    footerText: "© 2025 ADVAIT BUSINESS SOLUTION pvt ltd. All rights reserved.",
+    privacyPolicy: "Privacy Policy",
+}
