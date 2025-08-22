@@ -495,7 +495,7 @@ body {
   border-radius: 20px;
   padding: 0.5px;
   /* Match the border width */
-  background: linear-gradient(45deg, #46F27A, #46F27A);
+  background: linear-gradient(45deg #46F27A);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -503,20 +503,17 @@ body {
 }
 
 .sec5_1:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
+  border: 1px solid #46F27A;
+  box-shadow: inset 0 0 3px #46F27A,
+    inset 0 0 1px #46F27A,
+    inset 0 0 1px #46F27A;
+    background-color: #E3FFEB;
 }
 
 .sec5_1:hover::before {
   opacity: 1;
-  box-shadow:
-    inset 0 0 15px #46F27A,
-    inset 0 0 30px #46F27A,
-    inset 0 0 45px #46F27A;
-}
 
-.sec5_1:hover .sec5_text,
-.sec5_1:hover .sec5_text_p {
-  color: white;
 }
 
 .sec5_image {

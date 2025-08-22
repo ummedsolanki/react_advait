@@ -1,4 +1,4 @@
-import team from "../assets/card3.jpg";
+import team from "../assets/card2.jpg";
 import { whyCardData, whyText } from "../data/staticData";
 
 // Card Component
