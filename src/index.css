@@ -305,6 +305,61 @@ body {
   color: white;
 }
 
+/*---pop up ---*/
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* make sure it's above everything */
+}
+
+/* Popup Box */
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  /* equal padding on all 4 sides */
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.popup-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.popup-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.popup-buttons button[type="button"] {
+  background: #ccc;
+}
+
+.popup-buttons button[type="submit"] {
+  background: var(--green-text);
+  color: #fff;
+}
+
 /*--------------------------------------------------Services-Section----------------------------------------------------*/
 
 .blog-section {
