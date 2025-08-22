@@ -19,14 +19,14 @@ export const modalContent = {
     { title: "Retail", link: "/industries/retail" },
   ],
   services: [
-    { title: "Cloud Solution", link: "/services/cloud-solution" },
+    { title: "Cloud Solution", link: "/cloud-solutions" },
     {
       title: "Consulting & Engineering Services",
-      link: "/services/consulting",
+      link: "/consulting",
     },
-    { title: "Modernization", link: "/services/modernization" },
-    { title: "Solutions", link: "/services/solutions" },
-    { title: "Infra", link: "/services/infra" },
+    { title: "Modernization", link: "/modernization" },
+    { title: "Solutions", link: "/solutions" },
+    { title: "Infra", link: "/infra" },
   ],
 };
 

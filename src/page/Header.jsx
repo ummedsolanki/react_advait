@@ -81,6 +81,14 @@ const Header = () => {
     return currentPath.startsWith(path);
   };
 
+  const isServicesActive =
+    currentPath.startsWith("/services") ||
+    modalContent.services.some((s) => currentPath.startsWith(s.link));
+
+  const handleSubMenuClick = () => {
+    setOpenDropdown(null);
+  };
+
   return (
     <div style={styles.navbarContainer}>
       <div className="fixed-nav">
@@ -123,7 +131,7 @@ const Header = () => {
               title="Services"
               isOpen={openDropdown === "services"}
               onToggle={(isOpen) => setOpenDropdown(isOpen ? "services" : null)}
-              isActive={isActive("/services")}
+              isActive={isServicesActive}
             >
               {modalContent?.services.map((item, index) => (
                 <div
@@ -141,6 +149,7 @@ const Header = () => {
                 >
                   <Link
                     to={item.link}
+                    onClick={handleSubMenuClick}
                     style={{
                       textDecoration: "none",
                       color: "inherit",
@@ -188,18 +197,10 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          {/* <div>
-            <Link
-              to="/contact"
-              style={{
-                ...styles.getInTouch,
-                ...(isActive("/contact") ? styles.activeLink : {}),
-              }}
-            >
-              {headerData.contactUs} <span style={styles.arrow}>{"→"}</span>
-            </Link>
-          </div> */}
-          <button className="contactus-apply-btn" onClick={() => navigate("/contact")}>
+          <button
+            className="contactus-apply-btn"
+            onClick={() => navigate("/contact")}
+          >
             <span className="contactus-btn-text">Contact Us</span>
             <div className="contactus-job-box job-box">
               <svg
