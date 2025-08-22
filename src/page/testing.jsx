@@ -63,11 +63,10 @@ const JoinUs = () => {
                 <span className="for-phone">•</span>
                 <span>{role.location}</span>
               </p>
-
             </div>
             <button className="apply-btn">
               <span className="btn-text">Submit Application</span>
-              <span className="btn-icon">→</span>
+              <div className="job-box"></div>
             </button>
           </div>
         ))}
