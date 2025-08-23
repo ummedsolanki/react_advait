@@ -3,13 +3,7 @@ import CountUp from "react-countup";
 export default function Counter() {
   return (
     <div
-      className="counters"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        gap: "20px",
-        marginBottom: "40px",
-      }}
+      className="counters about-margin counter-section"
     >
       {/* Card 1 */}
       <div
