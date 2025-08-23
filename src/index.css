@@ -573,6 +573,8 @@ body {
   padding: 6px;
   font-size: 16px;
   line-height: 1;
+  align-self: flex-start;
+  text-align: right;
 }
 
 .arrow-box {
@@ -1191,6 +1193,7 @@ body {
   background: white;
   border-radius: 16px;
   padding: 16px;
+  /* padding-top: 27px; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1235,6 +1238,15 @@ body {
   margin-bottom: 0.625rem;
 
 }
+
+.workedwith-card-header> :first-child {
+  flex: 0 0 75%;
+}
+
+/* .workedwith-card-header> :last-child {
+  flex: 0 0 7%;
+  text-align: right;
+} */
 
 .workedwith-card-header h3 {
   font-size: var(--cardtitle-fontsize);
