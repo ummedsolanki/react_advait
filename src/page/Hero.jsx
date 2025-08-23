@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero" style={{marginTop: "20px"}}>
+    <section className="hero" style={{ marginTop: "20px" }}>
       {/* 🔁 Background Video */}
       <video
         ref={videoRef}
@@ -40,6 +40,7 @@ export default function Hero() {
         autoPlay
         muted
         playsInline
+        loop // 🔁 optional, usually better UX for hero
       >
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
@@ -52,7 +53,9 @@ export default function Hero() {
           {showHeading && (
             <h1>
               Empowering Businesses with
-              <br/>SAP Solutions & Digital<br/>  Transformation
+              <br />
+              SAP Solutions & Digital
+              <br /> Transformation
             </h1>
           )}
 
@@ -60,14 +63,14 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
-              bottom: "40px",
-              right: "40px",
-              backgroundColor: "white",
-              padding: "8px",
-              borderRadius: "20px",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-              display: "inline-block",
-              
+              top: "300px",
+              right: "30px",
+              height: "55px",
+              width: "auto",
+              backgroundColor: "#fff",
+              padding: "6px 12px",
+              borderRadius: "16px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
             }}
           >
             <img
@@ -76,7 +79,7 @@ export default function Hero() {
               style={{
                 display: "block",
                 // width: "20%",
-                height: "50px",
+                height: "55px",
               }}
             />
           </div>
