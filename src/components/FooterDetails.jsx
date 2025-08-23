@@ -15,7 +15,6 @@ const FooterDetails = () => {
     justifyContent: "center",
     padding: "0 5%",
     boxSizing: "border-box",
-    marginTop: "70px",
     // fontFamily: "'Open Sans', sans-serif !important",
   };
 

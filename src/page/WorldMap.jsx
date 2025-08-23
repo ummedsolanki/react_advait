@@ -3,17 +3,16 @@ import locationIcon from "../assets/location.svg"; // your location SVG
 import { markers } from "../data/staticData";
 
 const WorldMap = () => {
-  
   return (
     <section
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "10px",
         width: "100%",
-        margin: "10px auto 0",
-        maxWidth: "1200px"
+        maxWidth: "1200px",
+        marginTop: "20px",
+        marginBottom: "20px",
       }}
     >
       <div
@@ -22,7 +21,6 @@ const WorldMap = () => {
           position: "relative",
           width: "100%",
           maxWidth: "800px",
-          margin: "0 auto"
         }}
       >
         {/* World Map */}
@@ -31,7 +29,7 @@ const WorldMap = () => {
           alt="World Map"
           style={{
             width: "100%",
-            height: "auto",
+            height: "10%",
             borderRadius: "8px",
             filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.6))",
             display: "block",
@@ -71,76 +69,60 @@ const WorldMap = () => {
       {/* Responsive CSS */}
       <style>
         {`
+        .marker .tooltip {
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: white;
+          color: #333;
+          padding: 8px 12px;
+          border-radius: 6px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          font-size: 8px;
+          line-height: 1.2;
+          width: 143px;
+          text-align: left;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          z-index: 10;
+        }
+
+        .marker:hover .tooltip {
+          opacity: 1;
+        }
+
+      @media (max-width: 1024px) {
+          .world-map-container {
+            width: 70%;
+          }
           .marker .tooltip {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            color: #333;
-            padding: 8px 12px;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            font-size: 8px;
-            line-height: 1.2;
-            width: 143px;
-            text-align: left;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            z-index: 10;
+            font-size: 9px;
+            width: 130px;
           }
+          .marker-icon {
+            width: 9px;
+            height: 24px;
+          }
+        }
 
-          .marker:hover .tooltip {
-            opacity: 1;
-          }
+        @media (max-width: 768px) {
+          .world-map-container { width: 85%; }
+          .marker .tooltip { font-size: 9px; width: 120px; top: -20px; }
+          .marker-icon { width: 8px; height: 22px; }
+        }
 
-          /* Responsive Styles */
-          @media (max-width: 1024px) {
-            .world-map-container {
-              width: 70%;
-            }
-            .marker .tooltip {
-              font-size: 9px;
-              width: 130px;
-            }
-            .marker-icon {
-              width: 9px;
-              height: 24px;
-            }
+        @media (max-width: 480px) {
+          .world-map-container img { margin-top: 20px; }
+          .world-map-container {
+            width: 95%;
           }
+          .marker .tooltip { font-size: 8px; width: 110px; padding: 6px 8px; top: -18px; }
+          .marker-icon { width: 7px; height: 20px; }
+              }
 
-          @media (max-width: 768px) {
-            .world-map-container {
-              width: 85%;
-            }
-            .marker .tooltip {
-              font-size: 9px;
-              width: 120px;
-              top: -20px;
-            }
-            .marker-icon {
-              width: 8px;
-              height: 22px;
-            }
-          }
-
-          @media (max-width: 480px) {
-            .world-map-container {
-              width: 95%;
-            }
-            .marker .tooltip {
-              font-size: 8px;
-              width: 110px;
-              padding: 6px 8px;
-              top: -18px;
-            }
-            .marker-icon {
-              width: 7px;
-              height: 20px;
-            }
-          }
-        `}
+    `}
       </style>
     </section>
   );

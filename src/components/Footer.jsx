@@ -33,6 +33,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "10px",
+    marginRight: "30%",
   },
   footerLogo: {
     height: "50px",

@@ -241,7 +241,7 @@ const ContactForm = () => {
   const handleCountryChange = (selectedOption) => {
     setFormData((prev) => ({
       ...prev,
-      country: selectedOption ? selectedOption.label : "",
+      country: selectedOption, // store the whole object (value + label)
     }));
   };
 
@@ -250,27 +250,50 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitStatus({ success: null, message: "" });
 
+    // Ensure the API URL is properly constructed
+    const apiUrl = `${import.meta.env.VITE_BACKEND_API_URL}/api/contactUs/add`;
+
     try {
-      await axios.post("http://172.16.5.23:5000/api/contactUs/add", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await axios.post(
+        apiUrl,
+        {
+          ...formData,
+          country: formData.country?.label || "",
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          timeout: 10000,
+        }
+      );
+      console.log(response);
+
       setSubmitStatus({
         success: true,
         message: "Thank you for contacting us! We will get back to you soon.",
       });
+
+      // Reset form
       setFormData({
         name: "",
         phone: "",
         email: "",
         organization: "",
-        country: "",
+        country: null,
         message: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+      const errorMessage =
+        error.response?.data?.message ||
+        error.message ||
+        "Failed to submit the form. Please try again later.";
+
       setSubmitStatus({
         success: false,
-        message: "Failed to submit the form. Please try again later.",
+        message: errorMessage,
       });
     } finally {
       setIsSubmitting(false);
@@ -363,9 +386,7 @@ const ContactForm = () => {
               >
                 <Select
                   options={countryOptions}
-                  value={countryOptions.find(
-                    (option) => option.label === formData.country
-                  )}
+                  value={formData.country} // directly bind the whole object
                   onChange={handleCountryChange}
                   placeholder="Select Country"
                 />
