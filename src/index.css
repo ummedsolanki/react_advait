@@ -694,7 +694,7 @@ body {
   display: block;
   object-fit: cover;
   margin: 1rem 0;
-  border-radius: 70px;
+  border-radius: 20px;
   /* removes bottom whitespace */
 }
 
