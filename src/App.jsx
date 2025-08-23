@@ -30,6 +30,7 @@ import CompanyExp from "./components/company_exp";
 import SolutionsSection from "./page/Solutions";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import FooterDetails from "./components/FooterDetails";
+import Counter from "./page/Counter";
 
 function Layout() {
   return (
@@ -46,7 +47,8 @@ function Home() {
     <>
       <Hero />
       <Why />
-      <CompanyExp />
+      <Counter />
+      {/* <CompanyExp /> */}
       <SolutionsSection />
       <ServiceSection />
       <HeroBanner />

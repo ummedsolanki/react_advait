@@ -74,12 +74,12 @@ export const whyCardData = [
 ];
 
 //Company Experience Data
-export const companyExpData = [
-  { number: "10+", text: "Years Experience" },
-  { number: "100+", text: "Projects Completed" },
-  { number: "50+", text: "Happy Clients" },
-  { number: "24/7", text: "Support" },
-];
+// export const companyExpData = [
+//   { number: "10+", text: "Years Experience" },
+//   { number: "100+", text: "Projects Completed" },
+//   { number: "50+", text: "Happy Clients" },
+//   { number: "24/7", text: "Support" },
+// ];
 
 //Solutions Data
 import service1 from "../assets/card1.jpg";

@@ -1,5 +1,5 @@
 import React from "react";
-import { companyExpData } from "../data/staticData";
+// import { companyExpData } from "../data/staticData";
 
 const CompanyExp = () => {
   const boxStyle = {
