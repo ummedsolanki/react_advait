@@ -462,7 +462,7 @@ body {
 /*--------------------------------------------------Services-Section----------------------------------------------------*/
 
 .blog-section {
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   background-color: var(--bg-body);
   font-family: 'Segoe UI', sans-serif;
 }
@@ -2762,7 +2762,7 @@ textarea {
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 3rem;
+    padding: 3rem 3rem 0 3rem;
   }
 
   .section-header {
@@ -2986,7 +2986,7 @@ textarea {
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
 
   .section-header {
@@ -3358,7 +3358,7 @@ textarea {
 
   /*-----------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
 
   .section-header {

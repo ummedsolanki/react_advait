@@ -91,7 +91,7 @@ function App() {
           element={
             <>
               <WeProvide />
-              <ServiceSection />
+              {/* <ServiceSection /> */}
             </>
           }
         />
