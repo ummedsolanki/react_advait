@@ -27,7 +27,7 @@ const Consultings = [
 export default function Insights() {
   return (
     <>
-      <section className="industries-section about-margin">
+      <section className="industries-section about-margin header-margin">
         <div className="video-banner">
           <video
             className="video-bg"

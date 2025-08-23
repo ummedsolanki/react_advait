@@ -61,7 +61,7 @@ export default function JoinUs() {
   return (
     <>
       {/* About Image */}
-      <section className="about-section about-margin">
+      <section className="about-section about-margin header-margin">
         <div className="about-image-wrapper">
           <img src={aboutImage} alt="About Us" className="about-image" />
           <div className="about-overlay">

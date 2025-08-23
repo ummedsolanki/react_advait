@@ -93,7 +93,7 @@ const provide = [
 export default function WeProvide() {
   return (
     <>
-      <section className="blog-section">
+      <section className="blog-section header-margin">
         <div className="about-image-wrapper">
           <img src={servicesBanner} alt="About Us" className="about-image" />
           <div className="about-overlay">

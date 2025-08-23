@@ -466,7 +466,7 @@ body {
 /*--------------------------------------------------Services-Section----------------------------------------------------*/
 
 .blog-section {
-  padding: 2rem 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
   background-color: var(--bg-body);
   font-family: 'Segoe UI', sans-serif;
 }
@@ -1111,7 +1111,10 @@ body {
 
 .about-section {
   margin: 0 2.5rem;
-  margin-top: 2.5rem;
+}
+
+.header-margin {
+  margin-top: 0.9rem !important;
 }
 
 .about-image-wrapper {
@@ -2769,7 +2772,7 @@ textarea {
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 3rem 3rem 0 3rem;
+    padding: 0 3rem 0 3rem;
   }
 
   .section-header {
@@ -2993,7 +2996,7 @@ textarea {
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 2rem 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
   }
 
   .section-header {
@@ -3365,7 +3368,7 @@ textarea {
 
   /*-----------------------------------------------Services-Section----------------------------------------------------*/
   .blog-section {
-    padding: 1rem 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
   }
 
   .section-header {
