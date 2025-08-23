@@ -1,5 +1,5 @@
-import bannerImage from "../assets/card1.jpg";
-import logo from "../assets/Advait-Logo.svg";
+import bannerImage from "../assets/Take Your Business .png";
+import logo from "../assets/Advait White Logo.svg";
 import { heroText } from "../data/staticData";
 
 const styles = {
@@ -82,7 +82,7 @@ const styles = {
   heroLogo: {
     position: 'absolute',
     right: '5%',
-    top: '50%',
+    top: '80%',
     transform: 'translateY(-50%)',
     zIndex: 1,
     maxWidth: '200px',

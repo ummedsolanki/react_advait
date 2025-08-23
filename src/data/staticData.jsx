@@ -148,31 +148,31 @@ export const servicesData = [
   {
     title: "Implementation & Rollouts Analytics Cloud",
     description:
-      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Lorem Ipsum cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service12,
   },
   {
     title: "SAP Upgrades & Migrations",
     description:
-      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Lorem Ipsum cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service22,
   },
   {
     title: "Managed Services & Support",
     description:
-      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Lorem Ipsum cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service32,
   },
   {
     title: "Staff Augmentation",
     description:
-      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Lorem Ipsum cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service42,
   },
   {
     title: "Training & Management",
     description:
-      "Lorem Ipsum cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Lorem Ipsum cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service52,
   },
 ];
