@@ -44,6 +44,10 @@ body {
   background-color: var(--bg-color);
 }
 
+.service-header {
+  top: 0;
+}
+
 .header {
   width: 100%;
   background: white;
@@ -975,13 +979,16 @@ body {
   display: grid;
   grid-template-columns: 36% 60.5%;
   gap: var(--gap);
-  align-items: start;
 }
 
+.Service-Header {
+  margin-top: -6px !important;
+}
 
 .industries-heading h2 {
   font-size: var(--header-fontsize);
   font-weight: 400;
+  margin: 0;
 }
 
 .industries-text {

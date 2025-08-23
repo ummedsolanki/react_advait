@@ -103,7 +103,7 @@ export default function WeProvide() {
 
         <div className="industries-content service-content">
           <div className="industries-heading">
-            <h2>
+            <h2 className="Service-Header">
               <strong>
                 Innovative IT Solutions
                 <span className="mobile-br">
