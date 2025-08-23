@@ -4,22 +4,28 @@ import logo from "../assets/i3.svg";
 
 export default function Hero() {
   const videoRef = useRef(null);
-  const [showHeading, setShowHeading] = useState(true);
+  const [showHeading, setShowHeading] = useState(false);
+  const timerRef = useRef(null);
 
   useEffect(() => {
     const video = videoRef.current;
 
-    const handlePlay = () => {
+    const startHeadingTimer = () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
       setShowHeading(true);
-      const timer = setTimeout(() => {
+      timerRef.current = setTimeout(() => {
         setShowHeading(false);
       }, 4000);
-      return () => clearTimeout(timer);
+    };
+
+    const handlePlay = () => {
+      startHeadingTimer();
     };
 
     const handleEnded = () => {
       video.currentTime = 0;
-      video.play(); // retriggers play -> will trigger handlePlay again
+      video.play(); // restart video
+      startHeadingTimer(); // restart heading timer too
     };
 
     video.addEventListener("play", handlePlay);
@@ -28,6 +34,7 @@ export default function Hero() {
     return () => {
       video.removeEventListener("play", handlePlay);
       video.removeEventListener("ended", handleEnded);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, []);
 
@@ -40,7 +47,7 @@ export default function Hero() {
         autoPlay
         muted
         playsInline
-        loop // 🔁 optional, usually better UX for hero
+       
       >
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
