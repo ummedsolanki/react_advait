@@ -31,11 +31,24 @@ import SolutionsSection from "./page/Solutions";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import FooterDetails from "./components/FooterDetails";
 import Counter from "./page/Counter";
+import HeaderMobile from "./page/HeaderMobile";
+import { useState, useEffect } from "react";
 
 function Layout() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
-      <Header />
+      {isMobile ? <HeaderMobile /> : <Header />}
       <Outlet />
       <Footer />
     </>

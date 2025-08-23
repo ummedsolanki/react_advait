@@ -4,37 +4,39 @@ import axios from "axios";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
-
 const contactFormStyles = {
   container: {
     width: "100%",
-    height: "600px",
+    minHeight: "600px",
     display: "flex",
     flexShrink: 0,
     borderRadius: "20px",
     background: "#FFF",
     overflow: "hidden",
     margin: "0 auto",
+    boxSizing: "border-box",
   },
   leftImageContainer: {
     width: "40%",
-    height: "600px",
     flexShrink: 0,
-    aspectRatio: "68 / 79",
     borderRadius: "20px 0 0 20px",
-    background:
-      "url('/your-image-path.jpg') lightgray -129px -221.884px / 118.805% 153.369% no-repeat",
+    background: "lightgray",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
   },
   leftImage: {
-    width: "110%",
+    width: "100%",
     height: "100%",
     objectFit: "cover",
+    display: "block",
   },
   rightContact: {
     width: "60%",
-    height: "600px",
+    minHeight: "600px",
     flexShrink: 0,
-    borderRadius: "20px 20px 20px 20px",
+    borderRadius: "0 20px 20px 0",
     background: "#E3FFEB",
     display: "flex",
     flexDirection: "column",
@@ -45,59 +47,69 @@ const contactFormStyles = {
     color: "#000",
     fontFamily: '"Open Sans", sans-serif',
     fontSize: "30px",
-    fontStyle: "normal",
     fontWeight: 600,
-    lineHeight: "normal",
     marginBottom: "15px",
   },
   headingSpan: {
-    fontWeight: 400, // For the "Transform Your Business" part
+    fontWeight: 400,
   },
   subHeading: {
     color: "#000",
     fontFamily: '"Open Sans", sans-serif',
     fontSize: "18px",
-    fontStyle: "normal",
     fontWeight: 400,
-    lineHeight: "normal",
     marginBottom: "30px",
   },
   form: {
     display: "flex",
     flexWrap: "wrap",
-    width: "60%",
-    height: "600px",
+    width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
     gap: "20px",
   },
   formRow: {
     display: "flex",
-    gap: "100px",
+    gap: "20px",
+    width: "100%",
+    flexWrap: "wrap",
   },
   input: {
-    width: "60%",
+    flex: "1 1 45%",
     height: "50px",
-    flexShrink: 0,
     borderRadius: "10px",
     border: "1px solid #ccc",
-    // padding: "10px",
     fontSize: "16px",
     boxSizing: "border-box",
+    padding: "10px",
+    minWidth: "200px",
+  },
+  countryInput: {
+    flex: "1 1 45%",
+    height: "50px",
+    borderRadius: "10px",
+    border: "1px solid #ccc",
+    fontSize: "16px",
+    boxSizing: "border-box",
+    padding: "10px",
+    minWidth: "200px",
+  },
+  selectWrapper: {
+    flex: "1 1 45%",
+    minWidth: "200px",
   },
   checkBoxContainer: {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    marginTop: "20px",
+    marginTop: "10px",
+    width: "100%",
   },
   checkBoxLabel: {
     color: "#000",
     fontFamily: '"Open Sans", sans-serif',
     fontSize: "16px",
-    fontStyle: "normal",
     fontWeight: 400,
-    lineHeight: "normal",
   },
   sendButton: {
     display: "flex",
@@ -105,7 +117,8 @@ const contactFormStyles = {
     height: "50px",
     justifyContent: "center",
     alignItems: "center",
-    background: "#46F27A",
+    color: "#fff",
+    background: "#078672",
     borderRadius: "30px",
     marginTop: "20px",
     gap: "10px",
@@ -117,125 +130,170 @@ const contactFormStyles = {
   sendIconCircle: {
     width: "40px",
     height: "40px",
-    flexShrink: 0,
-    aspectRatio: "1 / 1",
     background: "#FFF",
     borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "5px",
+    marginLeft: "5px",
   },
-  arrowIcon: {
-    width: "40px",
-    height: "40px",
-    flexShrink: 0,
-  },
-  countryInput: {
-    width: "60%",
-    height: "50px",
-    flexShrink: 0,
-    borderRadius: "10px",
-    border: "1px solid #ccc",
-    fontSize: "16px",
-    boxSizing: "border-box",
-    padding: "10px",
-  },
-  selectWrapper: {
-    width: "60%",
-    height: "50px",
-    flexShrink: 0,
-    borderRadius: "20px",
-    fontSize: "16px",
-    boxSizing: "border-box",
-    // padding: "10px",
-  }
 };
 
+// Responsive CSS Fix
+// Responsive CSS Fix
+const responsiveCSS = `
+  @media (max-width: 1024px) {
+    .contact-container {
+      flex-direction: column;
+      min-height: auto;
+    }
+    .contact-left, .contact-right {
+      width: 100% !important;
+      border-radius: 20px !important;
+    }
+    .contact-left {
+      height: 300px !important; /* Sets the lightgray background height */
+    }
+    .contact-left img {
+      width: 100%;
+      height: 100% !important; /* Ensures the image fills the container */
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+      display: block;
+    }
+    .contact-right {
+      padding: 20px !important;
+    }
+    .contact-heading {
+      font-size: 24px !important;
+    }
+    .contact-subheading {
+      font-size: 16px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-form-row {
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+    .contact-input, .contact-country, .contact-select {
+      flex: 1 1 100% !important;
+      width: 100% !important;
+    }
+    .contact-send-btn {
+      width: 100% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+  .contact-left {
+    height: 350px !important; /* Lightgray background height */
+  }
+  .contact-left img {
+    height: 350px !important; /* Image height matches background */
+    width: 100% !important;
+    object-fit: cover; /* Ensures proper scaling */
+  }
+  .contact-heading {
+    font-size: 20px !important;
+  }
+  .contact-subheading {
+    font-size: 14px !important;
+  }
+  .contact-send-btn {
+    font-size: 14px !important;
+    height: 45px !important;
+  }
+  .contact-send-btn div {
+    width: 35px !important;
+    height: 35px !important;
+  }
+    .contact-right {
+    margin-top: -80px !important; 
+  }
+}
+
+`;
+
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-      name: "",
-      phone: "",
-      email: "",
-      organization: "",
-      country: "",
-      message: "",
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState({
-      success: null,
-      message: "",
-    });
-  
-    // Get all countries for dropdown
-    const countryOptions = useMemo(() => countryList().getData(), []);
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    };
-  
-    const handleCountryChange = (selectedOption) => {
-      setFormData((prev) => ({
-        ...prev,
-        country: selectedOption ? selectedOption.label : "",
-      }));
-    };
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setIsSubmitting(true);
-      setSubmitStatus({ success: null, message: "" });
-  
-      try {
-        await axios.post(
-          "http://172.16.5.23:5000/api/contactUs/add",
-          formData,
-          { headers: { "Content-Type": "application/json" } }
-        );
-  
-        setSubmitStatus({
-          success: true,
-          message: "Thank you for contacting us! We will get back to you soon.",
-        });
-  
-        // Reset form
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          organization: "",
-          country: "",
-          message: "",
-        });
-      } catch (error) {
-        console.error("Error submitting form:", error);
-        setSubmitStatus({
-          success: false,
-          message: "Failed to submit the form. Please try again later.",
-        });
-      } finally {
-        setIsSubmitting(false);
-      }
-    };
-  
-    return (
-      <div style={contactFormStyles.container}>
-        {/* Left Image */}
-        <div style={contactFormStyles.leftImageContainer}>
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    organization: "",
+    country: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({
+    success: null,
+    message: "",
+  });
+
+  const countryOptions = useMemo(() => countryList().getData(), []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleCountryChange = (selectedOption) => {
+    setFormData((prev) => ({
+      ...prev,
+      country: selectedOption ? selectedOption.label : "",
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ success: null, message: "" });
+
+    try {
+      await axios.post("http://172.16.5.23:5000/api/contactUs/add", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      setSubmitStatus({
+        success: true,
+        message: "Thank you for contacting us! We will get back to you soon.",
+      });
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        organization: "",
+        country: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        success: false,
+        message: "Failed to submit the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      <style>{responsiveCSS}</style>
+      <div className="contact-container" style={contactFormStyles.container}>
+        <div
+          className="contact-left"
+          style={contactFormStyles.leftImageContainer}
+        >
           <img
             src={contactUsFormData.image}
             style={contactFormStyles.leftImage}
             alt="Contact illustration"
           />
         </div>
-  
-        {/* Right Contact Section */}
-        <div style={contactFormStyles.rightContact}>
-          <h2 style={contactFormStyles.heading}>
+
+        <div className="contact-right" style={contactFormStyles.rightContact}>
+          <h2 className="contact-heading" style={contactFormStyles.heading}>
             {contactUsFormData.heading}
             <br />
             {contactUsFormData.subHeading}{" "}
@@ -245,13 +303,17 @@ const ContactForm = () => {
               {contactUsFormData.subHeading3}
             </span>
           </h2>
-          <p style={contactFormStyles.subHeading}>
+          <p
+            className="contact-subheading"
+            style={contactFormStyles.subHeading}
+          >
             {contactUsFormData.subHeading4}
           </p>
-  
+
           <form style={contactFormStyles.form} onSubmit={handleSubmit}>
-            <div style={contactFormStyles.formRow}>
+            <div className="contact-form-row" style={contactFormStyles.formRow}>
               <input
+                className="contact-input"
                 style={contactFormStyles.input}
                 type="text"
                 name="name"
@@ -261,6 +323,7 @@ const ContactForm = () => {
                 required
               />
               <input
+                className="contact-input"
                 style={contactFormStyles.input}
                 type="tel"
                 name="phone"
@@ -270,9 +333,10 @@ const ContactForm = () => {
                 required
               />
             </div>
-  
-            <div style={contactFormStyles.formRow}>
+
+            <div className="contact-form-row" style={contactFormStyles.formRow}>
               <input
+                className="contact-input"
                 style={contactFormStyles.input}
                 type="email"
                 name="email"
@@ -282,6 +346,7 @@ const ContactForm = () => {
                 required
               />
               <input
+                className="contact-input"
                 style={contactFormStyles.input}
                 type="text"
                 name="organization"
@@ -290,10 +355,12 @@ const ContactForm = () => {
                 onChange={handleChange}
               />
             </div>
-  
-            <div style={contactFormStyles.formRow}>
-              {/* Country dropdown */}
-              <div style={contactFormStyles.selectWrapper}>
+
+            <div className="contact-form-row" style={contactFormStyles.formRow}>
+              <div
+                className="contact-select"
+                style={contactFormStyles.selectWrapper}
+              >
                 <Select
                   options={countryOptions}
                   value={countryOptions.find(
@@ -303,8 +370,9 @@ const ContactForm = () => {
                   placeholder="Select Country"
                 />
               </div>
-  
+
               <input
+                className="contact-country"
                 style={contactFormStyles.countryInput}
                 type="text"
                 name="message"
@@ -314,27 +382,26 @@ const ContactForm = () => {
                 required
               />
             </div>
-  
+
             <div style={contactFormStyles.checkBoxContainer}>
               <input type="checkbox" id="linkedin" />
               <label htmlFor="linkedin" style={contactFormStyles.checkBoxLabel}>
                 {contactUsFormData.checkBoxLabel}
               </label>
             </div>
-  
-            <button type="submit" style={contactFormStyles.sendButton} disabled={isSubmitting}>
+
+            <button
+              type="submit"
+              className="contact-send-btn"
+              style={contactFormStyles.sendButton}
+              disabled={isSubmitting}
+            >
               {isSubmitting ? "Sending..." : contactUsFormData.sendMessage}
               <div style={contactFormStyles.sendIconCircle}>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="#46F27A"
+                    stroke="#078672"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -342,7 +409,7 @@ const ContactForm = () => {
                 </svg>
               </div>
             </button>
-  
+
             {submitStatus.message && (
               <p
                 style={{
@@ -357,6 +424,8 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
-    );
-  };
+    </>
+  );
+};
+
 export default ContactForm;

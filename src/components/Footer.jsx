@@ -5,25 +5,26 @@ import { footerData } from "../data/staticData";
 const styles = {
   footer: {
     width: "100%",
-    height: "105px",
     background: "#FFF",
-    display: "flex ",
+    display: "flex",
+    flexWrap: "wrap", // Allow wrapping for smaller screens
     alignItems: "center",
-    padding: "0 10px",
+    justifyContent: "space-between",
+    padding: "10px 20px",
     boxSizing: "border-box",
   },
   footerLeft: {
     display: "flex",
-    flex: 0.5,
     flexDirection: "column",
     justifyContent: "flex-start",
+    marginBottom: "10px",
   },
   footerText: {
     color: "#078672",
     fontFamily: '"Open Sans", sans-serif',
-    fontSize: "18px",
+    fontSize: "16px",
     fontWeight: 400,
-    lineHeight: "25.5px",
+    lineHeight: "24px",
     margin: "2px 0",
     textDecoration: "none",
   },
@@ -31,43 +32,76 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    left: "50%",
+    marginBottom: "10px",
   },
   footerLogo: {
-    height: "60px",
+    height: "50px",
     objectFit: "contain",
   },
   footerRight: {
     display: "flex",
-    flex: 0.5,
-    gap: "40px",
+    gap: "20px",
     alignItems: "center",
     justifyContent: "flex-end",
+    marginBottom: "10px",
   },
   footerIcon: {
-    width: "30px",
-    height: "30px",
+    width: "28px",
+    height: "28px",
     cursor: "pointer",
   },
 };
 
+// Responsive inline styles using media queries dynamically
+const responsiveStyles = `
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center !important;
+      text-align: center;
+    }
+    footer .footer-left, footer .footer-right {
+      justify-content: center !important;
+      margin-bottom: 10px;
+    }
+    footer img {
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer .footer-text {
+      font-size: 14px !important;
+    }
+    footer .footer-icon {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    footer img {
+      height: 40px !important;
+    }
+  }
+`;
+
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
-      {/* Left Section */}
-      <div style={styles.footerLeft}>
-        <p style={styles.footerText}>
-          {footerData.footerText}
-        </p>
-        <a href="#" style={styles.footerText}>
-          {footerData.privacyPolicy}
-        </a>
-      </div>
+    <>
+      <style>{responsiveStyles}</style> 
+      <footer style={styles.footer}>
+        {/* Left Section */}
+        <div className="footer-left" style={styles.footerLeft}>
+          <p className="footer-text" style={styles.footerText}>
+            {footerData.footerText}
+          </p>
+          <a href="#" className="footer-text" style={styles.footerText}>
+            {footerData.privacyPolicy}
+          </a>
+        </div>
 
-      {/* Center Logo */}
-      <div style={styles.footerCenter}>
-        <img src={AdvaitLogo} alt="Advait Logo" style={styles.footerLogo} />
-      </div>
+        {/* Center Logo */}
+        <div style={styles.footerCenter}>
+          <img src={AdvaitLogo} alt="Advait Logo" style={styles.footerLogo} />
+        </div>
 
       {/* Right Icons */}
       <div style={styles.footerRight}>
@@ -117,6 +151,7 @@ const Footer = () => {
         </a>
       </div>
     </footer>
+    </>
   );
 };
 

@@ -1,45 +1,28 @@
 import worldMap from "../assets/Vector.svg";
 import locationIcon from "../assets/location.svg"; // your location SVG
+import { markers } from "../data/staticData";
 
 const WorldMap = () => {
-  const markers = [
-    {
-      id: 1,
-      top: "59%",
-      left: "67%",
-      tooltip:
-        "Plot # 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
-    },
-    {
-      id: 2,
-      top: "50%",
-      left: "25.5%",
-      tooltip:
-        "3500 South Dupont Highway, Dover, County of Kent, DE 19901, USA",
-    },
-    {
-      id: 3,
-      top: "39%",
-      left: "46%",
-      tooltip:
-        "46 Hibernia Road, Hounslow Middlesex TW3 3RY, United Kingdom",
-    },
-  ];
-
+  
   return (
     <section
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "40px 0",
+        padding: "10px",
+        width: "100%",
+        margin: "10px auto 0",
+        maxWidth: "1200px"
       }}
     >
       <div
+        className="world-map-container"
         style={{
           position: "relative",
-          width: "450px",
-          maxWidth: "55%",
+          width: "100%",
+          maxWidth: "800px",
+          margin: "0 auto"
         }}
       >
         {/* World Map */}
@@ -59,7 +42,7 @@ const WorldMap = () => {
         {markers.map((marker) => (
           <div
             key={marker.id}
-            className="marker" // ✅ added class
+            className="marker"
             style={{
               position: "absolute",
               top: marker.top,
@@ -68,10 +51,11 @@ const WorldMap = () => {
               cursor: "pointer",
             }}
           >
-            {/* Location SVG */}
+            {/* Location Icon */}
             <img
               src={locationIcon}
               alt="Location"
+              className="marker-icon"
               style={{
                 width: "10px",
                 height: "28px",
@@ -79,14 +63,12 @@ const WorldMap = () => {
             />
 
             {/* Tooltip */}
-            <div className="tooltip">
-              {marker.tooltip}
-            </div>
+            <div className="tooltip">{marker.tooltip}</div>
           </div>
         ))}
       </div>
 
-      {/* CSS for hover tooltip */}
+      {/* Responsive CSS */}
       <style>
         {`
           .marker .tooltip {
@@ -100,7 +82,7 @@ const WorldMap = () => {
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             font-size: 8px;
-            line-height: 1.0;
+            line-height: 1.2;
             width: 143px;
             text-align: left;
             opacity: 0;
@@ -111,6 +93,52 @@ const WorldMap = () => {
 
           .marker:hover .tooltip {
             opacity: 1;
+          }
+
+          /* Responsive Styles */
+          @media (max-width: 1024px) {
+            .world-map-container {
+              width: 70%;
+            }
+            .marker .tooltip {
+              font-size: 9px;
+              width: 130px;
+            }
+            .marker-icon {
+              width: 9px;
+              height: 24px;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .world-map-container {
+              width: 85%;
+            }
+            .marker .tooltip {
+              font-size: 9px;
+              width: 120px;
+              top: -20px;
+            }
+            .marker-icon {
+              width: 8px;
+              height: 22px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .world-map-container {
+              width: 95%;
+            }
+            .marker .tooltip {
+              font-size: 8px;
+              width: 110px;
+              padding: 6px 8px;
+              top: -18px;
+            }
+            .marker-icon {
+              width: 7px;
+              height: 20px;
+            }
           }
         `}
       </style>
