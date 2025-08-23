@@ -13,8 +13,8 @@ export default function RtlSlider() {
     autoplaySpeed: 0,
     cssEase: "linear",
     draggable: false,
-    swipe: false, 
-    touchMove: false, 
+    swipe: false,
+    touchMove: false,
     arrows: false,
     pauseOnHover: false,
     responsive: [
@@ -24,27 +24,14 @@ export default function RtlSlider() {
   };
 
   return (
-    <div style={{width: "100%", backgroundColor: "#fff", height: "100px" }}>
+    <div className="swiper-container">
       <Slider {...settings}>
         {ClientImages.map((src, i) => (
-          <div
-            key={i}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={src}
-              alt={`Slide ${i + 1}`}
-              style={{
-                height: "100px",
-                width: "auto",
-                objectFit: "contain",
-              }}
-            />
-          </div>
+          <img
+            src={src}
+            alt={`Slide ${i + 1}`}
+            className="swiper-img"
+          />
         ))}
       </Slider>
     </div>

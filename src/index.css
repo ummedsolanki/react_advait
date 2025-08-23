@@ -127,6 +127,43 @@ body {
   max-width: 597px;
 }
 
+/*--------------swiper----------------*/
+
+.swiper-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-slide>div {
+  margin: 0 15px;
+}
+
+.swiper-container {
+  height: 100%;
+  background-color: #fff;
+  padding: 1.875rem 2rem;
+  border-radius: 16px;
+}
+
+.swiper-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-img {
+  height: 3.75rem;
+  width: auto;
+  object-fit: contain;
+}
+
 /*-------------------------home-solution-------------------------*/
 
 /* Navigation Links */
@@ -3615,4 +3652,8 @@ textarea {
     max-width: 300px;
   }
 
+  .swiper-container {
+    padding: 1rem 1rem;
+    border-radius: 16px;
+  }
 }
