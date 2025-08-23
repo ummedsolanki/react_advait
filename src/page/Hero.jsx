@@ -39,7 +39,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero" style={{ marginTop: "20px" }}>
+    <section
+      className="hero"
+      style={{ marginTop: "20px", overflow: "hidden", borderRadius: "20px" }}
+    >
       {/* 🔁 Background Video */}
       <video
         ref={videoRef}
