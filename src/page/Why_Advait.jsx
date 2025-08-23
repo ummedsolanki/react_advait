@@ -1,5 +1,5 @@
 import { useState } from "react";
-import team from "../assets/card2.jpg";
+import team from "../assets/Why-Advait.png";
 import { whyCardData, whyText } from "../data/staticData";
 
 // Card Component
