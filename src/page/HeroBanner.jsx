@@ -28,32 +28,9 @@ const styles = {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     borderRadius: '20px',
   },
-  heroContent: {
-    position: 'relative',
-    zIndex: 1,
-    color: '#FFF',
-    maxWidth: '597px',
-  },
-  mainHeading: {
-    fontSize: '60px',
-    fontFamily: '"Open Sans", sans-serif',
-    fontStyle: 'italic',
-    fontWeight: 600,
-    lineHeight: 'normal',
-    margin: 0,
-    marginBottom: '20px',
-  },
   headingEm: {
     display: 'block',
     fontStyle: 'italic',
-  },
-  subHeading: {
-    fontSize: '25px',
-    fontFamily: '"Open Sans", sans-serif',
-    fontWeight: 400,
-    lineHeight: 'normal',
-    margin: '0 0 30px 0',
-    width: '395px',
   },
   contactButton: {
     width: '177px',
@@ -88,31 +65,35 @@ const styles = {
     maxWidth: '200px',
   }
 };
-
 const HeroBanner = () => {
   return (
-    <section style={styles.heroContainer}>
-      <div style={styles.overlay}></div>
-      <div style={styles.heroContent}>
-        <h1 style={styles.mainHeading}>
-          <span style={styles.headingEm}>{heroText.heroTitle}</span>
-          <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
-        </h1>
-        <p style={styles.subHeading}>{heroText.heroSubTitle2}</p>
-        <button style={styles.contactButton}>
-          {heroText.contactUs}
-          <svg 
-            style={styles.buttonIcon}
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 24 24" 
-            fill="none"
-          >
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      <img src={logo} alt="Logo" style={styles.heroLogo} />
-    </section>
+    <>
+      <section style={styles.heroContainer}>
+        <div style={styles.overlay}></div>
+        <div className="heroContent">
+          <h1 className="mainHeading">
+            <span style={styles.headingEm}>{heroText.heroTitle}</span>
+            <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
+          </h1>
+          <p className="subHeading">{heroText.heroSubTitle2}</p>
+          <button className="apply-btn">
+            <span className="btn-text">{heroText.contactUs}</span>
+            <div className="job-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="16"
+                viewBox="0 0 32 16"
+                fill="currentColor"
+              >
+                <path d="M1.00024 7C0.447959 7 0.000244141 7.44772 0.000244141 8C0.000244141 8.55228 0.447959 9 1.00024 9V8V7ZM31.7074 8.70711C32.0979 8.31658 32.0979 7.68342 31.7074 7.29289L25.3434 0.928932C24.9529 0.538408 24.3197 0.538408 23.9292 0.928932C23.5387 1.31946 23.5387 1.95262 23.9292 2.34315L29.586 8L23.9292 13.6569C23.5387 14.0474 23.5387 14.6805 23.9292 15.0711C24.3197 15.4616 24.9529 15.4616 25.3434 15.0711L31.7074 8.70711ZM1.00024 8V9L31.0002 9V8V7L1.00024 7V8Z" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <img src={logo} alt="Logo" style={styles.heroLogo} />
+      </section>
+    </>
   );
 };
 

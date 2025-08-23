@@ -103,6 +103,30 @@ body {
   align-items: center;
 }
 
+.mainHeading {
+  font-size: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.subHeading {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 30px 0;
+  width: 395px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 597px;
+}
+
 /*-------------------------home-solution-------------------------*/
 
 /* Navigation Links */
@@ -3482,4 +3506,18 @@ textarea {
   .home-service {
     margin: 0 1rem !important;
   }
+
+  .mainHeading {
+    font-size: var(--p-header-fontsize);
+  }
+
+  .subHeading {
+    font-size: var(--p-cardtitle-fontsize);
+    max-width: 300px;
+  }
+
+  .heroContent {
+    max-width: 300px;
+  }
+
 }
