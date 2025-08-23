@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import heroVideo from "../assets/Final Video.mp4";
+import heroVideo from "../assets/Merge videos project.mp4";
 import logo from "../assets/i3.svg";
 
 export default function Hero() {
@@ -76,7 +76,7 @@ export default function Hero() {
               style={{
                 display: "block",
                 // width: "20%",
-                height: "auto",
+                height: "50px",
               }}
             />
           </div>
