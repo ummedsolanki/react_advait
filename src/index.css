@@ -83,6 +83,11 @@ body {
   margin-bottom: 0 !important;
 }
 
+.home-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .sectionHeader {
   display: flex;
   justify-content: space-between;
