@@ -18,14 +18,11 @@ export default function Hero() {
       }, 4000);
     };
 
-    const handlePlay = () => {
-      startHeadingTimer();
-    };
-
+    const handlePlay = () => startHeadingTimer();
     const handleEnded = () => {
       video.currentTime = 0;
-      video.play(); // restart video
-      startHeadingTimer(); // restart heading timer too
+      video.play();
+      startHeadingTimer();
     };
 
     video.addEventListener("play", handlePlay);
@@ -43,33 +40,26 @@ export default function Hero() {
       className="hero"
       style={{ marginTop: "20px", overflow: "hidden", borderRadius: "20px" }}
     >
-      {/* 🔁 Background Video */}
-      <video
-        ref={videoRef}
-        className="hero-video"
-        autoPlay
-        muted
-        playsInline
-
-      >
+      <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* 🔁 Overlay Content */}
       <div className="hero-overlay">
         <div className="container">
-          {/* ⏱️ Heading shows for 4 sec every time video starts */}
-          {showHeading && (
-            <h1>
-              Empowering Businesses with
-              <br />
-              SAP Solutions & Digital
-              <br /> Transformation
-            </h1>
-          )}
+          <h1
+            className={`hero-heading ${showHeading ? "show" : "hide"}`}
+            style={{
+              transition: "opacity 0.6s ease-in-out",
+              opacity: showHeading ? 1 : 0,
+            }}
+          >
+            Empowering Businesses with
+            <br />
+            SAP Solutions & Digital
+            <br /> Transformation
+          </h1>
 
-          {/* ✅ Silver Partner Logo */}
           <div
             style={{
               position: "absolute",
@@ -88,7 +78,6 @@ export default function Hero() {
               alt="Silver Partner"
               style={{
                 display: "block",
-                // width: "20%",
                 height: "55px",
               }}
             />
