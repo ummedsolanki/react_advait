@@ -34,7 +34,8 @@ import Counter from "./page/Counter";
 import HeaderMobile from "./page/HeaderMobile";
 import { useState, useEffect } from "react";
 import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
-
+import Solution from "./page/Solution";
+import Infra from "./page/Infra";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -119,6 +120,8 @@ function App() {
             </>
           }
         />
+        <Route path="/infra" element={<Infra />} />
+        <Route path="/solution" element={<Solution />} />
         <Route path="/cloud-solutions" element={<CloudSolutions />} />
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/modernization" element={<Modernization />} />
