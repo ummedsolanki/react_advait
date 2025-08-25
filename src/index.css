@@ -965,6 +965,68 @@ body {
   overflow: hidden;
 }
 
+.hero {
+  position: relative;
+  /* anchor for absolute logo */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.silver-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  /* ensure it's always above other content */
+
+}
+
+.silver-logo img {
+  display: block;
+  height: 55px;
+  width: auto;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .silver-logo img {
+    height: 50px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .silver-logo {
+    bottom: 25px;
+    right: 15px;
+    padding: 4px 10px;
+  }
+
+  .silver-logo img {
+    height: 40px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .silver-logo {
+    bottom: 45px;
+    right: 10px;
+    padding: 3px 8px;
+  }
+
+  .silver-logo img {
+    height: 35px;
+  }
+}
+
 .hero-video {
   position: absolute;
   top: 0;
@@ -1032,19 +1094,15 @@ body {
 @media (max-width: 600px) {
   .hero {
     height: 70vh;
-    /* smaller hero on phones */
   }
 
   .hero-video {
-    object-fit: contain;
-    /* show whole video on small screens */
+    object-fit: cover;
     background-color: black;
-    /* letterbox effect */
   }
 
   .hero-overlay h1 {
     font-size: 1.6rem;
-    /* smaller heading */
     line-height: 1.2;
   }
 
