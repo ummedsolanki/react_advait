@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 export default function Counter() {
   return (
     <div
-      className="counters about-margin counter-section"
+      className="counters counter-section"
     >
       {/* Card 1 */}
       <div

@@ -51,8 +51,8 @@ const Studies = [
 export default function Insights() {
   return (
     <>
-      <section className="industries-section header-margin mobile-image-wrapper-ext-80">
-        <div className="video-banner">
+      <section className="industries-section header-margin">
+        <div className="video-banner mobile-image-wrapper-ext-80">
           <video
             className="video-bg"
             src={industryVideo}

@@ -61,7 +61,7 @@ export default function JoinUs() {
   return (
     <>
       <section className="about-section header-margin">
-        <div className="about-image-wrapper">
+        <div className="about-image-wrapper mobile-image-wrapper-ext-80">
           <video
             src={aboutImage}
             className="about-image"
