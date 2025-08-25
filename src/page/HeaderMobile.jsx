@@ -37,7 +37,7 @@ const HeaderMobile = () => {
     {
       title: headerData.services,
       path: "/services",
-      submenu: modalContent.services,
+      submenu: modalContent.MobileServices,
     },
     { title: headerData.industries, path: "/industries" },
     { title: headerData.careers, path: "/careers" },
@@ -100,7 +100,7 @@ const HeaderMobile = () => {
                               className="mobile-submenu-item"
                             >
                               <Link
-                                to={subItem.path}
+                                to={subItem.link}
                                 className="mobile-submenu-link"
                                 onClick={closeMenu}
                               >

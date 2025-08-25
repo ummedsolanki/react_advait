@@ -28,11 +28,17 @@ import WorkedWithSection from "./page/Workedwithe";
 import WorldMap from "./page/WorldMap";
 import CompanyExp from "./components/company_exp";
 import SolutionsSection from "./page/Solutions";
-import { Routes, Route, Navigate, Outlet } from "react-router-dom";
+import { Routes, Route, Navigate, Outlet, useOutletContext } from "react-router-dom";
 import FooterDetails from "./components/FooterDetails";
 import Counter from "./page/Counter";
 import HeaderMobile from "./page/HeaderMobile";
 import { useState, useEffect } from "react";
+import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
+
+// Custom hook to access context
+export function useIsMobile() {
+  return useOutletContext().isMobile;
+}
 
 function Layout() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -41,7 +47,6 @@ function Layout() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -49,7 +54,7 @@ function Layout() {
   return (
     <>
       {isMobile ? <HeaderMobile /> : <Header />}
-      <Outlet />
+      <Outlet context={{ isMobile }} />
       <Footer />
     </>
   );
@@ -71,22 +76,26 @@ function Home() {
     </>
   );
 }
+
+// Move the isMobile usage inside AboutPage component
+function AboutPage() {
+  const isMobile = useIsMobile();
+  return (
+    <>
+      <AboutUs />
+      <MissionSection />
+      <TimelineSlider />
+      {isMobile ? <OurTeamMobile /> : <Team />}
+    </>
+  );
+}
+
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route
-          path="/about"
-          element={
-            <>
-              <AboutUs />
-              <MissionSection />
-              <TimelineSlider />
-              <Team />
-            </>
-          }
-        />
+        <Route path="/about" element={<AboutPage />} />
         <Route
           path="/industries"
           element={

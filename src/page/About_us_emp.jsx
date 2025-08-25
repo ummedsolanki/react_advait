@@ -1,39 +1,29 @@
-import aboutImage from "../assets/About-us.jpg";
+import { aboutUsEmp, aboutUsEmpContent } from "../data/aboutUs.data";
 
 export default function AboutUs() {
   return (
-    <section className="about-section about-margin header-margin">
-      <div className="about-image-wrapper">
-        <img src={aboutImage} alt="About Us" className="about-image" />
+    <section className="about-section about-margin-0-margin">
+      <div className="about-image-wrapper mobile-image-wrapper-ext-80">
+        <img src={aboutUsEmp.aboutImage} alt="About Us" className="about-image" />
         <div className="about-overlay">
-          <h1>ABOUT US</h1>
+          <h1>{aboutUsEmp.title}</h1>
         </div>
       </div>
 
       <div className="about-content">
         <div className="about-left">
           <h2>
-            <strong>Empowering Your Digital <span className="mobile-br"><br /> </span>Journey
-            </strong> with Clarity and <span className="mobile-br"><br /></span>Confidence
+            <strong>{aboutUsEmpContent.title1} <span className="mobile-br"><br /> </span>{aboutUsEmpContent.title2}
+            </strong> {aboutUsEmpContent.title3} <span className="mobile-br"><br /></span>{aboutUsEmpContent.title4}
           </h2>
         </div>
 
         <div className="about-right">
           <p>
-            Advait Business Solutions is a trusted global technology partner
-            with over 13 years of experience in delivering innovative,
-            scalable enterprise solutions. Headquartered in Ahmedabad, India,
-            the company supports organizations worldwide in their digital
-            transformation journeys. Advait specializes in implementing and
-            optimizing advanced technologies including SAP S/4HANA, RISE with
-            SAP, Microsoft Dynamics, Odoo ERP, Analytics, AI/ML, and Custom
-            Application Development.
+            {aboutUsEmpContent.para1}
           </p>
           <p>
-            With a deep commitment to quality and a customer-first mindset,
-            Advait empowers businesses across industries to enhance operational
-            efficiency, embrace digital innovation, and achieve measurable
-            business outcomes.
+            {aboutUsEmpContent.para2}
           </p>
         </div>
       </div>

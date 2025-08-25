@@ -28,6 +28,17 @@ export const modalContent = {
     { title: "Solutions", link: "/solutions" },
     { title: "Infra", link: "/infra" },
   ],
+  MobileServices: [
+    { title: "Services", link: "/services" },
+    { title: "Cloud Solution", link: "/cloud-solutions" },
+    {
+      title: "Consulting & Engineering Services",
+      link: "/consulting",
+    },
+    { title: "Modernization", link: "/modernization" },
+    { title: "Solutions", link: "/solutions" },
+    { title: "Infra", link: "/infra" },
+  ],
 };
 
 //Why.jsx (Why Card Data)

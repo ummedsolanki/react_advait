@@ -1,33 +1,19 @@
 import Slider from "react-slick";
-
-const timelineData = [
-  {
-    year: "2012",
-    text: "The Begining ADVAIT journey began in 2012",
-  },
-  {
-    year: "2013",
-    text: "Partnered with Accenture India The first partnership happened with and we were responsible for delivering part of the large projects undertaken.",
-  },
-  {
-    year: "2014 - 2015",
-    text: "Revenue Grew by 160% & Team Grew by 25% since inception and there was a considerable amount of revenue growth & team during 2014-2015.",
-  },
-  {
-    year: "2016",
-    text: "Delivery Centre Setup in Ahmedabad, Gujarat. India Inaugurated a new office in Ahmedabad for setting up a delivery center for Gujarat.",
-  },
-  {
-    year: "2017",
-    text: "Attained CMMi Level 3 certification for non-SAP practices, Recognition by DIPP for an upcoming startup from the government.",
-  },
-  {
-    year: "2018",
-    text: "Team Grew Team Grew by 15% and Revenues by 30%. Performed Upgrades, Migrations and implementations on SAP.",
-  },
-];
+import { useState, useEffect } from "react";
+import { timelineData } from "../data/aboutUs.data";
 
 export default function TimelineSlider() {
+  const [isWebView, setIsWebView] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWebView(window.innerWidth >= 768); // e.g., >=768px considered "web"
+    };
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -41,11 +27,12 @@ export default function TimelineSlider() {
     touchMove: false,
     arrows: false,
     pauseOnHover: false,
-    cssEase: "linear"
+    cssEase: "linear",
+    variableWidth: isWebView,
   };
 
   return (
-    <div className="timeline-slider about-margin">
+    <div className="timeline-slider about-margin-0-margin">
       <div className="timeline-line"></div>
       <Slider {...settings}>
         {timelineData.map((item, index) => (

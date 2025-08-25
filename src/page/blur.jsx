@@ -1,56 +1,16 @@
-import img1 from "../assets/team1.jpg";
-import img1Hover from "../assets/team1.jpg";
-import img2 from "../assets/team2.jpg";
-import img2Hover from "../assets/team1.jpg";
-import img3 from "../assets/team3.jpg";
-import img3Hover from "../assets/team1.jpg";
-import linkedinIcon from "../assets/linkedin.svg";
-
-const teamMembers = [
-  {
-    name: "James Carter",
-    role: "Senior Dev",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    image: img1,
-    hoverImage: img1Hover,
-    linkedin: "#",
-    linkedinIcon: linkedinIcon,
-  },
-  {
-    name: "Olivya Brook",
-    role: "UI/UX Designer",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image: img2,
-    hoverImage: img2Hover,
-    linkedin: "#",
-    linkedinIcon: linkedinIcon,
-  },
-  {
-    name: "Emma Johnson",
-    role: "Marketing Head",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    image: img3,
-    hoverImage: img3Hover,
-    linkedin: "#",
-    linkedinIcon: linkedinIcon,
-  },
-];
+import { teamMembers, teamStaticData } from "../data/aboutUs.data";
 
 export default function Team() {
   return (
-    <section className="team-section about-margin ">
+    <section className="team-section about-margin-0-margin">
       <div className="team-header">
-        <p className="team-subtitle">Our Team</p>
+        <p className="team-subtitle">{teamStaticData.subtitle}</p>
         <h2>
           <strong>
-            A team of{" "}
-            experts
+            {teamStaticData.title}
             <br />
-            {" "}
-            dedicated </strong> to your success.
+            {teamStaticData.subtitle2}
+            {teamStaticData.subtitle3} </strong>
         </h2>
       </div>
 
@@ -72,7 +32,7 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="linkedin-icon"
                 >
-                  <img src={member.linkedinIcon} alt="LinkedIn" />
+                  <img src={teamStaticData.linkedinImage} alt="LinkedIn" />
                 </a>
               </div>
             </div>
