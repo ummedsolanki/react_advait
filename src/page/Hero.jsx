@@ -6,8 +6,17 @@ export default function Hero() {
   const videoRef = useRef(null);
   const [showHeading, setShowHeading] = useState(false);
   const timerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect screen width to apply mobile view styles dynamically
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // you can adjust breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const video = videoRef.current;
 
     const startHeadingTimer = () => {
@@ -32,13 +41,18 @@ export default function Hero() {
       video.removeEventListener("play", handlePlay);
       video.removeEventListener("ended", handleEnded);
       if (timerRef.current) clearTimeout(timerRef.current);
+      window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
   return (
     <section
       className="hero"
-      style={{ marginTop: "20px", overflow: "hidden", borderRadius: "20px" }}
+      style={{
+        marginTop: isMobile ? "80px" : "20px",
+        overflow: "hidden",
+        borderRadius: "20px",
+      }}
     >
       <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
         <source src={heroVideo} type="video/mp4" />
@@ -63,12 +77,13 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
-              top: "300px",
-              right: "30px",
-              height: "55px",
-              width: "auto",
-              backgroundColor: "#fff",
-              padding: "6px 12px",
+              top: isMobile ? "auto" : "300px",
+              bottom: isMobile ? "225px" : "auto",
+              right: isMobile ? "-5px" : "30px",
+              height: isMobile ? "80px" : "55px",
+              width: isMobile ? "80px" : "auto",
+              backgroundColor: isMobile ? "transparent" : "#fff",
+              padding: isMobile ? "3px 8px" : "6px 12px",
               borderRadius: "16px",
               boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
             }}
@@ -78,7 +93,8 @@ export default function Hero() {
               alt="Silver Partner"
               style={{
                 display: "block",
-                height: "55px",
+                height: isMobile ? "80px" : "55px",
+                width: isMobile ? "80px" : "auto",
               }}
             />
           </div>
