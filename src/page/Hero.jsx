@@ -9,9 +9,8 @@ export default function Hero() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Detect screen width to apply mobile view styles dynamically
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // you can adjust breakpoint
+      setIsMobile(window.innerWidth <= 768); // adjust breakpoint as needed
     };
 
     checkMobile();
@@ -54,11 +53,29 @@ export default function Hero() {
         borderRadius: "20px",
       }}
     >
-      <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
-        <source src={heroVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
+      {isMobile ? (
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted
+          playsInline
+          style={{
+            width: "100%",
+            height: isMobile ? "105%" : "auto",
+            objectFit: isMobile ? "cover" : "contain",
+            marginTop: isMobile ? "-15px" : "0px",
+          }}
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
       <div className="hero-overlay">
         <div className="container">
           <h1
@@ -85,7 +102,6 @@ export default function Hero() {
               backgroundColor: isMobile ? "transparent" : "#fff",
               padding: isMobile ? "3px 8px" : "6px 12px",
               borderRadius: "16px",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
             }}
           >
             <img
