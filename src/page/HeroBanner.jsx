@@ -1,4 +1,4 @@
-import bannerImage from "../assets/Take Your Business .png";
+import bannerImage from "../assets/Take Your Business .jpg";
 import logo from "../assets/Advait White Logo.svg";
 import { heroText } from "../data/staticData";
 

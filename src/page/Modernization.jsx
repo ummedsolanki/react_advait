@@ -1,6 +1,9 @@
-import industryVideo from "../assets/industry.mp4";
-import Modernization1 from "../assets/card1.jpg";
-import Modernization2 from "../assets/card2.jpg";
+import industryVideo from "../assets/Modernization.png";
+import Modernization1 from "../assets/Application Migration Services.png";
+import Modernization2 from "../assets/Cloud Transformation Services.png";
+import Modernization3 from "../assets/Data Analytics.png";
+import Modernization4 from "../assets/Application Managed Services.png";
+import Modernization5 from "../assets/Sofware Development.png";
 import ServiceCard from "../components/ServiceCard";
 
 const Modernizations = [
@@ -15,22 +18,37 @@ const Modernizations = [
     description:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
     src: Modernization2,
-  }
-];
+  },
+  {
+    title: "SAP Analytics Cloud",
+    description:
+      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
+    src: Modernization3,
+  },
+  {
+    title: "SAP Fiori & UX",
+    description:
+      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
+    src: Modernization4,
+  },
+  {
+    title: "SAP Analytics Cloud",
+    description:
+      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
+    src: Modernization5,
+  }]
 
 export default function Modernization() {
   return (
     <>
       <section className="industries-section about-margin">
         <div className="video-banner">
-          <video
+          <img
             className="video-bg"
             src={industryVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
+            alt="Industry Video"
           />
+           
           <div className="video-overlay">
             <h1 className="industries-title">MODERNIZATION</h1>
           </div>

@@ -1,7 +1,6 @@
 //contactUs data
 
-//contactUs Hero Datamp4
-import contactUsVideo from "../assets/industry.mp4";
+import contactUsVideo from "../assets/Contact US.jpg";
 export const contactUsHeroData = {
   contactUsTitle: "CONTACT US",
   LetStart: "Let's",
@@ -17,9 +16,9 @@ export const contactUsHeroData = {
 };
 
 //contactUs Form Data
-import rightimage from "../assets/handshake.jpg";
+import rightimage from "../assets/Contact Us Form.jpg";
 export const contactUsFormData = {
-  heading: " Let’s Discuss How We",
+  heading: " Let's Discuss How We",
   subHeading: "Can",
   subHeading2: "Transform Your ",
   subHeading3: "Business",

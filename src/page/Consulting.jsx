@@ -1,7 +1,9 @@
-import industryVideo from "../assets/industry.mp4";
-import Consulting1 from '../assets/card1.jpg';
-import Consulting2 from '../assets/card2.jpg';
-import Consulting3 from '../assets/card3.jpg';
+import industryVideo from "../assets/Consuting & Engineering Services.png";
+import Consulting1 from '../assets/Consuting.png';
+import Consulting2 from '../assets/Data & AI.png';
+import Consulting3 from '../assets/Custom Applications.png';
+import Consulting4 from '../assets/Design & Engineering.png';
+import Consulting5 from '../assets/Integration.png';
 import ServiceCard from '../components/ServiceCard';
 
 const Consultings = [
@@ -27,13 +29,13 @@ const Consultings = [
     title: 'SAP Fiori & UX',
     description:
       'Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.',
-    src: Consulting2,
+    src: Consulting4,
   },
   {
     title: 'SAP S/4HANA',
     description:
       'Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.',
-    src: Consulting3,
+    src: Consulting5,
   }
 ];
 
@@ -42,13 +44,10 @@ export default function Consulting() {
     <>
       <section className="industries-section about-margin">
         <div className="video-banner">
-          <video
+          <img
             className="video-bg"
             src={industryVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
+            alt="Industry Video"
           />
           <div className="video-overlay">
             <h1 className="industries-title">

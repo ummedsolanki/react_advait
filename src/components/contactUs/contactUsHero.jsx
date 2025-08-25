@@ -5,14 +5,13 @@ const contactUsHero = () => {
   return (
     <section className="contact-us-section">
       <div className="video-banner">
-        <video
+        <img
           className="video-bg"
           src={contactUsHeroData.contactUsVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
+          alt="Contact Us"
         />
+          playsInline
+        
         <div className="video-overlay">
           <h1 className="contact-us-title">{contactUsHeroData.contactUsTitle}</h1>
         </div>

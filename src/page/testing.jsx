@@ -7,7 +7,7 @@ import img5 from "../assets/ind5.jpg";
 import img6 from "../assets/ind6.jpg";
 import img7 from "../assets/ind7.jpg";
 import img8 from "../assets/ind4.jpg";
-import aboutImage from "../assets/About-us.jpg";
+import aboutImage from "../assets/Join Us.mp4";
 
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
@@ -60,10 +60,19 @@ export default function JoinUs() {
 
   return (
     <>
-      {/* About Image */}
       <section className="about-section about-margin header-margin">
         <div className="about-image-wrapper">
-          <img src={aboutImage} alt="About Us" className="about-image" />
+          <video
+            src={aboutImage}
+            className="about-image"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
+
           <div className="about-overlay">
             <h1>JOIN US</h1>
           </div>
