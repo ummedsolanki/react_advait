@@ -60,7 +60,7 @@ export default function JoinUs() {
 
   return (
     <>
-      <section className="about-section about-margin header-margin">
+      <section className="about-section header-margin">
         <div className="about-image-wrapper">
           <video
             src={aboutImage}
@@ -80,10 +80,10 @@ export default function JoinUs() {
       </section>
 
       {/* Open Roles */}
-      <div className="section-header about-margin job-section">
+      <div className="section-header job-section">
         <h2 className="job-header">Our Open Roles</h2>
       </div>
-      <div className="job-section about-margin">
+      <div className="job-section">
         {roles.map((role, index) => (
           <div key={index} className="job-card">
             <div>
@@ -115,8 +115,8 @@ export default function JoinUs() {
       </div>
 
       {/* Culture */}
-      <h2 className="culture-title about-margin">Culture highlights</h2>
-      <div className="gallery-container about-margin">
+      <h2 className="culture-title">Culture highlights</h2>
+      <div className="gallery-container">
         {images.map((img, i) => (
           <div key={i} className={`gallery-item ${img.id}`}>
             <img src={img.src} alt={`gallery-${i}`} />
