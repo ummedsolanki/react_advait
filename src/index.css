@@ -37,7 +37,8 @@ p,
 h2,
 h3,
 section,
-div {
+div,
+body {
   margin: 0;
 }
 
@@ -988,12 +989,12 @@ body {
 /* 📱 Phones */
 @media (max-width: 600px) {
   .hero {
-    height: 70vh;
+    height: 40vh;
     /* smaller hero on phones */
   }
 
   .hero-video {
-    object-fit: contain;
+    object-fit: cover;
     /* show whole video on small screens */
     background-color: black;
     /* letterbox effect */
@@ -1254,9 +1255,20 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.workedwith-src img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.workedwith-card:hover img {
+  transform: scale(1.05);
+}
+
+
 .workedwith-src {
   margin-top: auto;
-  /* push image to the bottom */
+  overflow: hidden;
+  border-radius: var(--radius);
 }
 
 .workedwith-src img {

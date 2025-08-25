@@ -50,7 +50,7 @@ export default function Hero() {
         autoPlay
         muted
         playsInline
-       
+
       >
         <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
