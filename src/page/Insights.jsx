@@ -61,7 +61,7 @@ export default function Insights() {
             playsInline
           />
           <div className="video-overlay">
-            <h1 className="industries-title">CLOUD SOLUTIONS</h1>
+            <h1 className="industries-title">INSIGHTS</h1>
           </div>
         </div>
       </section>
