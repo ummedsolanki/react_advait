@@ -40,6 +40,7 @@ const HeaderMobile = () => {
       submenu: modalContent.MobileServices,
     },
     { title: headerData.industries, path: "/industries" },
+    { title: headerData.insights, path: "/insights" },
     { title: headerData.careers, path: "/careers" },
   ];
 

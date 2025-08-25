@@ -416,14 +416,15 @@ body {
   position: relative;
   overflow: hidden;
   border: none;
-  background: var(--green-text);
-  color: #fff;
+  background: var(--bg-card);
+  color: var(--green-text);
   font-size: 1rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   border-radius: 30px;
+  border: 1px solid var(--green-text);
 }
 
 /* White wipe (hover in) */
@@ -436,7 +437,7 @@ body {
   width: 0;
   border-radius: 30px;
   /* hidden by default */
-  background: #fff;
+  background: var(--green-text);
   transition: width 0.45s ease;
   z-index: 0;
 }
@@ -451,7 +452,7 @@ body {
   height: 100%;
   width: 0;
   /* hidden by default */
-  background: var(--green-text);
+  background: var(--bg-card);
   transition: width 0.45s ease;
   z-index: 1;
   /* above white but below text */
@@ -481,7 +482,7 @@ body {
 
 /* On hover, text/icon turn green */
 .contactus-apply-btn:hover .contactus-btn-text {
-  color: var(--green-text);
+  color: var(--bg-card);
 }
 
 /* Icon circle */
@@ -491,8 +492,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  color: var(--green-text);
+  background: var(--green-text);
+  color: var(--bg-card);
   border: 1px solid currentColor;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -507,8 +508,8 @@ body {
 
 .contactus-apply-btn:hover .contactus-job-box {
   transform: rotate(-45deg);
-  background: var(--green-text);
-  color: white;
+  background: var(--bg-card);
+  color: var(--green-text);
 }
 
 /*---pop up ---*/
