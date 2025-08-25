@@ -25,7 +25,7 @@ const workedWithe = [
 
 export default function WorkedWithSection() {
   return (
-    <section className="workedwith-section about-margin">
+    <section className="workedwith-section">
       <div className="workedwith-header">
         <p className="tag">WORKED WITH</p>
         <h2>

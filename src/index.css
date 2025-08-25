@@ -1319,10 +1319,6 @@ body {
   border-radius: var(--radius);
 }
 
-.success {
-  margin: 0 2.5rem;
-}
-
 .success h2 {
   font-size: var(--header-fontsize);
   font-weight: 600;
@@ -2601,7 +2597,7 @@ body {
 .video-banner {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   min-height: 400px;
   overflow: hidden;
 }
@@ -2997,10 +2993,6 @@ textarea {
     font-size: var(--l-normal-fontsize);
   }
 
-  .success {
-    margin: 0 3rem;
-  }
-
   .success h2 {
     font-size: var(--l-header-fontsize);
   }
@@ -3246,10 +3238,6 @@ textarea {
     margin: 1.6rem 0;
   }
 
-  .success {
-    margin: 0 2rem;
-  }
-
   .success h2 {
     font-size: var(--m-header-fontsize);
   }
@@ -3352,10 +3340,6 @@ textarea {
   .workedwith-cards {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin: 1.6rem 0;
-  }
-
-  .success {
-    margin: 0 2rem;
   }
 
   .success h2 {
@@ -3466,10 +3450,6 @@ textarea {
   .workedwith-cards {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin: 1.6rem 0;
-  }
-
-  .success {
-    margin: 0 2rem;
   }
 
   .success h2 {
@@ -3625,9 +3605,6 @@ textarea {
     font-size: var(--p-normal-fontsize);
   }
 
-  .success {
-    margin: 0 1rem;
-  }
 
   .success h2 {
     font-size: var(--p-header-fontsize);

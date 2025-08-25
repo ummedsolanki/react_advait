@@ -5,6 +5,7 @@ import Consulting3 from "../assets/Chemical Industry.png";
 import Study1 from "../assets/insights1.jpg";
 import Study2 from "../assets/insights2.jpg";
 import Study3 from "../assets/insights3.jpg";
+import ServiceCard from "../components/ServiceCard";
 
 const Consultings = [
   {
@@ -50,7 +51,7 @@ const Studies = [
 export default function Insights() {
   return (
     <>
-      <section className="industries-section about-margin header-margin">
+      <section className="industries-section header-margin mobile-image-wrapper-ext-80">
         <div className="video-banner">
           <video
             className="video-bg"
@@ -65,52 +66,8 @@ export default function Insights() {
           </div>
         </div>
       </section>
-      <section className="Consulting-section about-margin">
-        <div className="section-header">
-          <p className="tag">INSIGHTS</p>
-          <h2>
-            <strong>Blogs & Articles</strong>
-          </h2>
-        </div>
-
-        <div className="workedwith-cards">
-          {Consultings.map((Consulting, index) => (
-            <div className="workedwith-card" key={index}>
-              <div className="workedwith-card-header">
-                <h3>{Consulting.title}</h3>
-                <div className="arrow-box"></div>
-              </div>
-              <p>{Consulting.description}</p>
-              <div className="workedwith-src">
-                <img src={Consulting.src} alt={Consulting.title} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="Consulting-section about-margin">
-        <div className="section-header">
-          <p className="tag">WORKS</p>
-          <h2>
-            <strong>Case Studies</strong>
-          </h2>
-        </div>
-
-        <div className="workedwith-cards">
-          {Studies.map((Study, index) => (
-            <div className="workedwith-card" key={index}>
-              <div className="workedwith-card-header">
-                <h3>{Study.title}</h3>
-                <div className="arrow-box"></div>
-              </div>
-              <p>{Study.description}</p>
-              <div className="workedwith-src">
-                <img src={Study.src} alt={Study.title} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServiceCard sectionTitle="INSIGHTS" sectionTag="Blogs & Articles" data={Consultings} />
+      <ServiceCard sectionTitle="WORKS" sectionTag="Case Studies" data={Studies} />
     </>
   );
 }

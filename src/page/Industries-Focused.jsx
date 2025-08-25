@@ -2,8 +2,8 @@ import industryVideo from "../assets/industry.mp4";
 
 export default function Industries() {
   return (
-    <section className="industries-section about-margin header-margin">
-      <div className="video-banner">
+    <section className="industries-section header-margin">
+      <div className="video-banner mobile-image-wrapper-ext-80">
         <video
           className="video-bg"
           src={industryVideo}
