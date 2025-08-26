@@ -425,6 +425,7 @@ body {
   gap: 10px;
   border-radius: 30px;
   border: 1px solid var(--green-text);
+  margin-top: 2rem;
 }
 
 /* White wipe (hover in) */

@@ -97,9 +97,10 @@ const Footer = () => {
       
       <footer className="footer">
         <div className="footer-left">
-          <p className="footer-text">
-            {footerData.footerText}
-          </p>
+          <p 
+            className="footer-text"
+            dangerouslySetInnerHTML={{ __html: footerData.footerText }}
+          />
           <a href="#" className="footer-text">
             {footerData.privacyPolicy}
           </a>

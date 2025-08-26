@@ -1,8 +1,25 @@
+import React, { useState, useEffect } from "react";
 import worldMap from "../assets/Vector.svg";
-import locationIcon from "../assets/location.svg"; // your location SVG
-import { markers } from "../data/staticData";
+import locationIcon from "../assets/location.svg";
+import { markersWeb, markersMobile } from "../data/staticData";
 
 const WorldMap = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  console.log("🚀 ~ WorldMap ~ isMobile:", isMobile)
+  const [markers, setMarkers] = useState(isMobile ? markersMobile : markersWeb);
+  console.log("🚀 ~ WorldMap ~ markers:", markers)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      setMarkers(mobile ? markersMobile : markersWeb);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       style={{
@@ -10,7 +27,7 @@ const WorldMap = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        maxWidth: "1200px",
+        maxWidth: "100%",
         marginTop: "20px",
         marginBottom: "20px",
       }}
@@ -19,24 +36,24 @@ const WorldMap = () => {
         className="world-map-container"
         style={{
           position: "relative",
-          width: "100%",
-          maxWidth: "800px",
+          width: "80%",
+          maxWidth: "80%",
         }}
       >
-        {/* World Map */}
+        {/* World Map Image */}
         <img
           src={worldMap}
           alt="World Map"
           style={{
             width: "100%",
-            height: "10%",
+            height: "auto",
             borderRadius: "8px",
             filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.6))",
             display: "block",
           }}
         />
 
-        {/* Markers */}
+        {/* Dynamic Markers */}
         {markers.map((marker) => (
           <div
             key={marker.id}
@@ -79,9 +96,9 @@ const WorldMap = () => {
           padding: 8px 12px;
           border-radius: 6px;
           box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-          font-size: 8px;
+          font-size: 14px;
           line-height: 1.2;
-          width: 143px;
+          width: 300px;
           text-align: left;
           opacity: 0;
           pointer-events: none;
@@ -93,13 +110,13 @@ const WorldMap = () => {
           opacity: 1;
         }
 
-      @media (max-width: 1024px) {
+        @media (max-width: 1024px) {
           .world-map-container {
             width: 70%;
           }
           .marker .tooltip {
-            font-size: 9px;
-            width: 130px;
+            font-size: 12px;
+            width: 250px;
           }
           .marker-icon {
             width: 9px;
@@ -108,21 +125,18 @@ const WorldMap = () => {
         }
 
         @media (max-width: 768px) {
-          .world-map-container { width: 85%; }
-          .marker .tooltip { font-size: 9px; width: 120px; top: -20px; }
+          .world-map-container { width: 100% !important; }
+          .marker .tooltip { font-size: 12px; width: 250px; top: -20px; }
           .marker-icon { width: 8px; height: 22px; }
         }
 
         @media (max-width: 480px) {
           .world-map-container img { margin-top: 20px; }
-          .world-map-container {
-            width: 95%;
-          }
-          .marker .tooltip { font-size: 8px; width: 110px; padding: 6px 8px; top: -18px; }
+          .world-map-container { width: 95% !important; }
+          .marker .tooltip { font-size: 12px; width: 150px; padding: 6px 8px; top: -18px; }
           .marker-icon { width: 7px; height: 20px; }
-              }
-
-    `}
+        }
+        `}
       </style>
     </section>
   );

@@ -230,8 +230,21 @@ const ContactForm = () => {
     success: null,
     message: "",
   });
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
 
   const countryOptions = useMemo(() => countryList().getData(), []);
+
+  const isMobileOrTablet = window.innerWidth <= 1024;
+
+  const customSelectStyles = {
+    control: (base) => ({
+      ...base,
+      height: isMobileOrTablet ? "45px" : "50px",
+      minHeight: isMobileOrTablet ? "45px" : "50px",
+      fontSize: "16px",
+      borderRadius: "10px",
+    }),
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -386,9 +399,12 @@ const ContactForm = () => {
               >
                 <Select
                   options={countryOptions}
-                  value={formData.country} // directly bind the whole object
+                  value={formData.country}
                   onChange={handleCountryChange}
+                  onMenuOpen={() => setIsCountryDropdownOpen(true)}
+                  onMenuClose={() => setIsCountryDropdownOpen(false)}
                   placeholder="Select Country"
+                  styles={customSelectStyles}
                 />
               </div>
 
@@ -404,14 +420,14 @@ const ContactForm = () => {
               />
             </div>
 
-            <div style={contactFormStyles.checkBoxContainer}>
+            {/* <div style={contactFormStyles.checkBoxContainer}>
               <input type="checkbox" id="linkedin" />
               <label htmlFor="linkedin" style={contactFormStyles.checkBoxLabel}>
                 {contactUsFormData.checkBoxLabel}
               </label>
-            </div>
+            </div> */}
 
-            <button
+            {/* <button
               type="submit"
               className="contact-send-btn"
               style={contactFormStyles.sendButton}
@@ -429,7 +445,30 @@ const ContactForm = () => {
                   />
                 </svg>
               </div>
-            </button>
+            </button> */}
+
+            {!isCountryDropdownOpen && (
+              <button
+                type="submit"
+                className="contactus-apply-btn"
+                disabled={isSubmitting}
+              >
+                <span className="contactus-btn-text">
+                  {isSubmitting ? "Sending..." : contactUsFormData.sendMessage}
+                </span>
+                <div className="contactus-job-box job-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 32 16"
+                    fill="currentColor"
+                  >
+                    <path d="M1.00024 7C0.447959 7 0.000244141 7.44772 0.000244141 8C0.000244141 8.55228 0.447959 9 1.00024 9V8V7ZM31.7074 8.70711C32.0979 8.31658 32.0979 7.68342 31.7074 7.29289L25.3434 0.928932C24.9529 0.538408 24.3197 0.538408 23.9292 0.928932C23.5387 1.31946 23.5387 1.95262 23.9292 2.34315L29.586 8L23.9292 13.6569C23.5387 14.0474 23.5387 14.6805 23.9292 15.0711C24.3197 15.4616 24.9529 15.4616 25.3434 15.0711L31.7074 8.70711ZM1.00024 8V9L31.0002 9V8V7L1.00024 7V8Z" />
+                  </svg>
+                </div>
+              </button>
+            )}
 
             {submitStatus.message && (
               <p
