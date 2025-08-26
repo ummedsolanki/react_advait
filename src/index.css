@@ -1660,6 +1660,13 @@ body {
   line-height: 1.5;
 }
 
+.success-class {
+  width: 380px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 @media (max-width: 768px) {
   .timeline-slider {
     padding: 40px 15px;
@@ -3129,6 +3136,10 @@ textarea {
   .section5_right img {
     margin-top: 3rem;
   }
+
+  .success-class {
+    width: 490px;
+  }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1367px) {
@@ -3214,6 +3225,10 @@ textarea {
   .service-content {
     display: grid;
     grid-template-columns: 40% 56%;
+  }
+
+  .success-class {
+    width: 350px;
   }
 }
 
@@ -3331,6 +3346,9 @@ textarea {
     font-size: var(--m-header-fontsize);
   }
 
+  .success-class {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
@@ -3433,6 +3451,9 @@ textarea {
     font-size: var(--s-header-fontsize);
   }
 
+  .success-class {
+    width: 280px;
+  }
 }
 
 /* Tablets: 991px and below */
@@ -3535,6 +3556,10 @@ textarea {
 
   .counter-section {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .success-class {
+    width: 320px;
   }
 }
 
@@ -3931,4 +3956,11 @@ textarea {
     fill: #ffffff;
   }
 
+  .slick-slide>div {
+    margin: 0 20px;
+  }
+
+  .success-class {
+    width: 280px;
+  }
 }

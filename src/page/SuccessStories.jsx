@@ -76,14 +76,14 @@ export default function TestimonialSlider() {
             <div key={i} style={{ padding: "15px" }}>
               <div
                 style={{
-                  // background: "#e6ffe6",
+                  background: "#ffffff",
                   borderRadius: "12px",
                   padding: "16px",
                   textAlign: "left",
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "8px",
+                  gap: "10px",
                 }}
               >
                 <div
@@ -98,12 +98,7 @@ export default function TestimonialSlider() {
                   <img
                     src={item.img}
                     alt={item.name}
-                    style={{
-                      width: "250px",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: "12px",
-                    }}
+                    className="success-class"
                   />
                 </div>
 
