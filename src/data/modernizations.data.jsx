@@ -1,4 +1,4 @@
-import industryVideo from "../assets/Modernization.png";
+import industryVideo from "../assets/Modernization.jpg";
 export const ModernizationStaticData = {
     title:"MODERNIZATION",
     subtitle:"Innovative IT Solutions",
@@ -14,11 +14,11 @@ export const ModernizationStaticData = {
 }
 
 
-import Modernization1 from "../assets/Application Migration Services.png";
-import Modernization2 from "../assets/Cloud Transformation Services.png";
-import Modernization3 from "../assets/Data Analytics.png";
-import Modernization4 from "../assets/Application Managed Services.png";
-import Modernization5 from "../assets/Sofware Development.png";
+import Modernization1 from "../assets/Application Migration Services.jpg";
+import Modernization2 from "../assets/Cloud Transformation Services.jpg";
+import Modernization3 from "../assets/Data Analytics.jpg";
+import Modernization4 from "../assets/Application Managed Services.jpg";
+import Modernization5 from "../assets/Sofware Development.jpg";
 export const Modernizations = [
   {
     title: "SAP Analytics Cloud",

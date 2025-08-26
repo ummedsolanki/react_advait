@@ -1,7 +1,7 @@
 import industryVideo from "../assets/Insights.mp4";
-import Consulting1 from "../assets/Digital Transformation.png";
-import Consulting2 from "../assets/SAP Business Solution.png";
-import Consulting3 from "../assets/Chemical Industry.png";
+import Consulting1 from "../assets/Digital Transformation.jpg";
+import Consulting2 from "../assets/SAP Business Solution.jpg";
+import Consulting3 from "../assets/Chemical Industry.jpg";
 import Study1 from "../assets/insights1.jpg";
 import Study2 from "../assets/insights2.jpg";
 import Study3 from "../assets/insights3.jpg";

@@ -12,20 +12,20 @@ export const solutionContent = {
     para2: "With a deep commitment to quality and a customer-first mindset, Advait empowers businesses across industries to enhance operational efficiency, embrace digital innovation, and achieve measurable business outcomes.",
 }
 
-import card1 from "../assets/Rise with SAP Private cloud.png";
-import card2 from "../assets/Rise with SAP Public cloud.png";
-import card3 from "../assets/Grow with Sap.png";
-import card4 from "../assets/SAP S4HANA.png";
-import card5 from "../assets/SAP CX.png";
-import card6 from "../assets/SAP BTP.png";
-import card7 from "../assets/Success Factor.png";
-import card8 from "../assets/SAP ECC.png";
-import card9 from "../assets/Analytic Cloud.png";
-import card10 from "../assets/SAP Fiori & UX.png";
-import card11 from "../assets/SAP Development.png";
-import card12 from "../assets/Mobility.png";
-import card13 from "../assets/Managed Services.png";
-import card14 from "../assets/Big Data.png";
+import card1 from "../assets/Rise with SAP Private cloud.jpg";
+import card2 from "../assets/Rise with SAP Public cloud.jpg";
+import card3 from "../assets/Grow with Sap.jpg";
+import card4 from "../assets/SAP S4HANA.jpg";
+import card5 from "../assets/SAP CX.jpg";
+import card6 from "../assets/SAP BTP.jpg";
+import card7 from "../assets/Success Factor.jpg";
+import card8 from "../assets/SAP ECC.jpg";
+import card9 from "../assets/Analytic Cloud.jpg";
+import card10 from "../assets/SAP Fiori & UX.jpg";
+import card11 from "../assets/SAP Development.jpg";
+import card12 from "../assets/Mobility.jpg";
+import card13 from "../assets/Managed Services.jpg";
+import card14 from "../assets/Big Data.jpg";
 export const solutionProvide = [
     {
         title: "Digital Transformation",

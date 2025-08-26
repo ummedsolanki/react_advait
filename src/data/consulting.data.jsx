@@ -1,4 +1,4 @@
-import industryVideo from "../assets/Consuting & Engineering Services.png";
+import industryVideo from "../assets/Consuting & Engineering Services.jpg";
 
 export const consultingStaticData = {
   title: "CONSULTING & ENGINEERING SERVICES",
@@ -13,11 +13,11 @@ export const consultingStaticData = {
   video: industryVideo,
 };
 
-import Consulting1 from "../assets/Consuting.png";
-import Consulting2 from "../assets/Data & AI.png";
-import Consulting3 from "../assets/Custom Applications.png";
-import Consulting4 from "../assets/Design & Engineering.png";
-import Consulting5 from "../assets/Integration.png";
+import Consulting1 from "../assets/Consuting.jpg";
+import Consulting2 from "../assets/Data & AI.jpg";
+import Consulting3 from "../assets/Custom Applications.jpg";
+import Consulting4 from "../assets/Design & Engineering.jpg";
+import Consulting5 from "../assets/Integration.jpg";
 export const Consultings = [
   {
     title: "SAP Analytics Cloud",

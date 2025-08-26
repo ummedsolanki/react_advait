@@ -12,7 +12,7 @@ export const infraContent = {
     para2: "With a deep commitment to quality and a customer-first mindset, Advait empowers businesses across industries to enhance operational efficiency, embrace digital innovation, and achieve measurable business outcomes.",
 }
 
-import card1 from "../assets/Rise with SAP Private cloud.png";
+import card1 from "../assets/Rise with SAP Private cloud.jpg";
 
 export const infraProvide = [
     {

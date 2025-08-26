@@ -13,10 +13,10 @@ export const cloudStaticData = {
   industryVideo: industryVideo,
 };
 
-import Modernization1 from "../assets/SAP on Azure.png";
-import Modernization2 from "../assets/SAP on CtrlS.png";
-import Modernization3 from "../assets/Application Modernization.png";
-import Modernization4 from "../assets/Managed Services.png";
+import Modernization1 from "../assets/SAP on Azure.jpg";
+import Modernization2 from "../assets/SAP on CtrlS.jpg";
+import Modernization3 from "../assets/Application Modernization.jpg";
+import Modernization4 from "../assets/Managed Services.jpg";
 export const CloudSolution = [
   {
     title: "SAP on Azure",
