@@ -1319,7 +1319,7 @@ body {
 }
 
 /* Dip shape */
-.workedwith-card::before {
+/* .workedwith-card::before {
   content: "";
   position: absolute;
   top: -20px;
@@ -1329,8 +1329,7 @@ body {
   background: #f4f6f4;
   border-radius: 50%;
   z-index: 1;
-  /* box-shadow: 0 0 0 6px white; */
-}
+} */
 
 .workedwith-card-header {
   display: flex;
@@ -3825,4 +3824,28 @@ textarea {
     height: 30px;
     padding: 17px;
   }
+}
+.workedwith-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.workedwith-card-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workedwith-card-header .notch {
+  position: absolute;
+  top: -25px;   /* adjust depth */
+  right: 40px;  /* adjust position */
+  color: #F4F6F4;
+}
+.workedwith-card:hover .notch path {
+  stroke: rgba(0, 255, 0, 0.4);   /* match your card hover glow */
+  stroke-width: 2px;
 }
