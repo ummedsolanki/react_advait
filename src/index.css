@@ -1336,8 +1336,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.625rem;
-
 }
+
 
 .workedwith-card-header> :first-child {
   flex: 0 0 75%;
@@ -1463,9 +1463,22 @@ body {
 }
 
 .mission-title {
-  color: var(--green-text);
+  color: var(--green-text) !important;
   font-size: var(--normal-fontsize);
-  /* margin: 1.25rem 0 0 1.25rem; */
+  margin: 0;
+  padding: 0;
+}
+
+
+.mission-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.mission-header>p:first-child {
+  flex: 0 !important;
 }
 
 .mission-section {
