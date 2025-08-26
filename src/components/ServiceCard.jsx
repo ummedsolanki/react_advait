@@ -13,6 +13,7 @@ export default function ServiceCard({ sectionTitle, sectionTag, data }) {
           <div className="workedwith-card" key={index}>
             <div className="workedwith-card-header">
               <h3>{item.title}</h3>
+              <div className="arrow-box"></div>
 
               {/* Notch SVG instead of circle div */}
               <svg

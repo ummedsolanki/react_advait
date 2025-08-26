@@ -1,7 +1,7 @@
 import worked1 from "../assets/ind11.jpg";
 import worked2 from "../assets/ind12.jpg";
 import worked3 from "../assets/ind13.jpg";
-
+import ServiceCard from "../components/ServiceCard";
 const workedWithd = [
   {
     title: "Company A",
@@ -26,27 +26,7 @@ const workedWithd = [
 export default function WorkedWithSection() {
   return (
     <section className="workedwith-section">
-      <div className="workedwith-header">
-        <p className="tag">WORKED WITH</p>
-        <h2>
-          <strong>Manufacturing / Chemicals</strong>
-        </h2>
-      </div>
-
-      <div className="workedwith-cards">
-        {workedWithd.map((item, index) => (
-          <div className="workedwith-card" key={index}>
-            <div className="workedwith-card-header">
-              <h3>{item.title}</h3>
-              <div className="arrow-box"></div>
-            </div>
-            <p>{item.description}</p>
-            <div className="workedwith-src">
-              <img src={item.src} alt={item.title} />
-            </div>
-          </div>
-        ))}
-      </div>
+      <ServiceCard sectionTitle="Manufacturing / Chemicals" sectionTag="WORKED WITH" data={workedWithd} />
     </section>
   );
 }
