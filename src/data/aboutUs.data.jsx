@@ -77,7 +77,7 @@ export const timelineData = [
 //Team Members Data
 import img1 from "../assets/Jash.jpg";
 import img1Hover from "../assets/team1.jpg";
-import img2 from "../assets/jay.jpg";
+import img2 from "../assets/Jay.jpg";
 import img2Hover from "../assets/team1.jpg";
 import img3 from "../assets/Priy.jpg";
 import img3Hover from "../assets/team1.jpg";
