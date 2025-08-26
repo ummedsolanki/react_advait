@@ -1,5 +1,6 @@
 import { infraEmp, infraContent, infraProvide } from "../data/Infra.data";
 import ServiceCard from "../components/ServiceCard";
+import parse from 'html-react-parser';
 
 export default function Infra() {
     return (
@@ -14,18 +15,14 @@ export default function Infra() {
 
                 <div className="about-content">
                     <div className="about-left">
-                        <h2>
-                            <strong>{infraContent.title1} <span className="mobile-br"><br /> </span>{infraContent.title2}
-                            </strong> {infraContent.title3} <span className="mobile-br"><br /></span>{infraContent.title4}
+                        <h2 className="about-title">
+                            {parse(infraContent.title1)}
                         </h2>
                     </div>
 
                     <div className="about-right">
                         <p>
-                            {infraContent.para1}
-                        </p>
-                        <p>
-                            {infraContent.para2}
+                            {parse(infraContent.para1)}
                         </p>
                     </div>
                 </div>

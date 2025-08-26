@@ -7,7 +7,6 @@
   --bg-color: #F4F6F4;
   --radius: 1.25rem;
   --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
   --card-text: #00000099;
 
   --i-header-fontsize: 3rem;
@@ -3909,6 +3908,10 @@ textarea {
     background: transparent !important;
     padding: 0 2rem;
 
+  }
+
+  .apply-btn:hover .solutions-arrow {
+    border: none !important;
   }
 
   .solutions-arrow svg {
