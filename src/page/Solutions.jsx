@@ -107,8 +107,8 @@ export default function SolutionsSection() {
             </h2>
           </div>
           <button className="apply-btn">
-            <span className="btn-text">{solutionsText.solutionsViewAll}</span>
-            <div className="job-box">
+            <span className="btn-text service-button">{solutionsText.solutionsViewAll}</span>
+            <div className="job-box solutions-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

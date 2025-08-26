@@ -111,7 +111,7 @@ export default function BlogSection() {
           </div>
           <button className="apply-btn">
             <span className="btn-text">{blogText.blogViewAll}</span>
-            <div className="job-box">
+            <div className="job-box solutions-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

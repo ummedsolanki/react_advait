@@ -3745,7 +3745,7 @@ textarea {
 
   /*-----------------------------home-solution-----------------------------*/
   .home-section-header {
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: start;
     gap: 1rem;
   }
@@ -3825,6 +3825,7 @@ textarea {
     padding: 17px;
   }
 }
+
 .workedwith-card {
   position: relative;
   background: #ffffff;
@@ -3841,11 +3842,76 @@ textarea {
 
 .workedwith-card-header .notch {
   position: absolute;
-  top: -25px;   /* adjust depth */
-  right: 40px;  /* adjust position */
+  top: -25px;
+  /* adjust depth */
+  right: 40px;
+  /* adjust position */
   color: #F4F6F4;
 }
+
 .workedwith-card:hover .notch path {
-  stroke: rgba(0, 255, 0, 0.4);   /* match your card hover glow */
+  stroke: rgba(0, 255, 0, 0.4);
+  /* match your card hover glow */
   stroke-width: 2px;
+}
+
+@media (max-width: 768px) {
+
+  .home-section-header {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+  }
+
+  .home-section-header .section-header {
+    display: contents !important;
+  }
+
+  .home-section-header .tag {
+    order: 1 !important;
+    margin: 0 !important;
+  }
+
+  .home-section-header .apply-btn {
+    order: 2 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    /* background: transparent !important; */
+  }
+
+  .home-section-header .apply-btn::before,
+  .home-section-header .apply-btn::after {
+    display: none !important;
+  }
+
+  .home-section-header .apply-btn .btn-text {
+    display: none !important;
+  }
+
+  .home-section-header .job-box {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    margin: 0 !important;
+  }
+
+  .home-section-header h2 {
+    order: 3 !important;
+    flex-basis: 100% !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .solutions-arrow {
+    background: transparent !important;
+    padding: 0 2rem;
+
+  }
+
+  .solutions-arrow svg {
+    fill: #ffffff;
+  }
+
 }
