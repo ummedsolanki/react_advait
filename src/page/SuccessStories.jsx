@@ -13,7 +13,7 @@ export default function TestimonialSlider() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     speed: 7000,
     autoplaySpeed: 0,
     cssEase: "linear",
@@ -70,7 +70,7 @@ export default function TestimonialSlider() {
   return (
     <>
       <div className="success"><h2>Success Stories</h2></div>
-      <div style={{ margin: "auto", width: "100%" }}>
+      <div style={{ width: "100%" }} className="success-section">
         <Slider {...settings}>
           {data.map((item, i) => (
             <div key={i} style={{ padding: "15px" }}>

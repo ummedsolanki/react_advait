@@ -178,6 +178,9 @@ body {
 }
 
 /*--------------swiper----------------*/
+.success-section {
+  margin: 2.5rem 0;
+}
 
 .swiper-img {
   height: 60px;
@@ -192,7 +195,7 @@ body {
 }
 
 .slick-slide>div {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .swiper-container {
@@ -212,6 +215,10 @@ body {
   height: 3.75rem;
   width: auto;
   object-fit: contain;
+}
+
+.gallery-container {
+  margin-bottom: 2.5rem;
 }
 
 /*-------------------------home-solution-------------------------*/
@@ -3779,6 +3786,7 @@ textarea {
     display: flex;
     flex-direction: column !important;
     gap: 1rem !important;
+    margin-bottom: 1rem;
   }
 
   /*-----------------------------home-solution-----------------------------*/
@@ -3962,5 +3970,9 @@ textarea {
 
   .success-class {
     width: 280px;
+  }
+
+  .success-section {
+    margin: 1rem 0;
   }
 }
