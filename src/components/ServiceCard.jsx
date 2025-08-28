@@ -16,18 +16,24 @@ export default function ServiceCard({ sectionTitle, sectionTag, data }) {
               <div className="arrow-box"></div>
 
               {/* Notch SVG instead of circle div */}
-              {/* <svg
+              <svg
                 className="notch"
-                width="80"
-                height="30"
-                viewBox="0 0 80 30"
+                width="200"
+                height="45"
+                viewBox="0 0 300 80"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M0,0 C20,0 20,30 40,30 C60,30 60,0 80,0"
-                  fill="currentColor"
-                />
-              </svg> */}
+                <path d="M0,0
+       H120
+       A40,40 0 0 1 160,40
+       A40,40 0 0 0 240,40
+       A40,40 0 0 1 280,0
+       H400
+       
+       H0
+       Z" fill="#f4f6f4"></path>
+              </svg>
+
             </div>
 
             <p>{item.description}</p>
