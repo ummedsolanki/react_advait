@@ -198,7 +198,7 @@ const Header = () => {
             </li>
           </ul>
           <button
-            className="contactus-apply-btn"
+            className="contactus-apply-btn header-btn"
             onClick={() => navigate("/contact")}
           >
             <span className="contactus-btn-text">Contact Us</span>
