@@ -1314,8 +1314,9 @@ body {
 }
 
 .workedwith-card:hover {
-  box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4),
-    0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4);
+  background-color: #d2f9e8;
+  /* 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .workedwith-card:hover::before {
