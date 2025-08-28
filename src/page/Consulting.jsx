@@ -1,11 +1,11 @@
-import {Consultings, consultingStaticData} from '../data/consulting.data';
+import { Consultings, consultingStaticData } from '../data/consulting.data';
 import ServiceCard from '../components/ServiceCard';
 
 export default function Consulting() {
   return (
     <>
-      <section className="industries-section mobile-image-wrapper-ext-80">
-        <div className="video-banner">
+      <section className="industries-section header-margin">
+        <div className="video-banner mobile-image-wrapper-ext-80">
           <img
             className="video-bg"
             src={consultingStaticData.video}
@@ -13,7 +13,7 @@ export default function Consulting() {
           />
           <div className="video-overlay">
             <h1 className="industries-title">
-             {consultingStaticData.title}
+              {consultingStaticData.title}
             </h1>
           </div>
         </div>

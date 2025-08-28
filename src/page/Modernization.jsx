@@ -1,18 +1,18 @@
 
 import ServiceCard from "../components/ServiceCard";
-import {ModernizationStaticData,Modernizations } from "../data/modernizations.data";
+import { ModernizationStaticData, Modernizations } from "../data/modernizations.data";
 
 export default function Modernization() {
   return (
     <>
-      <section className="industries-section mobile-image-wrapper-ext-80">
-        <div className="video-banner">
+      <section className="industries-section header-margin">
+        <div className="video-banner mobile-image-wrapper-ext-80">
           <img
             className="video-bg"
             src={ModernizationStaticData.video}
             alt="Industry Video"
           />
-           
+
           <div className="video-overlay">
             <h1 className="industries-title">{ModernizationStaticData.title}</h1>
           </div>
@@ -27,7 +27,7 @@ export default function Modernization() {
           </div>
           <div className="industries-text">
             <p>
-          {ModernizationStaticData.lineData}
+              {ModernizationStaticData.lineData}
             </p>
           </div>
         </div>

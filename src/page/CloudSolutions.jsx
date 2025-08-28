@@ -4,8 +4,8 @@ import { cloudStaticData, CloudSolution } from "../data/cloudSolutions.data";
 export default function CloudSolutions() {
   return (
     <>
-      <section className="industries-section mobile-image-wrapper-ext-80">
-        <div className="video-banner">
+      <section className="industries-section header-margin">
+        <div className="video-banner mobile-image-wrapper-ext-80">
           <img
             className="video-bg"
             src={cloudStaticData.industryVideo}
@@ -29,7 +29,7 @@ export default function CloudSolutions() {
           </div>
           <div className="industries-text">
             <p>
-             {cloudStaticData.lineData}
+              {cloudStaticData.lineData}
             </p>
           </div>
         </div>
