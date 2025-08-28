@@ -1203,7 +1203,7 @@ body {
 }
 
 .arrow-box::before {
-  content: "→";
+  /* content: "→"; */
   /* default arrow */
   font-size: 16px;
   transition: transform 0.3s ease, content 0.3s ease;
@@ -1326,9 +1326,35 @@ body {
   background-color: #d2f9e8;
 }
 
-.workedwith-card:hover .arrow-box {
+.workedwith-card:hover .card-box {
   transform: rotate(-45deg);
-  background: rgba(255, 255, 255, 0.3);
+  border: 0px;
+}
+
+.card-box {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.card-box::before {
+  font-size: 16px;
+}
+
+.card-box {
+  border-radius: 50%;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 1;
 }
 
 /* Dip shape */
