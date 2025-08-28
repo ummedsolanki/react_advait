@@ -1302,7 +1302,7 @@ body {
 
 .workedwith-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 16px;
   /* padding-top: 27px; */
   position: relative;
@@ -1310,8 +1310,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  /* arrange vertically */
   justify-content: space-between;
+  -webkit-clip-path: path("M0 20C0 8.95429 8.95431 0 20 0H286C297.046 0 306 8.95431 306 20V21.6941C306 32.7398 314.954 41.6941 326 41.6941H334C345.046 41.6941 354 32.7398 354 21.6941V20C354 8.95432 362.954 0 374 0H420C431.046 0 440 8.9543 440 20V423C440 434.046 431.046 443 420 443H20C8.95431 443 0 434.046 0 423V20Z");
+  clip-path: path("M0 20C0 8.95429 8.95431 0 20 0H286C297.046 0 306 8.95431 306 20V21.6941C306 32.7398 314.954 41.6941 326 41.6941H334C345.046 41.6941 354 32.7398 354 21.6941V20C354 8.95432 362.954 0 374 0H420C431.046 0 440 8.9543 440 20V423C440 434.046 431.046 443 420 443H20C8.95431 443 0 434.046 0 423V20Z");
 }
 
 .workedwith-card:hover {
@@ -1321,6 +1322,11 @@ body {
 
 .workedwith-card:hover::before {
   box-shadow: inset 0 0 0 2px rgba(0, 255, 0, 0.4);
+}
+
+
+.workedwith-card:hover {
+  background-color: #d2f9e8;
 }
 
 .workedwith-card:hover .arrow-box {
@@ -1361,10 +1367,6 @@ body {
 .workedwith-card-header h3 {
   font-size: var(--cardtitle-fontsize);
   font-weight: 400;
-}
-
-.workedwith-card:hover {
-  background-color: #d2f9e8;
 }
 
 .workedwith-card p {
@@ -3905,20 +3907,17 @@ textarea {
   align-items: center;
 }
 
-.workedwith-card-header .notch {
+/* .workedwith-card-header .notch {
   position: absolute;
   top: -25px;
-  /* adjust depth */
   right: 40px;
-  /* adjust position */
   color: #F4F6F4;
 }
 
 .workedwith-card:hover .notch path {
   stroke: rgba(0, 255, 0, 0.4);
-  /* match your card hover glow */
   stroke-width: 2px;
-}
+} */
 
 @media (max-width: 768px) {
 
