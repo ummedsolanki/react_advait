@@ -3907,7 +3907,7 @@ textarea {
   align-items: center;
 }
 
-/* .workedwith-card-header .notch {
+.workedwith-card-header .notch {
   position: absolute;
   top: -25px;
   right: 40px;
@@ -3917,7 +3917,7 @@ textarea {
 .workedwith-card:hover .notch path {
   stroke: rgba(0, 255, 0, 0.4);
   stroke-width: 2px;
-} */
+}
 
 @media (max-width: 768px) {
 
