@@ -4533,3 +4533,158 @@ textarea {
   align-items: center;
 
 }
+/* ..............................   ........................................ */
+.chemical-industry {
+  background: var(--bg-color);
+  padding: 80px 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.chemical-industry h2 {
+  font-size: var(--header-fontsize);
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.chemical-industry p {
+  font-size: var(--normal-fontsize);
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Banner Styling */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.video-banner .video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-banner .video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.industries-title {
+  font-size: var(--i-header-fontsize);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.digital-transformations {
+  display: flex;
+  align-items: stretch; /* equal height for text + image */
+  justify-content: space-between;
+  gap: var(--gap);
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+}
+
+.digital-transformations .content {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.digital-transformations h2 {
+  font-size: var(--header-fontsize);
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.digital-transformations p {
+  font-size: var(--normal-fontsize);
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.digital-transformations ul {
+  font-size: var(--normal-fontsize);
+  color: var(--text-dark);
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.digital-transformations .images {
+  flex: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.digital-transformations .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .digital-transformations {
+    flex-direction: column;
+  }
+  .digital-transformations .images img {
+    height: auto; /* avoid distortion on mobile */
+  }
+}
+.transformation-challenges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #fff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+}
+
+.transformation-challenges .image {
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.transformation-challenges .image img {
+  width: 100%;
+  height: 400px; /* set desired height */
+  object-fit: cover; /* ensures image crops instead of stretching */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.transformation-challenges .content {
+  flex: 60%;
+}
+
+.transformation-challenges h2 {
+  font-size: var(--header-fontsize);
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.transformation-challenges p {
+  font-size: var(--normal-fontsize);
+  color: var(--text-light);
+  line-height: 1.7;
+}
