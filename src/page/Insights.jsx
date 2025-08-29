@@ -6,6 +6,7 @@ import Study1 from "../assets/insights1.jpg";
 import Study2 from "../assets/insights2.jpg";
 import Study3 from "../assets/insights3.jpg";
 import ServiceCard from "../components/ServiceCard";
+import TestimonialSlider from "./SuccessStories";
 
 const Consultings = [
   {
@@ -68,6 +69,7 @@ export default function Insights() {
       </section>
       <ServiceCard sectionTitle="INSIGHTS" sectionTag="Blogs & Articles" data={Consultings} />
       <ServiceCard sectionTitle="WORKS" sectionTag="Case Studies" data={Studies} />
+      <TestimonialSlider />
     </>
   );
 }

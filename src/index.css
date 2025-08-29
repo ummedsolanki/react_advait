@@ -10,7 +10,7 @@
   --card-text: #00000099;
 
   --i-header-fontsize: 3rem;
-  --header-fontsize: 2.5rem;
+  --header-fontsize: 2rem;
   --l-header-fontsize: 2.8rem;
   --m-header-fontsize: 2rem;
   --p-header-fontsize: 1.5rem;
@@ -600,7 +600,7 @@ body {
 
 .section-header h2 {
   font-size: var(--header-fontsize);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 
@@ -1254,6 +1254,7 @@ body {
   margin-top: -6px !important;
 }
 
+
 .industries-heading h2 {
   font-size: var(--header-fontsize);
   font-weight: 400;
@@ -1463,13 +1464,19 @@ body {
 }
 
 .about-margin {
-  margin: 0 2.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .about-left h2 {
   font-size: var(--header-fontsize);
   font-weight: 400;
 
+}
+
+.title-bold {
+  font-size: var(--header-fontsize);
+  font-weight: 600;
 }
 
 .about-left h2 span {

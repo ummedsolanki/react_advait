@@ -17,7 +17,7 @@ export default function CloudSolutions() {
           </div>
         </div>
 
-        <div className="industries-content service-content">
+        <div className="industries-content service-content about-margin">
           <div className="industries-heading">
             <h2>
               <strong>{cloudStaticData.description}</strong>

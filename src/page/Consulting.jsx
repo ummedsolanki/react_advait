@@ -18,7 +18,7 @@ export default function Consulting() {
           </div>
         </div>
 
-        <div className="industries-content service-content">
+        <div className="industries-content service-content about-margin">
           <div className="industries-heading">
             <h2>
               <strong>{consultingStaticData.subtitle}</strong>

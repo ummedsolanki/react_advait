@@ -17,7 +17,7 @@ export default function MissionSection() {
           </div>
         ))}
       </div> */}
-      <div className="workedwith-cards">
+      <div className="workedwith-cards about-margin">
         {aboutMissions.map((mission, index) => (
           <div className="workedwith-card" key={index}>
 

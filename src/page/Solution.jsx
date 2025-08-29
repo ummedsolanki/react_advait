@@ -13,10 +13,10 @@ export default function Solution() {
                     </div>
                 </div>
 
-                <div className="about-content">
+                <div className="about-content about-margin">
                     <div className="about-left">
                         <h2>
-                            <strong>{solutionContent.title1} <span className="mobile-br"><br /> </span>{solutionContent.title2}
+                            <strong className="title-bold">{solutionContent.title1} <span className="mobile-br"><br /> </span>{solutionContent.title2}
                             </strong> {solutionContent.title3} <span className="mobile-br"><br /></span>{solutionContent.title4}
                         </h2>
                     </div>

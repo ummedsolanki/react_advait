@@ -107,7 +107,7 @@ function App() {
               <Workedwithc />
               <Workedwithd />
               <WorkedWithSection />
-              <TestimonialSlider />
+              {/* <TestimonialSlider /> */}
             </>
           }
         />

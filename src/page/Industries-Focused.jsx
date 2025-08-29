@@ -17,7 +17,7 @@ export default function Industries() {
         </div>
       </div>
 
-      <div className="industries-content">
+      <div className="industries-content about-margin">
         <div className="industries-heading">
           <h2>
             <strong>Industry-Focused</strong> <span className="mobile-br"><br /> </span> Solutions.

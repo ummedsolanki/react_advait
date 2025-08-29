@@ -80,10 +80,10 @@ export default function JoinUs() {
       </section>
 
       {/* Open Roles */}
-      <div className="section-header job-section">
+      <div className="section-header job-section about-margin">
         <h2 className="job-header">Our Open Roles</h2>
       </div>
-      <div className="job-section">
+      <div className="job-section about-margin">
         {roles.map((role, index) => (
           <div key={index} className="job-card">
             <div>

@@ -2,7 +2,7 @@ import industryVideo from "../assets/Consuting & Engineering Services.jpg";
 
 export const consultingStaticData = {
   title: "CONSULTING & ENGINEERING SERVICES",
-  subtitle: "Innovative IT Solutions Tailored to Your Business Needs.",
+  subtitle: "Innovative IT Solutions",
   description: "Tailored to Your Business Needs.",
   lineData: ` Our SAP Managed Services ensure the seamless operation, maintenance,
               and optimization of your SAP landscape. From system monitoring and

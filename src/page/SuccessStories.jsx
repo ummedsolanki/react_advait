@@ -69,7 +69,7 @@ export default function TestimonialSlider() {
 
   return (
     <>
-      <div className="success"><h2>Success Stories</h2></div>
+      <div className="success about-margin"><h2>Success Stories</h2></div>
       <div style={{ width: "100%" }} className="success-section">
         <Slider {...settings}>
           {data.map((item, i) => (

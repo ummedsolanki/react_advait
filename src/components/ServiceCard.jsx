@@ -1,10 +1,10 @@
 export default function ServiceCard({ sectionTitle, sectionTag, data }) {
   return (
-    <section className="Consulting-section about-margin-0-margin">
+    <section className="Consulting-section about-margin-0-margin about-margin">
       <div className="section-header">
         {sectionTag && <p className="tag">{sectionTag}</p>}
         <h2>
-          <strong>{sectionTitle}</strong>
+          {sectionTitle}
         </h2>
       </div>
 

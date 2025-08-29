@@ -2,7 +2,7 @@ import { teamMembers, teamStaticData } from "../data/aboutUs.data";
 
 export default function Team() {
   return (
-    <section className="team-section about-margin-0-margin">
+    <section className="team-section about-margin-0-margin about-margin">
       <div className="team-header">
         <p className="team-subtitle">{teamStaticData.subtitle}</p>
         <h2>

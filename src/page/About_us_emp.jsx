@@ -10,7 +10,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="about-content">
+      <div className="about-content about-margin">
         <div className="about-left">
           <h2>
             <strong>{aboutUsEmpContent.title1} <span className="mobile-br"><br /> </span>{aboutUsEmpContent.title2}

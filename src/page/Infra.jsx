@@ -13,7 +13,7 @@ export default function Infra() {
                     </div>
                 </div>
 
-                <div className="about-content">
+                <div className="about-content about-margin">
                     <div className="about-left">
                         <h2 className="about-title">
                             {parse(infraContent.title1)}
