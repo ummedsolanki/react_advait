@@ -15,6 +15,7 @@ export default function ServiceCard({
       "Rise with SAP Private cloud": "/rise-private-cloud",
       "SAP S/4HANA": "/sap-s4",
       "Digital Transformation": "/digital-transformation",
+      "SAP Business Solution": "/transforming-chemical-industry",
     };
 
     const path = routes[item.title];
