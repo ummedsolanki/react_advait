@@ -36,6 +36,7 @@ import { useState, useEffect } from "react";
 import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
 import Solution from "./page/Solution";
 import Infra from "./page/Infra";
+import RisePrivateCloud from "./page/RisePrivateCloud";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -131,6 +132,7 @@ function App() {
         <Route path="/roles" element={<JobRoles />} />
         <Route path="/map" element={<WorldMap />} />
         <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
       </Route>
     </Routes>
   );
