@@ -1,16 +1,53 @@
-export default function ServiceCard({ sectionTitle, sectionTag, data }) {
+import { useNavigate } from "react-router-dom";
+
+export default function ServiceCard({
+  sectionTitle,
+  sectionTag,
+  data,
+  onCardClick,
+}) {
+  const navigate = useNavigate();
+
+  // Function to handle card click
+  // Function to handle card click with mapping
+  const handleCardClick = (item) => {
+    const routes = {
+      "Rise with SAP Private cloud": "/rise-private-cloud",
+      "SAP S/4HANA": "/sap-s4",
+      "Digital Transformation": "/digital-transformation",
+    };
+
+    const path = routes[item.title];
+    if (path) {
+      navigate(path);
+    }
+
+    // ✅ Also call the parent's onCardClick if provided
+    if (onCardClick) {
+      onCardClick(item);
+    }
+  };
+
   return (
     <section className="Consulting-section about-margin-0-margin about-margin">
       <div className="section-header">
         {sectionTag && <p className="tag">{sectionTag}</p>}
-        <h2>
-          {sectionTitle}
-        </h2>
+        <h2>{sectionTitle}</h2>
       </div>
 
       <div className="workedwith-cards">
         {data.map((item, index) => (
-          <div className="workedwith-card" key={index}>
+          <div
+            className="workedwith-card"
+            key={index}
+            onClick={() => handleCardClick(item)}
+            style={{
+              cursor:
+                item.title === "Rise with SAP Private cloud"
+                  ? "pointer"
+                  : "default",
+            }}
+          >
             <div className="workedwith-card-header">
               <h3>{item.title}</h3>
               <div className="card-box ">
@@ -32,7 +69,8 @@ export default function ServiceCard({ sectionTitle, sectionTag, data }) {
                 viewBox="0 0 300 80"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M0,0
+                <path
+                  d="M0,0
        H120
        A40,40 0 0 1 160,40
        A40,40 0 0 0 240,40
@@ -40,9 +78,10 @@ export default function ServiceCard({ sectionTitle, sectionTag, data }) {
        H400
        
        H0
-       Z" fill="#f4f6f4"></path>
+       Z"
+                  fill="#f4f6f4"
+                ></path>
               </svg>
-
             </div>
 
             <p>{item.description}</p>

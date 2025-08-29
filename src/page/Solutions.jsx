@@ -65,6 +65,7 @@ const styles = {
     background: "#fff",
     boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    cursor: "pointer",
   },
   serviceCardHover: {
     transform: "translateY(-5px)",
@@ -95,6 +96,7 @@ const styles = {
 };
 
 export default function SolutionsSection() {
+
   return (
     <>
       <section className="service-section home-service">
@@ -102,12 +104,18 @@ export default function SolutionsSection() {
           <div className="section-header home-section-title">
             <p className="tag">{solutionsText.solutionsTitle}</p>
             <h2>
-              <strong>{solutionsText.solutionsSubTitle}</strong> {solutionsText.solutionsSubTitle2}
-              <span className="mobile-br"><br /> </span> {solutionsText.solutionsSubTitle3}
+              <strong>{solutionsText.solutionsSubTitle}</strong>{" "}
+              {solutionsText.solutionsSubTitle2}
+              <span className="mobile-br">
+                <br />{" "}
+              </span>{" "}
+              {solutionsText.solutionsSubTitle3}
             </h2>
           </div>
           <button className="apply-btn">
-            <span className="btn-text service-button">{solutionsText.solutionsViewAll}</span>
+            <span className="btn-text service-button">
+              {solutionsText.solutionsViewAll}
+            </span>
             <div className="job-box solutions-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,6 +130,8 @@ export default function SolutionsSection() {
           </button>
         </div>
       </section>
+
+      {/* Pass the click handler to ServiceCard component */}
       <ServiceCard
         data={solutionsData}
         className="home-section"

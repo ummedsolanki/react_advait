@@ -135,7 +135,7 @@ export const solutionsData = [
   {
     title: "SAP Development",
     description:
-      "Leverage cloud agility with SAP’s bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
+      "Leverage cloud agility with SAP's bundled offering. We help you adopt RISE with SAP with speed, flexibility, and business value.",
     src: service5,
   },
 ];
@@ -271,7 +271,7 @@ export const markersWeb = [
     top: "58%",
     left: "67%",
     tooltip:
-      "Plot # 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
+      "Plot # 10: Sunshine Industrial Hub - 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
   },
   {
     id: 2,
@@ -293,7 +293,7 @@ export const markersMobile = [
     top: "67%",
     left: "67%",
     tooltip:
-      "Plot # 10: Sunshine Industrial Hub – 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
+      "Plot # 10: Sunshine Industrial Hub - 1, Near Zydus Lifesciences, Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad 382213. Gujarat. India",
   },
   {
     id: 2,
