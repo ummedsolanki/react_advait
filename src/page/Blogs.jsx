@@ -100,7 +100,7 @@ export default function BlogSection() {
   return (
     <>
 
-      <section className="service-section home-service">
+      <section className="service-section home-service about-margin">
         <div className="home-section-header">
           <div className="section-header home-section-title ">
             <p className="tag">{blogText.blogTitle}</p>

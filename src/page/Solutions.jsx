@@ -98,8 +98,8 @@ export default function SolutionsSection() {
   return (
     <>
       <section className="service-section home-service">
-        <div className="home-section-header">
-          <div className="section-header home-section-title ">
+        <div className="home-section-header about-margin">
+          <div className="section-header home-section-title">
             <p className="tag">{solutionsText.solutionsTitle}</p>
             <h2>
               <strong>{solutionsText.solutionsSubTitle}</strong> {solutionsText.solutionsSubTitle2}

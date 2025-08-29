@@ -101,7 +101,7 @@ const styles = {
 
 export default function ServiceSection() {
   return (
-    <section className="service-section home-service">
+    <section className="service-section home-service about-margin">
       <div className="home-section-header">
         <div className="section-header home-title">
           <p className="tag">{servicesText.servicesTitle}</p>
