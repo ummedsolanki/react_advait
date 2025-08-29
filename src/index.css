@@ -4280,11 +4280,8 @@ textarea {
 }
 
 .silver-strategies {
-  background: #f8f9fa;
-  padding: 80px 20px;
-  text-align: left;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 2.5rem 1.5rem !important;
+
 }
 
 .silver-strategies h2 {
@@ -4308,37 +4305,37 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: var(--gap);
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
 }
 
 .digital-transformation .content {
-  flex: 1;
+  flex: 60%;
 }
 
 .digital-transformation h2 {
   font-size: var(--header-fontsize);
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   color: var(--text-dark);
 }
 
 .digital-transformation p {
   font-size: var(--normal-fontsize);
   color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .digital-transformation .image {
-  flex: 1;
+  flex: 40%;
   display: flex;
   justify-content: center;
 }
 
 .digital-transformation .image img {
   width: 100%;
+  height: 568px;
   max-width: 550px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -4347,41 +4344,39 @@ textarea {
 /* ------------------ Integration Decision ------------------ */
 .integration-decision {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: var(--gap);
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 2.5rem 1.5rem;
 }
 
 .integration-decision .content {
-  flex: 1;
+  flex: 60%;
 }
 
 .integration-decision h2 {
   font-size: var(--header-fontsize);
   font-weight: bold;
-  margin-bottom: 15px;
   color: var(--text-dark);
+  margin-bottom: 40px;
 }
 
 .integration-decision p {
   font-size: var(--normal-fontsize);
   color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .integration-decision .image {
-  flex: 1;
+  flex: 40%;
   display: flex;
   justify-content: center;
 }
 
 .integration-decision .image img {
   width: 100%;
-  max-width: 550px;
+  max-width: 568px;
+  height: 568px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -4389,34 +4384,34 @@ textarea {
 /* ------------------ Cloud Customer ------------------ */
 .cloud-customer {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: var(--gap);
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  background-color: white;
+  border-radius: 16px;
 }
 
 .cloud-customer .content {
-  flex: 1;
+  flex: 60%;
+  align-items: center;
 }
 
 .cloud-customer h2 {
   font-size: var(--header-fontsize);
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   color: var(--text-dark);
 }
 
 .cloud-customer p {
   font-size: var(--normal-fontsize);
   color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .cloud-customer .image {
-  flex: 1;
+  flex: 40%;
   display: flex;
   justify-content: center;
 }
@@ -4424,6 +4419,7 @@ textarea {
 .cloud-customer .image img {
   width: 100%;
   max-width: 550px;
+  height: 568px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -4431,34 +4427,31 @@ textarea {
 /* ------------------ Transformation Partner ------------------ */
 .transformation-partner {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: var(--gap);
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
 }
 
 .transformation-partner .content {
-  flex: 1;
+  flex: 60%;
 }
 
 .transformation-partner h2 {
   font-size: var(--header-fontsize);
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   color: var(--text-dark);
 }
 
 .transformation-partner p {
   font-size: var(--normal-fontsize);
   color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .transformation-partner .image {
-  flex: 1;
+  flex: 40%;
   display: flex;
   justify-content: center;
 }
@@ -4466,6 +4459,7 @@ textarea {
 .transformation-partner .image img {
   width: 100%;
   max-width: 550px;
+  height: 568px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -4483,10 +4477,8 @@ textarea {
 
 
 
-/* .blog-background {
-  margin: 2.5rem 1.5rem;
-} */
 
+/*---------------------------sap-s4------------------------*/
 
 .bg-white {
   background: #fff;
