@@ -1,6 +1,9 @@
 import privateCloudImage from "../assets/Rise with SAP Private cloud.jpg";
 import cyber from "../assets/CYBER.jpg";
 import transformationImage from "../assets/transformation.jpg";
+import handy from "../assets/handy.jpg";
+import digi from "../assets/digi.jpg";
+
 export default function RisePrivateCloud() {
   return (
     <>
@@ -123,6 +126,58 @@ export default function RisePrivateCloud() {
               experiences.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="partner-section">
+        <div className="partner-image">
+          <img src={handy} alt="Partner with Advait" />
+        </div>
+
+        <div className="partner-content">
+          <h2>
+            Why Partner <span className="highlight">with Advait</span> for RISE
+            with SAP - <span className="highlight">Private Cloud</span>?
+          </h2>
+
+          <ul>
+            <li>
+              Certified SAP Partner with a proven track record in enterprise
+              transformation
+            </li>
+            <li>
+              Expert-led SAP S/4HANA migrations and greenfield implementations
+            </li>
+            <li>
+              Deep industry knowledge across manufacturing, retail, services,
+              and more
+            </li>
+            <li>Seamless integration into your existing IT landscape</li>
+            <li>
+              Dedicated support across the transformation lifecycle—from
+              planning to post-go-live optimization
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="future-section">
+        <div className="future-content">
+          <h2>
+            The <span className="highlight">Future is Intelligent.</span>
+            <br />
+            The <span className="highlight">Platform is RISE.</span>
+            <br />
+            The <span className="highlight">Partner is Advait.</span>
+          </h2>
+          <p>
+            RISE with SAP Private Cloud is the bridge between where you are
+            today and the intelligent enterprise you aspire to become. With
+            Advait Business Solutions as your strategic partner, you're not just
+            upgrading your ERP—you're transforming your business for tomorrow.
+          </p>
+        </div>
+
+        <div className="future-image">
+          <img src={digi} alt="Future with SAP" />
         </div>
       </div>
     </>
