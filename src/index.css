@@ -4469,3 +4469,77 @@ textarea {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .blog-background {
+  margin: 2.5rem 1.5rem;
+} */
+
+
+.bg-white {
+  background: #fff;
+}
+
+.blog-section {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  gap: 2.5rem;
+  box-sizing: border-box;
+  padding: 2.5rem 1.5rem;
+}
+
+.row-normal {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.blog-text {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+
+.blog-text h2 {
+  font-size: var(--header-fontsize);
+}
+
+.blog-text p {
+  font-size: var(--normal-fontsize);
+}
+
+.blog-content p {
+  margin-bottom: 10px;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.blog-img-wrap {
+  flex: 0 0 36.5%;
+  text-align: center;
+  align-items: center;
+
+}

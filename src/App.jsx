@@ -38,7 +38,7 @@ import Solution from "./page/Solution";
 import Infra from "./page/Infra";
 import RisePrivateCloud from "./page/RisePrivateCloud";
 import DigitalTransformation from "./page/Digital_trans";
-// import Sap from "./page/Sap";
+import Sap from "./page/Sap";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -136,7 +136,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
         <Route path="/digital-transformation" element={<DigitalTransformation />} />
-        {/* <Route path="/sap-s4" element={<Sap />} /> */}
+        <Route path="/sap-s4" element={<Sap />} />
       </Route>
     </Routes>
   );
