@@ -39,6 +39,7 @@ import Infra from "./page/Infra";
 import RisePrivateCloud from "./page/RisePrivateCloud";
 import DigitalTransformation from "./page/Digital_trans";
 import Sap from "./page/Sap";
+import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -137,6 +138,7 @@ function App() {
         <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
         <Route path="/digital-transformation" element={<DigitalTransformation />} />
         <Route path="/sap-s4" element={<Sap />} />
+        <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
       </Route>
     </Routes>
   );
