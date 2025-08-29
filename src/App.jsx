@@ -37,6 +37,7 @@ import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
 import Solution from "./page/Solution";
 import Infra from "./page/Infra";
 import RisePrivateCloud from "./page/RisePrivateCloud";
+import Sap from "./page/Sap";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -133,6 +134,7 @@ function App() {
         <Route path="/map" element={<WorldMap />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
+        <Route path="/sap-s4" element={<Sap />} />
       </Route>
     </Routes>
   );
