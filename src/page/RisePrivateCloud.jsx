@@ -16,8 +16,7 @@ export default function RisePrivateCloud() {
       <div className="private-cloud-section">
         {/* Left Content */}
         <div className="content">
-          <h2>RISE with SAP in a Private Cloud-</h2>
-          <h2>Advait Business Solutions Pvt Ltd:</h2>
+          <h2>RISE with SAP in a Private Cloud-<br />Advait Business Solutions Pvt Ltd:</h2>
           <p>
             Accelerate your journey to an intelligent enterprise with RISE with
             SAP in a Private Cloud.
