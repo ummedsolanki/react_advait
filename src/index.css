@@ -3019,12 +3019,13 @@ textarea {
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
-    margin: 0 3rem;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
   }
 
   .about-content {
-    margin: 3rem 0;
-    gap: 3.5rem;
+    margin: 2.5rem 0;
+    gap: 2.5rem;
   }
 
   .about-left h2 {
@@ -3055,7 +3056,7 @@ textarea {
   }
 
   .team-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
 
   .team-subtitle {
@@ -3076,8 +3077,8 @@ textarea {
   }
 
   .timeline-slider {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .timeline-card {
@@ -3130,13 +3131,10 @@ textarea {
   }
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
-  .blog-section {
-    padding: 0 3rem 0 3rem;
-  }
 
   .section-header {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
   }
 
   .section-header .tag {
@@ -3167,7 +3165,7 @@ textarea {
 
   /*-----------------------Banner Container-------------------------*/
   .banner-left {
-    margin-left: 3rem;
+    margin-left: 2.5rem;
   }
 
   .banner-subtitle {
@@ -3179,8 +3177,8 @@ textarea {
   }
 
   .section5_left {
-    margin-left: 3rem;
-    margin-bottom: 3rem;
+    margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .section5_left p {
@@ -3188,7 +3186,7 @@ textarea {
   }
 
   .section5_right img {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   .success-class {
@@ -3200,7 +3198,8 @@ textarea {
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
-    margin: 0 2.5rem;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
   }
 
   .about-content {
@@ -3290,7 +3289,12 @@ textarea {
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
-    margin: 0 2rem;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+  }
+
+  .about-image-wrapper {
+    height: 80vh;
   }
 
   .about-content {
@@ -3383,9 +3387,6 @@ textarea {
   }
 
   /*--------------------------------------------------Services-Section----------------------------------------------------*/
-  .blog-section {
-    padding: 0 2rem 0 2rem;
-  }
 
   .section-header {
     margin-bottom: 2rem;
@@ -3410,7 +3411,12 @@ textarea {
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
-    margin: 0 2rem;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+  }
+
+  .about-image-wrapper {
+    height: 74vh;
   }
 
   .about-content {
@@ -3513,7 +3519,8 @@ textarea {
 /* Tablets: 991px and below */
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   .about-margin {
-    margin: 0 2rem;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
   }
 
   .industries-title {
@@ -4474,7 +4481,7 @@ textarea {
   background: #fff;
 }
 
-.blog-section {
+.sap-section {
   display: flex;
   border-radius: 16px;
   overflow: hidden;
@@ -4491,7 +4498,7 @@ textarea {
   flex-direction: row-reverse;
 }
 
-.blog-text {
+.sap-text {
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
@@ -4499,19 +4506,19 @@ textarea {
 }
 
 
-.blog-text h2 {
+.sap-text h2 {
   font-size: var(--header-fontsize);
 }
 
-.blog-text p {
+.sap-text p {
   font-size: var(--normal-fontsize);
 }
 
-.blog-content p {
+.sap-content p {
   margin-bottom: 10px;
 }
 
-.blog-img {
+.sap-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -4519,7 +4526,7 @@ textarea {
 }
 
 
-.blog-img-wrap {
+.sap-img-wrap {
   flex: 0 0 36.5%;
   text-align: center;
   align-items: center;

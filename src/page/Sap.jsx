@@ -51,36 +51,36 @@ Scalable and secure ERP landscape`,
         content1: `Begin Your S/4HANA Journey with Confidence`,
         content: `No matter where you are on your transformation journey, Advait Business Solutions is here to help you drive measurable business outcomes with SAP S/4HANA.`,
         image: card2,
-    }, 
+    },
 ];
 function Sap() {
     return (
         <>
-            <div className="about-image-wrapper mobile-image-wrapper-ext-80">
+            <div className="about-image-wrapper mobile-image-wrapper-ext-80 header-margin">
                 <img src={card1} alt="About Us" className="about-image" />
                 <div className="about-overlay">
                     <h1>SAP S/4 HANA</h1>
                 </div>
             </div>
-            <div className="blog-background">
-                <div className="blog-container">
+            <div className="sap-background">
+                <div className="sap-container">
 
                     {blogSections.map((section, idx) => (
                         <div
                             key={idx}
                             className={
-                                `blog-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse bg-white'}`
+                                `sap-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse bg-white'}`
                             }
                         >
-                            <div className="blog-text">
+                            <div className="sap-text">
                                 <h2>{section.title}</h2>
-                                <div className='blog-content'>
+                                <div className='sap-content'>
                                     <p><b>{section.content1}</b></p>
                                     <p>{parse(section.content)}</p>
                                 </div>
                             </div>
-                            <div className="blog-img-wrap">
-                                <img src={section.image} alt={section.title} className="blog-img" />
+                            <div className="sap-img-wrap">
+                                <img src={section.image} alt={section.title} className="sap-img" />
                             </div>
                         </div>
                     ))}
