@@ -40,6 +40,7 @@ import RisePrivateCloud from "./page/RisePrivateCloud";
 import DigitalTransformation from "./page/Digital_trans";
 import Sap from "./page/Sap";
 import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry";
+import AllBlogData from "./page/AllBlogData";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -135,10 +136,15 @@ function App() {
         <Route path="/roles" element={<JobRoles />} />
         <Route path="/map" element={<WorldMap />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
-        <Route path="/digital-transformation" element={<DigitalTransformation />} />
-        <Route path="/sap-s4" element={<Sap />} />
-        <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
+        <Route path="/blog/:slug" element={<AllBlogData />} />
+        <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} />
+        <Route path="/digital-transformation/:slug" element={<AllBlogData />} />
+        <Route path="/sap-s4/:slug" element={<AllBlogData />} />
+        <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} />
+        {/* <Route path="/rise-private-cloud" element={<RisePrivateCloud />} /> */}
+        {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
+        {/* <Route path="/sap-s4" element={<Sap />} /> */}
+        {/* <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} /> */}
       </Route>
     </Routes>
   );

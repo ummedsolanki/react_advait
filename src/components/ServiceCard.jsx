@@ -12,10 +12,10 @@ export default function ServiceCard({
   // Function to handle card click with mapping
   const handleCardClick = (item) => {
     const routes = {
-      "Rise with SAP Private cloud": "/rise-private-cloud",
-      "SAP S/4HANA": "/sap-s4",
-      "Digital Transformation": "/digital-transformation",
-      "SAP Business Solution": "/transforming-chemical-industry",
+      "Rise with SAP Private cloud": "/blog/rise-private-cloud",
+      "SAP S/4HANA": "/blog/sap-business-solutions",
+      "Digital Transformation": "/blog/digital-transformation",
+      "SAP Business Solution": "/blog/transforming-chemical-industry",
     };
 
     const path = routes[item.title];
@@ -23,7 +23,6 @@ export default function ServiceCard({
       navigate(path);
     }
 
-    // ✅ Also call the parent's onCardClick if provided
     if (onCardClick) {
       onCardClick(item);
     }

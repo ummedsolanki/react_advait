@@ -29,6 +29,7 @@ import card11 from "../assets/SAP Development.jpg";
 import card12 from "../assets/Mobility.jpg";
 import card13 from "../assets/Managed Services.jpg";
 import card14 from "../assets/Big Data.jpg";
+import card15 from "../assets/Signavio.png";
 export const servicesProvide = [
   {
     title: "Digital Transformation",
@@ -114,4 +115,11 @@ export const servicesProvide = [
       "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
     src: card14,
   },
+  {
+    title: "SAP Signavio",
+    description:
+      "SAP Signavio is a comprehensive suite of business process management (BPM) tools designed to help organizations model",
+    src: card15,
+  },
+
 ];
