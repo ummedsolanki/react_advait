@@ -4581,7 +4581,6 @@ textarea {
 }
 
 .industries-title {
-  font-size: var(--i-header-fontsize);
   color: #fff;
   text-align: center;
   font-weight: bold;
