@@ -95,28 +95,28 @@ export const teamStaticData = {
 
 export const teamMembers = [
   {
-    name: "James Carter",
+    name: "Jash",
     role: "Senior dev",
     image: img1,
     hoverImage: img1Hover,
     linkedin: "#",
   },
   {
-    name: "Olivya Brook",
+    name: "Jay",
     role: "Full Stack Developer",
     image: img2,
     hoverImage: img2Hover,
     linkedin: "#",
   },
   {
-    name: "Priyanka",
+    name: "Priy",
     role: "Marketing Head",
     image: img3,
     hoverImage: img3Hover,
     linkedin: "#",
   },
   {
-    name: "Emma Johnson",
+    name: "Yug",
     role: "Marketing Head",
     image: img4,
     hoverImage: img4Hover,
