@@ -1432,7 +1432,7 @@ body {
 .about-image-wrapper {
   position: relative;
   border-radius: 12px;
-  height: 85vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -2793,7 +2793,7 @@ body {
   }
 
   .about-image-wrapper {
-    height: 50vh;
+    height: 100%;
   }
 
   .contact-us-title {
@@ -2821,7 +2821,7 @@ body {
   }
 
   .about-image-wrapper {
-    height: 40vh;
+    height: 100%;
   }
 
   .contact-us-title {
@@ -3295,7 +3295,7 @@ textarea {
   }
 
   .about-image-wrapper {
-    height: 80vh;
+    height: 100%;
   }
 
   .about-content {
@@ -3417,7 +3417,7 @@ textarea {
   }
 
   .about-image-wrapper {
-    height: 74vh;
+    height: 100%;
   }
 
   .about-content {
@@ -3629,7 +3629,7 @@ textarea {
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
-    margin: 0 1.125rem;
+    margin: 0;
   }
 
   .about-margin-0-margin {
@@ -3856,7 +3856,7 @@ textarea {
   }
 
   .home-service {
-    margin: 0 1rem !important;
+    margin: 0 !important;
   }
 
   .mainHeading {
@@ -3965,7 +3965,7 @@ textarea {
     flex-wrap: wrap !important;
     align-items: center !important;
     gap: 0.75rem !important;
-    width: 100% !important;
+    /* width: 100% !important; */
     margin-top: 1rem !important;
   }
 
@@ -4533,6 +4533,7 @@ textarea {
   align-items: center;
 
 }
+
 /* ..............................   ........................................ */
 .chemical-industry {
   background: var(--bg-color);
@@ -4573,7 +4574,7 @@ textarea {
 .video-banner .video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4588,7 +4589,8 @@ textarea {
 
 .digital-transformations {
   display: flex;
-  align-items: stretch; /* equal height for text + image */
+  align-items: stretch;
+  /* equal height for text + image */
   justify-content: space-between;
   gap: var(--gap);
   background-color: white;
@@ -4644,10 +4646,13 @@ textarea {
   .digital-transformations {
     flex-direction: column;
   }
+
   .digital-transformations .images img {
-    height: auto; /* avoid distortion on mobile */
+    height: auto;
+    /* avoid distortion on mobile */
   }
 }
+
 .transformation-challenges {
   display: flex;
   align-items: center;
@@ -4666,8 +4671,10 @@ textarea {
 
 .transformation-challenges .image img {
   width: 100%;
-  height: 400px; /* set desired height */
-  object-fit: cover; /* ensures image crops instead of stretching */
+  height: 400px;
+  /* set desired height */
+  object-fit: cover;
+  /* ensures image crops instead of stretching */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
