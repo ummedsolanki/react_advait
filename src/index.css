@@ -1432,7 +1432,7 @@ body {
 .about-image-wrapper {
   position: relative;
   border-radius: 12px;
-  height: 100%;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -2718,7 +2718,7 @@ body {
 .video-banner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   min-height: 400px;
   overflow: hidden;
 }
@@ -4062,12 +4062,12 @@ textarea {
   flex: 1;
   max-width: 50%;
   position: relative;
-  height: 100%;
+  height: 90vh;
 }
 
 .private-cloud-section .video-banner img.video-bg {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -4561,7 +4561,7 @@ textarea {
 .video-banner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   overflow: hidden;
 }
 
