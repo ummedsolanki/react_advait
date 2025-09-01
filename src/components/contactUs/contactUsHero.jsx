@@ -3,15 +3,15 @@ import { contactUsHeroData } from "../../data/contactUs.data";
 
 const contactUsHero = () => {
   return (
-    <section className="contact-us-section">
+    <section className="contact-us-section mobile-image-wrapper-ext-80">
       <div className="video-banner">
         <img
           className="video-bg"
           src={contactUsHeroData.contactUsVideo}
           alt="Contact Us"
         />
-          playsInline
-        
+        playsInline
+
         <div className="video-overlay">
           <h1 className="contact-us-title">{contactUsHeroData.contactUsTitle}</h1>
         </div>
@@ -27,13 +27,13 @@ const contactUsHero = () => {
           </h2>
         </div>
         <div className="contact-us-text">
-          <p style={{marginBottom: "1rem"}}>
+          <p style={{ marginBottom: "1rem" }}>
             {contactUsHeroData.ourTeam}
-            </p>
-            <p style={{marginBottom: "1rem"}}>
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
             {contactUsHeroData.ourTeam2}
-            </p>
-            <p style={{marginBottom: "1rem"}}>
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
             {contactUsHeroData.ourTeam3}
           </p>
         </div>
