@@ -3864,6 +3864,31 @@ textarea {
 .private-cloud-section .content {
   flex: 1;
 }
+.video-bgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;       /* ✅ ensures it always fills parent */
+  object-fit: cover;  /* ✅ keeps aspect ratio while covering */
+  z-index: -1;
+  border-radius: 12px; /* optional: matches your cards/images */
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .video-bgs {
+    position: relative;  /* ✅ stack normally on small screens */
+    height: auto;
+    max-height: 300px;   /* ✅ prevents it from being too tall */
+    border-radius: 8px;
+  }
+}
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"] {
+  height: 30px;
+}
 
 .private-cloud-section .content h2 {
   font-size: var(--header-fontsize);
@@ -4084,6 +4109,100 @@ textarea {
     margin: 0 auto;
   }
 }
+/* Responsive for private-cloud-section */
+@media (max-width: 768px) {
+  .private-cloud-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem 1rem;
+  }
+
+  .private-cloud-section .video-banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .private-cloud-section .video-banner img.video-bg {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .private-cloud-section .content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .private-cloud-section .content p {
+    font-size: 15px;
+  }
+}
+
+/* Responsive for transformation-section */
+@media (max-width: 768px) {
+  .transformation-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem 1rem;
+  }
+
+  .transformation-section .image-banner,
+  .transformation-section .content {
+    max-width: 100%;
+  }
+
+  .transformation-section .content h2 {
+    font-size: 20px;
+  }
+}
+
+/* Responsive for unique-section cards */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 18px;
+  }
+}
+
+/* Responsive for partner-section (already partly done) */
+@media (max-width: 768px) {
+  .partner-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .partner-image img {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .partner-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive for future-section (already partly done) */
+@media (max-width: 768px) {
+  .future-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .future-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .future-image img {
+    max-height: 280px;
+  }
+}
+
 
 .silver-strategies {
   margin: 2.5rem 1.5rem !important;

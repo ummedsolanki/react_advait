@@ -75,7 +75,7 @@ const digitalSections = [
   {
     title: "Silver Strategies for Digital Success: Partnering with SAP in Transformation",
     content: `In today's fast-paced digital landscape, organizations are under increasing pressure to innovate, streamline operations, and stay competitive. At the heart of this transformation is SAP (Systems, Applications, and Products in Data Processing), a global leader in enterprise software solutions. As a Silver Partner, we've had the privilege of seeing firsthand how SAP empowers businesses across industries to thrive in the digital age.`,
-    image: city, // no image for this section
+    image: city,
   },
   {
     title: "Understanding Digital Transformation",
@@ -353,7 +353,7 @@ function RisePrivateCloud() {
 
         {/* Right Content */}
         <div className="video-banner">
-          <img className="video-bg" src={cyber} alt="Private Cloud" />
+          <img className="video-bgs" src={cyber} alt="Private Cloud" />
         </div>
       </div>
       <div className="transformation-section">
