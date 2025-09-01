@@ -1,5 +1,8 @@
 import { blogText, blogData } from "../data/staticData";
 import ServiceCard from "../components/ServiceCard";
+import { useState, useEffect } from "react";
+import { getHomeData } from "../api/HomeApi";
+
 const styles = {
   section: {
     fontFamily: "Open Sans, sans-serif",
@@ -96,39 +99,37 @@ const styles = {
   },
 };
 
-export default function BlogSection() {
+export default function BlogSection({ data }) {
+  if (!data) return null;
+
+  const blogText = data.blogText;
+  const blogsWithFullSrc = data.blogs.map((blog) => ({
+    ...blog,
+    src: `${import.meta.env.VITE_BACKEND_API_URL}${blog.src}`,
+  }));
+
   return (
     <>
-
       <section className="service-section home-service about-margin">
         <div className="home-section-header">
-          <div className="section-header home-section-title ">
+          <div className="section-header home-section-title">
             <p className="tag">{blogText.blogTitle}</p>
             <h2>
               <strong>{blogText.blogSubTitle}</strong> {blogText.blogSubTitle2}
-              <span className="mobile-br"><br /> </span> {blogText.blogSubTitle3}
+              <span className="mobile-br"><br /></span> {blogText.blogSubTitle3}
             </h2>
           </div>
           <button className="apply-btn">
             <span className="btn-text">{blogText.blogViewAll}</span>
             <div className="job-box solutions-arrow">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="16"
-                viewBox="0 0 32 16"
-                fill="currentColor"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="16" viewBox="0 0 32 16" fill="currentColor">
                 <path d="M1.00024 7C0.447959 7 0.000244141 7.44772 0.000244141 8C0.000244141 8.55228 0.447959 9 1.00024 9V8V7ZM31.7074 8.70711C32.0979 8.31658 32.0979 7.68342 31.7074 7.29289L25.3434 0.928932C24.9529 0.538408 24.3197 0.538408 23.9292 0.928932C23.5387 1.31946 23.5387 1.95262 23.9292 2.34315L29.586 8L23.9292 13.6569C23.5387 14.0474 23.5387 14.6805 23.9292 15.0711C24.3197 15.4616 24.9529 15.4616 25.3434 15.0711L31.7074 8.70711ZM1.00024 8V9L31.0002 9V8V7L1.00024 7V8Z" />
               </svg>
             </div>
           </button>
         </div>
       </section>
-      <ServiceCard
-        data={blogData}
-        className="home-section"
-      />
+      <ServiceCard data={blogsWithFullSrc} className="home-section" />
     </>
   );
 }

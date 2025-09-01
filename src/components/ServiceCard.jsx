@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import parse from "html-react-parser"
 export default function ServiceCard({
   sectionTitle,
   sectionTag,
@@ -84,7 +84,8 @@ export default function ServiceCard({
               </svg>
             </div>
 
-            <p>{item.description}</p>
+            <p>{item.subtitle}</p>
+            {/* <div>{parse(item.subtitle)}</div> */}
 
             <div className="workedwith-src">
               <img src={item.src} alt={item.title} />

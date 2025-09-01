@@ -2,6 +2,9 @@ import service1 from "../assets/card1.jpg";
 import service2 from "../assets/card2.jpg";
 import service3 from "../assets/card3.jpg";
 import { servicesData, servicesText } from "../data/staticData";
+import parse from "html-react-parser";
+import { getHomeData } from "../api/HomeApi";
+import { useState, useEffect } from "react";
 
 const styles = {
   section: {
@@ -99,7 +102,15 @@ const styles = {
   },
 };
 
-export default function ServiceSection() {
+export default function ServiceSection({ data }) {
+
+  if (!data) return null;
+
+  const servicesWithFullSrc = data?.servicesCardsData?.map((item) => ({
+    ...item,
+    src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
+  })) || [];
+
   return (
     <section className="service-section home-service about-margin">
       <div className="home-section-header">
@@ -112,7 +123,7 @@ export default function ServiceSection() {
         </div>
       </div>
       <div className="workedwith-cards">
-        {servicesData.map((item, index) => (
+        {servicesWithFullSrc.map((item, index) => (
           <div className="workedwith-card" key={index}>
             <div className="workedwith-card-header">
               <h3>{item.title}</h3>
@@ -148,7 +159,7 @@ export default function ServiceSection() {
 
             </div>
 
-            <p>{item.description}</p>
+            <div> {parse(item.description)} </div>
 
             <div className="workedwith-src">
               <img src={item.src} alt={item.title} />

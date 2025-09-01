@@ -79,8 +79,10 @@ const HeroBanner = () => {
             <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
           </h1>
           <p className="subHeading">{heroText.heroSubTitle2}</p>
-          <button className="apply-btn" onClick={() => navigate("/contact")}
-          >
+          <button className="apply-btn" onClick={() => {
+            navigate("/contact");
+            window.scrollTo(0, 0); // scroll to top
+          }}>
             <span className="btn-text">{heroText.contactUs}</span>
             <div className="job-box">
               <svg
@@ -96,7 +98,7 @@ const HeroBanner = () => {
           </button>
         </div>
         <img src={logo} alt="Logo" style={styles.heroLogo} />
-      </section>
+      </section >
     </>
   );
 };

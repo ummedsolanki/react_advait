@@ -1,5 +1,8 @@
 import { solutionsData, solutionsText } from "../data/staticData";
 import ServiceCard from "../components/ServiceCard";
+import { getHomeData } from "../api/HomeApi";
+import { useState, useEffect } from "react";
+
 const styles = {
   section: {
     fontFamily: "Open Sans, sans-serif",
@@ -95,7 +98,14 @@ const styles = {
   },
 };
 
-export default function SolutionsSection() {
+export default function SolutionsSection({ data }) {
+
+  if (!data) return null;
+
+  const solutionsWithFullSrc = data?.solutionsCardsData?.map((item) => ({
+    ...item,
+    src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
+  })) || [];
 
   return (
     <>
@@ -133,7 +143,7 @@ export default function SolutionsSection() {
 
       {/* Pass the click handler to ServiceCard component */}
       <ServiceCard
-        data={solutionsData}
+        data={solutionsWithFullSrc}
         className="home-section"
       />
     </>

@@ -1,25 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
-import heroVideo from "../assets/Merge videos project.mp4";
 import logo from "../assets/i3.svg";
-import Slider from "react-slick";
-import src1 from "../assets/i1.png";
-import src2 from "../assets/i2.png";
-import src3 from "../assets/i1.png";
-export default function Hero() {
+import parse from "html-react-parser";
+export default function Hero({ data }) {
   const videoRef = useRef(null);
+  const [currentHero, setCurrentHero] = useState({ heroVideo: "", text: "" });
   const [showHeading, setShowHeading] = useState(false);
   const timerRef = useRef(null);
 
+  // Set first active hero from props
+  useEffect(() => {
+    if (data?.length) {
+      const activeSections = data.filter((s) => s.isActive);
+      if (activeSections.length > 0) {
+        setCurrentHero(activeSections[0]);
+      }
+    }
+  }, [data]);
+
+  // Video event handling
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return; // ✅ Prevent null errors
+    if (!video || !currentHero.heroVideo?.endsWith(".mp4")) return;
 
     const startHeadingTimer = () => {
       if (timerRef.current) clearTimeout(timerRef.current);
       setShowHeading(true);
-      timerRef.current = setTimeout(() => {
-        setShowHeading(false);
-      }, 4000);
+      timerRef.current = setTimeout(() => setShowHeading(false), 4000);
     };
 
     const handlePlay = () => startHeadingTimer();
@@ -37,41 +43,31 @@ export default function Hero() {
       video.removeEventListener("ended", handleEnded);
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, []);
+  }, [currentHero]);
 
-  const data = [
-    {
-      img: src1,
-      text: "Success Story 1",
-      name: "Client 1",
-      position: "CEO",
-    },
-    {
-      img: src2,
-      text: "Success Story 2",
-      name: "Client 2",
-      position: "CTO",
-    },
-    {
-      img: src3,
-      text: "Success Story 3",
-      name: "Client 3",
-      position: "CFO",
-    },
-  ];
+  const isVideo = currentHero.heroVideo?.endsWith(".mp4");
+  const mediaSrc = currentHero.heroVideo
+    ? `${import.meta.env.VITE_BACKEND_API_URL}${currentHero.heroVideo}`
+    : "";
 
   return (
     <section className="hero">
-      <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
-        <source src={heroVideo} type="video/mp4" />
-      </video>
-      {/* <Slider>
-        {data.map((item, i) => (
-          <div key={i}>
-            <img src={item.img} alt={item.name} className="success-class" />
-          </div>
-        ))}
-      </Slider> */}
+      {isVideo ? (
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted
+          playsInline
+          poster="fallback.jpg"
+          onError={() => setShowHeading(true)}
+        >
+          <source src={mediaSrc} type="video/mp4" />
+        </video>
+      ) : currentHero.heroVideo ? (
+        <img src={mediaSrc} alt="Hero" className="hero-video" />
+      ) : null}
+
       <div className="hero-overlay">
         <div className="container">
           <h1
@@ -81,18 +77,140 @@ export default function Hero() {
               opacity: showHeading ? 1 : 0,
             }}
           >
-            Empowering Businesses with
-            <br />
-            SAP Solutions & Digital
-            <br /> Transformation
+            {parse(currentHero.text)}
           </h1>
         </div>
       </div>
 
-      {/* ✅ Move logo here, direct child of hero */}
       <div className="silver-logo">
         <img src={logo} alt="Silver Partner" />
       </div>
     </section>
   );
 }
+
+
+
+// import React, { useEffect, useRef, useState } from "react";
+// import logo from "../assets/i3.svg";
+// import { getHomeData } from "../api/HomeApi"; // import your API helper
+
+// export default function Hero() {
+//   const videoRef = useRef(null);
+//   const [currentHero, setCurrentHero] = useState({ heroVideo: "", text: "" });
+//   const [showHeading, setShowHeading] = useState(false);
+//   const timerRef = useRef(null);
+
+//   // Fetch hero data from API
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const homeData = await getHomeData();
+//       if (homeData?.heroSections) {
+//         const activeSections = homeData.heroSections.filter((s) => s.isActive);
+//         if (activeSections.length > 0) {
+//           setCurrentHero(activeSections[0]); // first active hero section
+//         }
+//       }
+//     };
+//     fetchData();
+//   }, []);
+
+//   // Video event handling
+//   useEffect(() => {
+//     const video = videoRef.current;
+//     if (!video || !currentHero.heroVideo.endsWith(".mp4")) return;
+
+//     const startHeadingTimer = () => {
+//       if (timerRef.current) clearTimeout(timerRef.current);
+//       setShowHeading(true);
+//       timerRef.current = setTimeout(() => setShowHeading(false), 4000);
+//     };
+
+//     const handlePlay = () => startHeadingTimer();
+//     const handleEnded = () => {
+//       video.currentTime = 0;
+//       video.play();
+//       startHeadingTimer();
+//     };
+
+//     video.addEventListener("play", handlePlay);
+//     video.addEventListener("ended", handleEnded);
+
+//     return () => {
+//       video.removeEventListener("play", handlePlay);
+//       video.removeEventListener("ended", handleEnded);
+//       if (timerRef.current) clearTimeout(timerRef.current);
+//     };
+//   }, [currentHero]);
+
+//   const isVideo = currentHero.heroVideo.endsWith(".mp4");
+//   const mediaSrc = `${import.meta.env.VITE_BACKEND_API_URL}${currentHero.heroVideo}`;
+
+//   return (
+//     <section className="hero">
+//       {isVideo && currentHero.heroVideo ? (
+//         // <video ref={videoRef} className="hero-video" autoPlay muted playsInline>
+//         //   <source src={mediaSrc} type="video/mp4" />
+//         // </video>
+
+//         // <video
+//         //   ref={videoRef}
+//         //   className="hero-video"
+//         //   autoPlay
+//         //   muted
+//         //   playsInline
+//         //   onError={() => setShowHeading(true)} // show text if video fails
+//         // >
+//         //   <source src={mediaSrc} type="video/mp4" />
+//         // </video>
+
+//         <video
+//           ref={videoRef}
+//           className="hero-video"
+//           autoPlay
+//           muted
+//           playsInline
+//           poster="fallback.jpg" // optional
+//           onError={() => setShowHeading(true)}
+//         >
+//           <source src={mediaSrc} type="video/mp4" />
+//         </video>
+
+//       ) : (
+//         <img src={mediaSrc} alt="Hero" className="hero-video" />
+//       )}
+
+//       <div className="hero-overlay">
+//         <div className="container">
+//           <h1
+//             className={`hero-heading ${showHeading ? "show" : "hide"}`}
+//             style={{
+//               transition: "opacity 0.6s ease-in-out",
+//               opacity: showHeading ? 1 : 0,
+//             }}
+//           >
+//             {currentHero.text}
+//           </h1>
+//         </div>
+//       </div>
+//       {/* <div className="hero-overlay">
+//         <div className="container">
+//           <h1
+//             className="hero-heading"
+//             style={{
+//               transition: "opacity 0.6s ease-in-out",
+//               opacity: showHeading || !currentHero.heroVideo ? 1 : 0,
+//             }}
+//           >
+//             {currentHero.text}
+//           </h1>
+//         </div>
+//       </div> */}
+
+
+//       <div className="silver-logo">
+//         <img src={logo} alt="Silver Partner" />
+//       </div>
+//     </section>
+//   );
+// }

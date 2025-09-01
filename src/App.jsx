@@ -1,36 +1,28 @@
 import Footer from "./components/Footer";
 import AboutUs from "./page/About_us_emp";
-import BlogSection from "./page/Blogs";
 import Team from "./page/blur";
 import CloudSolutions from "./page/CloudSolutions";
 import Consulting from "./page/Consulting";
 import ContactUs from "./page/Contact_us";
 import Header from "./page/Header";
-import Hero from "./page/Hero";
 import HeroBanner from "./page/HeroBanner";
 import Industries from "./page/Industries-Focused";
 import Insights from "./page/Insights";
 import Modernization from "./page/Modernization";
 import MissionSection from "./page/Our_mission";
 import JobRoles from "./page/Roles";
-import ServiceSection from "./page/Services";
 import WeProvide from "./page/ServicesHeader";
 import RtlSwiper from "./page/Slider";
 import TestimonialSlider from "./page/SuccessStories";
 import JoinUs from "./page/testing";
 import TimelineSlider from "./page/TimelineSlider";
-import Why from "./page/Why_Advait";
 import Workedwitha from "./page/Workedwitha";
 import Workedwithb from "./page/Workedwithb";
 import Workedwithc from "./page/Workedwithc";
 import Workedwithd from "./page/Workedwithd";
 import WorkedWithSection from "./page/Workedwithe";
 import WorldMap from "./page/WorldMap";
-import CompanyExp from "./components/company_exp";
-import SolutionsSection from "./page/Solutions";
 import { Routes, Route, Navigate, Outlet, useOutletContext } from "react-router-dom";
-import FooterDetails from "./components/FooterDetails";
-import Counter from "./page/Counter";
 import HeaderMobile from "./page/HeaderMobile";
 import { useState, useEffect } from "react";
 import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
@@ -41,6 +33,7 @@ import DigitalTransformation from "./page/Digital_trans";
 import Sap from "./page/Sap";
 import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry";
 import AllBlogData from "./page/AllBlogData";
+import Home from "./page/Home";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -62,23 +55,6 @@ function Layout() {
       {isMobile ? <HeaderMobile /> : <Header />}
       <Outlet context={{ isMobile }} />
       <Footer />
-    </>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <Hero />
-      <Why />
-      <Counter />
-      {/* <CompanyExp /> */}
-      <SolutionsSection />
-      <ServiceSection />
-      <HeroBanner />
-      <BlogSection />
-      <RtlSwiper />
-      <FooterDetails />
     </>
   );
 }

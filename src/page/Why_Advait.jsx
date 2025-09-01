@@ -1,6 +1,13 @@
 import { useState } from "react";
-import team from "../assets/Why-Advait.jpg";
-import { whyCardData, whyText } from "../data/staticData";
+import why1 from "../assets/Innovation.svg";
+import why2 from "../assets/Industries.svg";
+import why3 from "../assets/Scalability.svg";
+import why4 from "../assets/Cost.svg";
+
+import InnovationBlack from "../assets/Innovationblack.svg";
+import IndustriesBlack from "../assets/Industriesblack.svg";
+import ScalabilityBlack from "../assets/Scalabilityblack.svg";
+import CostBlack from "../assets/Costblack.svg";
 
 // Card Component
 
@@ -27,7 +34,12 @@ function FeatureCard({ img, hoverImg, title, desc }) {
   );
 }
 
-export default function Why() {
+export default function Why({ data }) {
+  if (!data) return <p>Loading...</p>;
+
+  const imgMap = [why1, why2, why3, why4];
+  const hoverImgMap = [InnovationBlack, IndustriesBlack, ScalabilityBlack, CostBlack];
+
   return (
     <>
       {/* Header Section */}
@@ -42,7 +54,7 @@ export default function Why() {
           }}
         >
           <div className="banner-left">
-            <p className="banner-subtitle">{whyText.whyAdvait}</p>
+            <p className="banner-subtitle">{data.banner}</p>
 
           </div>
         </div>
@@ -52,19 +64,19 @@ export default function Why() {
       <section className="section5">
         <div className="section5_left">
           <h1 className="banner-title">
-            {whyText.whyAdvaitSub} <br />
-            <span className="banner-title-thin">{whyText.whyAdvaitSub2}</span>
+            {data.heading} <br />
+            <span className="banner-title-thin">{data.subHeading}</span>
           </h1>
           <div className="sec5_cards">
             <div className="section5_grid">
-              {whyCardData.map((card, index) => (
+              {data.whyCardData.map((card, index) => (
                 <FeatureCard
-                  key={index}
-                  img={card.img}
+                  key={card._id || index}
+                  img={imgMap[index]}
                   title={card.title}
                   desc={card.desc}
                   imgComponent={card.img}
-                  hoverImg={card.hoverImg}
+                  hoverImg={hoverImgMap[index]}
                 />
               ))}
             </div>
@@ -74,7 +86,9 @@ export default function Why() {
         {/* Right Side Image */}
         <div className="section5_right">
           <div>
-            <img src={team} alt="Line6" />
+            {/* <img src={whySection.image} alt="Line6" /> */}
+            <img src={`${import.meta.env.VITE_BACKEND_API_URL}${data.image}`} alt="Why Advait" />
+
           </div>
         </div>
       </section>
