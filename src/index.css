@@ -942,13 +942,6 @@ body {
   width: auto;
 }
 
-/* Tablets */
-@media (max-width: 1024px) {
-  .silver-logo img {
-    height: 50px;
-  }
-}
-
 
 .hero-video {
   position: absolute;
@@ -2626,6 +2619,9 @@ body {
 
 /* Tablet Styles */
 @media only screen and (max-width: 1024px) {
+  .silver-logo img {
+    height: 50px;
+  }
 
   .contact-us-section {
     margin-top: 20px !important;
@@ -3192,7 +3188,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
-  /* @media only screen and (max-width: 1040px) and (min-width: 779px) { */
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
@@ -3524,11 +3519,12 @@ textarea {
 
   .contact-us-heading h2 {
     font-size: 1.8rem;
+    margin-bottom: 0;
   }
 
   .contact-us-content {
-    padding: 0 1.5rem;
-    margin: 2.5rem auto;
+    padding: 0 1rem;
+    margin: 1rem auto;
   }
 
   .contact-us-text p {
