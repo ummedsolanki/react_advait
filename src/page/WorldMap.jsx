@@ -72,7 +72,7 @@ const WorldMap = () => {
               alt="Location"
               className="marker-icon"
               style={{
-                width: "10px",
+                width: "15px",
                 height: "28px",
               }}
             />
