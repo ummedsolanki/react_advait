@@ -1,6 +1,7 @@
 import bannerImage from "../assets/Take Your Business .jpg";
 import logo from "../assets/Advait White Logo.svg";
 import { heroText } from "../data/staticData";
+import { useNavigate } from "react-router-dom";
 
 const styles = {
   heroContainer: {
@@ -66,6 +67,8 @@ const styles = {
   }
 };
 const HeroBanner = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <section style={styles.heroContainer}>
@@ -76,7 +79,8 @@ const HeroBanner = () => {
             <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
           </h1>
           <p className="subHeading">{heroText.heroSubTitle2}</p>
-          <button className="apply-btn">
+          <button className="apply-btn" onClick={() => navigate("/contact")}
+          >
             <span className="btn-text">{heroText.contactUs}</span>
             <div className="job-box">
               <svg
