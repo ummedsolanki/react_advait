@@ -72,10 +72,10 @@ export default function PrivacyPolicy() {
           <p>
             If you have any questions, contact us at:
             <br /> 📧{" "}
-            <a href="mailto:support@advaitbusiness.com">
-              support@advaitbusiness.com
+            <a href="mailto:sales@advaitbusiness.com">
+              sales@advaitbusiness.com
             </a>
-            <br /> 📞 +91-9876543210
+            <br /> 📞 +91-92270-22260
           </p>
         </section>
       </main>
