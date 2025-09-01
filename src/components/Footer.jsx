@@ -101,7 +101,7 @@ const Footer = () => {
             className="footer-text"
             dangerouslySetInnerHTML={{ __html: footerData.footerText }}
           />
-          <a href="#" className="footer-text">
+          <a href="/privacy-policy" className="footer-text">
             {footerData.privacyPolicy}
           </a>
         </div>

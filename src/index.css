@@ -4486,3 +4486,152 @@ form input[type="email"] {
   color: var(--text-light);
   line-height: 1.7;
 }
+
+/* -----------------------------Privacy Policy---------------------------------------- */
+/* Global Container */
+.privacy-container {
+  /* min-height: 100vh; */
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Header */
+.privacy-header {
+  padding: 20px 24px;
+  background: rgba(22, 163, 74, 0.1);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logos-img {
+  width: 52px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.logos-text {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #16a34a;
+  letter-spacing: 0.5px;
+}
+
+/* Main Layout */
+.privacy-main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Card Content */
+.privacy-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 34px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.8s ease;
+}
+
+.page-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+.privacy-content h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  color: #16a34a;
+  font-size: 22px;
+  font-weight: 600;
+  position: relative;
+}
+
+.privacy-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: #16a34a;
+}
+
+.privacy-content p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* Links */
+.privacy-content a {
+  color: #16a34a;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.privacy-content a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}
+
+/* Footer */
+.privacy-footer {
+  margin-top: auto;
+  padding: 18px;
+  text-align: center;
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .privacy-content {
+    padding: 24px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .privacy-content h2 {
+    font-size: 20px;
+  }
+}

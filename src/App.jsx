@@ -22,7 +22,13 @@ import Workedwithc from "./page/Workedwithc";
 import Workedwithd from "./page/Workedwithd";
 import WorkedWithSection from "./page/Workedwithe";
 import WorldMap from "./page/WorldMap";
-import { Routes, Route, Navigate, Outlet, useOutletContext } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  Outlet,
+  useOutletContext,
+} from "react-router-dom";
 import HeaderMobile from "./page/HeaderMobile";
 import { useState, useEffect } from "react";
 import OurTeamMobile from "./components/AboutUs/ourTeamMobile";
@@ -34,6 +40,7 @@ import Sap from "./page/Sap";
 import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry";
 import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
+import PrivacyPolicy from "./page/PrivacyPolicy";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -46,8 +53,8 @@ function Layout() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -111,6 +118,7 @@ function App() {
         <Route path="/careers" element={<JoinUs />} />
         <Route path="/roles" element={<JobRoles />} />
         <Route path="/map" element={<WorldMap />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/blog/:slug" element={<AllBlogData />} />
         <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} />
