@@ -7,36 +7,33 @@ import { modalContent, headerData } from "../data/staticData";
 const NavItem = ({ title, children, isOpen, onToggle, isActive }) => {
   const navItemRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        navItemRef.current &&
-        !navItemRef.current.contains(event.target) &&
-        isOpen
-      ) {
+      if (navItemRef.current && !navItemRef.current.contains(event.target)) {
+        setIsHovered(false);
+        setIsClosed(true);
         onToggle && onToggle(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen, onToggle]);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [onToggle]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (onToggle && !isOpen) {
-      onToggle(true);
-    }
+    setIsClosed(false);
+    onToggle && onToggle(true);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    setIsClosed(true);
+    onToggle && onToggle(false);
   };
 
-  const shouldShowDropdown = (isOpen || isHovered) && onToggle;
+  const shouldShowDropdown = (isHovered || !isClosed || isOpen) && children;
 
   return (
     <li
@@ -49,20 +46,12 @@ const NavItem = ({ title, children, isOpen, onToggle, isActive }) => {
         to={title.toLowerCase() === "services" ? "/services" : "/industries"}
         style={{
           ...styles.link,
-          ...(isOpen || isHovered || isActive ? styles.activeLink : {}),
+          ...(isHovered || isOpen || isActive ? styles.activeLink : {}),
         }}
       >
         {title}
       </Link>
-      {shouldShowDropdown && children && (
-        <div
-          style={styles.modal}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {children}
-        </div>
-      )}
+      {shouldShowDropdown && <div style={styles.modal}>{children}</div>}
     </li>
   );
 };
