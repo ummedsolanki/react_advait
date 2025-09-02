@@ -1,16 +1,31 @@
 import { solutionEmp, solutionContent } from "../data/solution.data";
 import ServiceCard from "../components/ServiceCard";
 import { solutionProvide } from "../data/solution.data";
+import HeroComponent from "../components/HeroComponent";
+import { getHeroData } from "../api/HeroApi";
+import { useState, useEffect, useRef } from "react";
 
-export default function Solution() {
+export default function Industries() {
+    const [heroData, setHeroData] = useState(null);
+    const fetched = useRef(false); // track if API already called
+
+    useEffect(() => {
+        if (fetched.current) return; // prevent second call
+        fetched.current = true;
+        getHeroData("Solutions").then((data) => {
+            if (data.home && data.home.length > 0) {
+                setHeroData(data.home[0]);
+            }
+        });
+    }, []);
+
+    if (!heroData) return <p>Loading...</p>;
+
     return (
         <>
             <section className="about-section about-margin-0-margin">
-                <div className="about-image-wrapper mobile-image-wrapper-ext-80">
-                    <img src={solutionEmp.solutionImage} alt="Solution" className="about-image" />
-                    <div className="about-overlay">
-                        <h1>{solutionEmp.title}</h1>
-                    </div>
+                <div>
+                    <HeroComponent heroData={heroData} />
                 </div>
 
                 <div className="about-content about-margin">

@@ -1,20 +1,27 @@
-import industryVideo from "../assets/industry.mp4";
+import HeroComponent from "../components/HeroComponent";
+import { getHeroData } from "../api/HeroApi";
+import { useState, useEffect, useRef } from "react";
 
 export default function Industries() {
+  const [heroData, setHeroData] = useState(null);
+  const fetched = useRef(false); // track if API already called
+
+  useEffect(() => {
+    if (fetched.current) return; // prevent second call
+    fetched.current = true;
+    getHeroData("Industries").then((data) => {
+      if (data.home && data.home.length > 0) {
+        setHeroData(data.home[0]);
+      }
+    });
+  }, []);
+
+  if (!heroData) return <p>Loading...</p>;
+
   return (
     <section className="industries-section header-margin">
-      <div className="video-banner mobile-image-wrapper-ext-80">
-        <video
-          className="video-bg"
-          src={industryVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="video-overlay">
-          <h1 className="industries-title">INDUSTRIES</h1>
-        </div>
+      <div>
+        <HeroComponent heroData={heroData} />
       </div>
 
       <div className="industries-content about-margin">

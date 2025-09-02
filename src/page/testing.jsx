@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import img1 from "../assets/ind1.jpg";
 import img2 from "../assets/ind2.jpg";
 import img3 from "../assets/ind3.jpg";
@@ -8,6 +8,8 @@ import img6 from "../assets/ind6.jpg";
 import img7 from "../assets/ind7.jpg";
 import img8 from "../assets/ind4.jpg";
 import aboutImage from "../assets/Join Us.mp4";
+import { getHeroData } from "../api/HeroApi";
+import HeroComponent from "../components/HeroComponent";
 
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
@@ -58,24 +60,25 @@ export default function JoinUs() {
     setShowPopup(false);
   };
 
+  const [heroData, setHeroData] = useState(null);
+  const fetched = useRef(false); // track if API already called
+
+  useEffect(() => {
+    if (fetched.current) return; // prevent second call
+    fetched.current = true;
+    getHeroData("Join Us").then((data) => {
+      if (data.home && data.home.length > 0) {
+        setHeroData(data.home[0]);
+      }
+    });
+  }, []);
+
+  if (!heroData) return <p>Loading...</p>;
   return (
     <>
       <section className="about-section header-margin">
-        <div className="about-image-wrapper mobile-image-wrapper-ext-80">
-          <video
-            src={aboutImage}
-            className="about-image"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            Your browser does not support the video tag.
-          </video>
-
-          <div className="about-overlay">
-            <h1>JOIN US</h1>
-          </div>
+        <div>
+          <HeroComponent heroData={heroData} />
         </div>
       </section>
 
