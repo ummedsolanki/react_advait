@@ -34,7 +34,7 @@ export default function Home() {
             <ServiceSection data={homeData.servicesSection} />
             <HeroBanner data={homeData.businessLevelSection} />
             <BlogSection data={homeData.blogSections} />
-            <RtlSwiper />
+            <RtlSwiper data={homeData.companyList} />
             <FooterDetails />
         </>
     );

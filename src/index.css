@@ -138,12 +138,13 @@ body {
   margin: 2.5rem 0;
 }
 
+/* 
 .swiper-img {
   height: 60px;
   width: auto;
   object-fit: contain;
   display: block;
-}
+} */
 
 .slick-slide {
   display: flex !important;
@@ -162,16 +163,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.swiper-div {
+/* .swiper-div {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  margin-right: 10rem;
+} */
 
 .swiper-img {
   height: 3.75rem;
   width: auto;
   object-fit: contain;
+  margin-right: 10rem;
 }
 
 .gallery-container {
@@ -3119,6 +3122,10 @@ textarea {
     margin-right: 1.5rem !important;
   }
 
+  .swiper-img {
+    margin-right: 4rem;
+  }
+
   .industries-title {
     font-size: var(--header-fontsize);
   }
@@ -3265,6 +3272,10 @@ textarea {
 @media only screen and (max-width: 768px) {
   .section-header h2 {
     font-size: 1.5rem;
+  }
+
+  .swiper-img {
+    margin-right: 1rem;
   }
 
   /*--------------------------------silver-logo--------------------------------------------*/
