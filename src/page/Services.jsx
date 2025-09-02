@@ -1,10 +1,7 @@
-import service1 from "../assets/card1.jpg";
-import service2 from "../assets/card2.jpg";
-import service3 from "../assets/card3.jpg";
-import { servicesData, servicesText } from "../data/staticData";
+
+import { servicesText } from "../data/staticData";
 import parse from "html-react-parser";
-import { getHomeData } from "../api/HomeApi";
-import { useState, useEffect } from "react";
+
 
 const styles = {
   section: {

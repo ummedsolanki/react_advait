@@ -1,7 +1,5 @@
-import { solutionsData, solutionsText } from "../data/staticData";
+import { solutionsText } from "../data/staticData";
 import ServiceCard from "../components/ServiceCard";
-import { getHomeData } from "../api/HomeApi";
-import { useState, useEffect } from "react";
 
 const styles = {
   section: {

@@ -1,11 +1,3 @@
-
-
-import aboutImage from "../assets/About-us.jpg";
-export const aboutUsEmp = {
-  title: "About Us",
-  aboutImage: aboutImage,
-}
-
 export const aboutUsEmpContent = {
   title1: "Empowering Your Digital ",
   title2: "Journey",

@@ -1,4 +1,4 @@
-import { infraEmp, infraContent, infraProvide } from "../data/Infra.data";
+import { infraContent, infraProvide } from "../data/Infra.data";
 import ServiceCard from "../components/ServiceCard";
 import parse from 'html-react-parser';
 import HeroComponent from "../components/HeroComponent";

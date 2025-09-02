@@ -1,7 +1,5 @@
-import servicesBanner from "../assets/SERVICES.jpg";
 
 export const servicesStaticData = {
-  servicesTitle: "SERVICES/BUSINESS SOLUTION",
   servicesSubTitle: "Innovative IT Solutions",
   servicesSubTitle2: "Tailored",
   servicesSubTitle3: "to Your Business",
@@ -12,7 +10,6 @@ export const servicesStaticData = {
       end-to-end support tailored to your business needs. With proactive
       management and 24/7 support, we help you reduce downtime, lower IT
       costs, and enhance system performance.`,
-  servicesBanner: servicesBanner,
 };
 
 import card1 from "../assets/Rise with SAP Private cloud.jpg";

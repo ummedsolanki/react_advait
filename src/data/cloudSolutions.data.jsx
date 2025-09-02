@@ -1,6 +1,4 @@
-import industryVideo from "../assets/CLOUD SOLUTIONS.jpg";
 export const cloudStaticData = {
-  title: "CLOUD SOLUTIONS",
   description: "Innovative IT Solutions",
   Tailored: "Tailored to Your Business Needs.",
   lineData: ` Accelerate operational efficiency, enhance business agility, and
@@ -10,7 +8,6 @@ export const cloudStaticData = {
               Whether you're starting your SAP journey or optimizing an existing
               environment, our expert team ensures scalable, future-ready
               solutions tailored to your business goals.`,
-  industryVideo: industryVideo,
 };
 
 import Modernization1 from "../assets/SAP on Azure.jpg";

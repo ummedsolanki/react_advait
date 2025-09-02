@@ -1,4 +1,3 @@
-import industryVideo from "../assets/Insights.mp4";
 import Consulting1 from "../assets/Digital Transformation.jpg";
 import Consulting2 from "../assets/SAP Business Solution.jpg";
 import Consulting3 from "../assets/Chemical Industry.jpg";

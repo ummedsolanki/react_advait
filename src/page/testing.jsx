@@ -7,7 +7,6 @@ import img5 from "../assets/ind5.jpg";
 import img6 from "../assets/ind6.jpg";
 import img7 from "../assets/ind7.jpg";
 import img8 from "../assets/ind4.jpg";
-import aboutImage from "../assets/Join Us.mp4";
 import { getHeroData } from "../api/HeroApi";
 import HeroComponent from "../components/HeroComponent";
 

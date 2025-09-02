@@ -1,7 +1,4 @@
-import { blogText, blogData } from "../data/staticData";
 import ServiceCard from "../components/ServiceCard";
-import { useState, useEffect } from "react";
-import { getHomeData } from "../api/HomeApi";
 
 const styles = {
   section: {
