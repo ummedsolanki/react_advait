@@ -61,7 +61,7 @@ export default function Insights() {
     fetched.current = true;
     getHeroData("Insights").then((data) => {
       if (data.home && data.home.length > 0) {
-        setHeroData(data.home[0]);
+        setHeroData(data.home);
       }
     });
   }, []);

@@ -12,7 +12,7 @@ export default function Industries() {
     fetched.current = true;
     getHeroData("About").then((data) => {
       if (data.home && data.home.length > 0) {
-        setHeroData(data.home[0]);
+        setHeroData(data.home);
       }
     });
   }, []);
