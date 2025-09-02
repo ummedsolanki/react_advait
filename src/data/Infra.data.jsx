@@ -8,7 +8,7 @@ import card1 from "../assets/Rise with SAP Private cloud.jpg";
 export const infraProvide = [
     {
         title: "Digital Transformation",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card1,
     }

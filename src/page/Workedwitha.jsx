@@ -5,19 +5,19 @@ import ServiceCard from "../components/ServiceCard";
 const workedWitha = [
   {
     title: "Company A",
-    description:
+    subtitle:
       "Partnered for delivering enterprise-grade analytics and transformation projects.",
     src: worked1,
   },
   {
     title: "Company B",
-    description:
+    subtitle:
       "Collaborated on user experience optimization and digital workplace solutions.",
     src: worked2,
   },
   {
     title: "Company C",
-    description:
+    subtitle:
       "Implemented modern ERP systems with best-in-class migration strategies.",
     src: worked3,
   },

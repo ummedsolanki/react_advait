@@ -29,85 +29,85 @@ import card14 from "../assets/Big Data.jpg";
 export const solutionProvide = [
     {
         title: "Digital Transformation",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card1,
     },
     {
         title: "SAP Business Solution",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card2,
     },
     {
         title: "SAP BASIS & Security",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card3,
     },
     {
         title: "Digital Transformation",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card4,
     },
     {
         title: "SAP Business Solution",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card5,
     },
     {
         title: "SAP BASIS & Security",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card6,
     },
     {
         title: "Digital Transformation",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card7,
     },
     {
         title: "SAP Business Solution",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card8,
     },
     {
         title: "SAP BASIS & Security",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card9,
     },
     {
         title: "Digital Transformation",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card10,
     },
     {
         title: "SAP Business Solution",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card11,
     },
     {
         title: "SAP BASIS & Security",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card12,
     },
     {
         title: "SAP Business Solution",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card13,
     },
     {
         title: "SAP BASIS & Security",
-        description:
+        subtitle:
             "In the powerful scene of computerized change, organizations are ceaselessly looking for imaginative",
         src: card14,
     },

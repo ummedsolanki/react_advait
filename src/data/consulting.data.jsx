@@ -21,31 +21,31 @@ import Consulting5 from "../assets/Integration.jpg";
 export const Consultings = [
   {
     title: "SAP Analytics Cloud",
-    description:
+    subtitle:
       "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
     src: Consulting1,
   },
   {
     title: "SAP Fiori & UX",
-    description:
+    subtitle:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
     src: Consulting2,
   },
   {
     title: "SAP S/4HANA",
-    description:
+    subtitle:
       "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
     src: Consulting3,
   },
   {
     title: "SAP Fiori & UX",
-    description:
+    subtitle:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
     src: Consulting4,
   },
   {
     title: "SAP S/4HANA",
-    description:
+    subtitle:
       "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
     src: Consulting5,
   },

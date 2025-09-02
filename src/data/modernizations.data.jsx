@@ -19,31 +19,31 @@ import Modernization5 from "../assets/Sofware Development.jpg";
 export const Modernizations = [
   {
     title: "SAP Analytics Cloud",
-    description:
+    subtitle:
       "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
     src: Modernization1,
   },
   {
     title: "SAP Fiori & UX",
-    description:
+    subtitle:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
     src: Modernization2,
   },
   {
     title: "SAP Analytics Cloud",
-    description:
+    subtitle:
       "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
     src: Modernization3,
   },
   {
     title: "SAP Fiori & UX",
-    description:
+    subtitle:
       "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
     src: Modernization4,
   },
   {
     title: "SAP Analytics Cloud",
-    description:
+    subtitle:
       "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
     src: Modernization5,
   }]
