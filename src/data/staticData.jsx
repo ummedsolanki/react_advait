@@ -190,9 +190,6 @@ export const servicesData = [
 
 //Hero Banner Data
 export const heroText = {
-  heroTitle: "Take Your Business",
-  heroSubTitle: "To Next Level",
-  heroSubTitle2: "Start Your Journey With Us Today",
   contactUs: "Contact Us",
 };
 

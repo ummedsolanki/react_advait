@@ -66,8 +66,9 @@ const styles = {
     maxWidth: '200px',
   }
 };
-const HeroBanner = () => {
+const HeroBanner = ({ data }) => {
   const navigate = useNavigate();
+  if (!data) return null;
 
   return (
     <>
@@ -75,10 +76,9 @@ const HeroBanner = () => {
         <div style={styles.overlay}></div>
         <div className="heroContent">
           <h1 className="mainHeading">
-            <span style={styles.headingEm}>{heroText.heroTitle}</span>
-            <span style={styles.headingEm}>{heroText.heroSubTitle}</span>
+            <span style={styles.headingEm}>{data.text}</span>
           </h1>
-          <p className="subHeading">{heroText.heroSubTitle2}</p>
+          <p className="subHeading">{data.subText}</p>
           <button className="apply-btn" onClick={() => {
             navigate("/contact");
             window.scrollTo(0, 0); // scroll to top

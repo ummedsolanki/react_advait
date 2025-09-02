@@ -29,10 +29,10 @@ export default function Home() {
         <>
             <Hero data={homeData.heroSections} />
             <Why data={homeData.whySection} />
-            <Counter />
+            <Counter data={homeData.middleSection} />
             <SolutionsSection data={homeData.solutionsSection} />
             <ServiceSection data={homeData.servicesSection} />
-            <HeroBanner />
+            <HeroBanner data={homeData.businessLevelSection} />
             <BlogSection data={homeData.blogSections} />
             <RtlSwiper />
             <FooterDetails />
