@@ -1,20 +1,28 @@
 import { contactUsHeroData } from "../../data/contactUs.data";
+import HeroComponent from "../HeroComponent";
+import { useState, useEffect, useRef } from "react";
+import { getHeroData } from "../../api/HeroApi";
 
 
-const contactUsHero = () => {
+export default function ContactUsHero() {
+  const [heroData, setHeroData] = useState(null);
+  const fetched = useRef(false); // track if API already called
+
+  useEffect(() => {
+    if (fetched.current) return; // prevent second call
+    fetched.current = true;
+    getHeroData("Contact Us").then((data) => {
+      if (data.home && data.home.length > 0) {
+        setHeroData(data.home);
+      }
+    });
+  }, []);
+
+  if (!heroData) return <p>Loading...</p>;
   return (
-    <section className="contact-us-section mobile-image-wrapper-ext-80">
-      <div className="video-banner">
-        <img
-          className="video-bg"
-          src={contactUsHeroData.contactUsVideo}
-          alt="Contact Us"
-        />
-        playsInline
-
-        <div className="video-overlay">
-          <h1 className="contact-us-title">{contactUsHeroData.contactUsTitle}</h1>
-        </div>
+    <section className="contact-us-section ">
+      <div>
+        <HeroComponent heroData={heroData} />
       </div>
 
       {/* Text Content */}
@@ -40,6 +48,5 @@ const contactUsHero = () => {
       </div>
     </section>
   );
-};
+}
 
-export default contactUsHero;
