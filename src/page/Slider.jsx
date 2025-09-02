@@ -11,7 +11,7 @@ export default function RtlSlider({ data }) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     speed: 7000,
     autoplaySpeed: 0,
     cssEase: "linear",
