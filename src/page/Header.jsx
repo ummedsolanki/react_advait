@@ -8,6 +8,7 @@ const NavItem = ({ title, children, isOpen, onToggle, isActive }) => {
   const navItemRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+  const timerRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -22,18 +23,23 @@ const NavItem = ({ title, children, isOpen, onToggle, isActive }) => {
   }, [onToggle]);
 
   const handleMouseEnter = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
     setIsHovered(true);
     setIsClosed(false);
     onToggle && onToggle(true);
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
-    setIsClosed(true);
-    onToggle && onToggle(false);
+    timerRef.current = setTimeout(() => {
+      setIsHovered(false);
+      setIsClosed(true);
+      onToggle && onToggle(false);
+    }, 200);
   };
 
-  const shouldShowDropdown = (isHovered || !isClosed || isOpen) && children;
+  const shouldShowDropdown = (isHovered || isOpen) && children;
 
   return (
     <li
