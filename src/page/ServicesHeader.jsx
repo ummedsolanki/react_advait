@@ -1,31 +1,48 @@
 import ServiceCard from "../components/ServiceCard";
-import { servicesProvide, servicesStaticData } from "../data/services.data";
 import HeroComponent from "../components/HeroComponent";
 import { getHeroData } from "../api/HeroApi";
 import { useState, useEffect, useRef } from "react";
+import { servicesStaticData } from "../data/services.data";
 
 export default function Industries() {
   const [heroData, setHeroData] = useState(null);
+  const [servicesProvide, setServicesProvide] = useState([]); // backend services
   const fetched = useRef(false); // track if API already called
 
   useEffect(() => {
-    if (fetched.current) return; // prevent second call
+    if (fetched.current) return;
     fetched.current = true;
+
+    // get hero data
     getHeroData("Services").then((data) => {
       if (data.home && data.home.length > 0) {
         setHeroData(data.home);
       }
     });
+
+    // fetch services from backend
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/services/list?page=1&limit=20 `)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.services) {
+          const updatedServices = data.services.map((item) => ({
+            ...item,
+            src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
+          }));
+          setServicesProvide(updatedServices);
+        }
+      })
+      .catch((err) => console.error("Error fetching services:", err));
   }, []);
 
-  if (!heroData) return <p>Loading...</p>;
+  if (!heroData || servicesProvide.length === 0) return <p>Loading...</p>;
+
   return (
     <>
       <section className="blog-section header-margin">
         <div>
           <HeroComponent heroData={heroData} />
         </div>
-
         <div className="industries-content service-content about-margin">
           <div className="industries-heading">
             <h2 className="Service-Header">
@@ -51,8 +68,12 @@ export default function Industries() {
         </div>
       </section>
 
-      <ServiceCard sectionTitle="Services" sectionTag="WE PROVIDE" data={servicesProvide} />
+      {/* ✅ now this uses backend data */}
+      <ServiceCard
+        sectionTitle="Services"
+        sectionTag="WE PROVIDE"
+        data={servicesProvide}
+      />
     </>
   );
 }
-

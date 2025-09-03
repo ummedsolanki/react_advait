@@ -4425,6 +4425,8 @@ form input[type="email"] {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  color: #333;
+
 }
 
 
@@ -4735,5 +4737,40 @@ form input[type="email"] {
 
   .privacy-content h2 {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sap-section {
+    flex-direction: column !important;
+    gap: 1rem;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .sap-text,
+  .sap-img-wrap {
+    flex: 1 1 100%;
+  }
+
+  .sap-text {
+    gap: 1rem;
+  }
+
+  .row-reverse {
+    flex-direction: column !important;
+  }
+
+  .sap-img {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .sap-text h2 {
+    font-size: var(--p-header-fontsize);
+  }
+
+  .sap-text p {
+    font-size: var(--p-normal-fontsize);
   }
 }

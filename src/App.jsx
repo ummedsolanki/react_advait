@@ -41,7 +41,7 @@ import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry"
 import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
-import Loader from "./page/Loader";
+// import Loader from "./page/Loader";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -120,7 +120,7 @@ function App() {
         <Route path="/roles" element={<JobRoles />} />
         <Route path="/map" element={<WorldMap />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/loading" element={<Loader />} />
+        {/* <Route path="/loading" element={<Loader />} /> */}
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/blog/:slug" element={<AllBlogData />} />
         <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} />

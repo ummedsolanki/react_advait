@@ -54,6 +54,7 @@ const Studies = [
 export default function Insights() {
   const [heroData, setHeroData] = useState(null);
   const fetched = useRef(false); // track if API already called
+  const [blogs, setblogs] = useState([]); // backend services
 
   useEffect(() => {
     if (fetched.current) return; // prevent second call
@@ -63,9 +64,23 @@ export default function Insights() {
         setHeroData(data.home);
       }
     });
+
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/blogs/list?page=1&limit=20`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.blogs) {
+          const updatedBlogs = data.blogs.map((item) => ({
+            ...item,
+            src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
+          }));
+          setblogs(updatedBlogs);
+        }
+      })
+      .catch((err) => console.error("Error fetching blogs:", err));
+
   }, []);
 
-  if (!heroData) return <p>Loading...</p>;
+  if (!heroData || blogs.length === 0) return <p>Loading...</p>;
   return (
     <>
       <section className="industries-section header-margin">
@@ -73,7 +88,7 @@ export default function Insights() {
           <HeroComponent heroData={heroData} />
         </div>
       </section>
-      <ServiceCard sectionTitle="INSIGHTS" sectionTag="Blogs & Articles" data={Consultings} />
+      <ServiceCard sectionTitle="INSIGHTS" sectionTag="Blogs & Articles" data={blogs} />
       <ServiceCard sectionTitle="WORKS" sectionTag="Case Studies" data={Studies} />
       <TestimonialSlider />
     </>

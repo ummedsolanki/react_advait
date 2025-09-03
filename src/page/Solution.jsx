@@ -1,6 +1,5 @@
-import { solutionEmp, solutionContent } from "../data/solution.data";
+import { solutionContent } from "../data/solution.data";
 import ServiceCard from "../components/ServiceCard";
-import { solutionProvide } from "../data/solution.data";
 import HeroComponent from "../components/HeroComponent";
 import { getHeroData } from "../api/HeroApi";
 import { useState, useEffect, useRef } from "react";
@@ -8,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 export default function Industries() {
     const [heroData, setHeroData] = useState(null);
     const fetched = useRef(false); // track if API already called
+    const [solutionProvide, setSolutionProvide] = useState([]); // backend services
 
     useEffect(() => {
         if (fetched.current) return; // prevent second call
@@ -17,6 +17,18 @@ export default function Industries() {
                 setHeroData(data.home);
             }
         });
+        fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/solutions/list?page=1&limit=20`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.solutions) {
+                    const updatedSolutions = data.solutions.map((item) => ({
+                        ...item,
+                        src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
+                    }));
+                    setSolutionProvide(updatedSolutions);
+                }
+            })
+            .catch((err) => console.error("Error fetching services:", err));
     }, []);
 
     if (!heroData) return <p>Loading...</p>;
