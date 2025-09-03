@@ -1,7 +1,27 @@
 import "./ourTeamMobile.css";
-import { teamMembers, teamStaticData } from "../../data/aboutUs.data";
+import { teamStaticData } from "../../data/aboutUs.data";
+import { useState, useEffect } from "react";
 
 export default function OurTeamMobile() {
+  const [teamMembers, setTeamMembers] = useState([]);
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/our-teams/list?page=1&limit=20`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.teams) {
+          // Map API fields to your UI fields
+          const mappedMembers = data.teams.map((member) => ({
+            name: member.name,
+            role: member.designation,
+            description: member.content,
+            linkedin: member.linkedin,
+            image: member.imageUrl, // background image
+          }));
+          setTeamMembers(mappedMembers);
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
   return (
     <section className="our-team-mobile">
       <h3 className="mobile-section-title">{teamStaticData.title}</h3>

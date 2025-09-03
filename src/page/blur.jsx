@@ -5,7 +5,7 @@ import parse from "html-react-parser";
 export default function Team() {
   const [teamMembers, setTeamMembers] = useState([]);
   useEffect(() => {
-    fetch("http://172.16.5.23:5000/api/our-teams/list?page=1&limit=20")
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/our-teams/list?page=1&limit=20`)
       .then((res) => res.json())
       .then((data) => {
         if (data.teams) {
@@ -36,29 +36,6 @@ export default function Team() {
       </div>
 
       <div className="team-grid">
-        {/* {teamMembers.map((member, index) => (
-          <div key={index} className="team-card">
-            <div className="card-inner">
-              <div
-                className="card-front"
-                style={{ backgroundImage: `url(${member.image})` }}
-              ></div>
-              <div className="card-back">
-                <h3>{member.name}</h3>
-                <p className="role">{member.role}</p>
-                <p className="desc">{member.description}</p>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="linkedin-icon"
-                >
-                  <img src={teamStaticData.linkedinImage} alt="LinkedIn" />
-                </a>
-              </div>
-            </div>
-          </div>
-        ))} */}
         {teamMembers.map((member, index) => (
           <div key={index} className="team-card">
             <div className="card-inner">
