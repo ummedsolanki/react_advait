@@ -4635,12 +4635,7 @@ form input[type="email"] {
 }
 
 /* Main Layout */
-.privacy-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  width: 100%;
-}
+
 
 /* Card Content */
 .privacy-content {
