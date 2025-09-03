@@ -134,16 +134,24 @@ export default function JoinUs() {
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
+                name="firstName"
+                placeholder="First-Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last-Name"
+                value={formData.lastName}
                 onChange={handleChange}
                 required
               />
               <input
                 type="tel"
                 name="number"
-                placeholder="Your Number"
+                placeholder="Phone-Number"
                 value={formData.number}
                 onChange={handleChange}
                 required
@@ -151,18 +159,49 @@ export default function JoinUs() {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
+
+              {/* File Upload */}
+              <div className="file-upload">
+                <input type="file" id="resume" name="resume" />
+              </div>
+
+              {/* Fake reCAPTCHA UI */}
+              <div className="fake-recaptcha">
+                <div className="recaptcha-check">
+                  <input type="checkbox" id="notRobot" required />
+                  <label htmlFor="notRobot">I'm not a robot</label>
+                </div>
+                <div className="recaptcha-logo">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 122.88 116.79"
+                    xmlSpace="preserve"
+                  >
+                    <path
+                      d="M101.42 40.78c0-.59-.02-1.17-.04-1.75V5.88l-9.16 9.17C84.72 5.86 73.31 0 60.53 0c-13.3 0-25.12 6.35-32.59 16.18l15.02 15.18a19.95 19.95 0 0 1 6.08-6.83c2.62-2.05 6.34-3.72 11.48-3.72.62 0 1.1.07 1.45.21 6.37.5 11.89 4.02 15.14 9.12L66.48 40.77c13.47-.05 28.69-.08 34.94.01"
+                      fill="#1c3aa9"
+                    />
+                    <path
+                      d="M60.29 0c-.59 0-1.17.02-1.75.04H25.38l9.17 9.16C25.37 16.71 19.5 28.12 19.5 40.9c0 13.3 6.35 25.12 16.18 32.59l15.18-15.02a19.95 19.95 0 0 1-6.83-6.08c-2.05-2.62-3.72-6.34-3.72-11.48 0-.62.07-1.1.21-1.45.5-6.37 4.02-11.89 9.12-15.14l10.63 10.63c-.04-13.48-.08-28.69.02-34.95"
+                      fill="#4285f4"
+                    />
+                    <path
+                      d="M19.51 40.9c0 .59.02 1.17.04 1.75V75.8l9.16-9.16c7.5 9.18 18.91 15.04 31.69 15.04 13.3 0 25.12-6.35 32.59-16.18L77.97 50.32a19.95 19.95 0 0 1-6.08 6.83c-2.62 2.05-6.34 3.72-11.48 3.72-.62 0-1.1-.07-1.45-.21-6.37-.5-11.89-4.02-15.14-9.12l10.63-10.63c-13.47.05-28.69.08-34.94-.01"
+                      fill="#ababab"
+                    />
+                  </svg>
+                  <p>
+                    reCAPTCHA <span>Privacy</span> - <span>Terms</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Buttons */}
               <div className="popup-buttons">
                 <button type="button" onClick={() => setShowPopup(false)}>
                   Cancel

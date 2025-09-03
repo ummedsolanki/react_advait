@@ -24,15 +24,6 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="privacy-container">
-      {/* Header */}
-      <header className="privacy-header">
-        <div className="logos">
-          <img src={companyLogo} alt="Company Logo" className="logos-img" />
-          <span className="logos-text">ADVAIT BUSINESS SOLUTION PVT LTD</span>
-        </div>
-      </header>
-
-      {/* Main Section */}
       <main className="privacy-main">
         <section className="privacy-content" aria-live="polite">
           <h1 className="page-title">Privacy Policy</h1>
