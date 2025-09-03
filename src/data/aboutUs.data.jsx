@@ -84,34 +84,3 @@ export const teamStaticData = {
   subtitle3: "to your success.",
   linkedinImage: linkedinIcon,
 }
-
-export const teamMembers = [
-  {
-    name: "Jash",
-    role: "Senior dev",
-    image: img1,
-    hoverImage: img1Hover,
-    linkedin: "#",
-  },
-  {
-    name: "Jay",
-    role: "Full Stack Developer",
-    image: img2,
-    hoverImage: img2Hover,
-    linkedin: "#",
-  },
-  {
-    name: "Priy",
-    role: "Marketing Head",
-    image: img3,
-    hoverImage: img3Hover,
-    linkedin: "#",
-  },
-  {
-    name: "Yug",
-    role: "Marketing Head",
-    image: img4,
-    hoverImage: img4Hover,
-    linkedin: "#",
-  },
-];
