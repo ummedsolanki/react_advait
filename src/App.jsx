@@ -42,7 +42,7 @@ import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
 // import ShinyText from "./components/Shinytext";
-// import Loader from "./page/Loader";
+import Loader from "./page/Loader";
 // Custom hook to access context
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -122,7 +122,7 @@ function App() {
         <Route path="/map" element={<WorldMap />} />
         {/* <Route path="/shiny-text" element={<ShinyText />} /> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        {/* <Route path="/loading" element={<Loader />} /> */}
+        <Route path="/loading" element={<Loader />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/blog/:slug" element={<AllBlogData />} />
         <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} />
@@ -130,7 +130,7 @@ function App() {
         <Route path="/sap-s4/:slug" element={<AllBlogData />} />
         <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} />
         {/* <Route path="/rise-private-cloud" element={<RisePrivateCloud />} /> */}
-        {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
+        <Route path="/digital-transformation" element={<DigitalTransformation />} />
         {/* <Route path="/sap-s4" element={<Sap />} /> */}
         {/* <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} /> */}
       </Route>

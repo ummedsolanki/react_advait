@@ -3957,6 +3957,7 @@ form input[type="email"] {
   width: 100%;
   border-radius: 16px;
   object-fit: cover;
+  height: 270px;
 }
 
 .transformation-section .content {
@@ -4084,7 +4085,7 @@ form input[type="email"] {
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 40px;
-  padding: 1.5rem 0.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
 .future-content h2 {
@@ -4106,6 +4107,7 @@ form input[type="email"] {
   width: 100%;
   border-radius: 16px;
   object-fit: cover;
+  height: 270px;
 }
 
 @media (max-width: 900px) {
@@ -4184,7 +4186,7 @@ form input[type="email"] {
 
   .partner-image img {
     height: auto;
-    max-height: 280px;
+    max-height: 270px;
   }
 
   .partner-content h2 {

@@ -7,16 +7,13 @@ import digi from "../assets/digi.jpg";
 export default function RisePrivateCloud() {
   return (
     <>
-      <div className="video-banner mobile-image-wrapper-ext-80">
-        <img className="video-bg" src={privateCloudImage} />
-        <div className="video-overlay">
-          <h1 className="industries-title">Rise with SAP Private cloud</h1>
-        </div>
-      </div>
-      <div className="private-cloud-section">
-        {/* Left Content */}
+      <div className="future-section">
         <div className="content">
-          <h2>RISE with SAP in a Private Cloud-<br />Advait Business Solutions Pvt Ltd:</h2>
+          <h2>
+            RISE with SAP in a Private Cloud-
+            <br />
+            Advait Business Solutions Pvt Ltd:
+          </h2>
           <p>
             Accelerate your journey to an intelligent enterprise with RISE with
             SAP in a Private Cloud.
@@ -35,11 +32,11 @@ export default function RisePrivateCloud() {
           </p>
         </div>
 
-        {/* Right Content */}
-        <div className="video-banner">
-          <img className="video-bg" src={cyber} alt="Private Cloud" />
+        <div className="future-image">
+          <img src={digi} alt="Future with SAP" />
         </div>
       </div>
+
       <div className="transformation-section">
         {/* Left Image */}
         <div className="image-banner">
