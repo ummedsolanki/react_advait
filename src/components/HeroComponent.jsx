@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ShinyText from "./Shinytext";
 
 export default function HeroComponent({ heroData, sliderSettings }) {
     if (!heroData || heroData.length === 0) return null;
@@ -67,7 +68,9 @@ export default function HeroComponent({ heroData, sliderSettings }) {
 
             {/* Overlay for title (optional, if you want per slide title then move inside .map loop) */}
             <div className="about-overlay">
+              <ShinyText>
                 <h1>{heroData[0].title}</h1>
+              </ShinyText>
             </div>
         </div>
     );

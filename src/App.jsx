@@ -41,6 +41,7 @@ import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry"
 import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
+// import ShinyText from "./components/Shinytext";
 // import Loader from "./page/Loader";
 // Custom hook to access context
 export function useIsMobile() {
@@ -119,6 +120,7 @@ function App() {
         <Route path="/careers" element={<JoinUs />} />
         <Route path="/roles" element={<JobRoles />} />
         <Route path="/map" element={<WorldMap />} />
+        {/* <Route path="/shiny-text" element={<ShinyText />} /> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* <Route path="/loading" element={<Loader />} /> */}
         <Route path="*" element={<Navigate to="/" replace />} />
@@ -134,6 +136,6 @@ function App() {
       </Route>
     </Routes>
   );
-}
+} 
 
 export default App;
