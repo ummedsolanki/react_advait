@@ -73,7 +73,8 @@ Scalable and secure ERP landscape`,
 ];
 const digitalSections = [
   {
-    title: "Silver Strategies for Digital Success: Partnering with SAP in Transformation",
+    title:
+      "Silver Strategies for Digital Success: Partnering with SAP in Transformation",
     content: `In today's fast-paced digital landscape, organizations are under increasing pressure to innovate, streamline operations, and stay competitive. At the heart of this transformation is SAP (Systems, Applications, and Products in Data Processing), a global leader in enterprise software solutions. As a Silver Partner, we've had the privilege of seeing firsthand how SAP empowers businesses across industries to thrive in the digital age.`,
     image: city,
   },
@@ -166,7 +167,7 @@ function Sap() {
 function DigitalTransformation() {
   return (
     <>
-      <div className="video-banner mobile-image-wrapper-ext-80">
+      <div className="about-image-wrapper mobile-image-wrapper-ext-80 header-margin">
         <img className="video-bg" src={digital} alt="Digital Transformation" />
         <div className="video-overlay">
           <h1 className="industries-title">DIGITAL TRANSFORMATION</h1>
@@ -325,8 +326,7 @@ function RisePrivateCloud() {
           <h1 className="industries-title">Rise with SAP Private cloud</h1>
         </div>
       </div>
-      <div className="private-cloud-section">
-        {/* Left Content */}
+      {/* <div className="private-cloud-section">
         <div className="content">
           <h2>
             RISE with SAP in a Private Cloud-
@@ -351,11 +351,55 @@ function RisePrivateCloud() {
           </p>
         </div>
 
-        {/* Right Content */}
         <div className="video-banner">
           <img className="video-bgs" src={cyber} alt="Private Cloud" />
         </div>
+      </div> */}
+       <div className="future-section">
+        {/* <div className="future-content">
+          <h2>
+            The <span className="highlight">Future is Intelligent.</span>
+            <br />
+            The <span className="highlight">Platform is RISE.</span>
+            <br />
+            The <span className="highlight">Partner is Advait.</span>
+          </h2>
+          <p>
+            RISE with SAP Private Cloud is the bridge between where you are
+            today and the intelligent enterprise you aspire to become. With
+            Advait Business Solutions as your strategic partner, you're not just
+            upgrading your ERP—you're transforming your business for tomorrow.
+          </p>
+        </div> */}
+         <div className="content">
+          <h2>
+            RISE with SAP in a Private Cloud-
+            <br />
+            Advait Business Solutions Pvt Ltd:
+          </h2>
+          <p>
+            Accelerate your journey to an intelligent enterprise with RISE with
+            SAP in a Private Cloud.
+          </p>
+          <p>
+            At <b>Advait Business Solutions</b>, we believe that transformation
+            should be meaningful, measurable, and sustainable. While enterprises
+            understand the vast potential of SAP to drive innovation, the real
+            challenge lies in unlocking tangible outcomes—ones that create
+            lasting value, streamline operations, and power next-generation
+            business models.
+          </p>
+          <p>
+            That's where RISE with SAP - Private Cloud Edition, enabled by
+            Advait, makes the difference.
+          </p>
+        </div>
+
+        <div className="future-image">
+          <img src={digi} alt="Future with SAP" />
+        </div>
       </div>
+      
       <div className="transformation-section">
         {/* Left Image */}
         <div className="image-banner">

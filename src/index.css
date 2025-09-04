@@ -4037,7 +4037,7 @@ form input[type="email"] {
   align-items: start;
   border-radius: 16px;
   gap: 40px;
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem 0.5rem;
   background-color: white;
 }
 
@@ -4085,7 +4085,7 @@ form input[type="email"] {
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 40px;
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem 0.5rem;
 }
 
 .future-content h2 {
@@ -4112,7 +4112,7 @@ form input[type="email"] {
 @media (max-width: 900px) {
   .future-section {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: start;
   }
 
   .future-content p {
@@ -4198,7 +4198,7 @@ form input[type="email"] {
   .future-section {
     grid-template-columns: 1fr;
     gap: 20px;
-    text-align: center;
+    text-align: start;
   }
 
   .future-content h2 {
