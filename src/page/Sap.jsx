@@ -53,40 +53,131 @@ Scalable and secure ERP landscape`,
         image: card2,
     },
 ];
+// function Sap() {
+//     return (
+//         <>
+//             {/* <div className="hero mobile-image-wrapper-ext-80">
+//                 <img src={card1} alt="About Us" className="hero-video" />
+//                 <div className="hero-overlay">
+//                     <h1>SAP S/4 HANA</h1>
+//                 </div>
+//             </div> */}
+//             <div className="video-banner mobile-image-wrapper-ext-80">
+//                 <img className="video-bg" src={card1} alt="Digital Transformation" />
+//                 <div className="video-overlay">
+//                     <h1 className="industries-title">SAP S/4 HANA</h1>
+//                 </div>
+//             </div>
+//             <div className="sap-background">
+//                 <div className="sap-container">
+
+//                     <div
+//                         key={idx}
+//                         className={
+//                             `sap-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse bg-white'}`
+//                         }
+//                     >
+//                         <div className="sap-text">
+//                             <h2>Our SAP S/4HANA Expertise Includes</h2>
+//                             <div className='sap-content'>
+//                                 <p>SAP ECC to S/4HANA Migrations<br />
+//                                     On-Premises, Private Cloud, and Public Cloud Deployments<br />
+//                                     Industry-specific Best Practices & Templates<br />
+//                                     custom development & integration services<br />
+//                                     post-go-live optimization & support`,</p>
+//                                 <p>SAP ECC to S/4HANA Migrations<br />
+//                                     On-Premises, Private Cloud, and Public Cloud Deployments<br />
+//                                     Industry-specific Best Practices & Templates<br />
+//                                     custom development & integration services<br />
+//                                     post-go-live optimization & support</p>
+//                             </div>
+//                         </div>
+//                         <div className="sap-text">
+//                             <h2>Our SAP S/4HANA Expertise Includes</h2>
+//                             <div className='sap-content'>
+//                                 <p>SAP ECC to S/4HANA Migrations<br />
+//                                     On-Premises, Private Cloud, and Public Cloud Deployments<br />
+//                                     Industry-specific Best Practices & Templates<br />
+//                                     custom development & integration services<br />
+//                                     post-go-live optimization & support`,</p>
+//                                 <p>SAP ECC to S/4HANA Migrations<br />
+//                                     On-Premises, Private Cloud, and Public Cloud Deployments<br />
+//                                     Industry-specific Best Practices & Templates<br />
+//                                     custom development & integration services<br />
+//                                     post-go-live optimization & support</p>
+//                             </div>
+//                         </div>
+//                         <div className="sap-img-wrap">
+//                             <img src={card1} alt="" className="sap-img" />
+//                         </div>
+//                     </div>
+
+
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
 function Sap() {
     return (
         <>
-            <div className="about-image-wrapper mobile-image-wrapper-ext-80 header-margin">
-                <img src={card1} alt="About Us" className="about-image" />
-                <div className="about-overlay">
-                    <h1>SAP S/4 HANA</h1>
+            <div className="video-banner mobile-image-wrapper-ext-80">
+                <img className="video-bg" src={card1} alt="Digital Transformation" />
+                <div className="video-overlay">
+                    <h1 className="industries-title">SAP S/4 HANA</h1>
                 </div>
             </div>
+
             <div className="sap-background">
                 <div className="sap-container">
 
-                    {blogSections.map((section, idx) => (
-                        <div
-                            key={idx}
-                            className={
-                                `sap-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse bg-white'}`
-                            }
-                        >
-                            <div className="sap-text">
-                                <h2>{section.title}</h2>
-                                <div className='sap-content'>
-                                    <p><b>{section.content1}</b></p>
-                                    <p>{parse(section.content)}</p>
-                                </div>
-                            </div>
-                            <div className="sap-img-wrap">
-                                <img src={section.image} alt={section.title} className="sap-img" />
+                    <div className="sap-section row-normal bg-green">
+                        <div className="sap-text">
+                            <h2>Revamp Your ERP Strategy with SAP S /4HANA:</h2>
+                            <div className="sap-content">
+                                <p><b>Transform. Simplify. Accelerate.</b></p>
+                                <p>
+                                    At Advait Business Solutions Pvt. Ltd., we help businesses unlock new levels of agility and innovation with SAP S/4HANA—SAP’s next-generation intelligent ERP suite. Built on an advanced in-memory platform, SAP S/4HANA delivers unmatched performance, real-time analytics, and streamlined processes to future-proof your digital core.
+                                    <br />
+                                    <br />
+                                    Whether you're planning a greenfield implementation or a brownfield migration from SAP ECC/R/3, Advait is your trusted partner in executing a seamless, value-driven transformation.
+                                </p>
                             </div>
                         </div>
-                    ))}
+
+                        <div className="sap-img-wrap">
+                            <img src="/src/assets/city.jpg" alt="" className="sap-img" />
+                        </div>
+                    </div>
+
+                    <div className="sap-section row-reverse bg-white">
+                        <div className="sap-text">
+                            <h2>Why SAP S/4HANA?</h2>
+                            <div className="sap-content">
+                                <p><b>SAP S/4HANA is one of the most trusted and widely adopted ERP platforms globally offering:</b></p>
+                                <p>
+                                    <li>Modern, future-ready architecture</li>
+                                    <li>Real-time analytics & intelligent automation</li>
+                                    <li>Streamlined processes and simplified IT landscapes
+                                    </li>
+                                    <li>Rapid decision-making powered by live business data
+                                    </li>
+                                    <li>Flexible deployment options—on-premises, cloud, or hybrid
+                                    </li>
+                                    <li>A clear and scalable roadmap from SAP ECC to S/4HANA
+                                    </li>
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="sap-img-wrap">
+                            <img src="/src/assets/city.jpg" alt="" className="sap-img" />
+                        </div>
+                    </div>
 
                 </div>
-            </div>
+            </div >
         </>
     );
 }

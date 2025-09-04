@@ -1,5 +1,7 @@
 import { solutionsText } from "../data/staticData";
 import ServiceCard from "../components/ServiceCard";
+import { useNavigate } from "react-router-dom";
+import { generateSlug } from "../components/GenerateSlug";
 
 const styles = {
   section: {
@@ -104,6 +106,7 @@ export default function SolutionsSection({ data }) {
     ...item,
     src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
   })) || [];
+  const navigate = useNavigate();
 
   return (
     <>
@@ -142,8 +145,11 @@ export default function SolutionsSection({ data }) {
       {/* Pass the click handler to ServiceCard component */}
       <ServiceCard
         data={solutionsWithFullSrc}
-        className="home-section"
+        onCardClick={(solution) => {
+          navigate(`/solutionss/${generateSlug(solution.title)}`, { state: { item: solution } });
+        }}
       />
+
     </>
   );
 }

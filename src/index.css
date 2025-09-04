@@ -1183,6 +1183,7 @@ textarea {
   min-height: 400px;
   overflow: hidden;
   border-radius: 20px;
+  margin-top: 1rem;
 }
 
 .video-bg {
@@ -3096,6 +3097,13 @@ textarea {
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
+  .row-normal {
+    flex-direction: column !important;
+  }
+
+  .row-reverse {
+    flex-direction: column !important;
+  }
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
@@ -3205,6 +3213,29 @@ textarea {
 }
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+
+  .sap-text,
+  .sap-img-wrap {
+    flex: 1 1 100%;
+  }
+
+  .sap-text {
+    gap: 1rem;
+  }
+
+  .row-normal {
+    flex-direction: column !important;
+  }
+
+  .row-reverse {
+    flex-direction: column !important;
+  }
+
+  .sap-img {
+    width: 100%;
+    height: 30vh;
+  }
+
   .about-margin {
     margin-left: 1.5rem !important;
     margin-right: 1.5rem !important;
@@ -4138,6 +4169,7 @@ form input[type="email"] {
     height: auto;
     max-height: 300px;
     object-fit: cover;
+    margin-top: 8rem !important;
   }
 
   .private-cloud-section .content h2 {
@@ -4445,7 +4477,7 @@ form input[type="email"] {
 
 .sap-img {
   width: 100%;
-  height: auto;
+  height: 50vh;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -4745,7 +4777,7 @@ form input[type="email"] {
   .sap-section {
     flex-direction: column !important;
     gap: 1rem;
-    padding: 0;
+    padding: 1rem;
     padding-bottom: 1rem;
   }
 

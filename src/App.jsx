@@ -42,6 +42,8 @@ import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
 // import ShinyText from "./components/Shinytext";
+import BlogDetails from "./page/BlogDetails";
+// import Loader from "./page/Loader";
 import Loader from "./page/Loader";
 // Custom hook to access context
 export function useIsMobile() {
@@ -130,12 +132,16 @@ function App() {
         <Route path="/sap-s4/:slug" element={<AllBlogData />} />
         <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} />
         {/* <Route path="/rise-private-cloud" element={<RisePrivateCloud />} /> */}
+        {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
+        <Route path="/sap-s4" element={<Sap />} />
+        <Route path="/:type/:slug" element={<BlogDetails />} />
+
         <Route path="/digital-transformation" element={<DigitalTransformation />} />
         {/* <Route path="/sap-s4" element={<Sap />} /> */}
         {/* <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} /> */}
       </Route>
     </Routes>
   );
-} 
+}
 
 export default App;

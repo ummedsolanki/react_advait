@@ -9,6 +9,8 @@ import TestimonialSlider from "./SuccessStories";
 import HeroComponent from "../components/HeroComponent";
 import { useState, useEffect, useRef } from "react";
 import { getHeroData } from "../api/HeroApi";
+import { useNavigate } from "react-router-dom";
+import { generateSlug } from "../components/GenerateSlug";
 
 const Consultings = [
   {
@@ -55,6 +57,7 @@ export default function Insights() {
   const [heroData, setHeroData] = useState(null);
   const fetched = useRef(false); // track if API already called
   const [blogs, setblogs] = useState([]); // backend services
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (fetched.current) return; // prevent second call
@@ -88,7 +91,14 @@ export default function Insights() {
           <HeroComponent heroData={heroData} />
         </div>
       </section>
-      <ServiceCard sectionTitle="INSIGHTS" sectionTag="Blogs & Articles" data={blogs} />
+      <ServiceCard
+        sectionTitle="INSIGHTS"
+        sectionTag="Blogs & Articles"
+        data={blogs}
+        onCardClick={(blog) => {
+          navigate(`/blogs/${generateSlug(blog.title)}`, { state: { item: blog } });
+        }}
+      />
       <ServiceCard sectionTitle="WORKS" sectionTag="Case Studies" data={Studies} />
       <TestimonialSlider />
     </>
