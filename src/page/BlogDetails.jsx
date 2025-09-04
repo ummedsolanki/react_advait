@@ -18,7 +18,7 @@ export default function BlogDetails() {
                 />
                 <div className="video-overlay">
                     <h1 className="industries-title">{item.title}</h1>
-                    <h3 className="industries-subtitle">{type.toUpperCase()}</h3>
+                    {/* <h3 className="industries-subtitle">{type.toUpperCase()}</h3> */}
                 </div>
             </div>
             {parse(item.description)}
