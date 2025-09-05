@@ -69,7 +69,7 @@ export default function Hero({ data }) {
       ) : currentHero.heroVideo ? (
         <img src={mediaSrc} alt="Hero" className="hero-video" />
       ) : null}
-      {/* 
+
       <div className="hero-overlay">
         <div className="container">
           <h1
@@ -79,25 +79,24 @@ export default function Hero({ data }) {
               opacity: showHeading ? 1 : 0,
             }}
           >
-            {parse(currentHero.text)}
+            <ShinyText
+              shineWidth={40} // give shine some visible width
+              speed={2} // how fast the shine moves
+              intensity={1} // opacity of shine
+              baseColor="#999" // fallback base color
+              shineColor="#fff" // bright shine color
+              direction="left-to-right"
+            >
+              {parse(currentHero.text)}
+            </ShinyText>
           </h1>
         </div>
-      </div> */}
+      </div>
 
       <div className="silver-logo">
         <img src={logo} alt="Silver Partner" />
       </div>
 
-      <ShinyText
-        shineWidth={40} // give shine some visible width
-        speed={2} // how fast the shine moves
-        intensity={1} // opacity of shine
-        baseColor="#999" // fallback base color
-        shineColor="#fff" // bright shine color
-        direction="left-to-right"
-      >
-        One Platform Infinite Possibilities{" "}
-      </ShinyText>
     </section>
   );
 }

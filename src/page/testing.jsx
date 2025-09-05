@@ -1,12 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import img1 from "../assets/ind1.jpg";
-import img2 from "../assets/ind2.jpg";
-import img3 from "../assets/ind3.jpg";
-import img4 from "../assets/ind4.jpg";
-import img5 from "../assets/ind5.jpg";
-import img6 from "../assets/ind6.jpg";
-import img7 from "../assets/ind7.jpg";
-import img8 from "../assets/ind4.jpg";
 import { getHeroData } from "../api/HeroApi";
 import HeroComponent from "../components/HeroComponent";
 
@@ -18,17 +10,27 @@ export default function JoinUs() {
     email: "",
     message: "",
   });
+  const [images, setImages] = useState([]);
 
-  const images = [
-    { src: img1, id: "big" },
-    { src: img2, id: "medium" },
-    { src: img3, id: "small" },
-    { src: img4, id: "small" },
-    { src: img5, id: "small" },
-    { src: img7, id: "mediums" },
-    { src: img6, id: "mediums" },
-    { src: img8, id: "small" },
-  ];
+  useEffect(() => {
+    const sizeClasses = ["big", "medium", "small", "small", "small", "mediums", "mediums", "small"];
+
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/culture-highlights/list?page=1&limit=20`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.highlights && data.highlights.length > 0) {
+          const allImagesWithSize = data.highlights.flatMap((highlight) =>
+            highlight.images.map((img, index) => ({
+              src: img.url,
+              id: sizeClasses[index % sizeClasses.length], // rotate classes
+            }))
+          );
+          setImages(allImagesWithSize);
+        }
+      })
+      .catch((err) => console.error("Error fetching culture highlights:", err));
+  }, []);
+
 
   const roles = [
     {
@@ -117,7 +119,8 @@ export default function JoinUs() {
       </div>
 
       {/* Culture */}
-      <h2 className="culture-title">Culture highlights</h2>
+
+      <h2 className="culture-title">Culture Highlights</h2>
       <div className="gallery-container">
         {images.map((img, i) => (
           <div key={i} className={`gallery-item ${img.id}`}>
