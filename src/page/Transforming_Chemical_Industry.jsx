@@ -1,20 +1,8 @@
-import chemical from "../assets/Chemical.jpg";
-import lab from "../assets/lab.jpg";
-import operations from "../assets/operations.jpg";
-import sustainability from "../assets/sustain.jpg";
-import challenges from "../assets/challenges.jpg";
+
 export default function TransformingChemicalIndustry() {
   return (
     <>
-      {/* Banner with Image */}
-      <div className="video-banner mobile-image-wrapper-ext-80">
-        <img className="video-bg" src={chemical} alt="Chemical Industry" />
-        <div className="video-overlay">
-          <h1 className="industries-title">Transforming Chemical Industry</h1>
-        </div>
-      </div>
 
-      {/* Text Content Section */}
       <section className="chemical-industry">
         <h2>
           Transforming the Chemical Industry: SAP Solutions Driving Efficiency
@@ -36,7 +24,6 @@ export default function TransformingChemicalIndustry() {
         </p>
       </section>
       <div className="digital-transformation">
-        {/* Left Side Content */}
         <div className="content">
           <h2>Embracing Digital Transformation in Chemicals</h2>
           <p>
@@ -78,18 +65,15 @@ export default function TransformingChemicalIndustry() {
           </p>
         </div>
 
-        {/* Right Side Image */}
         <div className="image">
-          <img src={lab} alt="Digital Transformation in Chemicals" />
+          <img src="/src/assets/lab.jpg" alt="Digital Transformation in Chemicals" />
         </div>
       </div>
       <div className="digital-transformation reverse">
-        {/* Left Side Image */}
         <div className="image">
-          <img src={operations} alt="Streamlining Operations in Chemicals" />
+          <img src="/src/assets/operations.jpg" alt="Streamlining Operations in Chemicals" />
         </div>
 
-        {/* Right Side Content */}
         <div className="content">
           <h2>Streamlining Operations for Maximum Efficiency</h2>
           <p>
@@ -131,7 +115,6 @@ export default function TransformingChemicalIndustry() {
         </div>
       </div>
       <div className="digital-transformations">
-        {/* Left Side Content */}
         <div className="contents">
           <h2>Driving Sustainability and Regulatory Compliance</h2>
           <p>
@@ -177,21 +160,18 @@ export default function TransformingChemicalIndustry() {
           </p>
         </div>
 
-        {/* Right Side Image */}
         <div className="images">
           <img
-            src={sustainability}
+            src="/src/assets/sustain.jpg"
             alt="Sustainability and Digital Platforms in Chemicals"
           />
         </div>
       </div>
       <div className="transformation-challenges">
-        {/* Left Side Image */}
         <div className="image">
-          <img src={challenges} alt="Overcoming Transformation Challenges" />
+          <img src="/src/assets/challenges.jpg" alt="Overcoming Transformation Challenges" />
         </div>
 
-        {/* Right Side Content */}
         <div className="content">
           <h2>Overcoming Transformation Challenges</h2>
           <p>

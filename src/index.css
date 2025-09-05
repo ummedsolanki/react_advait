@@ -4433,6 +4433,10 @@ form input[type="email"] {
   background: #fff;
 }
 
+.sap-simg {
+  height: 650px !important;
+}
+
 .sap-section {
   display: flex;
   border-radius: 16px;
@@ -4440,6 +4444,7 @@ form input[type="email"] {
   gap: 2.5rem;
   box-sizing: border-box;
   padding: 2.5rem 1.5rem;
+  align-items: stretch;
 }
 
 .row-normal {
@@ -4484,7 +4489,8 @@ form input[type="email"] {
   flex: 0 0 46.5%;
   text-align: center;
   align-items: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 /* ..............................   ........................................ */
@@ -4793,7 +4799,7 @@ form input[type="email"] {
 
   .sap-img {
     width: 100%;
-    height: 30vh;
+    height: 30vh !important;
   }
 
   .sap-text h2 {

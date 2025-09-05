@@ -255,7 +255,7 @@ function Sap() {
             </div > */}
 
             {/*------ sap-btp ------*/}
-            <div className="sap-background">
+            {/* <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
@@ -371,7 +371,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div >
+            </div > */}
 
             {/*------ sap signavio ------*/}
 
@@ -398,7 +398,7 @@ function Sap() {
                         </div>
 
                         <div className="sap-img-wrap">
-                            <img src="/src/assets/btp3.png" alt="" className="sap-img" />
+                            <img src="/src/assets/ss2.png" alt="" className="sap-img" />
                         </div>
                     </div>
 
@@ -414,15 +414,19 @@ function Sap() {
                                         <li>
                                             <b>Enhanced Efficiency:</b> Streamline your operations by identifying and eliminating inefficiencies in your processes. SAP Signavio helps you optimize workflows and resource allocation.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Improved Compliance:</b> Ensure adherence to regulatory standards and internal policies, reducing the risk of non-compliance and associated penalties.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Greater Agility:</b> Quickly adapt to market changes and new business requirements with flexible, scalable process management tools.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Increased Collaboration:</b> Promote cross-functional collaboration and alignment, ensuring all stakeholders are engaged and informed throughout the process lifecycle.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Data-Driven Decisions:</b> Leverage real-time data and analytics to make informed decisions about process improvements and strategic initiatives.
                                         </li>
@@ -436,7 +440,7 @@ function Sap() {
                         </div>
 
                         <div className="sap-img-wrap">
-                            <img src="/src/assets/btp4.png" alt="" className="sap-img" />
+                            <img src="/src/assets/ss3.png" alt="" className="sap-img sap-simg" />
                         </div>
                     </div>
 
@@ -454,7 +458,7 @@ function Sap() {
                         </div>
 
                         <div className="sap-img-wrap">
-                            <img src="/src/assets/btp5.png" alt="" className="sap-img" />
+                            <img src="/src/assets/ss4.png" alt="" className="sap-img" />
                         </div>
                     </div>
 
@@ -462,7 +466,7 @@ function Sap() {
             </div >
 
             {/*------ sap-analytics-cloud ------*/}
-            <div className="sap-background">
+            {/* <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
@@ -543,7 +547,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div >
+            </div > */}
 
         </>
     );
