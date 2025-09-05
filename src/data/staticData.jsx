@@ -77,7 +77,7 @@ export const footerDetails = {
 
 //Footer
 export const footerData = {
-  footerText: "© 2025 ADVAIT BUSINESS SOLUTION PVT LTD.<br/> All rights reserved.",
+  footerText: "© 2025 Advait Business Solutions Pvt Ltd<br/> All rights reserved.",
   privacyPolicy: "Privacy Policy",
 };
 

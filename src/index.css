@@ -4437,6 +4437,10 @@ form input[type="email"] {
   height: 650px !important;
 }
 
+.sap-aimg {
+  height: 500px !important;
+}
+
 .sap-section {
   display: flex;
   border-radius: 16px;
@@ -4464,6 +4468,9 @@ form input[type="email"] {
 
 }
 
+.sap-content li {
+  font-size: var(--normal-fontsize);
+}
 
 .sap-text h2 {
   font-size: var(--header-fontsize);

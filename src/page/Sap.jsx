@@ -122,7 +122,7 @@ function Sap() {
     return (
         <>
             {/*-----sap-hana-----*/}
-            {/* <div className="sap-background">
+            <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
@@ -151,13 +151,18 @@ function Sap() {
                                 <p><b>SAP S/4HANA is one of the most trusted and widely adopted ERP platforms globally offering:</b></p>
                                 <p>
                                     <li>Modern, future-ready architecture</li>
+                                    <br />
                                     <li>Real-time analytics & intelligent automation</li>
+                                    <br />
                                     <li>Streamlined processes and simplified IT landscapes
                                     </li>
+                                    <br />
                                     <li>Rapid decision-making powered by live business data
                                     </li>
+                                    <br />
                                     <li>Flexible deployment options—on-premises, cloud, or hybrid
                                     </li>
+                                    <br />
                                     <li>A clear and scalable roadmap from SAP ECC to S/4HANA
                                     </li>
 
@@ -181,8 +186,11 @@ function Sap() {
                                     <br />
                                     <ul>
                                         <li>Reimagine business processes</li>
+                                        <br />
                                         <li>Minimize disruption through proven migration strategies</li>
+                                        <br />
                                         <li>Optimize ERP investments through smart, phased rollouts</li>
+                                        <br />
                                         <li>Ensure rapid value realization through our SAP S/4HANA accelerators</li>
                                     </ul>
                                 </p>
@@ -202,9 +210,13 @@ function Sap() {
                                 <p>
                                     <ul>
                                         <li>SAP ECC to S/4HANA Migrations</li>
+                                        <br />
                                         <li>On-Premises, Private Cloud, and Public Cloud Deployments</li>
+                                        <br />
                                         <li>Industry-specific Best Practices & Templates</li>
+                                        <br />
                                         <li>Custom Development & Integration Services</li>
+                                        <br />
                                         <li>Post-Go-Live Optimization & Support</li>
                                     </ul>
                                 </p>
@@ -225,8 +237,11 @@ function Sap() {
                                 <p>
                                     <ul>
                                         <li>Reduced implementation timelines</li>
+                                        <br />
                                         <li>Minimal business disruption</li>
+                                        <br />
                                         <li>High adoption across business units</li>
+                                        <br />
                                         <li>Scalable and secure ERP landscape</li>
                                     </ul>
                                 </p>
@@ -252,7 +267,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div > */}
+            </div >
 
             {/*------ sap-btp ------*/}
             {/* <div className="sap-background">
@@ -314,15 +329,19 @@ function Sap() {
                                         <li>
                                             <b>Application Development & Automation</b> - Rapidly build, deploy, and orchestrate custom applications and automated workflows using low-code/no-code tools and event-driven architectures.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Extended Planning & Analysis</b> - Unify financial and operational planning for real-time forecasting and cross-functional alignment.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Data & Analytics</b> - Consolidate and model data across sources, enabling embedded analytics and actionable insights.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Integration Suite</b> - Connect SAP and non-SAP systems through APIs, event mesh, and prebuilt connectors to ensure end-to-end process continuity.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Artificial Intelligence & Machine Learning</b> - Embed intelligent services and predictive models into business applications to enhance decision-making and operational efficiency.
                                         </li>
@@ -333,7 +352,7 @@ function Sap() {
                         </div>
 
                         <div className="sap-img-wrap">
-                            <img src="/src/assets/btp6.png" alt="" className="sap-img" />
+                            <img src="/src/assets/btp6.png" alt="" className="sap-img sap-simg" />
                         </div>
                     </div>
 
@@ -345,19 +364,23 @@ function Sap() {
                                 <p>
                                     <ul>
                                         <li>
-                                            Integrate disparate systems and applications for seamless data flow
+                                            Integrate disparate systems and applications for seamless data flow.
                                         </li>
+                                        <br />
                                         <li>
-                                            Build scalable extensions for SAP S/4HANA and industry cloud solutions
+                                            Build scalable extensions for SAP S/4HANA and industry cloud solutions.
                                         </li>
+                                        <br />
                                         <li>
-                                            Enable real-time analytics and predictive modelling for proactive decision-making
+                                            Enable real-time analytics and predictive modelling for proactive decision-making.
                                         </li>
+                                        <br />
                                         <li>
-                                            Automate repetitive tasks to improve efficiency and resource utilization
+                                            Automate repetitive tasks to improve efficiency and resource utilization.
                                         </li>
+                                        <br />
                                         <li>
-                                            Drive agility with modular, cloud-native services and low-code tools
+                                            Drive agility with modular, cloud-native services and low-code tools.
                                         </li>
                                     </ul>
 
@@ -375,7 +398,7 @@ function Sap() {
 
             {/*------ sap signavio ------*/}
 
-            <div className="sap-background">
+            {/* <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
@@ -463,7 +486,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div >
+            </div > */}
 
             {/*------ sap-analytics-cloud ------*/}
             {/* <div className="sap-background">
@@ -505,12 +528,15 @@ function Sap() {
                                         <li>
                                             <b>Faster Decision-Making:</b> Gain access to real-time data and insights, allowing you to make informed decisions quickly and confidently.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Improved Collaboration:</b> Foster a collaborative environment where teams can work together on planning, reporting, and analysis.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Enhanced Predictive Capabilities:</b> Anticipate future trends and outcomes with advanced predictive analytics, helping you stay ahead of the competition.
                                         </li>
+                                        <br />
                                         <li>
                                             <b>Unified Platform:</b> Benefit from a single, integrated solution that combines BI, planning, and predictive analytics, reducing the need for multiple tools and simplifying your analytics landscape.
                                         </li>
@@ -524,7 +550,7 @@ function Sap() {
                         </div>
 
                         <div className="sap-img-wrap">
-                            <img src="/src/assets/sac3.png" alt="" className="sap-img" />
+                            <img src="/src/assets/sac3.png" alt="" className="sap-img sap-aimg" />
                         </div>
                     </div>
 
