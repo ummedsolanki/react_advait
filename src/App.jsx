@@ -46,6 +46,7 @@ import BlogDetails from "./page/BlogDetails";
 // import Loader from "./page/Loader";
 import Loader from "./page/Loader";
 import Detailofsap from "./page/detail5";
+import ScrollToTop from "./components/ScrollToTop";
 export function useIsMobile() {
   return useOutletContext().isMobile;
 }
@@ -85,63 +86,65 @@ function AboutPage() {
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route
-          path="/industries"
-          element={
-            <>
-              <Industries />
-              <Workedwitha />
-              <Workedwithb />
-              <Workedwithc />
-              <Workedwithd />
-              <WorkedWithSection />
-              {/* <TestimonialSlider /> */}
-            </>
-          }
-        />
-        <Route
-          path="/services"
-          element={
-            <>
-              <WeProvide />
-              {/* <ServiceSection /> */}
-            </>
-          }
-        />
-        <Route path="/infra" element={<Infra />} />
-        <Route path="/solution" element={<Solution />} />
-        <Route path="/cloud-solutions" element={<CloudSolutions />} />
-        <Route path="/consulting" element={<Consulting />} />
-        <Route path="/modernization" element={<Modernization />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/careers" element={<JoinUs />} />
-        <Route path="/roles" element={<JobRoles />} />
-        <Route path="/map" element={<WorldMap />} />
-        {/* <Route path="/shiny-text" element={<ShinyText />} /> */}
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/loading" element={<Loader />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/blog/:slug" element={<AllBlogData />} />
-        <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} />
-        <Route path="/digital-transformation/:slug" element={<AllBlogData />} />
-        <Route path="/sap-s4/:slug" element={<AllBlogData />} />
-        <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} />
-        {/* <Route path="/rise-private-cloud" element={<RisePrivateCloud />} /> */}
-        {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
-        <Route path="/sap-s4" element={<Sap />} />
-        <Route path="/detail-5" element={<Detailofsap />} />
-        <Route path="/:type/:slug" element={<BlogDetails />} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/industries"
+            element={
+              <>
+                <Industries />
+                <Workedwitha />
+                <Workedwithb />
+                <Workedwithc />
+                <Workedwithd />
+                <WorkedWithSection />
+                {/* <TestimonialSlider /> */}
+              </>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <>
+                <WeProvide />
+                {/* <ServiceSection /> */}
+              </>
+            }
+          />
+          <Route path="/infra" element={<Infra />} />
+          <Route path="/solution" element={<Solution />} />
+          <Route path="/cloud-solutions" element={<CloudSolutions />} />
+          <Route path="/consulting" element={<Consulting />} />
+          <Route path="/modernization" element={<Modernization />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/careers" element={<JoinUs />} />
+          <Route path="/roles" element={<JobRoles />} />
+          <Route path="/map" element={<WorldMap />} />
+          {/* <Route path="/shiny-text" element={<ShinyText />} /> */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/loading" element={<Loader />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* <Route path="/blog/:slug" element={<AllBlogData />} /> */}
+          {/* <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} /> */}
+          {/* <Route path="/digital-transformation/:slug" element={<AllBlogData />} /> */}
+          {/* <Route path="/sap-s4/:slug" element={<AllBlogData />} /> */}
+          {/* <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} /> */}
+          {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
+          <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
+          <Route path="/sap-s4" element={<Sap />} />
+          <Route path="/detail-5" element={<Detailofsap />} />
+          <Route path="/digital-transformation" element={<DigitalTransformation />} />
+          <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
 
-        <Route path="/digital-transformation" element={<DigitalTransformation />} />
-        {/* <Route path="/sap-s4" element={<Sap />} /> */}
-        {/* <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} /> */}
-      </Route>
-    </Routes>
+          <Route path="/:type/:slug" element={<BlogDetails />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
