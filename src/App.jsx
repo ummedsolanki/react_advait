@@ -45,7 +45,7 @@ import PrivacyPolicy from "./page/PrivacyPolicy";
 import BlogDetails from "./page/BlogDetails";
 // import Loader from "./page/Loader";
 import Loader from "./page/Loader";
-// Custom hook to access context
+import Detailofsap from "./page/detail5";
 export function useIsMobile() {
   return useOutletContext().isMobile;
 }
@@ -134,6 +134,7 @@ function App() {
         {/* <Route path="/rise-private-cloud" element={<RisePrivateCloud />} /> */}
         {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
         <Route path="/sap-s4" element={<Sap />} />
+        <Route path="/detail-5" element={<Detailofsap />} />
         <Route path="/:type/:slug" element={<BlogDetails />} />
 
         <Route path="/digital-transformation" element={<DigitalTransformation />} />
