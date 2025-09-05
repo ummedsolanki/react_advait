@@ -7,7 +7,7 @@ export default function BlogDetails() {
     const item = location.state?.item;
 
     if (!item) return <p>No data found.</p>; // simple, no fetching
-
+    console.log(item, "item");
     return (
         <>
             <div className="video-banner mobile-image-wrapper-ext-80">

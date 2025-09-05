@@ -3097,13 +3097,13 @@ textarea {
 }
 
 @media only screen and (max-width: 1040px) and (min-width: 992px) {
-  .row-normal {
+  /* .row-normal {
     flex-direction: column !important;
   }
 
   .row-reverse {
     flex-direction: column !important;
-  }
+  } */
 
   /*-------------------------------------About Us------------------------------------*/
   .about-margin {
@@ -4453,7 +4453,7 @@ form input[type="email"] {
 }
 
 .sap-text {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -4477,13 +4477,13 @@ form input[type="email"] {
 .sap-img {
   width: 100%;
   height: 50vh;
-  border-radius: 8px;
+  border-radius: 16px;
   object-fit: cover;
 }
 
 
 .sap-img-wrap {
-  flex: 0 0 36.5%;
+  flex: 0 0 46.5%;
   text-align: center;
   align-items: center;
 

@@ -3,8 +3,11 @@ import HeroComponent from "../components/HeroComponent";
 import { getHeroData } from "../api/HeroApi";
 import { useState, useEffect, useRef } from "react";
 import { servicesStaticData } from "../data/services.data";
+import { useNavigate } from "react-router-dom";
+import { generateSlug } from "../components/GenerateSlug";
 
 export default function Industries() {
+  const navigate = useNavigate();
   const [heroData, setHeroData] = useState(null);
   const [servicesProvide, setServicesProvide] = useState([]); // backend services
   const fetched = useRef(false); // track if API already called
@@ -73,6 +76,9 @@ export default function Industries() {
         sectionTitle="Services"
         sectionTag="WE PROVIDE"
         data={servicesProvide}
+        onCardClick={(service) => {
+          navigate(`/services/${generateSlug(service.title)}`, { state: { item: service } });
+        }}
       />
     </>
   );
