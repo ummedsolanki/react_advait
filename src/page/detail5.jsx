@@ -52,10 +52,10 @@ export default function Detailofsap() {
       <div className="unique-section">
         <div className="unique-header">
           <h2>
-            What Makes{" "}
+            What Makes
             <span className="highlight">
               RISE with SAP -<br /> Private Cloud
-            </span>{" "}
+            </span>
             Unique with <span className="highlight">Advait</span>?
           </h2>
         </div>

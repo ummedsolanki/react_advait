@@ -47,6 +47,7 @@ import BlogDetails from "./page/BlogDetails";
 import Loader from "./page/Loader";
 import Detailofsap from "./page/detail5";
 import ScrollToTop from "./components/ScrollToTop";
+import Loaderbounce from "./page/Loading";
 export function useIsMobile() {
   return useOutletContext().isMobile;
 }
@@ -137,6 +138,7 @@ function App() {
           {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
           <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
           <Route path="/sap-s4" element={<Sap />} />
+          <Route path="/loadingg" element={<Loaderbounce />} />
           <Route path="/detail-5" element={<Detailofsap />} />
           <Route path="/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />

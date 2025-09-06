@@ -1,9 +1,3 @@
-import digital from "../assets/Digital Transformation.jpg";
-import city from "../assets/city.jpg";
-import Seamless from "../assets/laser.jpg";
-import future from "../assets/future.jpg";
-import Opportunities from "../assets/Opportunities.jpg";
-
 export default function DigitalTransformation() {
   return (
     <>
@@ -33,21 +27,17 @@ export default function DigitalTransformation() {
         </div>
 
         <div className="future-image">
-          <img src={digital} alt="Future with SAP" />
-        </div>
-      </div>
-
-      <div className="transformation-section">
-        {/* Left Image */}
-        <div className="image-banner">
           <img
-            className="banner-img"
-            src={city}
-            alt="Transformation with Purpose"
+            src="/src/assets/Digital Transformation.jpg"
+            alt="Future with SAP"
           />
         </div>
+      </div>
+      <div className="transformation-section">
+        <div className="partner-image">
+          <img src="/src/assets/city.jpg" alt="Partner with Advait" />
+        </div>
 
-        {/* Right Text */}
         <div className="content">
           <h2>Transformation with Purpose</h2>
           <p>
@@ -65,12 +55,30 @@ export default function DigitalTransformation() {
           </p>
         </div>
       </div>
-
-      <div className="partner-section">
-        <div className="partner-image">
-          <img src={Seamless} alt="Partner with Advait" />
+      <div className="future-section">
+        <div className="future-image">
+          <img
+            src="/src/assets/Digital Transformation.jpg"
+            alt="Future with SAP"
+          />
         </div>
-
+        <div className="future-content">
+          <h2>
+            The <span className="highlight">Future is Intelligent.</span>
+            <br />
+            The <span className="highlight">Platform is RISE.</span>
+            <br />
+            The <span className="highlight">Partner is Advait.</span>
+          </h2>
+          <p>
+            RISE with SAP Private Cloud is the bridge between where you are
+            today and the intelligent enterprise you aspire to become. With
+            Advait Business Solutions as your strategic partner, you're not just
+            upgrading your ERP—you're transforming your business for tomorrow.
+          </p>
+        </div>
+      </div>
+       <div className="partner-section">
         <div className="partner-content">
           <h2>
             Why Partner <span className="highlight">with Advait</span> for RISE
@@ -96,26 +104,8 @@ export default function DigitalTransformation() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="future-section">
-        <div className="future-content">
-          <h2>
-            The <span className="highlight">Future is Intelligent.</span>
-            <br />
-            The <span className="highlight">Platform is RISE.</span>
-            <br />
-            The <span className="highlight">Partner is Advait.</span>
-          </h2>
-          <p>
-            RISE with SAP Private Cloud is the bridge between where you are
-            today and the intelligent enterprise you aspire to become. With
-            Advait Business Solutions as your strategic partner, you're not just
-            upgrading your ERP—you're transforming your business for tomorrow.
-          </p>
-        </div>
-
-        <div className="future-image">
-          <img src={future} alt="Future with SAP" />
+        <div className="partner-image">
+          <img src="/src/assets/laser.jpg" alt="Partner with Advait" />
         </div>
       </div>
     </>
