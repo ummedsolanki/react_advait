@@ -196,7 +196,7 @@ const FooterDetails = () => {
                   stroke="white"
                 />
               </svg>
-              {footerDetails.Phone}
+              {footerDetails.Phone1} <br/> {footerDetails.Phone2}
             </div>
 
             {/* Email */}
