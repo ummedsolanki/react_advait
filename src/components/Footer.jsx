@@ -8,7 +8,7 @@ const Footer = () => {
       <style jsx>{`
         .footer {
           width: 100%;
-          background: #FFF;
+          background: #fff;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
@@ -26,7 +26,7 @@ const Footer = () => {
 
         .footer-text {
           color: #078672;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Open Sans", sans-serif;
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
@@ -72,7 +72,8 @@ const Footer = () => {
             align-items: center;
             text-align: center;
           }
-          .footer-left, .footer-right {
+          .footer-left,
+          .footer-right {
             justify-content: center;
             margin-bottom: 10px;
           }
@@ -94,26 +95,26 @@ const Footer = () => {
           }
         }
       `}</style>
-      
+
       <footer className="footer">
         <div className="footer-left">
-          <p 
+          <p
             className="footer-text"
             dangerouslySetInnerHTML={{ __html: footerData.footerText }}
           />
           <p href="#" className="footer-text">
             {footerData.privacyPolicy}
-          
+
             {footerData.Allrightsreserved}
           </p>
         </div>
-        
+
         <div className="footer-center">
           <img src={AdvaitLogo} alt="Advait Logo" className="footer-logo" />
         </div>
-        
+
         <div className="footer-right">
-          <a href="https://www.linkedin.com/company/advaitbusinesssolutions/" className="footer-icon">
+          <a href="#" className="footer-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
