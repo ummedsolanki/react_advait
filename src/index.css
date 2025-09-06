@@ -1342,7 +1342,7 @@ textarea {
 .workedwith-card p {
   font-size: var(--normal-fontsize);
   color: var(--card-text);
-  margin-bottom: 1.25rem;
+  /* margin-bottom: 1.25rem; */
 }
 
 .workedwith-src {

@@ -143,11 +143,11 @@ export default function BlogSection({ data }) {
       {/* Blog cards with slug + navigate */}
       <ServiceCard
         data={blogsWithFullSrc}
-        onCardClick={(blog) => {
-          navigate(`/blog/${generateSlug(blog.title)}`, {
-            state: { item: blog },
-          });
-        }}
+        // onCardClick={(blog) => {
+        //   navigate(`/blog/${generateSlug(blog.title)}`, {
+        //     state: { item: blog },
+        //   });
+        // }}
       />
     </>
   );

@@ -1,8 +1,7 @@
-
 import { servicesText } from "../data/staticData";
-import parse from "html-react-parser";
-import { useState } from "react";
 
+import parse from "html-react-parser";
+import { useState, useEffect } from "react";
 
 const styles = {
   section: {
@@ -10,12 +9,12 @@ const styles = {
     padding: "40px 20px",
   },
   sectionHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    margin: '40px 0',
-    flexWrap: 'wrap',
-    gap: '20px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    margin: "40px 0",
+    flexWrap: "wrap",
+    gap: "20px",
   },
   tag: {
     color: "#078672",
@@ -101,21 +100,71 @@ const styles = {
 };
 
 export default function ServiceSection({ data }) {
+  function useClampStyle() {
+    useEffect(() => {
+      const clampStyle = `
+      .clamp-6-lines {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        max-height: 10.0em;
+      }
+      .read-more-fade {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2.2em;
+        // background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 80%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        pointer-events: none;
+      }
+      .read-more-link {
+        color: #078672;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 0.5em;
+        margin-bottom: 0.2em;
+        background: #fff;
+        padding-left: 4px;
+        pointer-events: auto;
+      }
+    `;
+
+      if (
+        typeof document !== "undefined" &&
+        !document.getElementById("clamp-4-lines-style")
+      ) {
+        const style = document.createElement("style");
+        style.id = "clamp-4-lines-style";
+        style.innerHTML = clampStyle;
+        document.head.appendChild(style);
+      }
+    }, []);
+  }
+
+  useClampStyle();
 
   if (!data) return null;
 
-  const servicesWithFullSrc = data?.servicesCardsData?.map((item) => ({
-    ...item,
-    src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
-  })) || [];
+  const servicesWithFullSrc =
+    data?.servicesCardsData?.map((item) => ({
+      ...item,
+      src: item.image
+        ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`
+        : "",
+    })) || [];
 
   const [expandedIndexes, setExpandedIndexes] = useState([]);
 
   const handleToggle = (idx) => {
     setExpandedIndexes((prev) =>
-      prev.includes(idx)
-        ? prev.filter((i) => i !== idx)
-        : [...prev, idx]
+      prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx]
     );
   };
 
@@ -125,7 +174,8 @@ export default function ServiceSection({ data }) {
         <div className="section-header home-title">
           <p className="tag">{servicesText.servicesTitle}</p>
           <h2>
-            <strong>{servicesText.servicesSubTitle}</strong> {servicesText.servicesSubTitle2}
+            <strong>{servicesText.servicesSubTitle}</strong>{" "}
+            {servicesText.servicesSubTitle2}
             <br /> {servicesText.servicesSubTitle3}
           </h2>
         </div>
@@ -134,23 +184,10 @@ export default function ServiceSection({ data }) {
         {servicesWithFullSrc.map((item, index) => {
           const isExpanded = expandedIndexes.includes(index);
           const plainText = item.description?.replace(/<[^>]+>/g, "");
-          const shouldTruncate = plainText && plainText.length > 205;
+          const TRUNCATE_THRESHOLD = 120; // or your expected value
+          const shouldTruncate =
+            plainText && plainText.length > TRUNCATE_THRESHOLD;
           let displayDesc = item.description;
-          if (!isExpanded && shouldTruncate) {
-            let count = 0, cutIdx = 0;
-            for (let i = 0; i < item.description.length; i++) {
-              if (item.description[i] === '<') {
-                while (i < item.description.length && item.description[i] !== '>') i++;
-              } else {
-                count++;
-              }
-              if (count >= 205) {
-                cutIdx = i + 1;
-                break;
-              }
-            }
-            displayDesc = item.description.slice(0, cutIdx) + '...';
-          }
           return (
             <div className="workedwith-card" key={index}>
               <div className="workedwith-card-header">
@@ -173,7 +210,8 @@ export default function ServiceSection({ data }) {
                   viewBox="0 0 300 80"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M0,0
+                  <path
+                    d="M0,0
          H120
          A40,40 0 0 1 160,40
          A40,40 0 0 0 240,40
@@ -181,18 +219,40 @@ export default function ServiceSection({ data }) {
          H400
          
          H0
-         Z" fill="#f4f6f4"></path>
+         Z"
+                    fill="#f4f6f4"
+                  ></path>
                 </svg>
               </div>
 
-              <div>
-                {parse(displayDesc)}
-                {shouldTruncate && (
+              <div style={{ position: "relative" }}>
+                <div
+                  className={isExpanded ? "" : "clamp-6-lines"}
+                  style={{ transition: "max-height 0.3s", minHeight: "2em" }}
+                >
+                  {parse(displayDesc)}
+                  {!isExpanded && shouldTruncate && (
+                    <span className="read-more-fade">
+                      <span
+                        className="read-more-link"
+                        onClick={() => handleToggle(index)}
+                      >
+                        ...Read more
+                      </span>
+                    </span>
+                  )}
+                </div>
+                {isExpanded && shouldTruncate && (
                   <span
-                    style={{ color: '#078672', cursor: 'pointer', marginLeft: 4, fontWeight: 600 }}
+                    style={{
+                      color: "#078672",
+                      cursor: "pointer",
+                      marginLeft: 4,
+                      fontWeight: 600,
+                    }}
                     onClick={() => handleToggle(index)}
                   >
-                    {isExpanded ? ' Show Less' : ' Read More'}
+                    Show Less
                   </span>
                 )}
               </div>
@@ -204,6 +264,6 @@ export default function ServiceSection({ data }) {
           );
         })}
       </div>
-    </section >
+    </section>
   );
 }

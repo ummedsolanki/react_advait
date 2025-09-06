@@ -145,9 +145,9 @@ export default function SolutionsSection({ data }) {
       {/* Pass the click handler to ServiceCard component */}
       <ServiceCard
         data={solutionsWithFullSrc}
-        onCardClick={(solution) => {
-          navigate(`/solution/${generateSlug(solution.title)}`, { state: { item: solution } });
-        }}
+        // onCardClick={(solution) => {
+        //   navigate(`/solution/${generateSlug(solution.title)}`, { state: { item: solution } });
+        // }}
       />
 
     </>
