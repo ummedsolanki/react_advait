@@ -71,14 +71,15 @@ export const footerDetails = {
   IndiaHeadOffice: "India Head Office",
   Address:
     "Advait House Plot 10: Sunshine Industrial Hub - 1, Near Zydus Lifesciences,Near Navapura Railway Crossing, Navapura, Changodar, Ahmedabad- 382213.Gujarat.India",
-  Phone: "+91-92270-22260",
+  Phone: "+91 63536 01679",
   Email: "sales@advaitbusiness.com",
 };
 
 //Footer
 export const footerData = {
-  footerText: "© 2025 Advait Business Solutions Pvt Ltd<br/> All rights reserved.",
-  privacyPolicy: "Privacy Policy",
+  footerText: "Advait Business Solutions Pvt Ltd",
+  privacyPolicy: "Privacy Policy . ",
+  Allrightsreserved: " All rights reserved.",
 };
 
 //Company world map markers(WorldMap.jsx)
