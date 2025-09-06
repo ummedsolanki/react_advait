@@ -49,7 +49,7 @@ const NavItem = ({ title, children, isOpen, onToggle, isActive }) => {
       onMouseLeave={handleMouseLeave}
     >
       <Link
-        to={title.toLowerCase() === "services" ? "/services" : "/industries"}
+        to="/"
         style={{
           ...styles.link,
           ...(isHovered || isOpen || isActive ? styles.activeLink : {}),
@@ -113,7 +113,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/about"
+                to="/"
                 style={{
                   ...styles.link,
                   ...(isActive("/about") ? styles.activeLink : {}),
@@ -143,7 +143,7 @@ const Header = () => {
                   }}
                 >
                   <Link
-                    to={item.link}
+                    to="/"
                     onClick={handleSubMenuClick}
                     style={{
                       textDecoration: "none",
@@ -160,7 +160,7 @@ const Header = () => {
             </NavItem>
             <li>
               <Link
-                to="/industries"
+                to="/"
                 style={{
                   ...styles.link,
                   ...(isActive("/industries") ? styles.activeLink : {}),
@@ -171,7 +171,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/insights"
+                to="/"
                 style={{
                   ...styles.link,
                   ...(isActive("/insights") ? styles.activeLink : {}),
@@ -182,7 +182,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/careers"
+                to="/"
                 style={{
                   ...styles.link,
                   ...(isActive("/careers") ? styles.activeLink : {}),
