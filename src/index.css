@@ -4138,7 +4138,6 @@ form input[type="email"] {
   width: 100%;
   border-radius: 16px;
   object-fit: cover;
-  height: 270px;
 }
 
 @media (max-width: 900px) {
@@ -4149,7 +4148,7 @@ form input[type="email"] {
 
   .future-content p {
     max-width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 }
 
@@ -4238,9 +4237,6 @@ form input[type="email"] {
     margin-bottom: 20px;
   }
 
-  .future-image img {
-    max-height: 280px;
-  }
 }
 
 
@@ -4505,8 +4501,8 @@ form input[type="email"] {
 /* ..............................   ........................................ */
 .chemical-industry {
   background: var(--bg-color);
-  padding: 80px 20px;
-  margin: 0 auto;
+  padding: 10px 20px;
+  margin: auto;
   text-align: left;
 }
 
