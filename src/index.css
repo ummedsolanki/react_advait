@@ -3978,7 +3978,6 @@ form input[type="email"] {
   display: flex;
   align-items: start;
   justify-content: start;
-  background-color: white;
   gap: 40px;
   padding: 2.5rem 1.5rem;
   border-radius: 16px;
@@ -4074,7 +4073,6 @@ form input[type="email"] {
   border-radius: 16px;
   gap: 40px;
   padding: 1.5rem 0.5rem;
-  background-color: white;
 }
 
 .partner-image img {
