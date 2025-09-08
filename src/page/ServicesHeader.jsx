@@ -4,7 +4,6 @@ import { getHeroData } from "../api/HeroApi";
 import { useState, useEffect, useRef } from "react";
 import { servicesStaticData } from "../data/services.data";
 import { useNavigate } from "react-router-dom";
-import { generateSlug } from "../components/GenerateSlug";
 
 export default function Industries() {
   const navigate = useNavigate();
@@ -24,18 +23,33 @@ export default function Industries() {
     });
 
     // fetch services from backend
-    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/services/list?page=1&limit=20 `)
+    // fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/services/list?page=1&limit=20 `)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.services) {
+    //       const updatedServices = data.services.map((item) => ({
+    //         ...item,
+    //         src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
+    //       }));
+    //       setServicesProvide(updatedServices);
+    //     }
+    //   })
+    //   .catch((err) => console.error("Error fetching services:", err));
+
+    fetch(`${import.meta.env.VITE_BACKEND_API_URL}/api/services/list?page=1&limit=20`)
       .then((res) => res.json())
       .then((data) => {
         if (data.services) {
           const updatedServices = data.services.map((item) => ({
             ...item,
+            id: item._id,
             src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
           }));
           setServicesProvide(updatedServices);
         }
       })
       .catch((err) => console.error("Error fetching services:", err));
+
   }, []);
 
   if (!heroData || servicesProvide.length === 0) return <p>Loading...</p>;
@@ -72,14 +86,24 @@ export default function Industries() {
       </section>
 
       {/* ✅ now this uses backend data */}
-      <ServiceCard
+      {/* <ServiceCard
         sectionTitle="Services"
         sectionTag="WE PROVIDE"
         data={servicesProvide}
         onCardClick={(service) => {
           navigate(`/services/${generateSlug(service.title)}`, { state: { item: service } });
         }}
+      /> */}
+      <ServiceCard
+        sectionTitle="Services"
+        sectionTag="WE PROVIDE"
+        data={servicesProvide}
+        onCardClick={(service) => {
+          navigate(`/services/${service.id}`, { state: { item: service } });
+        }}
       />
+
+
     </>
   );
 }

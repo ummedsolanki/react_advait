@@ -183,11 +183,11 @@ export default function ServiceSection({ data }) {
       <div className="workedwith-cards">
         {servicesWithFullSrc.map((item, index) => {
           const isExpanded = expandedIndexes.includes(index);
-          const plainText = item.description?.replace(/<[^>]+>/g, "");
+          const plainText = item.subtitle?.replace(/<[^>]+>/g, "");
           const TRUNCATE_THRESHOLD = 120; // or your expected value
           const shouldTruncate =
             plainText && plainText.length > TRUNCATE_THRESHOLD;
-          let displayDesc = item.description;
+          let displayDesc = item.subtitle;
           return (
             <div className="workedwith-card" key={index}>
               <div className="workedwith-card-header">

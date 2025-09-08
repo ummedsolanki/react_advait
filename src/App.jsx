@@ -143,7 +143,7 @@ function App() {
           <Route path="/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
 
-          <Route path="/:type/:slug" element={<BlogDetails />} />
+          <Route path="/:type/:id" element={<BlogDetails />} />
         </Route>
       </Routes>
     </>

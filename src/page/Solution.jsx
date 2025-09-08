@@ -4,7 +4,6 @@ import HeroComponent from "../components/HeroComponent";
 import { getHeroData } from "../api/HeroApi";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { generateSlug } from "../components/GenerateSlug";
 
 export default function Industries() {
     const navigate = useNavigate();
@@ -26,6 +25,7 @@ export default function Industries() {
                 if (data.solutions) {
                     const updatedSolutions = data.solutions.map((item) => ({
                         ...item,
+                        id: item._id,
                         src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
                     }));
                     setSolutionProvide(updatedSolutions);
@@ -64,8 +64,9 @@ export default function Industries() {
             {/* <ServiceCard sectionTitle="Solutions" sectionTag="WE PROVIDE" data={solutionProvide} /> */}
             <ServiceCard
                 data={solutionProvide}
+
                 onCardClick={(solution) => {
-                    navigate(`/solution/${generateSlug(solution.title)}`, { state: { item: solution } });
+                    navigate(`/solutions/${solution.id}`, { state: { item: solution } });
                 }}
             />
         </>

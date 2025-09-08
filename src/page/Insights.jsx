@@ -74,6 +74,7 @@ export default function Insights() {
         if (data.blogs) {
           const updatedBlogs = data.blogs.map((item) => ({
             ...item,
+            id: item._id,
             src: item.imageUrl || `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`,
           }));
           setblogs(updatedBlogs);
@@ -95,8 +96,11 @@ export default function Insights() {
         sectionTitle="INSIGHTS"
         sectionTag="Blogs & Articles"
         data={blogs}
+        // onCardClick={(blog) => {
+        //   navigate(`/blogs/${generateSlug(blog.title)}`, { state: { item: blog } });
+        // }}
         onCardClick={(blog) => {
-          navigate(`/blogs/${generateSlug(blog.title)}`, { state: { item: blog } });
+          navigate(`/blogs/${blog.id}`, { state: { item: blog } });
         }}
       />
       <ServiceCard sectionTitle="WORKS" sectionTag="Case Studies" data={Studies} />
