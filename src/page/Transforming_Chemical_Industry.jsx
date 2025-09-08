@@ -23,7 +23,8 @@ export default function TransformingChemicalIndustry() {
           companies to lead in a digitally connected world.
         </p>
       </section>
-      <div className="digital-transformation">
+      <div className="future-section bg-color">
+
         <div className="content">
           <h2>Embracing Digital Transformation in Chemicals</h2>
           <p>
@@ -65,12 +66,12 @@ export default function TransformingChemicalIndustry() {
           </p>
         </div>
 
-        <div className="image">
+        <div className="partner-image">
           <img src="/src/assets/lab.jpg" alt="Digital Transformation in Chemicals" />
         </div>
       </div>
-      <div className="digital-transformation reverse">
-        <div className="image">
+      <div className="transformation-section">
+        <div className="partner-image">
           <img src="/src/assets/operations.jpg" alt="Streamlining Operations in Chemicals" />
         </div>
 
@@ -114,8 +115,8 @@ export default function TransformingChemicalIndustry() {
           </p>
         </div>
       </div>
-      <div className="digital-transformations">
-        <div className="contents">
+      <div className="future-section">
+        <div className="content">
           <h2>Driving Sustainability and Regulatory Compliance</h2>
           <p>
             With increasing emphasis on sustainability, chemical companies are
@@ -160,19 +161,19 @@ export default function TransformingChemicalIndustry() {
           </p>
         </div>
 
-        <div className="images">
+        <div className="partner-image">
           <img
             src="/src/assets/sustain.jpg"
             alt="Sustainability and Digital Platforms in Chemicals"
           />
         </div>
       </div>
-      <div className="transformation-challenges">
-        <div className="image">
+      <div className="partner-section">
+        <div className="partner-image">
           <img src="/src/assets/challenges.jpg" alt="Overcoming Transformation Challenges" />
         </div>
 
-        <div className="content">
+        <div className="partner-content">
           <h2>Overcoming Transformation Challenges</h2>
           <p>
             Despite the clear benefits, digital transformation in chemicals
