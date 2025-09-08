@@ -124,16 +124,21 @@ export default function ServiceSection({ data }) {
         justify-content: flex-end;
         pointer-events: none;
       }
-      .read-more-link {
-        color: #078672;
-        font-weight: 600;
-        cursor: pointer;
-        margin-right: 0.5em;
-        margin-bottom: 0.2em;
-        background: #fff;
-        padding-left: 4px;
-        pointer-events: auto;
-      }
+     .read-more-link {
+  color: #078672;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+  background: #fff;
+  padding-left: 4px;
+  pointer-events: auto;
+}
+
+.workedwith-card:hover .read-more-link {
+  background: #d2f9e8;
+}
+
     `;
 
       if (
