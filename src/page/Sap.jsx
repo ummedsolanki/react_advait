@@ -122,12 +122,12 @@ function Sap() {
     return (
         <>
             {/*-----sap-hana-----*/}
-            <div className="sap-background">
+            {/* <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Revamp Your ERP Strategy with SAP S /4HANA:</h2>
+                            <h2>Revamp Your <strong> ERP Strategy with SAP S /4HANA:</strong></h2>
                             <div className="sap-content">
                                 <p><b>Transform. Simplify. Accelerate.</b></p>
                                 <p>
@@ -146,7 +146,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Why SAP S/4HANA?</h2>
+                            <h2> <strong>Why SAP S/4HANA?</strong></h2>
                             <div className="sap-content">
                                 <p><b>SAP S/4HANA is one of the most trusted and widely adopted ERP platforms globally offering:</b></p>
                                 <p>
@@ -177,7 +177,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>How Advait Enables SAP S/4HANA Success</h2>
+                            <h2><strong>How Advait</strong> Enables SAP <strong>S/4HANA Success</strong></h2>
                             <div className="sap-content">
                                 <p>As a growing force in SAP consulting and ERP transformation, Advait Business Solutions brings deep domain experience, industry-specific insights, and robust delivery capabilities to every S/4HANA engagement.</p>
                                 <br />
@@ -204,7 +204,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Our SAP S/4HANA Expertise Includes:</h2>
+                            <h2>Our <strong>SAP S/4HANA Expertise</strong> Includes:</h2>
                             <div className="sap-content">
                                 <p>Greenfield & Brownfield Implementations</p>
                                 <p>
@@ -230,7 +230,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Built for the Future, Delivered by Advait</h2>
+                            <h2>Built for <strong>the Future,</strong> Delivered by <strong> Advait </strong></h2>
                             <div className="sap-content">
                                 <p>Our dedicated SAP S/4HANA Centre of Excellence (CoE) has developed a suite of tools, accelerators, and migration frameworks to ensure:</p>
                                 <br />
@@ -255,7 +255,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Begin Your S/4HANA Journey with Confidence</h2>
+                            <h2>Begin Your <strong>S/4HANA Journey</strong> with <strong>Confidence</strong></h2>
                             <div className="sap-content">
                                 <p>No matter where you are on your transformation journey, Advait Business Solutions is here to help you drive measurable business outcomes with SAP S/4HANA.</p>
                             </div>
@@ -267,7 +267,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div >
+            </div > */}
 
             {/*------ sap-btp ------*/}
             {/* <div className="sap-background">
@@ -275,7 +275,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Modernize and Extend Your SAP Landscape with BTP</h2>
+                            <h2> <strong> Modernize and Extend </strong>Your SAP Landscape <strong>with BTP</strong></h2>
                             <div className="sap-content">
                                 <p>
                                     Utilize SAP Business Technology Platform (SAP BTP) and cloud-native services to build, integrate, and extend applications seamlessly enabling real-time insights, intelligent workflows, and scalable innovation within your SAP ecosystem.
@@ -290,7 +290,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Scale Innovation and Integration with SAP Business Technology Platform</h2>
+                            <h2><strong>Scale Innovation and Integration</strong> with SAP Business Technology <strong>Platform</strong></h2>
                             <div className="sap-content">
                                 <p>
                                     SAP BTP empowers organizations to seamlessly integrate systems, extend core functionalities, and rapidly develop cloud-native applications using the latest SAP technologies. Whether you're modernizing a legacy SAP landscape, embedding AI into your SAP S/4HANA strategy, or building modular solutions on SAP's industry cloud, our expert team accelerates your innovation journey through rapid prototyping, low-code development, and real-time data orchestration.
@@ -305,7 +305,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Accelerate Digital Transformation with Advait BS and SAP BTP</h2>
+                            <h2>Accelerate Digital Transformation <strong>with Advait BS and SAP BTP</strong></h2>
                             <div className="sap-content">
                                 <p>
                                     Advait Business Solutions leverages deep SAP BTP expertise to help enterprises extend, integrate, and innovate across their SAP landscape. By unifying data, analytics, and AI on a single platform, we enable the development of intelligent, event-driven applications that automate core processes and deliver real-time business insights.
@@ -320,7 +320,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Maintain a Clean Core and Drive Intelligent Automation with SAP BTP</h2>
+                            <h2>Maintain a <strong>Clean Core and Drive </strong>Intelligent Automation <strong>with SAP BTP</strong></h2>
                             <div className="sap-content">
                                 <p>Leverage SAP Business Technology Platform to extend and customize your SAP applications without disrupting your core system. By integrating diverse business processes and system landscapes, SAP BTP enables scalable innovation and real-time responsiveness.</p>
                                 <p> <b>Advait Business Solutions supports your transformation with advanced SAP BTP services, including:</b></p>
@@ -358,7 +358,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Orchestrate the power of SAP BTP to / Operationalize data-driven applications via SAP BTP to</h2>
+                            <h2>Orchestrate the power <strong>of SAP BTP to / Operationalize</strong> data-driven applications <strong>via SAP BTP</strong></h2>
                             <div className="sap-content">
 
                                 <p>
@@ -398,12 +398,12 @@ function Sap() {
 
             {/*------ sap signavio ------*/}
 
-            {/* <div className="sap-background">
+            <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Transform Your Business Processes with SAP Signavio</h2>
+                            <h2> <strong>Transform Your Business Processes </strong> with SAP Signavio</h2>
                             <div className="sap-content">
                                 <p>
                                     SAP Signavio is a comprehensive suite of business process management (BPM) tools designed to help organizations model, analyse, and optimize their processes. By leveraging SAP Signavio, businesses can achieve greater efficiency, compliance, and agility, ensuring they stay competitive in an ever-changing market.
@@ -427,7 +427,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Advantages of SAP Signavio</h2>
+                            <h2><strong>Advantages of SAP Signavio</strong></h2>
                             <div className="sap-content">
                                 <p>
                                     SAP Signavio is a comprehensive suite of business process management (BPM) tools designed to help organizations model, analyse, and optimize their processes. By leveraging SAP Signavio, businesses can achieve greater efficiency, compliance, and agility, ensuring they stay competitive in an ever-changing market.
@@ -469,7 +469,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Why Choose SAP Signavio ?</h2>
+                            <h2>Why Choose <strong>SAP Signavio ?</strong> </h2>
                             <div className="sap-content">
                                 <p>
                                     SAP Signavio empowers organizations to take control of their business processes, driving efficiency, compliance, and agility. With its comprehensive suite of BPM tools, SAP Signavio provides the capabilities needed to model, analyse, and optimize processes, ensuring you can respond to changing business environments and stay competitive.
@@ -486,7 +486,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div > */}
+            </div >
 
             {/*------ sap-analytics-cloud ------*/}
             {/* <div className="sap-background">
@@ -494,7 +494,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Empower Your Business with Real-Time Insights</h2>
+                            <h2><strong>Empower Your Business </strong> with Real-Time Insights</h2>
                             <div className="sap-content">
                                 <p>
                                     SAP Analytics Cloud (SAC) is a comprehensive, cloud-based analytics solution designed to meet the needs of modern enterprises. By integrating business intelligence, planning, and predictive analytics into a single platform, SAC enables organizations to make data-driven decisions and drive better business outcomes.
@@ -518,7 +518,7 @@ function Sap() {
 
                     <div className="sap-section row-reverse bg-white">
                         <div className="sap-text">
-                            <h2>Advantages of SAP Signavio</h2>
+                            <h2><strong>Advantages of SAP Signavio</strong></h2>
                             <div className="sap-content">
                                 <p>
                                     Advantages of SAP Analytics Cloud
@@ -556,7 +556,7 @@ function Sap() {
 
                     <div className="sap-section row-normal bg-green">
                         <div className="sap-text">
-                            <h2>Why Choose SAP Analytics Cloud? </h2>
+                            <h2>Why Choose <strong>SAP Analytics Cloud?</strong> </h2>
                             <div className="sap-content">
                                 <p>
                                     SAP Analytics Cloud is designed to help organizations unlock the full potential of their data. By combining business intelligence, planning, and predictive analytics in one platform, SAC provides a holistic approach to data analysis and decision-making. Whether you're looking to improve your planning processes, gain deeper insights into your data, or predict future trends, SAC offers the tools and capabilities you need to succeed.
@@ -575,6 +575,160 @@ function Sap() {
                 </div>
             </div > */}
 
+            {/*------ grow-with-sap ------*/}
+            {/* <div className="sap-section row-normal bg-green">
+                <div className="sap-text">
+                    <h2> GROW with SAP - Empowering Growing<br />
+                        Businesses with Advait Business Solutions:</h2>
+                    <div className="sap-content">
+                        <p><b>Transform. Simplify. Accelerate.</b></p>
+                        <p>
+                            At <b>Advait Business Solutions Pvt. Ltd.</b>, we understand the unique challenges and opportunities that fast-growing companies face. You need speed, simplicity, and scalability—all without compromising on control or innovation.
+                            <br />
+                            <br />
+                            That's where GROW with SAP comes in: a cloud-native ERP solution designed specifically for mid-size and growing enterprises looking to scale efficiently and build a future-ready business foundation. As your trusted SAP partner, Advait helps you unlock the full value of GROW with SAP, tailored to your unique growth journey.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="sap-img-wrap">
+                    <img src="/src/assets/grow2.jpg" alt="" className="sap-img" />
+                </div>
+            </div>
+            <div className="sap-section row-reverse bg-white">
+                <div className="sap-text">
+                    <h2>
+                        What is GROW with SAP?
+                    </h2>
+                    <div className="sap-content">
+                        <p>
+                            GROW with SAP is a ready-to-run cloud ERP solution based on SAP S/4HANA Cloud, Public Edition. It's designed to help businesses go live quickly with industry best practices, embedded AI, and continuous innovation—all in a flexible and scalable cloud environment.
+                            <br />
+                            <br />
+                            It's more than just ERP—it's a growth platform that enables you to innovate fast, stay competitive, and future-proof your operations.
+                        </p>
+                    </div>
+                </div>
+                <div className="sap-img-wrap">
+                    <img src="/src/assets/grow3.jpg" alt="" className="sap-img" />
+                </div>
+            </div>
+
+            <div className="unique-section">
+                <div className="unique-header">
+                    <h2>
+                        Why Choose
+                        <span className="highlight">
+                            GROW with SAP? <br />SAP for Your Business?
+                        </span>
+                    </h2>
+                </div>
+
+                <div className="cards-grid">
+                    <div className="card">
+                        <h3>Rapid Time to Value</h3>
+                        <p>
+                            Deploy a pre-configured ERP solution built on proven industry practices, helping you go live quickly and start seeing results faster.
+                        </p>
+                    </div>
+
+                    <div className="card">
+                        <h3>Scalable Cloud ERP</h3>
+                        <p>
+                            Whether you're a local leader or expanding globally, GROW with SAP provides a scalable, secure, and always-updated ERP core to support your journey.
+                        </p>
+                    </div>
+
+                    <div className="card">
+                        <h3>Built-in Innovation</h3>
+                        <p>
+                            Take advantage of embedded AI, machine learning, and automation tools to streamline operations, reduce manual work, and make smarter decisions.
+                        </p>
+                    </div>
+
+                    <div className="card">
+                        <h3>User-Centric Experience</h3>
+                        <p>
+                            Intuitive, modern user interfaces make it easy for teams to adopt and get the most from the solution—with minimal training.
+                        </p>
+                    </div>
+                    <div className="card">
+                        <h3>Continuous Updates</h3>
+                        <p>
+                            Stay ahead of the curve with quarterly updates from SAP that bring new features, compliance updates, and performance enhancements—automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="sap-section row-reverse bg-white">
+                <div className="sap-text">
+                    <h2>Why Partner <span className="highlight">with Advait</span> for GROW
+                        with SAP?</h2>
+                    <div className="sap-content">
+                        <p>
+                            As a trusted SAP partner, Advait Business Solutions offers:
+                        </p>
+                        <ul>
+                            <li>Deep domain knowledge in key industries</li>
+                            <br />
+                            <li>Proven methodologies for rapid cloud ERP deployment</li>
+                            <br />
+                            <li>A dedicated team of SAP-certified consultants</li>
+                            <br />
+                            <li>End-to-end services—from strategy and implementation to training and support</li>
+                            <br />
+                            <li>Ongoing optimization to ensure sustained business value</li>
+                        </ul>
+
+                        <p>With Advait, you're not just implementing ERP—you're investing in a smarter, more agile, and resilient future.</p>
+                    </div>
+                </div>
+
+                <div className="sap-img-wrap">
+                    <img src="/src/assets/grow6.jpg" alt="" className="sap-img sap-aimg" />
+                </div>
+            </div>
+
+            <div className="sap-section row-normal bg-green">
+                <div className="sap-text">
+                    <h2>Who is <strong> GROW with SAP For?</strong></h2>
+                    <div className="sap-content">
+                        <p>
+                            <ul>
+                                <li>Startups and scale-ups aiming to establish a strong digital backbone.</li>
+                                <br />
+                                <li>Midsize businesses expanding into new markets or product lines.</li>
+                                <br />
+                                <li>Organizations moving from legacy or on-premises systems to the cloud.</li>
+                                <br />
+                                <li>Companies looking for rapid ERP deployment with minimal customization.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="sap-img-wrap">
+                    <img src="/src/assets/grow5.jpg" alt="" className="sap-img" />
+                </div>
+            </div>
+
+
+            <div className="sap-section row-reverse bg-white">
+                <div className="sap-text">
+                    <h2><b>Build. Scale. Lead.</b> <br />
+                        With GROW and Advait.</h2>
+                    <div className="sap-content">
+                        <p>
+                            At Advait, we help you move beyond operational efficiency to real business transformation. GROW with SAP is your launchpad to an intelligent enterprise—faster, smarter, and ready for tomorrow.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="sap-img-wrap">
+                    <img src="/src/assets/grow4.jpg" alt="" className="sap-img" />
+                </div>
+            </div> */}
         </>
     );
 }

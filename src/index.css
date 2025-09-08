@@ -32,10 +32,6 @@
   --gap: 2.5rem;
 }
 
-p {
-  line-height: 1.7;
-}
-
 p,
 h2,
 h3,
@@ -1332,6 +1328,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.625rem;
+
 }
 
 
@@ -4084,8 +4081,12 @@ form input[type="email"] {
 
 .partner-content h2 {
   font-size: var(--header-fontsize);
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 40px;
+}
+
+.partner-content p {
+  font-size: var(--normal-fontsize);
 }
 
 .partner-content .highlight {
@@ -4475,6 +4476,7 @@ form input[type="email"] {
 
 .sap-text h2 {
   font-size: var(--header-fontsize);
+  font-weight: 400;
 }
 
 .sap-text p {
@@ -4482,7 +4484,7 @@ form input[type="email"] {
 }
 
 .sap-content p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sap-img {
@@ -4529,7 +4531,7 @@ form input[type="email"] {
 
 .chemical-industry h2 {
   font-size: var(--header-fontsize);
-  font-weight: bold;
+  font-weight: 400;
   color: var(--text-dark);
   margin-bottom: 20px;
   line-height: 1.3;
