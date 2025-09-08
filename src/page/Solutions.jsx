@@ -104,6 +104,7 @@ export default function SolutionsSection({ data }) {
 
   const solutionsWithFullSrc = data?.solutionsCardsData?.map((item) => ({
     ...item,
+    id: item._id,
     src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
   })) || [];
   const navigate = useNavigate();
@@ -146,7 +147,7 @@ export default function SolutionsSection({ data }) {
       <ServiceCard
         data={solutionsWithFullSrc}
         onCardClick={(solution) => {
-          navigate(`/solution/${generateSlug(solution.title)}`, { state: { item: solution } });
+          navigate(`/solutions/${solution.id}`, { state: { item: solution } });
         }}
       />
 

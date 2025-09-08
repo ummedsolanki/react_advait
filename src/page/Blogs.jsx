@@ -106,6 +106,7 @@ export default function BlogSection({ data }) {
 
   const blogsWithFullSrc = data.blogs.map((blog) => ({
     ...blog,
+    id: blog._id,
     src: `${import.meta.env.VITE_BACKEND_API_URL}${blog.src}`,
   }));
 
@@ -144,7 +145,7 @@ export default function BlogSection({ data }) {
       <ServiceCard
         data={blogsWithFullSrc}
         onCardClick={(blog) => {
-          navigate(`/blog/${generateSlug(blog.title)}`, {
+          navigate(`/blogs/${(blog.id)}`, {
             state: { item: blog },
           });
         }}
