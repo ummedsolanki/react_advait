@@ -103,7 +103,6 @@ body {
 
 .mainHeading {
   font-size: 60px;
-  font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 600;
   margin-bottom: 20px;
@@ -111,7 +110,6 @@ body {
 
 .subHeading {
   font-size: 25px;
-  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: normal;
   margin: 0 0 30px 0;
@@ -492,7 +490,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
-  font-family: inherit;
   box-sizing: border-box;
   outline: none;
   transition: border 0.3s ease;
@@ -603,7 +600,6 @@ textarea {
 .blog-section {
   padding: 0 0rem 0 0rem;
   background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .section-header {
@@ -660,7 +656,6 @@ textarea {
 .service-section {
   padding: 2rem;
   background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .view-all {
@@ -959,7 +954,6 @@ textarea {
 
 
 .sec5_text {
-  font-family: "open sans-semibold", Helvetica;
   font-weight: 600;
   color: var(--text-black);
   font-size: 25px;
@@ -967,7 +961,6 @@ textarea {
 
 .sec5_text_p {
   color: rgba(0, 0, 0, 0.60);
-  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1808,7 +1801,6 @@ textarea {
 }
 
 .cloud-solutions-section {
-  font-family: Arial, sans-serif;
   padding: 40px 0;
 }
 
@@ -1981,7 +1973,6 @@ textarea {
 }
 
 .modernization-section {
-  font-family: Arial, sans-serif;
   padding: 40px 0;
 }
 
@@ -2077,7 +2068,6 @@ textarea {
 .modernization-section {
   padding: 2rem;
   background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .insights-text {
@@ -2119,7 +2109,6 @@ textarea {
 }
 
 .insights-section {
-  font-family: Arial, sans-serif;
   padding: 40px 0;
 }
 
@@ -2216,7 +2205,6 @@ textarea {
 .insights-section {
   padding: 2rem;
   background-color: var(--bg-body);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .culture-grid {
@@ -2429,10 +2417,6 @@ textarea {
   .gallery-item.medium {
     grid-column: span 6;
   }
-}
-
-.contact-us-section {
-  font-family: Arial, sans-serif;
 }
 
 .contact-us-title {
@@ -4017,7 +4001,7 @@ form input[type="email"] {
 
 .unique-header h2 {
   font-size: var(--header-fontsize);
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .unique-header .highlight {
@@ -4042,13 +4026,13 @@ form input[type="email"] {
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .card p {
-  font-size: 15px;
+  font-size: var(--normal-fontsize);
   line-height: 1.6;
   color: var(--text-black);
 }
@@ -4205,6 +4189,19 @@ form input[type="email"] {
 
   .card {
     padding: 18px;
+  }
+
+  .unique-header h2 {
+    font-size: var(--p-header-fontsize);
+    font-weight: 400;
+  }
+
+  .card h3 {
+    font-size: var(--p-cardtitle-fontsize);
+  }
+
+  .card p {
+    font-size: var(--p-normal-fontsize);
   }
 }
 
@@ -4663,7 +4660,6 @@ form input[type="email"] {
   color: var(--text-black);
   display: flex;
   flex-direction: column;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
 /* Header */
@@ -4927,7 +4923,6 @@ form input[type="email"] {
   width: 100%;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
-  font-family: "Poppins", sans-serif;
 }
 
 .loader-box {
@@ -4966,7 +4961,6 @@ form input[type="email"] {
   width: 100%;
   background: radial-gradient(circle at center, #1a1a2e, #16213e, #0f3460);
   color: white;
-  font-family: "Poppins", sans-serif;
 }
 
 .alt-circle {
@@ -5033,5 +5027,15 @@ form input[type="email"] {
   background: white;
   color: var(--text-black);
   padding: 20px;
-  font-family: "Poppins", sans-serif;
+}
+
+.clamp-6-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  max-height: 10.0em;
+  color: #00000099;
 }
