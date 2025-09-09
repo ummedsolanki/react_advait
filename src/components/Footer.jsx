@@ -62,7 +62,7 @@ const Footer = () => {
 
         @media (min-width: 769px) {
           .footer-center {
-            margin-right: 30%;
+            margin-right: 10%;
           }
         }
 
@@ -114,7 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-right">
-          <a href="#" className="footer-icon">
+          <a href="https://www.linkedin.com/company/advaitbusinesssolutions/" className="footer-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

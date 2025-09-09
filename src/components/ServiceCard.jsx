@@ -52,7 +52,7 @@ export default function ServiceCard({
               </svg>
             </div>
 
-            <p>{item.subtitle}</p>
+            <p className="clamp-6-lines">{item.subtitle}</p>
 
             <div className="workedwith-src">
               <img src={item.src} alt={item.title} />

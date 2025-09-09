@@ -48,6 +48,7 @@ import Loader from "./page/Loader";
 import Detailofsap from "./page/detail5";
 import ScrollToTop from "./components/ScrollToTop";
 import Loaderbounce from "./page/Loading";
+import Button from "./page/Backtotop";
 export function useIsMobile() {
   return useOutletContext().isMobile;
 }
@@ -67,6 +68,7 @@ function Layout() {
     <>
       {isMobile ? <HeaderMobile /> : <Header />}
       <Outlet context={{ isMobile }} />
+       <Button />
       <Footer />
     </>
   );
