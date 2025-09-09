@@ -2,6 +2,7 @@ import { contactUsHeroData } from "../../data/contactUs.data";
 import HeroComponent from "../HeroComponent";
 import { useState, useEffect, useRef } from "react";
 import { getHeroData } from "../../api/HeroApi";
+import Loaderbounce from "../../page/Loading";
 
 
 export default function ContactUsHero() {
@@ -18,7 +19,7 @@ export default function ContactUsHero() {
     });
   }, []);
 
-  if (!heroData) return <p>Loading...</p>;
+  if (!heroData) return <Loaderbounce />;
   return (
     <section className="contact-us-section ">
       <div>

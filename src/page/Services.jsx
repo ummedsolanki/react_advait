@@ -127,10 +127,10 @@ export default function ServiceSection({ data }) {
       }
      .read-more-link {
   color: #078672;
-  font-weight: 600;
+  font-weight: 100;
+  font-size: 14px;
   cursor: pointer;
   margin-right: 0.5em;
-  margin-bottom: 0.2em;
   background: #fff;
   padding-left: 4px;
   pointer-events: auto;
@@ -234,7 +234,11 @@ export default function ServiceSection({ data }) {
               <div style={{ position: "relative" }}>
                 <div
                   className={isExpanded ? "" : "clamp-6-lines"}
-                  style={{ transition: "max-height 0.3s", minHeight: "2em" }}
+                  style={{
+                    transition: "max-height 0.3s",
+                    minHeight: "2em",
+                    color: "var(--text-light)",
+                  }}
                 >
                   {parse(displayDesc)}
                   {!isExpanded && shouldTruncate && (
@@ -247,20 +251,21 @@ export default function ServiceSection({ data }) {
                       </span>
                     </span>
                   )}
+                  {isExpanded && shouldTruncate && (
+                    <span
+                      style={{
+                        color: "#078672",
+                        cursor: "pointer",
+                        marginLeft: 4,
+                        fontWeight: 100,
+                        fontSize: 14,
+                      }}
+                      onClick={() => handleToggle(index)}
+                    >
+                      Read Less
+                    </span>
+                  )}
                 </div>
-                {isExpanded && shouldTruncate && (
-                  <span
-                    style={{
-                      color: "#078672",
-                      cursor: "pointer",
-                      marginLeft: 4,
-                      fontWeight: 600,
-                    }}
-                    onClick={() => handleToggle(index)}
-                  >
-                    Show Less
-                  </span>
-                )}
               </div>
 
               <div className="workedwith-src">

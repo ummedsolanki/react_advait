@@ -6,7 +6,7 @@ const Button = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Show when scrolled more than 100px
+      if (window.scrollY > 100) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -51,7 +51,7 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    box-shadow: 0px 0px 0px 4px rgba(7, 134, 114, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -66,22 +66,24 @@ const StyledWrapper = styled.div`
   .svgIcon path {
     fill: white;
   }
-
+.button:hover .svgIcon {
+  fill: black;
+}
   .button:hover {
-    width: 140px;
+    width: 50px;
     border-radius: 50px;
-    background-color: rgb(181, 160, 255);
+    background-color:rgba(7, 134, 114, 1);
     align-items: center;
   }
 
   .button:hover .svgIcon {
-    transform: translateY(-200%);
+    // transform: translateY(-200%);
   }
 
   .button::before {
     position: absolute;
     bottom: -20px;
-    content: "Back to Top";
+    content: " ";
     color: white;
     font-size: 0px;
     transition: font-size 0.3s ease, opacity 0.3s ease, bottom 0.3s ease;

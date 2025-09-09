@@ -41,9 +41,7 @@ import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry"
 import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
-// import ShinyText from "./components/Shinytext";
 import BlogDetails from "./page/BlogDetails";
-// import Loader from "./page/Loader";
 import Loader from "./page/Loader";
 import Detailofsap from "./page/detail5";
 import ScrollToTop from "./components/ScrollToTop";
@@ -74,7 +72,6 @@ function Layout() {
   );
 }
 
-// Move the isMobile usage inside AboutPage component
 function AboutPage() {
   const isMobile = useIsMobile();
   return (
@@ -114,7 +111,6 @@ function App() {
             element={
               <>
                 <WeProvide />
-                {/* <ServiceSection /> */}
               </>
             }
           />
