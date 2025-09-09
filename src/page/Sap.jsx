@@ -398,7 +398,7 @@ function Sap() {
 
             {/*------ sap signavio ------*/}
 
-            <div className="sap-background">
+            {/* <div className="sap-background">
                 <div className="sap-container">
 
                     <div className="sap-section row-normal bg-green">
@@ -486,7 +486,7 @@ function Sap() {
                     </div>
 
                 </div>
-            </div >
+            </div > */}
 
             {/*------ sap-analytics-cloud ------*/}
             {/* <div className="sap-background">
@@ -576,9 +576,10 @@ function Sap() {
             </div > */}
 
             {/*------ grow-with-sap ------*/}
-            {/* <div className="sap-section row-normal bg-green">
+
+            <div className="sap-section row-normal bg-green">
                 <div className="sap-text">
-                    <h2> GROW with SAP - Empowering Growing<br />
+                    <h2> <strong>GROW with SAP</strong> - Empowering Growing<br />
                         Businesses with Advait Business Solutions:</h2>
                     <div className="sap-content">
                         <p><b>Transform. Simplify. Accelerate.</b></p>
@@ -598,7 +599,7 @@ function Sap() {
             <div className="sap-section row-reverse bg-white">
                 <div className="sap-text">
                     <h2>
-                        What is GROW with SAP?
+                        What is <strong>GROW with SAP?</strong>
                     </h2>
                     <div className="sap-content">
                         <p>
@@ -618,9 +619,7 @@ function Sap() {
                 <div className="unique-header">
                     <h2>
                         Why Choose
-                        <span className="highlight">
-                            GROW with SAP? <br />SAP for Your Business?
-                        </span>
+                        <strong> GROW with SAP? <br />SAP for Your Business?</strong>
                     </h2>
                 </div>
 
@@ -635,7 +634,7 @@ function Sap() {
                     <div className="card">
                         <h3>Scalable Cloud ERP</h3>
                         <p>
-                            Whether you're a local leader or expanding globally, GROW with SAP provides a scalable, secure, and always-updated ERP core to support your journey.
+                            Whether you're a local leader or expanding globally, GROW with SAP provides a scalable, secure, and always updated ERP core to support your journey.
                         </p>
                     </div>
 
@@ -649,13 +648,13 @@ function Sap() {
                     <div className="card">
                         <h3>User-Centric Experience</h3>
                         <p>
-                            Intuitive, modern user interfaces make it easy for teams to adopt and get the most from the solution—with minimal training.
+                            Intuitive, modern user interfaces make it easy for teams to adopt and get the most from the solution with minimal training.
                         </p>
                     </div>
                     <div className="card">
                         <h3>Continuous Updates</h3>
                         <p>
-                            Stay ahead of the curve with quarterly updates from SAP that bring new features, compliance updates, and performance enhancements—automatically.
+                            Stay ahead of the curve with quarterly updates from SAP that bring new features, compliance updates, and performance enhancements automatically.
                         </p>
                     </div>
                 </div>
@@ -663,8 +662,7 @@ function Sap() {
 
             <div className="sap-section row-reverse bg-white">
                 <div className="sap-text">
-                    <h2>Why Partner <span className="highlight">with Advait</span> for GROW
-                        with SAP?</h2>
+                    <h2>Why Partner  <strong>with Advait for GROW with SAP?</strong></h2>
                     <div className="sap-content">
                         <p>
                             As a trusted SAP partner, Advait Business Solutions offers:
@@ -713,7 +711,6 @@ function Sap() {
                 </div>
             </div>
 
-
             <div className="sap-section row-reverse bg-white">
                 <div className="sap-text">
                     <h2><b>Build. Scale. Lead.</b> <br />
@@ -728,7 +725,7 @@ function Sap() {
                 <div className="sap-img-wrap">
                     <img src="/src/assets/grow4.jpg" alt="" className="sap-img" />
                 </div>
-            </div> */}
+            </div>
         </>
     );
 }
