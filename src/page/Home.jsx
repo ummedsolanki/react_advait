@@ -9,6 +9,7 @@ import HeroBanner from "./HeroBanner";
 import BlogSection from "./Blogs";
 import RtlSwiper from "./Slider";
 import FooterDetails from "../components/FooterDetails";
+import Loaderbounce from "./Loading";
 
 export default function Home() {
     const [homeData, setHomeData] = useState(null);
@@ -24,7 +25,7 @@ export default function Home() {
         fetchData();
     }, []);
 
-    if (!homeData) return <p>Loading...</p>;
+    if (!homeData) return <Loaderbounce />;
     return (
         <>
             <Hero data={homeData.heroSections} />
