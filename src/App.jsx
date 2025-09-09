@@ -68,7 +68,7 @@ function Layout() {
     <>
       {isMobile ? <HeaderMobile /> : <Header />}
       <Outlet context={{ isMobile }} />
-       <Button />
+      <Button />
       <Footer />
     </>
   );
@@ -132,12 +132,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/loading" element={<Loader />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-          {/* <Route path="/blog/:slug" element={<AllBlogData />} /> */}
-          {/* <Route path="/rise-private-cloud/:slug" element={<AllBlogData />} /> */}
-          {/* <Route path="/digital-transformation/:slug" element={<AllBlogData />} /> */}
-          {/* <Route path="/sap-s4/:slug" element={<AllBlogData />} /> */}
-          {/* <Route path="/transforming-chemical-industry/:slug" element={<AllBlogData />} /> */}
-          {/* <Route path="/digital-transformation" element={<DigitalTransformation />} /> */}
+
           <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
           <Route path="/sap-s4" element={<Sap />} />
           <Route path="/loadingg" element={<Loaderbounce />} />
