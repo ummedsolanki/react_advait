@@ -245,6 +245,7 @@ body {
 .job-position {
   font-size: var(--cardtitle-fontsize);
   margin: 1.25rem 0;
+  font-weight: 400;
 }
 
 .job-info {
@@ -359,6 +360,42 @@ body {
   color: white;
 }
 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: var(--text-black);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: var(--normal-fontsize);
+  transition: all 0.2s ease-in-out;
+}
+
+.page-btn:hover:not(.disabled):not(.active) {
+  background-color: #f0f0f0;
+}
+
+.page-btn.active {
+  background-color: var(--green-text);
+  color: #fff;
+  border-color: var(--green-text);
+}
+
+.page-btn.disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/*------------------------------------------------------*/
 .contactus-apply-btn {
   position: relative;
   overflow: hidden;
