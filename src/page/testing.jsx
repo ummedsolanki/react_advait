@@ -166,7 +166,7 @@ export default function JoinUs() {
     {
       title: "Senior Software Developer",
       location: "Ahmedabad, India",
-      type: "Full Time",
+      type: "Full Time", 
     },
   ];
 
