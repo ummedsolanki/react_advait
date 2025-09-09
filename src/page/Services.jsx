@@ -111,6 +111,7 @@ export default function ServiceSection({ data }) {
         text-overflow: ellipsis;
         position: relative;
         max-height: 10.0em;
+        color: #00000099;
       }
       .read-more-fade {
         position: absolute;

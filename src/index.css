@@ -192,7 +192,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: var(--text-black);
   font-size: 14px;
   transition: color 0.3s;
 }
@@ -528,7 +528,7 @@ textarea {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: #333;
+  color: var(--text-black);
 }
 
 .recaptcha-check input[type="checkbox"] {
@@ -717,7 +717,7 @@ textarea {
 .service-card p {
   padding: 0 1.5rem;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--card-text);
   margin-bottom: 1rem;
 }
 
@@ -765,7 +765,7 @@ textarea {
 .contact-btn {
   padding: 0.7rem 1.5rem;
   background: white;
-  color: black;
+  color: var(--text-black);
   border: none;
   border-radius: 30px;
   font-size: 1rem;
@@ -832,7 +832,7 @@ textarea {
 }
 
 .banner-title {
-  color: black;
+  color: var(--text-black);
   font-size: var(--header-fontsize);
   font-weight: 600;
   margin: 0;
@@ -961,7 +961,7 @@ textarea {
 .sec5_text {
   font-family: "open sans-semibold", Helvetica;
   font-weight: 600;
-  color: #000000;
+  color: var(--text-black);
   font-size: 25px;
 }
 
@@ -1442,7 +1442,7 @@ textarea {
   font-size: var(--normal-fontsize);
   font-weight: 400;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-black);
 }
 
 
@@ -1776,7 +1776,7 @@ textarea {
 
 .cloud-solutions-text p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-black);
   line-height: 1.6;
 }
 
@@ -1821,7 +1821,7 @@ textarea {
 
 .consulting-text p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-black);
   line-height: 1.6;
 }
 
@@ -1949,7 +1949,7 @@ textarea {
 
 .modernization-text p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-black);
   line-height: 1.6;
 }
 
@@ -2087,7 +2087,7 @@ textarea {
 
 .insights-text p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-black);
   line-height: 1.6;
 }
 
@@ -2377,11 +2377,11 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  color: #333;
+  color: var(--text-black);
 }
 
 .footer-left a {
-  color: #333;
+  color: var(--text-black);
   text-decoration: none;
 }
 
@@ -2468,9 +2468,8 @@ textarea {
 }
 
 .contact-us-text p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
+  font-size: var(--normal-fontsize);
+  color: var(--text-black);
 }
 
 /* --- Banner --- */
@@ -2533,9 +2532,6 @@ textarea {
 }
 
 .contact-us-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-light);
   margin-bottom: 1.5rem;
   max-width: 800px;
 }
@@ -2642,7 +2638,7 @@ textarea {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #222;
+  color: var(--text-black);
   line-height: 1.4;
 }
 
@@ -4006,7 +4002,7 @@ form input[type="email"] {
 .transformation-section .content p {
   font-size: var(--normal-fontsize);
   margin-bottom: 16px;
-  color: var(--text-dark);
+  color: var(--text-black);
 }
 
 .unique-section {
@@ -4025,7 +4021,7 @@ form input[type="email"] {
 }
 
 .unique-header .highlight {
-  color: #000;
+  color: var(--text-black);
   font-weight: 600;
 }
 
@@ -4054,7 +4050,7 @@ form input[type="email"] {
 .card p {
   font-size: 15px;
   line-height: 1.6;
-  color: #444;
+  color: var(--text-black);
 }
 
 .card:hover {
@@ -4253,13 +4249,13 @@ form input[type="email"] {
   font-size: var(--header-fontsize);
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--text-dark);
+  color: var(--text-black);
   line-height: 1.3;
 }
 
 .silver-strategies p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   line-height: 1.7;
   max-width: 90%;
 }
@@ -4283,12 +4279,12 @@ form input[type="email"] {
   font-size: var(--header-fontsize);
   font-weight: bold;
   margin-bottom: 40px;
-  color: var(--text-dark);
+  color: var(--text-black);
 }
 
 .digital-transformation p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   margin-bottom: 40px;
 }
 
@@ -4328,7 +4324,7 @@ form input[type="email"] {
 
 .integration-decision p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-dark);
   margin-bottom: 40px;
 }
 
@@ -4366,12 +4362,12 @@ form input[type="email"] {
   font-size: var(--header-fontsize);
   font-weight: bold;
   margin-bottom: 40px;
-  color: var(--text-dark);
+  color: var(--text-black);
 }
 
 .cloud-customer p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   margin-bottom: 40px;
 }
 
@@ -4406,12 +4402,12 @@ form input[type="email"] {
   font-size: var(--header-fontsize);
   font-weight: bold;
   margin-bottom: 40px;
-  color: var(--text-dark);
+  color: var(--text-black);
 }
 
 .transformation-partner p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   margin-bottom: 40px;
 }
 
@@ -4466,7 +4462,7 @@ form input[type="email"] {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  color: #333;
+  color: var(--text-black);
 
 }
 
@@ -4532,7 +4528,7 @@ form input[type="email"] {
 .chemical-industry h2 {
   font-size: var(--header-fontsize);
   font-weight: 400;
-  color: var(--text-dark);
+  color: var(--text-black);
   margin-bottom: 20px;
   line-height: 1.3;
 }
@@ -4586,19 +4582,19 @@ form input[type="email"] {
   font-size: var(--header-fontsize);
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--text-dark);
+  color: var(--text-black);
   line-height: 1.3;
 }
 
 .digital-transformations p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   line-height: 1.7;
 }
 
 .digital-transformations ul {
   font-size: var(--normal-fontsize);
-  color: var(--text-dark);
+  color: var(--text-black);
   margin: 20px 0;
   padding-left: 20px;
   list-style-type: disc;
@@ -4655,7 +4651,7 @@ form input[type="email"] {
 
 .transformation-challenges p {
   font-size: var(--normal-fontsize);
-  color: var(--text-light);
+  color: var(--text-black);
   line-height: 1.7;
 }
 
@@ -4664,7 +4660,7 @@ form input[type="email"] {
 .privacy-container {
   /* min-height: 100vh; */
   background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-  color: #111827;
+  color: var(--text-black);
   display: flex;
   flex-direction: column;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
@@ -4717,7 +4713,7 @@ form input[type="email"] {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #111827;
+  color: var(--text-black);
 }
 
 .last-updated {
@@ -4749,7 +4745,7 @@ form input[type="email"] {
 .privacy-content p {
   line-height: 1.7;
   font-size: 16px;
-  color: #374151;
+  color: var(--text-black);
 }
 
 /* Links */
@@ -4856,13 +4852,13 @@ form input[type="email"] {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--text-black);
 }
 
 .sap-btp-content p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-black);
 }
 
 .sap-btp-content ul {
@@ -4873,7 +4869,7 @@ form input[type="email"] {
 .sap-btp-content ul li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #222;
+  color: var(--text-black);
 }
 
 .sap-btp-image {
@@ -5035,7 +5031,7 @@ form input[type="email"] {
 .page-content {
   min-height: 100vh;
   background: white;
-  color: black;
+  color: var(--text-black);
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }

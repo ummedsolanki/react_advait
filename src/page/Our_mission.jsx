@@ -71,9 +71,8 @@ export default function MissionSection() {
               }
             >
               <div className="sap-text">
-                <h2>{section.title}</h2>
+                <h2><strong>{section.title}</strong></h2>
                 <div className='sap-content'>
-                  <p><b>{section.content1}</b></p>
                   <p>{parse(section.content)}</p>
                 </div>
               </div>
