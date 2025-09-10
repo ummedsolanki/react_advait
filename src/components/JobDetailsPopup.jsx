@@ -17,24 +17,19 @@ export default function JobDetailsPopup({ job, onClose }) {
                 <h2 className="popup-title">{job.title}</h2>
 
                 {/* Meta Info */}
-                {/* <div className="popup-meta">
-                    <span>🏢 {job.department || "Product"}</span>
-                    <span>📍 {job.location || "Not specified"}</span>
-                    <span>💼 {job.jobType || "Full Time"}</span>
-                </div> */}
 
                 <div className="popup-meta">
                     <span className="popup-span">
                         <FaBuilding className="meta-icon" />
-                        {job.department || "Product"}
+                        {job.department}
                     </span>
                     <span className="popup-span">
                         <FaMapMarkerAlt className="meta-icon-red" />
-                        {job.location || "Not specified"}
+                        {job.location}
                     </span>
                     <span className="popup-span">
                         <FaBriefcase className="meta-icon" />
-                        {job.jobType || "Full Time"}
+                        {job.job_type}
                     </span>
                 </div>
 
@@ -44,12 +39,12 @@ export default function JobDetailsPopup({ job, onClose }) {
                     {/* Job Details */}
                     <div className="popup-card">
                         <h3>Job Details</h3>
-                        <p>Experience: {job.experience || "Not specified"}</p>
+                        <p>Experience: {job.experience}</p>
                         <p>
                             Education:{" "}
-                            {job.education ? job.education : "Not specified"}
+                            {job.education ? job.education : ""}
                         </p>
-                        <p>Salary: {job.salary || "Not specified"}</p>
+                        <p>Salary: {job.salary}</p>
                         <p>
                             Posted: {job.createdAt
                                 ? new Date(job.createdAt).toLocaleDateString("en-US", {
@@ -57,16 +52,16 @@ export default function JobDetailsPopup({ job, onClose }) {
                                     month: "long",
                                     day: "numeric",
                                 })
-                                : "Not specified"}
+                                : ""}
                         </p>
                     </div>
 
                     {/* Key Information */}
                     <div className="popup-card">
                         <h3>Key Information</h3>
-                        <p>Department: {job.department || "Product"}</p>
-                        <p>Location: {job.location || "Not specified"}</p>
-                        <p>Job Type: {job.job_type || "Not specified"}</p>
+                        <p>Department: {job.department}</p>
+                        <p>Location: {job.location}</p>
+                        <p>Job Type: {job.job_type}</p>
                     </div>
                 </div>
 

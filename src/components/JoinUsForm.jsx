@@ -1,103 +1,119 @@
-import { useState } from "react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React, { useState } from "react";
 
 export default function JoinUsForm({ onClose }) {
-    const { executeRecaptcha } = useGoogleReCaptcha();
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
-        number: "",
         email: "",
-        message: "",
-        recaptchaToken: "",
+        phone: "",
+        resume: null,
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        const { name, value, files } = e.target;
+        if (name === "resume") {
+            setFormData({ ...formData, resume: files[0] });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-
-        if (!executeRecaptcha) {
-            alert("Recaptcha not ready");
-            return;
-        }
-
-        const token = await executeRecaptcha("submit_application");
-
-        if (!token) {
-            alert("Failed to verify reCAPTCHA.");
-            return;
-        }
-
-        setFormData((prev) => ({ ...prev, recaptchaToken: token }));
-
-        console.log("Form submitted with token:", {
-            ...formData,
-            recaptchaToken: token,
-        });
-
-        // Send this to your backend for verification
-        // Example:
-        // await fetch('/api/submit-application', {
-        //   method: 'POST',
-        //   body: JSON.stringify({ ...formData, recaptchaToken: token }),
-        // })
-
+        console.log("Form submitted:", formData);
+        // You can send formData to backend here using axios/fetch
+        alert("Application submitted!");
         onClose();
     };
 
     return (
-        <div className="popup-overlay">
-            <div className="popup-content">
-                <h2>Submit Application</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First-Name"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last-Name"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="tel"
-                        name="number"
-                        placeholder="Phone-Number"
-                        value={formData.number}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <div className="file-upload">
-                        <input type="file" id="resume" name="resume" />
+        <div className="jobapply-overlay">
+            <div className="jobapply-content">
+                <div className="jobapply-header">
+                    <h2>Apply for Job</h2>
+                    <button className="jobapply-close" onClick={onClose}>
+                        ✕
+                    </button>
+                </div>
+
+                <form onSubmit={handleSubmit} className="jobapply-form">
+                    <div className="jobapply-row">
+                        <div className="jobapply-group">
+                            <label>First Name *</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                value={formData.firstName}
+                                onChange={handleChange}
+                                placeholder="Enter your first name"
+                                required
+                            />
+                        </div>
+                        <div className="jobapply-group">
+                            <label>Last Name *</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                value={formData.lastName}
+                                onChange={handleChange}
+                                placeholder="Enter your last name"
+                                required
+                            />
+                        </div>
                     </div>
 
-                    <div className="popup-buttons">
-                        <button type="button" onClick={onClose}>
+                    <div className="jobapply-row">
+                        <div className="jobapply-group">
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <div className="jobapply-group">
+                            <label>Phone Number *</label>
+                            <input
+                                type="tel"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="Enter your phone number"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="jobapply-group">
+                        <label>Resume (PDF, DOC, DOCX) *</label>
+                        <input
+                            type="file"
+                            name="resume"
+                            accept=".pdf,.doc,.docx"
+                            onChange={handleChange}
+                            required
+                        />
+                        <small>Accepted file types: PDF, DOC, DOCX (Max size: 5MB)</small>
+                    </div>
+
+                    <div className="jobapply-actions">
+                        <button
+                            type="button"
+                            className="jobapply-btn-cancel"
+                            onClick={onClose}
+                        >
                             Cancel
                         </button>
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="jobapply-btn-submit">
+                            Submit Application
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
+
     );
 }
