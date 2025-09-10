@@ -47,6 +47,9 @@ import Detailofsap from "./page/detail5";
 import ScrollToTop from "./components/ScrollToTop";
 import Loaderbounce from "./page/Loading";
 import Button from "./page/Backtotop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export function useIsMobile() {
   return useOutletContext().isMobile;
 }
@@ -139,6 +142,7 @@ function App() {
           <Route path="/:type/:id" element={<BlogDetails />} />
         </Route>
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 }

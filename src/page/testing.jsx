@@ -8,6 +8,7 @@ import JobDetailsPopup from "../components/JobDetailsPopup";
 import JoinUsForm from "../components/JoinUsForm";
 import { AiOutlineEye } from "react-icons/ai";
 import { FiArrowRight } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
@@ -115,7 +116,7 @@ export default function JoinUs() {
                 </div>
               </div>
               <button className="apply-btn" onClick={() => setShowPopup(true)}>
-                <span className="btn-text">Submit Application</span>
+                <span className="btn-text">Apply Now</span>
                 <div className="job-box">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
