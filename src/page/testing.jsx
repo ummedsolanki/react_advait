@@ -6,6 +6,8 @@ import { getHeroData } from "../api/HeroApi";
 import HeroComponent from "../components/HeroComponent";
 import JobDetailsPopup from "../components/JobDetailsPopup";
 import JoinUsForm from "../components/JoinUsForm";
+import { AiOutlineEye } from "react-icons/ai";
+import { FiArrowRight } from "react-icons/fi";
 
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
@@ -106,8 +108,9 @@ export default function JoinUs() {
                     <span className="for-phone">•</span>
                     <span>{job.location}</span>
                   </p>
-                  <button onClick={() => setSelectedJob(job)}>
-                    View Details
+                  <button onClick={() => setSelectedJob(job)} className="view-btn">
+                    <AiOutlineEye className="view-icon" />
+                    View Job
                   </button>
                 </div>
               </div>
