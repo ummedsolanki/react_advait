@@ -131,15 +131,14 @@ const Header = () => {
               {modalContent?.services.map((item, index) => (
                 <div
                   key={index}
-                  style={styles.modalItem}
+                  className="modal-item"
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#e6f7ed";
-                    e.currentTarget.querySelector("div").style.color =
+                    e.currentTarget.querySelector(".modal-title").style.color =
                       "#008060";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.querySelector("div").style.color = "#333";
+                    e.currentTarget.querySelector(".modal-title").style.color =
+                      "#333";
                   }}
                 >
                   <Link
@@ -153,7 +152,7 @@ const Header = () => {
                       height: "100%",
                     }}
                   >
-                    <div style={styles.modalTitle}>{item.title}</div>
+                    <div className="modal-title">{item.title}</div>
                   </Link>
                 </div>
               ))}

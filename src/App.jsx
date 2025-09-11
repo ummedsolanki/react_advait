@@ -5,15 +5,12 @@ import CloudSolutions from "./page/CloudSolutions";
 import Consulting from "./page/Consulting";
 import ContactUs from "./page/Contact_us";
 import Header from "./page/Header";
-import HeroBanner from "./page/HeroBanner";
 import Industries from "./page/Industries-Focused";
 import Insights from "./page/Insights";
 import Modernization from "./page/Modernization";
 import MissionSection from "./page/Our_mission";
 import JobRoles from "./page/Roles";
 import WeProvide from "./page/ServicesHeader";
-import RtlSwiper from "./page/Slider";
-import TestimonialSlider from "./page/SuccessStories";
 import JoinUs from "./page/testing";
 import TimelineSlider from "./page/TimelineSlider";
 import Workedwitha from "./page/Workedwitha";
@@ -38,7 +35,6 @@ import RisePrivateCloud from "./page/RisePrivateCloud";
 import DigitalTransformation from "./page/Digital_trans";
 import Sap from "./page/Sap";
 import TransformingChemicalIndustry from "./page/Transforming_Chemical_Industry";
-import AllBlogData from "./page/AllBlogData";
 import Home from "./page/Home";
 import PrivacyPolicy from "./page/PrivacyPolicy";
 import BlogDetails from "./page/BlogDetails";
@@ -105,7 +101,6 @@ function App() {
                 <Workedwithc />
                 <Workedwithd />
                 <WorkedWithSection />
-                {/* <TestimonialSlider /> */}
               </>
             }
           />
@@ -127,18 +122,15 @@ function App() {
           <Route path="/careers" element={<JoinUs />} />
           <Route path="/roles" element={<JobRoles />} />
           <Route path="/map" element={<WorldMap />} />
-          {/* <Route path="/shiny-text" element={<ShinyText />} /> */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/loading" element={<Loader />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-
           <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
           <Route path="/sap-s4" element={<Sap />} />
           <Route path="/loadingg" element={<Loaderbounce />} />
           <Route path="/detail-5" element={<Detailofsap />} />
           <Route path="/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
-
           <Route path="/:type/:id" element={<BlogDetails />} />
         </Route>
       </Routes>
