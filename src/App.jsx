@@ -9,7 +9,6 @@ import Industries from "./page/Industries-Focused";
 import Insights from "./page/Insights";
 import Modernization from "./page/Modernization";
 import MissionSection from "./page/Our_mission";
-import JobRoles from "./page/Roles";
 import WeProvide from "./page/ServicesHeader";
 import JoinUs from "./page/testing";
 import TimelineSlider from "./page/TimelineSlider";
@@ -45,6 +44,7 @@ import Loaderbounce from "./page/Loading";
 import Button from "./page/Backtotop";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TermsOfService from "./page/Terms&con";
 
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -120,9 +120,9 @@ function App() {
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/careers" element={<JoinUs />} />
-          <Route path="/roles" element={<JobRoles />} />
           <Route path="/map" element={<WorldMap />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/loading" element={<Loader />} />
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
