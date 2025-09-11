@@ -1,14 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  GoogleReCaptchaProvider,
-} from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { getHeroData } from "../api/HeroApi";
 import HeroComponent from "../components/HeroComponent";
 import JobDetailsPopup from "../components/JobDetailsPopup";
 import JoinUsForm from "../components/JoinUsForm";
 import { AiOutlineEye } from "react-icons/ai";
-import { FiArrowRight } from "react-icons/fi";
-import { toast } from "react-toastify";
 
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
@@ -34,7 +30,9 @@ export default function JoinUs() {
     ];
 
     fetch(
-      `${import.meta.env.VITE_BACKEND_API_URL}/api/culture-highlights/list?page=1&limit=20`
+      `${
+        import.meta.env.VITE_BACKEND_API_URL
+      }/api/culture-highlights/list?page=1&limit=20`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -71,7 +69,9 @@ export default function JoinUs() {
   // Fetch jobs data with pagination
   useEffect(() => {
     fetch(
-      `${import.meta.env.VITE_BACKEND_API_URL}/api/jobs?page=${page}&limit=5&status=active`
+      `${
+        import.meta.env.VITE_BACKEND_API_URL
+      }/api/jobs?page=${page}&limit=5&status=active`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -86,7 +86,9 @@ export default function JoinUs() {
   if (!heroData) return <p>Loading...</p>;
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+    >
       <section className="about-section header-margin">
         <div>
           <HeroComponent heroData={heroData} />
@@ -101,7 +103,20 @@ export default function JoinUs() {
           jobs.map((job) => (
             <div key={job._id} className="job-card">
               <div>
-                <p className="job-label">OPEN ROLE</p>
+                <div
+                  className="abcd"
+                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                >
+                  <p className="job-label">OPEN ROLE</p>
+                  <button
+                    onClick={() => setSelectedJob(job)}
+                    className="view-btn"
+                  >
+                    <AiOutlineEye className="view-icon" />
+                    View Job
+                  </button>
+                </div>
+
                 <h3 className="job-position">{job.title}</h3>
                 <div className="job-details">
                   <p className="job-info">
@@ -109,10 +124,6 @@ export default function JoinUs() {
                     <span className="for-phone">•</span>
                     <span>{job.location}</span>
                   </p>
-                  <button onClick={() => setSelectedJob(job)} className="view-btn">
-                    <AiOutlineEye className="view-icon" />
-                    View Job
-                  </button>
                 </div>
               </div>
               <button className="apply-btn" onClick={() => setShowPopup(true)}>
