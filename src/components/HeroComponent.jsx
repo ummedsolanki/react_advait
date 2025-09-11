@@ -7,12 +7,16 @@ export default function HeroComponent({ heroData, sliderSettings }) {
     if (!heroData || heroData.length === 0) return null;
 
     const defaultSliderSettings = {
-        dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        arrows: false,
+        swipe: false,
     };
 
     const settings = sliderSettings || defaultSliderSettings;
@@ -68,9 +72,9 @@ export default function HeroComponent({ heroData, sliderSettings }) {
 
             {/* Overlay for title (optional, if you want per slide title then move inside .map loop) */}
             <div className="about-overlay">
-              <ShinyText>
-                <h1>{heroData[0].title}</h1>
-              </ShinyText>
+                <ShinyText>
+                    <h1>{heroData[0].title}</h1>
+                </ShinyText>
             </div>
         </div>
     );

@@ -139,7 +139,7 @@ export default function DigitalTransformation() {
               <h2><strong>Challenges and Opportunities</strong>in Transformation</h2>
               <div className="sap-content">
                 <p>
-                  While SAP offers a powerful platform for transformation, the journey isn’t without its challenges. Common obstacles include integration complexity, organizational change management, and the need for skilled resources. However, these challenges also create opportunities for partners like us to deliver real value.
+                  While SAP offers a powerful platform for transformation, the journey isn't without its challenges. Common obstacles include integration complexity, organizational change management, and the need for skilled resources. However, these challenges also create opportunities for partners like us to deliver real value.
                   <br />
                   <br />
                   As a Silver Partner, we provide expert guidance, implementation support, and customized solutions to help clients navigate their transformation journey smoothly and successfully.
