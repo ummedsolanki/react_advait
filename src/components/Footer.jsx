@@ -102,10 +102,15 @@ const Footer = () => {
             className="footer-text"
             dangerouslySetInnerHTML={{ __html: footerData.footerText }}
           />
-          <p href="#" className="footer-text">
-            {footerData.privacyPolicy}
-
-            {footerData.Allrightsreserved}
+          <p className="footer-text">
+            <a href={footerData.privacyPolicy.link}>
+              {footerData.privacyPolicy.text}
+            </a>
+            <span> . </span>
+            <a href={footerData.termsOfService.link}>
+              {footerData.termsOfService.text}
+            </a>
+            <span> . </span>
           </p>
         </div>
 
@@ -114,7 +119,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-right">
-          <a href="https://www.linkedin.com/company/advaitbusinesssolutions/" className="footer-icon">
+          <a
+            href="https://www.linkedin.com/company/advaitbusinesssolutions/"
+            className="footer-icon"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

@@ -1,4 +1,3 @@
-//Header.jsx (Header Menu Data)
 export const headerData = {
   home: "Home",
   about: "About",
@@ -10,7 +9,6 @@ export const headerData = {
   contactUs: "Contact Us",
 };
 
-//Header.jsx (Sub Menu Modal Data)
 export const modalContent = {
   industries: [
     { title: "Healthcare", link: "/industries/healthcare" },
@@ -41,8 +39,6 @@ export const modalContent = {
   ],
 };
 
-//Solutions Data
-
 export const solutionsText = {
   solutionsTitle: "Our Solution",
   solutionsSubTitle: "Tailored Solution",
@@ -50,8 +46,6 @@ export const solutionsText = {
   solutionsSubTitle3: "& Expand Your Business",
   solutionsViewAll: "View all solution",
 };
-
-//Services Data
 
 export const servicesText = {
   servicesTitle: "Our Services",
@@ -61,12 +55,10 @@ export const servicesText = {
   servicesViewAll: "View all services",
 };
 
-//Hero Banner Data
 export const heroText = {
   contactUs: "Contact Us",
 };
 
-//Footer Details
 export const footerDetails = {
   IndiaHeadOffice: "India Head Office",
   Address:
@@ -76,14 +68,18 @@ export const footerDetails = {
   Email: "sales@advaitbusiness.com",
 };
 
-//Footer
 export const footerData = {
   footerText: "Advait Business Solutions Pvt Ltd",
-  privacyPolicy: "Privacy Policy . ",
-  Allrightsreserved: " All rights reserved.",
+  privacyPolicy: {
+    text: "Privacy Policy",
+    link: "/privacy-policy",
+  },
+  termsOfService: {
+    text: "Terms of Service",
+    link: "/terms-of-service",
+  },
 };
 
-//Company world map markers(WorldMap.jsx)
 export const markersWeb = [
   {
     id: 1,
@@ -127,4 +123,3 @@ export const markersMobile = [
     tooltip: "46 Hibernia Road, Hounslow Middlesex TW3 3RY, United Kingdom",
   },
 ];
-
