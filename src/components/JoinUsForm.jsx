@@ -189,7 +189,7 @@ export default function JoinUsForm({ onClose }) {
 
           <div className="jobapply-row">
             <div className="jobapply-group">
-              <label>First Name *</label>
+              <label>First Name*</label>
               <input
                 type="text"
                 name="firstName"
@@ -202,7 +202,7 @@ export default function JoinUsForm({ onClose }) {
               )}
             </div>
             <div className="jobapply-group">
-              <label>Last Name *</label>
+              <label>Last Name*</label>
               <input
                 type="text"
                 name="lastName"
@@ -218,7 +218,7 @@ export default function JoinUsForm({ onClose }) {
 
           <div className="jobapply-row">
             <div className="jobapply-group">
-              <label>Email *</label>
+              <label>Email*</label>
               <input
                 type="email"
                 name="email"
@@ -229,7 +229,7 @@ export default function JoinUsForm({ onClose }) {
               {errors.email && <span className="error">{errors.email}</span>}
             </div>
             <div className="jobapply-group">
-              <label>Phone Number *</label>
+              <label>Phone Number*</label>
               <input
                 type="tel"
                 name="phoneNumber"
@@ -244,7 +244,7 @@ export default function JoinUsForm({ onClose }) {
           </div>
 
           <div className="jobapply-group">
-            <label>Resume (PDF, DOC, DOCX) *</label>
+            <label>Resume (PDF, DOC, DOCX)*</label>
             <input
               type="file"
               name="resume"

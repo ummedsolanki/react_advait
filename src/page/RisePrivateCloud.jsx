@@ -152,7 +152,7 @@ export default function RisePrivateCloud() {
         </div>
 
         <div className="sap-img-wrap">
-          <img src="/src/assets/handy.jpg" alt="Partner with Advait" className="sap-img sap-aimg" />
+          <img src="/src/assets/grow6.jpg" alt="Partner with Advait" className="sap-img sap-aimg" />
         </div>
       </div>
 

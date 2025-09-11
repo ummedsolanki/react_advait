@@ -1,6 +1,4 @@
-import Consulting1 from "../assets/Digital Transformation.jpg";
-import Consulting2 from "../assets/SAP Business Solution.jpg";
-import Consulting3 from "../assets/Chemical Industry.jpg";
+
 import Study1 from "../assets/insights1.jpg";
 import Study2 from "../assets/insights2.jpg";
 import Study3 from "../assets/insights3.jpg";
@@ -10,28 +8,7 @@ import HeroComponent from "../components/HeroComponent";
 import { useState, useEffect, useRef } from "react";
 import { getHeroData } from "../api/HeroApi";
 import { useNavigate } from "react-router-dom";
-import { generateSlug } from "../components/GenerateSlug";
 
-const Consultings = [
-  {
-    title: "SAP Analytics Cloud",
-    description:
-      "Make real-time, data-driven decisions with powerful dashboards and predictive analytics.",
-    src: Consulting1,
-  },
-  {
-    title: "SAP Fiori & UX",
-    description:
-      "Build intuitive, role-based, and responsive interfaces with SAP Fiori to boost productivity and user satisfaction.",
-    src: Consulting2,
-  },
-  {
-    title: "SAP S/4HANA",
-    description:
-      "Modernize your ERP with Greenfield, Brownfield, or Bluefield strategies for SAP S/4HANA.",
-    src: Consulting3,
-  },
-];
 const Studies = [
   {
     title: "SAP Analytics Cloud",
