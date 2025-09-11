@@ -100,11 +100,12 @@ const StyledWrapper = styled.div`
     right: 10px;
     bottom: 15px;
     .button {
-      width: 40px;
-      height: 40px;
+      width: 10px;
+      height: 10px;
     }
     .button:hover {
-      width: 120px;
+      width: 30px;
+      height: 30px;
     }
   }
 `;

@@ -237,7 +237,7 @@ export default function ServiceSection({ data }) {
                   style={{
                     transition: "max-height 0.3s",
                     minHeight: "2em",
-                    color: "var(--text-light)",
+                    color: "var(--card-text)",
                   }}
                 >
                   {parse(displayDesc)}
