@@ -3,6 +3,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import recaptchaIcon from "../assets/recaptcha-icon.svg";
 
 export default function JoinUsForm({ onClose }) {
   const [formData, setFormData] = useState({
@@ -256,8 +257,8 @@ export default function JoinUsForm({ onClose }) {
           </div>
 
           {/* Checkbox for reCAPTCHA */}
-          <div className="jobapply-group recaptcha-group">
-            <label>
+          {/* <div className="jobapply-group recaptcha-group">
+            <label className="robot">
               <input
                 type="checkbox"
                 checked={isCheckboxChecked}
@@ -272,7 +273,30 @@ export default function JoinUsForm({ onClose }) {
                 <span>Verifying you're not a robot...</span>
               </div>
             )}
+          </div> */}
+
+          <div className="jobapply-group recaptcha-group">
+            <label className="robot">
+              <input
+                type="checkbox"
+                checked={isCheckboxChecked}
+                onChange={handleCheckboxChange}
+                disabled={isVerified || isRecaptchaProcessing}
+              />
+              <span className="recaptcha-label">
+                I'm not a robot
+                <img src={recaptchaIcon} alt="reCAPTCHA" className="recaptcha-icon" />
+              </span>
+            </label>
+
+            {isRecaptchaProcessing && (
+              <div className="recaptcha-status">
+                <div className="spinner"></div>
+                <span>Verifying you're not a robot...</span>
+              </div>
+            )}
           </div>
+
 
           <div className="jobapply-actions">
             <button
@@ -323,10 +347,6 @@ export default function JoinUsForm({ onClose }) {
           }
         }
 
-        .jobapply-btn-submit:disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
-        }
       `}</style>
     </div>
   );

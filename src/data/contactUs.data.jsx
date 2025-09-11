@@ -1,8 +1,6 @@
 //contactUs data
 
-import contactUsVideo from "../assets/Contact US.jpg";
 export const contactUsHeroData = {
-  contactUsTitle: "CONTACT US",
   LetStart: "Let's",
   start: "Start.",
   theConversation: "the Conversation!",
@@ -12,7 +10,6 @@ export const contactUsHeroData = {
     "Whether you're launching a new project, seeking expert advice, or exploring potential collaboration opportunities, we're here to guide you every step of the way. Your success is our priority, and we're committed to making the process as smooth and stress-free as possible.",
   ourTeam3:
     "Let's connect and bring your ideas to life—ready to take the next step?",
-  contactUsVideo: contactUsVideo,
 };
 
 //contactUs Form Data

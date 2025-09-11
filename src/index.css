@@ -39,9 +39,11 @@ section,
 div {
   margin: 0;
 }
+
 .grecaptcha-badge {
   visibility: hidden !important;
 }
+
 body {
   font-family: 'Open Sans', sans-serif !important;
   background-color: var(--bg-color);
@@ -532,6 +534,12 @@ body {
   cursor: pointer;
 }
 
+.jobapply-btn-cancel:hover {
+  background: red;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
 .jobapply-btn-submit {
   background: var(--green-text);
   color: white;
@@ -542,17 +550,25 @@ body {
   border: 1px solid var(--green-text);
 }
 
-.jobapply-btn-cancel:hover {
-  background: red;
-  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
-  transition: all 0.2s ease-in-out;
-}
-
 .jobapply-btn-submit:hover {
   background: white;
   color: var(--green-text);
   border: 1px solid var(--green-text);
   box-shadow: 0 0 4px rgba(7, 134, 114, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.jobapply-btn-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border: 1px solid #ccc;
+}
+
+.jobapply-btn-submit:disabled:hover {
+  background: #ccc;
+  color: white !important;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 4px rgba(254, 255, 255, 0.5);
   transition: all 0.2s ease-in-out;
 }
 
@@ -569,6 +585,28 @@ body {
   box-shadow: 0 0 4px rgba(7, 134, 114, 0.5);
 }
 
+.robot {
+  font-size: 14px !important;
+}
+
+.robot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.recaptcha-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.recaptcha-icon {
+  width: 50px;
+  height: 50px;
+}
 
 @media (max-width: 768px) {
   .jobapply-content {
@@ -5385,6 +5423,7 @@ form input[type="email"] {
   margin-bottom: 10px;
   font-size: var(--normal-fontsize);
 }
+
 .modal-item {
   position: relative;
   background: transparent;
