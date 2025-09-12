@@ -250,7 +250,7 @@ export default function JoinUs() {
                   controlsList="nodownload nofullscreen noremoteplayback"
                 />
               ) : (
-                <a href={item.src} target="_blank" rel="noopener noreferrer">
+                <a href="/">
                   <img src={item.src} alt={`gallery-${i}`} />
                 </a>
               )}

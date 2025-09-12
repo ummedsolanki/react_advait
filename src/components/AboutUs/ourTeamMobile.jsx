@@ -38,7 +38,7 @@ export default function OurTeamMobile() {
                 alt={member.name}
                 className="mobile-team-img"
               />
-              <a href={member.linkedin} target="_blank" rel="noreferrer">
+              <a href="/">
                 <img
                   src={teamStaticData.linkedinImage}
                   alt="LinkedIn"

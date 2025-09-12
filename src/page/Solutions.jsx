@@ -127,7 +127,9 @@ export default function SolutionsSection({ data }) {
               {solutionsText.solutionsSubTitle3}
             </h2>
           </div>
-          <button className="apply-btn" onClick={() => navigate("/solution")}>
+          <button className="apply-btn" 
+          // onClick={() => navigate("/solution")}
+          >
             <span className="btn-text service-button">
               {solutionsText.solutionsViewAll}
             </span>

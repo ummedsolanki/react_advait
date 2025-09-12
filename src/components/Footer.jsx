@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="footer-right">
           <a
-            href="https://www.linkedin.com/company/advaitbusinesssolutions/"
+            href="/"
             className="footer-icon"
           >
             <svg
@@ -143,7 +143,7 @@ const Footer = () => {
             </svg>
           </a>
 
-          <a href="#" className="footer-icon">
+          <a href="/" className="footer-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="27"
@@ -158,7 +158,7 @@ const Footer = () => {
             </svg>
           </a>
 
-          <a href="#" className="footer-icon">
+          <a href="/" className="footer-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

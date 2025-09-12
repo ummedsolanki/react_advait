@@ -124,7 +124,9 @@ export default function BlogSection({ data }) {
               {blogText.blogSubTitle3}
             </h2>
           </div>
-          <button className="apply-btn" onClick={() => navigate("/insights")}>
+          <button className="apply-btn" 
+          // onClick={() => navigate("/insights")}
+          >
             <span className="btn-text">{blogText.blogViewAll}</span>
             <div className="job-box solutions-arrow">
               <svg

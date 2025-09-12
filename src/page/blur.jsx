@@ -48,7 +48,7 @@ export default function Team() {
                 <p className="role">{member.role}</p>
                 <p className="desc">{parse(member.description)}</p>
                 <a
-                  href={member.linkedin}
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="linkedin-icon"

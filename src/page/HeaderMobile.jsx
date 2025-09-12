@@ -101,7 +101,7 @@ const HeaderMobile = () => {
                               className="mobile-submenu-item"
                             >
                               <Link
-                                to={subItem.link}
+                                to="/"
                                 className="mobile-submenu-link"
                                 onClick={closeMenu}
                               >
@@ -113,7 +113,7 @@ const HeaderMobile = () => {
                       </>
                     ) : (
                       <Link
-                        to={item.path}
+                        to="/"
                         className="mobile-nav-link"
                         onClick={closeMenu}
                       >
