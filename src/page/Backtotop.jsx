@@ -3,10 +3,19 @@ import styled from 'styled-components';
 
 const Button = () => {
   const [visible, setVisible] = useState(false);
+  const [stopButton, setStopButton] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      const footer = document.getElementById('footer');
+      if (!footer) return;
+
+      const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Show button only if user scrolled down and not too close to footer
+      if (scrollY > 100 && scrollY + windowHeight < footerTop - 20) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -14,11 +23,12 @@ const Button = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -30,7 +40,7 @@ const Button = () => {
       </button>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -66,18 +76,16 @@ const StyledWrapper = styled.div`
   .svgIcon path {
     fill: white;
   }
-.button:hover .svgIcon {
-  fill: black;
-}
+
+  .button:hover .svgIcon {
+    fill: black;
+  }
+
   .button:hover {
     width: 50px;
     border-radius: 50px;
-    background-color:rgba(7, 134, 114, 1);
+    background-color: rgba(7, 134, 114, 1);
     align-items: center;
-  }
-
-  .button:hover .svgIcon {
-    // transform: translateY(-200%);
   }
 
   .button::before {

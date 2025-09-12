@@ -66,7 +66,9 @@ function Layout() {
       {isMobile ? <HeaderMobile /> : <Header />}
       <Outlet context={{ isMobile }} />
       <Button />
+      <footer id="footer">
       <Footer />
+      </footer>
     </>
   );
 }
