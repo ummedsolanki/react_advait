@@ -121,8 +121,8 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/careers" element={<JoinUs />} />
           <Route path="/map" element={<WorldMap />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
+          {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
+          {/* <Route path="/terms-of-service" element={<TermsOfService />} /> */}
           <Route path="/loading" element={<Loader />} />
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/rise-private-cloud" element={<RisePrivateCloud />} />
