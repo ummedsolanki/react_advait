@@ -45,6 +45,7 @@ import Button from "./page/Backtotop";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TermsOfService from "./page/Terms&con";
+import AdvaitPremiumLoader from "./page/Loader";
 
 export function useIsMobile() {
   return useOutletContext().isMobile;
@@ -67,7 +68,7 @@ function Layout() {
       <Outlet context={{ isMobile }} />
       <Button />
       <footer id="footer">
-      <Footer />
+        <Footer />
       </footer>
     </>
   );
@@ -86,6 +87,19 @@ function AboutPage() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 8000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <AdvaitPremiumLoader />;
+  }
   return (
     <>
       <ScrollToTop />
@@ -131,8 +145,14 @@ function App() {
           <Route path="/sap-s4" element={<Sap />} />
           <Route path="/loadingg" element={<Loaderbounce />} />
           <Route path="/detail-5" element={<Detailofsap />} />
-          <Route path="/digital-transformation" element={<DigitalTransformation />} />
-          <Route path="/transforming-chemical-industry" element={<TransformingChemicalIndustry />} />
+          <Route
+            path="/digital-transformation"
+            element={<DigitalTransformation />}
+          />
+          <Route
+            path="/transforming-chemical-industry"
+            element={<TransformingChemicalIndustry />}
+          />
           <Route path="/:type/:id" element={<BlogDetails />} />
         </Route>
       </Routes>
