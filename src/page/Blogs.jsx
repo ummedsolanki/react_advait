@@ -124,7 +124,7 @@ export default function BlogSection({ data }) {
               {blogText.blogSubTitle3}
             </h2>
           </div>
-          <button className="apply-btn">
+          <button className="apply-btn" onClick={() => navigate("/insights")}>
             <span className="btn-text">{blogText.blogViewAll}</span>
             <div className="job-box solutions-arrow">
               <svg
@@ -141,11 +141,10 @@ export default function BlogSection({ data }) {
         </div>
       </section>
 
-      {/* Blog cards with slug + navigate */}
       <ServiceCard
         data={blogsWithFullSrc}
         onCardClick={(blog) => {
-          navigate(`/blogs/${(blog.id)}`, {
+          navigate(`/blogs/${blog.id}`, {
             state: { item: blog },
           });
         }}

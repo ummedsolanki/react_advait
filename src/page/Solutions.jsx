@@ -99,14 +99,17 @@ const styles = {
 };
 
 export default function SolutionsSection({ data }) {
-
   if (!data) return null;
 
-  const solutionsWithFullSrc = data?.solutionsCardsData?.map((item) => ({
-    ...item,
-    id: item._id,
-    src: item.image ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}` : "",
-  })) || [];
+  const solutionsWithFullSrc =
+    data?.solutionsCardsData?.map((item) => ({
+      ...item,
+      id: item._id,
+      src: item.image
+        ? `${import.meta.env.VITE_BACKEND_API_URL}${item.image}`
+        : "",
+    })) || [];
+
   const navigate = useNavigate();
 
   return (
@@ -119,12 +122,12 @@ export default function SolutionsSection({ data }) {
               <strong>{solutionsText.solutionsSubTitle}</strong>{" "}
               {solutionsText.solutionsSubTitle2}
               <span className="mobile-br">
-                <br />{" "}
+                <br />
               </span>{" "}
               {solutionsText.solutionsSubTitle3}
             </h2>
           </div>
-          <button className="apply-btn">
+          <button className="apply-btn" onClick={() => navigate("/solution")}>
             <span className="btn-text service-button">
               {solutionsText.solutionsViewAll}
             </span>
@@ -143,14 +146,12 @@ export default function SolutionsSection({ data }) {
         </div>
       </section>
 
-      {/* Pass the click handler to ServiceCard component */}
       <ServiceCard
         data={solutionsWithFullSrc}
         onCardClick={(solution) => {
           navigate(`/solutions/${solution.id}`, { state: { item: solution } });
         }}
       />
-
     </>
   );
 }

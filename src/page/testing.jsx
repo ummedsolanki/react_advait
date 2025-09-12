@@ -6,9 +6,40 @@ import JobDetailsPopup from "../components/JobDetailsPopup";
 import JoinUsForm from "../components/JoinUsForm";
 import { AiOutlineEye } from "react-icons/ai";
 
+// New component for viewing all images
+// function AllImagesModal({ images, onClose }) {
+//   return (
+//     <div className="modal-overlay">
+//       <div className="modal-content">
+//         <button onClick={onClose} className="close-btn">
+//           ✕
+//         </button>
+//         <div className="all-images-grid">
+//           {images.map((item, i) => (
+//             <div key={i} className="all-image-item">
+//               <div className="media-container">
+//                 {item.type === "video" ? (
+//                   <>
+//                     <video src={item.src} controls />
+//                   </>
+//                 ) : (
+//                   <>
+//                     <img src={item.src} alt={`gallery-${i}`} />
+//                   </>
+//                 )}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 export default function JoinUs() {
   const [showPopup, setShowPopup] = useState(false);
   const [images, setImages] = useState([]);
+  const [showAllImages, setShowAllImages] = useState(false); // ✅ new state
   const [heroData, setHeroData] = useState(null);
   const [jobs, setJobs] = useState([]);
   const fetched = useRef(false);
@@ -30,7 +61,9 @@ export default function JoinUs() {
     ];
 
     fetch(
-      `${import.meta.env.VITE_BACKEND_API_URL}/api/culture-highlights/list?page=1&limit=20`
+      `${
+        import.meta.env.VITE_BACKEND_API_URL
+      }/api/culture-highlights/list?page=1&limit=20`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -38,33 +71,21 @@ export default function JoinUs() {
           let videos = [];
           let imagesList = [];
 
-          // Collect all items first
           data.highlights.forEach((highlight) => {
             highlight.images.forEach((img) => {
               const isVideo =
                 img.url.endsWith(".mp4") ||
                 img.url.endsWith(".mov") ||
                 img.url.endsWith(".webm");
-
               if (isVideo) {
-                videos.push({
-                  type: "video",
-                  src: img.url,
-                  id: "big", // ✅ video always big
-                });
+                videos.push({ type: "video", src: img.url, id: "big" });
               } else {
-                imagesList.push({
-                  type: "image",
-                  src: img.url,
-                  id: "", // temporary, will assign later
-                });
+                imagesList.push({ type: "image", src: img.url, id: "" });
               }
             });
           });
 
-          // ✅ Assign classes to images
           imagesList = imagesList.map((img, index) => {
-            // If video exists → start from medium (skip first "big")
             const startIndex = videos.length > 0 ? 1 : 0;
             return {
               ...img,
@@ -72,13 +93,11 @@ export default function JoinUs() {
             };
           });
 
-          // ✅ Merge final list
           setImages([...videos, ...imagesList]);
         }
       })
       .catch((err) => console.error("Error fetching culture highlights:", err));
   }, []);
-
 
   useEffect(() => {
     if (fetched.current) return;
@@ -90,17 +109,16 @@ export default function JoinUs() {
     });
   }, []);
 
-  // Scroll to job section when page changes
   useEffect(() => {
     if (jobSectionRef.current) {
       jobSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [page]);
 
-  // Fetch jobs data with pagination
   useEffect(() => {
     fetch(
-      `${import.meta.env.VITE_BACKEND_API_URL
+      `${
+        import.meta.env.VITE_BACKEND_API_URL
       }/api/jobs?page=${page}&limit=5&status=active`
     )
       .then((res) => res.json())
@@ -114,6 +132,10 @@ export default function JoinUs() {
   }, [page]);
 
   if (!heroData) return <p>Loading...</p>;
+
+  const displayThreshold = 6; // Show first 6 images, then "Photos" card
+  const displayedImages = images.slice(0, displayThreshold);
+  const remainingImages = images.slice(displayThreshold);
 
   return (
     <GoogleReCaptchaProvider
@@ -146,7 +168,6 @@ export default function JoinUs() {
                     View Job
                   </button>
                 </div>
-
                 <h3 className="job-position">{job.title}</h3>
                 <div className="job-details">
                   <p className="job-info">
@@ -177,7 +198,6 @@ export default function JoinUs() {
         )}
       </div>
 
-      {/* Job Details Popup */}
       {selectedJob && (
         <JobDetailsPopup
           job={selectedJob}
@@ -194,7 +214,6 @@ export default function JoinUs() {
           >
             Prev
           </button>
-
           {[...Array(totalPages)].map((_, i) => (
             <button
               key={i + 1}
@@ -204,7 +223,6 @@ export default function JoinUs() {
               {i + 1}
             </button>
           ))}
-
           <button
             className={`page-btn ${page === totalPages ? "disabled" : ""}`}
             onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
@@ -218,21 +236,38 @@ export default function JoinUs() {
       <h2 className="culture-title">Culture Highlights</h2>
 
       <div className="gallery-container">
-        {images.map((item, i) => {
-          const isVideo = item.src.endsWith(".mp4") || item.src.endsWith(".mov") || item.src.endsWith(".webm");
-
+        {displayedImages.map((item, i) => {
+          const isVideo = item.type === "video";
           return (
             <div key={i} className={`gallery-item ${item.id}`}>
               {isVideo ? (
-                <video src={item.src} autoPlay muted loop playsInline />
+                <video src={item.src} controls muted loop playsInline />
               ) : (
-                <img src={item.src} alt={`gallery-${i}`} />
+                <a href={item.src} target="_blank" rel="noopener noreferrer">
+                  <img src={item.src} alt={`gallery-${i}`} />
+                </a>
               )}
             </div>
           );
         })}
+        {/* {remainingImages.length > 0 && (
+          <div
+            className="gallery-item grouped"
+            onClick={() => setShowAllImages(true)}
+          >
+            <div className="grouped-content">
+               <img src={galleryIcon} alt="Gallery" className="gallery-icon" />
+            </div>
+          </div>
+        )} */}
       </div>
 
+      {/* {showAllImages && (
+        <AllImagesModal
+          images={images}
+          onClose={() => setShowAllImages(false)}
+        />
+      )} */}
       {showPopup && <JoinUsForm onClose={() => setShowPopup(false)} />}
     </GoogleReCaptchaProvider>
   );
