@@ -27,7 +27,7 @@ export default function ContactUsHero() {
       </div>
 
       {/* Text Content */}
-      <div className="contact-us-content">
+      {/* <div className="contact-us-content">
         <div className="contact-us-heading">
           <h2>
             <strong>{contactUsHeroData.LetStart}</strong> {contactUsHeroData.start}.
@@ -45,6 +45,26 @@ export default function ContactUsHero() {
           <p style={{ marginBottom: "1rem" }}>
             {contactUsHeroData.ourTeam3}
           </p>
+        </div>
+      </div> */}
+      <div className="about-content about-margin">
+        <div className="about-left">
+          <h2>
+            <strong>
+              {contactUsHeroData.LetStart}{" "}
+            </strong>{contactUsHeroData.start}.
+            <span className="mobile-br">
+              <br />
+            </span>
+            {contactUsHeroData.theConversation}
+
+          </h2>
+        </div>
+
+        <div className="about-right">
+          <p>{contactUsHeroData.ourTeam}</p>
+          <p>{contactUsHeroData.ourTeam2}</p>
+          <p>{contactUsHeroData.ourTeam3}</p>
         </div>
       </div>
     </section>
