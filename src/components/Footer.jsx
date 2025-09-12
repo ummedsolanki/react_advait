@@ -103,11 +103,17 @@ const Footer = () => {
             dangerouslySetInnerHTML={{ __html: footerData.footerText }}
           />
           <p className="footer-text">
-            <a href={footerData.privacyPolicy.link}>
+            {/* <a href={footerData.privacyPolicy.link}>
+              {footerData.privacyPolicy.text}
+            </a> */}
+            <a >
               {footerData.privacyPolicy.text}
             </a>
             <span> . </span>
-            <a href={footerData.termsOfService.link}>
+            {/* <a href={footerData.termsOfService.link}>
+              {footerData.termsOfService.text}
+            </a> */}
+            <a>
               {footerData.termsOfService.text}
             </a>
             <span> . </span>

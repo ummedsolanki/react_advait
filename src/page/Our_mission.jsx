@@ -67,12 +67,12 @@ export default function MissionSection() {
             <div
               key={idx}
               className={
-                `sap-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse'}`
+                `about-mission sap-section ${idx % 2 === 0 ? 'row-normal bg-green' : 'row-reverse'}`
               }
             >
               <div className="sap-text">
                 <h2><strong>{section.title}</strong></h2>
-                <div className='sap-content'>
+                <div className='sap-content about-mission-text'>
                   <p>{parse(section.content)}</p>
                 </div>
               </div>
