@@ -1,5 +1,5 @@
 import { servicesText } from "../data/staticData";
-
+import { useNavigate } from "react-router-dom";
 import parse from "html-react-parser";
 import { useState, useEffect } from "react";
 
@@ -100,6 +100,7 @@ const styles = {
 };
 
 export default function ServiceSection({ data }) {
+  const navigate = useNavigate();
   function useClampStyle() {
     useEffect(() => {
       const clampStyle = `
@@ -173,6 +174,9 @@ export default function ServiceSection({ data }) {
       prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx]
     );
   };
+  const handleCardClick = (service) => {
+    navigate(`/services/${service._id}`, { state: { item: service } });
+  };
 
   return (
     <section className="service-section home-service about-margin">
@@ -195,7 +199,12 @@ export default function ServiceSection({ data }) {
             plainText && plainText.length > TRUNCATE_THRESHOLD;
           let displayDesc = item.subtitle;
           return (
-            <div className="workedwith-card" key={index}>
+            <div
+              className="workedwith-card"
+              key={index}
+              onClick={() => handleCardClick(item)}
+              style={{ cursor: "pointer" }}
+            >
               <div className="workedwith-card-header">
                 <h3>{item.title}</h3>
                 <div className="card-box ">
@@ -245,7 +254,10 @@ export default function ServiceSection({ data }) {
                     <span className="read-more-fade">
                       <span
                         className="read-more-link"
-                        onClick={() => handleToggle(index)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleToggle(index);
+                        }}
                       >
                         ...Read more
                       </span>
@@ -260,7 +272,10 @@ export default function ServiceSection({ data }) {
                         fontWeight: 100,
                         fontSize: 14,
                       }}
-                      onClick={() => handleToggle(index)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleToggle(index);
+                      }}
                     >
                       Read Less
                     </span>
