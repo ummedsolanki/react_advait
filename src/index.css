@@ -2013,7 +2013,7 @@ border-radius: 6px;
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.25rem;
 }
 
@@ -2021,7 +2021,7 @@ border-radius: 6px;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 20rem;
+  height: 25rem;
   cursor: pointer;
 }
 
@@ -3062,6 +3062,10 @@ textarea {
     gap: 1.6rem;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
+.team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1.6rem;
+  }
 
   .mission-title {
     font-size: var(--l-normal-fontsize);
@@ -3364,7 +3368,7 @@ textarea {
 
   .team-grid {
     gap: 1.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .role,
@@ -5188,7 +5192,7 @@ form input[type="email"] {
   .sap-section {
     flex-direction: column !important;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 0;
     padding-bottom: 1rem;
   }
 
