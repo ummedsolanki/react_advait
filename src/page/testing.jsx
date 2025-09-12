@@ -241,7 +241,14 @@ export default function JoinUs() {
           return (
             <div key={i} className={`gallery-item ${item.id}`}>
               {isVideo ? (
-                <video src={item.src} controls muted loop playsInline />
+                <video
+                  src={item.src}
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  controlsList="nodownload nofullscreen noremoteplayback"
+                />
               ) : (
                 <a href={item.src} target="_blank" rel="noopener noreferrer">
                   <img src={item.src} alt={`gallery-${i}`} />
