@@ -25,9 +25,9 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <HeroComponent heroData={heroData} />
-      </div>
+      </div> */}
       <div className="privacy-container">
         <main className="privacy-main">
           <section className="privacy-content" aria-live="polite">

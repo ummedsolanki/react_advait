@@ -25,9 +25,9 @@ export default function TermsOfService() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <HeroComponent heroData={heroData} />
-      </div>
+      </div> */}
       <div className="terms-container">
         <main className="terms-main">
           <section className="terms-content" aria-live="polite">
